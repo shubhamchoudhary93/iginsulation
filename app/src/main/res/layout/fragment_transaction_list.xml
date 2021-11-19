@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".transaction.TransactionListFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_column_one"
+                android:text="Date"/>
+
+            <TextView
+                style="@style/list_column_two"
+                android:text="Name"/>
+
+            <TextView
+                style="@style/list_column_two"
+                android:text="Amount"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/transaction_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/transaction_one_date"
+                style="@style/list_column_one"/>
+
+            <TextView
+                android:id="@+id/transaction_one_name"
+                style="@style/list_column_two"/>
+
+            <TextView
+                android:id="@+id/transaction_one_amount"
+                style="@style/list_column_two"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/transaction_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/transaction_two_date"
+                style="@style/list_column_one"/>
+
+            <TextView
+                android:id="@+id/transaction_two_name"
+                style="@style/list_column_two"/>
+
+            <TextView
+                android:id="@+id/transaction_two_amount"
+                style="@style/list_column_two"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/transaction_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/transaction_three_date"
+                style="@style/list_column_one"/>
+
+            <TextView
+                android:id="@+id/transaction_three_name"
+                style="@style/list_column_two"/>
+
+            <TextView
+                android:id="@+id/transaction_three_amount"
+                style="@style/list_column_two"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/transaction_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/transaction_four_date"
+                style="@style/list_column_one"/>
+
+            <TextView
+                android:id="@+id/transaction_four_name"
+                style="@style/list_column_two"/>
+
+            <TextView
+                android:id="@+id/transaction_four_amount"
+                style="@style/list_column_two"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/transaction_five"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/transaction_five_date"
+                style="@style/list_column_one"/>
+
+            <TextView
+                android:id="@+id/transaction_five_name"
+                style="@style/list_column_two"/>
+
+            <TextView
+                android:id="@+id/transaction_five_amount"
+                style="@style/list_column_two"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/transaction_six"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/transaction_six_date"
+                style="@style/list_column_one"/>
+
+            <TextView
+                android:id="@+id/transaction_six_name"
+                style="@style/list_column_two"/>
+
+            <TextView
+                android:id="@+id/transaction_six_amount"
+                style="@style/list_column_two"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/transaction_seven"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/transaction_seven_date"
+                style="@style/list_column_one"/>
+
+            <TextView
+                android:id="@+id/transaction_seven_name"
+                style="@style/list_column_two"/>
+
+            <TextView
+                android:id="@+id/transaction_seven_amount"
+                style="@style/list_column_two"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/transaction_eight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/transaction_eight_date"
+                style="@style/list_column_one"/>
+
+            <TextView
+                android:id="@+id/transaction_eight_name"
+                style="@style/list_column_two"/>
+
+            <TextView
+                android:id="@+id/transaction_eight_amount"
+                style="@style/list_column_two"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/transaction_nine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/transaction_nine_date"
+                style="@style/list_column_one"/>
+
+            <TextView
+                android:id="@+id/transaction_nine_name"
+                style="@style/list_column_two"/>
+
+            <TextView
+                android:id="@+id/transaction_nine_amount"
+                style="@style/list_column_two"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/transaction_ten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/transaction_ten_date"
+                style="@style/list_column_one"/>
+
+            <TextView
+                android:id="@+id/transaction_ten_name"
+                style="@style/list_column_two"/>
+
+            <TextView
+                android:id="@+id/transaction_ten_amount"
+                style="@style/list_column_two"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_previous_page"
+                style="@style/list_previous_button" />
+
+            <Button
+                android:id="@+id/button_next_page"
+                style="@style/list_next_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Page - " />
+
+            <TextView
+                android:id="@+id/page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" of " />
+
+            <TextView
+                android:id="@+id/total_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</layout>

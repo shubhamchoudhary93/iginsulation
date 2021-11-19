@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".customer.StockFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/list_column_one"
+                    android:text="name" />
+
+                <TextView
+                    style="@style/list_column_two"
+                    android:text="balance" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/customer_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/customer_one_name"
+                    style="@style/list_column_one" />
+
+                <TextView
+                    android:id="@+id/customer_one_balance"
+                    style="@style/list_column_two" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/customer_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/customer_two_name"
+                    style="@style/list_column_one" />
+
+                <TextView
+                    android:id="@+id/customer_two_balance"
+                    style="@style/list_column_two" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/customer_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/customer_three_name"
+                    style="@style/list_column_one" />
+
+                <TextView
+                    android:id="@+id/customer_three_balance"
+                    style="@style/list_column_two" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/customer_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/customer_four_name"
+                    style="@style/list_column_one" />
+
+                <TextView
+                    android:id="@+id/customer_four_balance"
+                    style="@style/list_column_two" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/customer_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/customer_five_name"
+                    style="@style/list_column_one" />
+
+                <TextView
+                    android:id="@+id/customer_five_balance"
+                    style="@style/list_column_two" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/customer_six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/customer_six_name"
+                    style="@style/list_column_one" />
+
+                <TextView
+                    android:id="@+id/customer_six_balance"
+                    style="@style/list_column_two" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/customer_seven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/customer_seven_name"
+                    style="@style/list_column_one" />
+
+                <TextView
+                    android:id="@+id/customer_seven_balance"
+                    style="@style/list_column_two" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/customer_eight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/customer_eight_name"
+                    style="@style/list_column_one" />
+
+                <TextView
+                    android:id="@+id/customer_eight_balance"
+                    style="@style/list_column_two" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/customer_nine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/customer_nine_name"
+                    style="@style/list_column_one" />
+
+                <TextView
+                    android:id="@+id/customer_nine_balance"
+                    style="@style/list_column_two" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/customer_ten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/customer_ten_name"
+                    style="@style/list_column_one" />
+
+                <TextView
+                    android:id="@+id/customer_ten_balance"
+                    style="@style/list_column_two" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button_previous_page"
+                    style="@style/list_previous_button" />
+
+                <Button
+                    android:id="@+id/button_next_page"
+                    style="@style/list_next_button" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Page - " />
+
+                <TextView
+                    android:id="@+id/page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" of " />
+
+                <TextView
+                    android:id="@+id/total_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".committee.committeeCalculatorFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/committee_ideal_installment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="ideal installment"
+            android:ems="10"
+            android:hint="ideal installment"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/committee_total_member"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="total members"
+            android:ems="10"
+            android:hint="total members"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/committee_current_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:autofillHints="current month"
+            android:ems="10"
+            android:hint="current month"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/committee_bid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="bid"
+            android:ems="10"
+            android:hint="bid"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/committee_calculate_installment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate installment" />
+
+        <TextView
+            android:id="@+id/committee_calculated_installment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/committee_calculated_interest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+
+        <EditText
+            android:id="@+id/committee_projected_interest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="projected interest"
+            android:ems="10"
+            android:hint="projected interest"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/committee_calculate_bid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="calculate Bid" />
+
+        <TextView
+            android:id="@+id/committee_calculated_bid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp" />
+    </LinearLayout>
+    </ScrollView>
+</layout>

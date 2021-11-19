@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".shopStock.ShopStockFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <AutoCompleteTextView
+                android:id="@+id/shop_stock_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="name"
+                android:ems="10"
+                android:hint="name"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/shop_stock_quantity_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/shop_stock_quantity"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/shop_stock_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="add" />
+
+            <Button
+                android:id="@+id/shop_stock_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="minus" />
+
+            <Button
+                android:id="@+id/button_new_shop_stock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="New Stock" />
+
+            <Button
+                android:id="@+id/button_view_shop_stock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Stock" />
+
+            <Button
+                android:id="@+id/button_update_shop_stock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update Stock" />
+
+            <Button
+                android:id="@+id/button_view_shop_stock_transaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Stock Transaction" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

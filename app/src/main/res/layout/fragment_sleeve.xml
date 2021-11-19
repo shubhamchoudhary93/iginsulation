@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".rateList.SleeveFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_f_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="F Class" />
+
+            <Button
+                android:id="@+id/button_b_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="B Class" />
+
+            <Button
+                android:id="@+id/button_h_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="H Class" />
+
+            <Button
+                android:id="@+id/button_china"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="China" />
+
+            <Button
+                android:id="@+id/button_heat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Heat" />
+
+            <Button
+                android:id="@+id/button_cotton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cotton" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

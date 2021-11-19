@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".customer.CustomerModifyFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/customer_modify_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"/>
+
+        <EditText
+            android:id="@+id/customer_modify_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="phone"
+            android:inputType="phone"
+            android:autofillHints="phone" />
+
+        <EditText
+            android:id="@+id/customer_modify_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="address"
+            android:inputType="textPostalAddress"
+            android:autofillHints="address" />
+
+        <EditText
+            android:id="@+id/customer_modify_opening"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="opening balance"
+            android:inputType="number"
+            android:autofillHints="opening balance" />
+
+        <EditText
+            android:id="@+id/customer_modify_current"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="current balance"
+            android:inputType="number"
+            android:autofillHints="current balance" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/customer_modify"
+            android:text="modify"/>
+    </LinearLayout>
+    </ScrollView>
+</layout>

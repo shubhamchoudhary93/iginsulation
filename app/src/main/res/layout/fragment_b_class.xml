@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".rateList.BClassFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B class rate list at "
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/head_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/values_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/one"
+                        style="@style/list_column_two" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="1.5" />
+
+                    <TextView
+                        android:id="@+id/one_point_five"
+                        style="@style/list_column_two" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="2" />
+
+                    <TextView
+                        android:id="@+id/two"
+                        style="@style/list_column_two" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="3" />
+
+                    <TextView
+                        android:id="@+id/three"
+                        style="@style/list_column_two" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="4" />
+
+                    <TextView
+                        android:id="@+id/four"
+                        style="@style/list_column_two" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="5" />
+
+                    <TextView
+                        android:id="@+id/five"
+                        style="@style/list_column_two" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="6" />
+
+                    <TextView
+                        android:id="@+id/six"
+                        style="@style/list_column_two" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="8" />
+
+                    <TextView
+                        android:id="@+id/eight"
+                        style="@style/list_column_two" />
+
+                    <TextView
+                        android:id="@+id/eight_packet"
+                        style="@style/list_column_two" />
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="for 50mtr" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="10" />
+
+                    <TextView
+                        android:id="@+id/ten"
+                        style="@style/list_column_two" />
+
+                    <TextView
+                        android:id="@+id/ten_packet"
+                        style="@style/list_column_two" />
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="for 50mtr" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="12" />
+
+                    <TextView
+                        android:id="@+id/twelve"
+                        style="@style/list_column_two" />
+
+                    <TextView
+                        android:id="@+id/twelve_packet"
+                        style="@style/list_column_two" />
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="for 25mtr" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="16" />
+
+                    <TextView
+                        android:id="@+id/sixteen"
+                        style="@style/list_column_two" />
+
+                    <TextView
+                        android:id="@+id/sixteen_packet"
+                        style="@style/list_column_two" />
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="for 25mtr" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/percentage_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/button_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/button_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/button_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/button_six"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/percentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Percentage"
+                        android:ems="10"
+                        android:hint="Percentage"
+                        android:inputType="numberDecimal" />
+
+                    <Button
+                        android:id="@+id/button_go"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Go" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

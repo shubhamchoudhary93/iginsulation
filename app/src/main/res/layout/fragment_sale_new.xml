@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".sale.SaleNewFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/cash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cash" />
+
+            <AutoCompleteTextView
+                android:id="@+id/sale_new_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="name" />
+
+            <EditText
+                android:id="@+id/sale_new_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="22/08/21" />
+
+            <LinearLayout
+                android:id="@+id/sale_new_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_one_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name One"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_one_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_one_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_one_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_one_rate"
+                    style="@style/list_column_sale_two"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_one_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_one_percentage"
+                    style="@style/list_column_sale_two"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_two_name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sale_new_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_two_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name two"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_two_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_two_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_two_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_two_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_two_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_two_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_three_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_three_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name three"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_three_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_three_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_three_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_three_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_three_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_three_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_four_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_four_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name four"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_four_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_four_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_four_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_four_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_four_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_four_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_five_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_five_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name five"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_five_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_five_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_five_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_five_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_five_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_five_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_six_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_six_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name six"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_six_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_six_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_six_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_six_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_six_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_six_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_seven_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_seven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_seven_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name seven"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_seven_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_seven_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_seven_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_seven_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_seven_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_seven_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_eight_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_eight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_eight_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name eight"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_eight_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_eight_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_eight_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_eight_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_eight_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_eight_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_nine_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_nine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_nine_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name nine"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_ten_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_nine_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_nine_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_nine_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_nine_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_nine_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_ten_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_ten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_ten_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name ten"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_ten_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_ten_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_ten_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_ten_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_ten_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_ten_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_eleven_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_eleven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_eleven_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name eleven"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_eleven_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_eleven_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_eleven_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_eleven_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_eleven_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_eleven_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_twelve_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_twelve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_twelve_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name twelve"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_twelve_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_twelve_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_twelve_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_twelve_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_twelve_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_twelve_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_thirteen_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_thirteen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_thirteen_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name thirteen"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_thirteen_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_thirteen_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_thirteen_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_thirteen_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_thirteen_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_thirteen_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_fourteen_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_fourteen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_fourteen_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name fourteen"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_fourteen_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_fourteen_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_fourteen_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_fourteen_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_fourteen_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_fourteen_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_fifteen_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_fifteen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_fifteen_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name fifteen"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_fifteen_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_fifteen_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_fifteen_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_fifteen_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_fifteen_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_fifteen_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_sixteen_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_sixteen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_sixteen_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name sixteen"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_sixteen_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_sixteen_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_sixteen_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_sixteen_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_sixteen_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_sixteen_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_seventeen_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_seventeen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_seventeen_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name seventeen"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_seventeen_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_seventeen_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_seventeen_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_seventeen_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_seventeen_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_seventeen_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_eighteen_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_eighteen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_eighteen_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name eighteen"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_eighteen_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_eighteen_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_eighteen_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_eighteen_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_eighteen_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_eighteen_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_nineteen_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_nineteen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_nineteen_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name nineteen"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_nineteen_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_nineteen_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_nineteen_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_nineteen_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_nineteen_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_nineteen_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_twenty_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_new_twenty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_new_twenty_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name twenty"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_twenty_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_new_twenty_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_twenty_rate" />
+
+                <EditText
+                    android:id="@+id/sale_new_twenty_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_twenty_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_new_twenty_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/sale_new_transport" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/sale_new_transport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="transport"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:nextFocusDown="@id/sale_new_other" />
+
+            <EditText
+                android:id="@+id/sale_new_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="other"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:nextFocusDown="@id/sale_new_total" />
+
+            <EditText
+                android:id="@+id/sale_new_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="total"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:maxLines="1" />
+
+            <Button
+                android:id="@+id/sale_new_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="add" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

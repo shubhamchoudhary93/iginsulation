@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1052980399367",
+    "project_id": "ig-insulation",
+    "storage_bucket": "ig-insulation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052980399367:android:543ce4bbf989cf098389a2",
+        "android_client_info": {
+          "package_name": "com.shubham.iginsulation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052980399367-k9ntrddlebe8n76pjobunljbtmrb2os5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shubham.iginsulation",
+            "certificate_hash": "4e7751c2da85fc09e57358b162e861f9a35309b3"
+          }
+        },
+        {
+          "client_id": "1052980399367-ovar8nbca5pn49dt67da5irjok08kqdj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFJ9cMtFYNrfAXcotMDlEJFbeQR-QmpF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1052980399367-ovar8nbca5pn49dt67da5irjok08kqdj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

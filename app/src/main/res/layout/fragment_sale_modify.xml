@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".sale.SaleModifyFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/cash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cash" />
+
+            <AutoCompleteTextView
+                android:id="@+id/sale_modify_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="name" />
+
+            <EditText
+                android:id="@+id/sale_modify_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="22/08/21" />
+
+            <LinearLayout
+                android:id="@+id/sale_modify_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_one_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name One"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_one_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_one_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_one_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_one_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_one_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_one_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_two_name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sale_modify_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_two_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name two"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_two_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_two_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_two_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_two_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_two_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_two_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_three_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_three_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name three"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_three_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_three_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_three_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_three_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_three_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_three_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_four_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_four_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name four"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_four_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_four_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_four_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_four_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_four_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_four_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_five_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_five_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name five"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_five_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_five_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_five_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_five_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_five_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_five_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_six_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_six_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name six"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_six_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_six_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_six_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_six_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_six_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_six_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_seven_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_seven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_seven_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name seven"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_seven_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_seven_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_seven_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_seven_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_seven_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_seven_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_eight_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_eight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_eight_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name eight"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_eight_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_eight_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_eight_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_eight_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_eight_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_eight_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_nine_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_nine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_nine_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name nine"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_ten_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_nine_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_nine_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_nine_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_nine_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_nine_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_ten_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_ten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_ten_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name ten"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_ten_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_ten_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_ten_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_ten_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_ten_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_ten_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_eleven_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_eleven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_eleven_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name eleven"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_eleven_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_eleven_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_eleven_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_eleven_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_eleven_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_eleven_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_twelve_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_twelve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_twelve_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name twelve"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_twelve_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_twelve_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_twelve_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_twelve_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_twelve_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_twelve_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_thirteen_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_thirteen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_thirteen_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name thirteen"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_thirteen_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_thirteen_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_thirteen_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_thirteen_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_thirteen_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_thirteen_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_fourteen_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_fourteen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_fourteen_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name fourteen"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_fourteen_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_fourteen_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_fourteen_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_fourteen_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_fourteen_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_fourteen_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_fifteen_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_fifteen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_fifteen_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name fifteen"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_fifteen_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_fifteen_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_fifteen_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_fifteen_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_fifteen_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_fifteen_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_sixteen_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_sixteen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_sixteen_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name sixteen"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_sixteen_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_sixteen_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_sixteen_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_sixteen_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_sixteen_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_sixteen_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_seventeen_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_seventeen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_seventeen_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name seventeen"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_seventeen_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_seventeen_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_seventeen_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_seventeen_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_seventeen_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_seventeen_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_eighteen_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_eighteen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_eighteen_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name eighteen"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_eighteen_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_eighteen_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_eighteen_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_eighteen_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_eighteen_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_eighteen_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_nineteen_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_nineteen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_nineteen_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name nineteen"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_nineteen_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_nineteen_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_nineteen_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_nineteen_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_nineteen_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_nineteen_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_twenty_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sale_modify_twenty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sale_modify_twenty_name"
+                    style="@style/list_column_sale_name"
+                    android:hint="name twenty"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/sale_modify_twenty_quantity" />
+
+                <EditText
+                    android:id="@+id/sale_modify_twenty_quantity"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_twenty_rate" />
+
+                <EditText
+                    android:id="@+id/sale_modify_twenty_rate"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_twenty_percentage" />
+
+                <EditText
+                    android:id="@+id/sale_modify_twenty_percentage"
+                    style="@style/list_column_sale_two"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:nextFocusDown="@id/sale_modify_transport" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/sale_modify_transport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="transport"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@id/sale_modify_other" />
+
+            <EditText
+                android:id="@+id/sale_modify_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="other"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@id/sale_modify_total" />
+
+            <EditText
+                android:id="@+id/sale_modify_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="total"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/sale_modify_modify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="modify" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

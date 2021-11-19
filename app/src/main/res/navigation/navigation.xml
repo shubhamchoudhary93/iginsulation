@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/customerFragment"
+        android:name="com.shubham.iginsulation.customer.CustomerFragment"
+        android:label="fragment_customer"
+        tools:layout="@layout/fragment_customer">
+        <action
+            android:id="@+id/action_customerFragment_to_customerNewFragment"
+            app:destination="@id/customerNewFragment" />
+        <action
+            android:id="@+id/action_customerFragment_to_customerListFragment"
+            app:destination="@id/customerListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.shubham.iginsulation.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_customerFragment"
+            app:destination="@id/customerFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_stockFragment"
+            app:destination="@id/stockFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_transactionFragment"
+            app:destination="@id/transactionFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_rateListFragment"
+            app:destination="@id/rateListFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_saleFragment"
+            app:destination="@id/saleFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_committeeFragment"
+            app:destination="@id/committeeFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_shopStockFragment"
+            app:destination="@id/shopStockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerNewFragment"
+        android:name="com.shubham.iginsulation.customer.CustomerNewFragment"
+        android:label="fragment_customer_new"
+        tools:layout="@layout/fragment_customer_new">
+        <action
+            android:id="@+id/action_customerNewFragment_to_customerDetailFragment"
+            app:destination="@id/customerDetailFragment"
+            app:popUpTo="@id/customerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerDetailFragment"
+        android:name="com.shubham.iginsulation.customer.CustomerDetailFragment"
+        android:label="CustomerDetailFragment"
+        tools:layout="@layout/fragment_customer_detail">
+        <argument
+            android:name="id"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_customerDetailFragment_to_customerListFragment"
+            app:destination="@id/customerListFragment" />
+        <action
+            android:id="@+id/action_customerDetailFragment_to_customerModifyFragment"
+            app:destination="@id/customerModifyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerListFragment"
+        android:name="com.shubham.iginsulation.customer.CustomerListFragment"
+        android:label="CustomerListFragment"
+        tools:layout="@layout/fragment_customer_list">
+        <action
+            android:id="@+id/action_customerListFragment_to_customerDetailFragment"
+            app:destination="@id/customerDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stockFragment"
+        android:name="com.shubham.iginsulation.stock.StockFragment"
+        android:label="fragment_stock"
+        tools:layout="@layout/fragment_stock" >
+        <action
+            android:id="@+id/action_stockFragment_to_stockNewFragment"
+            app:destination="@id/stockNewFragment" />
+        <action
+            android:id="@+id/action_stockFragment_to_stockListFragment"
+            app:destination="@id/stockListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stockNewFragment"
+        android:name="com.shubham.iginsulation.stock.StockNewFragment"
+        android:label="fragment_stock_new"
+        tools:layout="@layout/fragment_stock_new" >
+        <action
+            android:id="@+id/action_stockNewFragment_to_stockDetailFragment"
+            app:destination="@id/stockDetailFragment"
+            app:popUpTo="@id/stockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stockDetailFragment"
+        android:name="com.shubham.iginsulation.stock.StockDetailFragment"
+        android:label="fragment_stock_detail"
+        tools:layout="@layout/fragment_stock_detail" >
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_stockDetailFragment_to_stockListFragment"
+            app:destination="@id/stockListFragment" />
+        <action
+            android:id="@+id/action_stockDetailFragment_to_stockModifyFragment"
+            app:destination="@id/stockModifyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stockListFragment"
+        android:name="com.shubham.iginsulation.stock.StockListFragment"
+        android:label="fragment_stock_list"
+        tools:layout="@layout/fragment_stock_list" >
+        <action
+            android:id="@+id/action_stockListFragment_to_stockDetailFragment"
+            app:destination="@id/stockDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.shubham.iginsulation.transaction.TransactionFragment"
+        android:label="fragment_transaction"
+        tools:layout="@layout/fragment_transaction" >
+        <action
+            android:id="@+id/action_transactionFragment_to_transactionNewFragment"
+            app:destination="@id/transactionNewFragment" />
+        <action
+            android:id="@+id/action_transactionFragment_to_transactionListFragment"
+            app:destination="@id/transactionListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionNewFragment"
+        android:name="com.shubham.iginsulation.transaction.TransactionNewFragment"
+        android:label="TransactionNewFragment"
+        tools:layout="@layout/fragment_transaction_new">
+        <action
+            android:id="@+id/action_transactionNewFragment_to_transactionDetailFragment"
+            app:destination="@id/transactionDetailFragment"
+            app:popUpTo="@id/transactionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rateListFragment"
+        android:name="com.shubham.iginsulation.rateList.RateListFragment"
+        android:label="RateListFragment"
+        tools:layout="@layout/fragment_rate_list">
+        <action
+            android:id="@+id/action_rateListFragment_to_sleeveFragment"
+            app:destination="@id/sleeveFragment" />
+        <action
+            android:id="@+id/action_rateListFragment_to_varnishFragment"
+            app:destination="@id/varnishFragment" />
+        <action
+            android:id="@+id/action_rateListFragment_to_leadWireFragment"
+            app:destination="@id/leadWireFragment" />
+        <action
+            android:id="@+id/action_rateListFragment_to_glassTapeFragment"
+            app:destination="@id/glassTapeFragment" />
+        <action
+            android:id="@+id/action_rateListFragment_to_taxRateFragment"
+            app:destination="@id/taxRateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sleeveFragment"
+        android:name="com.shubham.iginsulation.rateList.SleeveFragment"
+        android:label="fragment_sleeve"
+        tools:layout="@layout/fragment_sleeve" >
+        <action
+            android:id="@+id/action_sleeveFragment_to_FClassFragment"
+            app:destination="@id/FClassFragment" />
+        <action
+            android:id="@+id/action_sleeveFragment_to_BClassFragment"
+            app:destination="@id/BClassFragment" />
+        <action
+            android:id="@+id/action_sleeveFragment_to_HClassFragment"
+            app:destination="@id/HClassFragment" />
+        <action
+            android:id="@+id/action_sleeveFragment_to_chinaFragment"
+            app:destination="@id/chinaFragment" />
+        <action
+            android:id="@+id/action_sleeveFragment_to_heatFragment"
+            app:destination="@id/heatFragment" />
+        <action
+            android:id="@+id/action_sleeveFragment_to_cottonFragment"
+            app:destination="@id/cottonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FClassFragment"
+        android:name="com.shubham.iginsulation.rateList.FClassFragment"
+        android:label="FClassFragment"
+        tools:layout="@layout/fragment_f_class"/>
+    <fragment
+        android:id="@+id/BClassFragment"
+        android:name="com.shubham.iginsulation.rateList.BClassFragment"
+        android:label="fragment_b_class"
+        tools:layout="@layout/fragment_b_class" />
+    <fragment
+        android:id="@+id/HClassFragment"
+        android:name="com.shubham.iginsulation.rateList.HClassFragment"
+        android:label="fragment_h_class"
+        tools:layout="@layout/fragment_h_class" />
+    <fragment
+        android:id="@+id/chinaFragment"
+        android:name="com.shubham.iginsulation.rateList.ChinaFragment"
+        android:label="fragment_china"
+        tools:layout="@layout/fragment_china" />
+    <fragment
+        android:id="@+id/heatFragment"
+        android:name="com.shubham.iginsulation.rateList.HeatFragment"
+        android:label="fragment_heat"
+        tools:layout="@layout/fragment_heat" />
+    <fragment
+        android:id="@+id/cottonFragment"
+        android:name="com.shubham.iginsulation.rateList.CottonFragment"
+        android:label="fragment_cotton"
+        tools:layout="@layout/fragment_cotton" />
+    <fragment
+        android:id="@+id/varnishFragment"
+        android:name="com.shubham.iginsulation.rateList.VarnishFragment"
+        android:label="fragment_varnish"
+        tools:layout="@layout/fragment_varnish" />
+    <fragment
+        android:id="@+id/leadWireFragment"
+        android:name="com.shubham.iginsulation.rateList.LeadWireFragment"
+        android:label="fragment_lead_wire"
+        tools:layout="@layout/fragment_lead_wire" >
+        <action
+            android:id="@+id/action_leadWireFragment_to_NMFragment"
+            app:destination="@id/NMFragment" />
+        <action
+            android:id="@+id/action_leadWireFragment_to_BRFragment"
+            app:destination="@id/BRFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/NMFragment"
+        android:name="com.shubham.iginsulation.rateList.NMFragment"
+        android:label="fragment_nm"
+        tools:layout="@layout/fragment_nm" />
+    <fragment
+        android:id="@+id/BRFragment"
+        android:name="com.shubham.iginsulation.rateList.BRFragment"
+        android:label="fragment_br"
+        tools:layout="@layout/fragment_br" />
+    <fragment
+        android:id="@+id/glassTapeFragment"
+        android:name="com.shubham.iginsulation.rateList.GlassTapeFragment"
+        android:label="fragment_glass_tape"
+        tools:layout="@layout/fragment_glass_tape" />
+    <fragment
+        android:id="@+id/transactionDetailFragment"
+        android:name="com.shubham.iginsulation.transaction.TransactionDetailFragment"
+        android:label="fragment_transaction_detail"
+        tools:layout="@layout/fragment_transaction_detail" >
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_transactionDetailFragment_to_transactionListFragment"
+            app:destination="@id/transactionListFragment" />
+        <action
+            android:id="@+id/action_transactionDetailFragment_to_transactionModifyFragment"
+            app:destination="@id/transactionModifyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionListFragment"
+        android:name="com.shubham.iginsulation.transaction.TransactionListFragment"
+        android:label="TransactionListFragment"
+        tools:layout="@layout/fragment_transaction_list">
+        <action
+            android:id="@+id/action_transactionListFragment_to_transactionDetailFragment"
+            app:destination="@id/transactionDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saleFragment"
+        android:name="com.shubham.iginsulation.sale.SaleFragment"
+        android:label="SaleFragment"
+        tools:layout="@layout/fragment_sale">
+        <action
+            android:id="@+id/action_saleFragment_to_saleListFragment"
+            app:destination="@id/saleListFragment" />
+        <action
+            android:id="@+id/action_saleFragment_to_saleNewFragment"
+            app:destination="@id/saleNewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saleListFragment"
+        android:name="com.shubham.iginsulation.sale.SaleListFragment"
+        android:label="fragment_sale_list"
+        tools:layout="@layout/fragment_sale_list" >
+        <action
+            android:id="@+id/action_saleListFragment_to_saleDetailFragment"
+            app:destination="@id/saleDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saleDetailFragment"
+        android:name="com.shubham.iginsulation.sale.SaleDetailFragment"
+        android:label="fragment_sale_detail"
+        tools:layout="@layout/fragment_sale_detail" >
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_saleDetailFragment_to_saleListFragment"
+            app:destination="@id/saleListFragment" />
+        <action
+            android:id="@+id/action_saleDetailFragment_to_saleModifyFragment"
+            app:destination="@id/saleModifyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saleNewFragment"
+        android:name="com.shubham.iginsulation.sale.SaleNewFragment"
+        android:label="fragment_sale_new"
+        tools:layout="@layout/fragment_sale_new" >
+        <action
+            android:id="@+id/action_saleNewFragment_to_saleDetailFragment"
+            app:destination="@id/saleDetailFragment"
+            app:popUpTo="@id/saleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerModifyFragment"
+        android:name="com.shubham.iginsulation.customer.CustomerModifyFragment"
+        android:label="fragment_customer_modify"
+        tools:layout="@layout/fragment_customer_modify" >
+        <action
+            android:id="@+id/action_customerModifyFragment_to_customerDetailFragment"
+            app:destination="@id/customerDetailFragment"
+            app:popUpTo="@id/customerListFragment" />
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/taxRateFragment"
+        android:name="com.shubham.iginsulation.rateList.TaxRateFragment"
+        android:label="fragment_tax_rate"
+        tools:layout="@layout/fragment_tax_rate" />
+    <fragment
+        android:id="@+id/committeeFragment"
+        android:name="com.shubham.iginsulation.committee.CommitteeFragment"
+        android:label="fragment_committee"
+        tools:layout="@layout/fragment_committee" >
+        <action
+            android:id="@+id/action_committeeFragment_to_committeeCalculator"
+            app:destination="@id/committeeCalculator" />
+    </fragment>
+    <fragment
+        android:id="@+id/committeeCalculator"
+        android:name="com.shubham.iginsulation.committee.CommitteeCalculator"
+        android:label="CommitteeCalculator" />
+    <fragment
+        android:id="@+id/stockModifyFragment"
+        android:name="com.shubham.iginsulation.stock.StockModifyFragment"
+        android:label="fragment_stock_modify"
+        tools:layout="@layout/fragment_stock_modify" >
+        <action
+            android:id="@+id/action_stockModifyFragment_to_stockDetailFragment"
+            app:destination="@id/stockDetailFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/stockListFragment" />
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionModifyFragment"
+        android:name="com.shubham.iginsulation.transaction.TransactionModifyFragment"
+        android:label="fragment_transaction_modify"
+        tools:layout="@layout/fragment_transaction_modify" >
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_transactionModifyFragment_to_transactionDetailFragment"
+            app:destination="@id/transactionDetailFragment"
+            app:popUpTo="@id/transactionListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saleModifyFragment"
+        android:name="com.shubham.iginsulation.sale.SaleModifyFragment"
+        android:label="fragment_sale_modify"
+        tools:layout="@layout/fragment_sale_modify" >
+        <action
+            android:id="@+id/action_saleModifyFragment_to_saleDetailFragment"
+            app:destination="@id/saleDetailFragment"
+            app:popUpTo="@id/saleListFragment" />
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopStockFragment"
+        android:name="com.shubham.iginsulation.shopStock.ShopStockFragment"
+        android:label="fragment_shop_stock"
+        tools:layout="@layout/fragment_shop_stock" >
+        <action
+            android:id="@+id/action_shopStockFragment_to_shopStockNewFragment"
+            app:destination="@id/shopStockNewFragment" />
+        <action
+            android:id="@+id/action_shopStockFragment_to_shopStockListFragment"
+            app:destination="@id/shopStockListFragment" />
+        <action
+            android:id="@+id/action_shopStockFragment_to_shopStockTransactionListFragment"
+            app:destination="@id/shopStockTransactionListFragment" />
+        <action
+            android:id="@+id/action_shopStockFragment_to_shopStockUpdateFragment"
+            app:destination="@id/shopStockUpdateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopStockNewFragment"
+        android:name="com.shubham.iginsulation.shopStock.ShopStockNewFragment"
+        android:label="fragment_shop_stock_new"
+        tools:layout="@layout/fragment_shop_stock_new" >
+        <action
+            android:id="@+id/action_shopStockNewFragment_to_shopStockDetailFragment"
+            app:destination="@id/shopStockDetailFragment"
+            app:popUpTo="@id/shopStockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopStockDetailFragment"
+        android:name="com.shubham.iginsulation.shopStock.ShopStockDetailFragment"
+        android:label="ShopStockDetailFragment" >
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_shopStockDetailFragment_to_shopStockModifyFragment"
+            app:destination="@id/shopStockModifyFragment" />
+        <action
+            android:id="@+id/action_shopStockDetailFragment_to_shopStockListFragment"
+            app:destination="@id/shopStockListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopStockListFragment"
+        android:name="com.shubham.iginsulation.shopStock.ShopStockListFragment"
+        android:label="ShopStockListFragment" >
+        <action
+            android:id="@+id/action_shopStockListFragment_to_shopStockDetailFragment"
+            app:destination="@id/shopStockDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopStockModifyFragment"
+        android:name="com.shubham.iginsulation.shopStock.ShopStockModifyFragment"
+        android:label="fragment_shop_stock_modify"
+        tools:layout="@layout/fragment_shop_stock_modify" >
+        <action
+            android:id="@+id/action_shopStockModifyFragment_to_shopStockDetailFragment"
+            app:destination="@id/shopStockDetailFragment"
+            app:popUpTo="@id/shopStockListFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopStockTransactionListFragment"
+        android:name="com.shubham.iginsulation.shopStock.ShopStockTransactionListFragment"
+        android:label="fragment_shop_stock_transaction_list"
+        tools:layout="@layout/fragment_shop_stock_transaction_list" >
+        <action
+            android:id="@+id/action_shopStockTransactionListFragment_to_shopStockTransactionDetailFragment"
+            app:destination="@id/shopStockTransactionDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopStockTransactionDetailFragment"
+        android:name="com.shubham.iginsulation.shopStock.ShopStockTransactionDetailFragment"
+        android:label="fragment_shop_stock_transaction_detail"
+        tools:layout="@layout/fragment_shop_stock_transaction_detail" >
+        <action
+            android:id="@+id/action_shopStockTransactionDetailFragment_to_shopStockTransactionModifyFragment"
+            app:destination="@id/shopStockTransactionModifyFragment"
+            app:popUpTo="@id/shopStockListFragment" />
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_shopStockTransactionDetailFragment_to_shopStockTransactionListFragment"
+            app:destination="@id/shopStockTransactionListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopStockTransactionModifyFragment"
+        android:name="com.shubham.iginsulation.shopStock.ShopStockTransactionModifyFragment"
+        android:label="fragment_shop_stock_transaction_modify"
+        tools:layout="@layout/fragment_shop_stock_transaction_modify" >
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_shopStockTransactionModifyFragment_to_shopStockTransactionDetailFragment"
+            app:destination="@id/shopStockTransactionDetailFragment"
+            app:popUpTo="@id/shopStockTransactionListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopStockUpdateFragment"
+        android:name="com.shubham.iginsulation.shopStock.ShopStockUpdateFragment"
+        android:label="fragment_shop_stock_update"
+        tools:layout="@layout/fragment_shop_stock_update" >
+        <action
+            android:id="@+id/action_shopStockUpdateFragment_to_shopStockFragment"
+            app:destination="@id/shopStockFragment" />
+    </fragment>
+</navigation>

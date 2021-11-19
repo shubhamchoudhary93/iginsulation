@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".stock.StockDetailFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/stock_detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="name" />
+
+            <TextView
+                android:id="@+id/stock_detail_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="category" />
+
+            <TextView
+                android:id="@+id/stock_detail_sub_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="subCategory" />
+
+            <TextView
+                android:id="@+id/stock_detail_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="rate" />
+
+            <TextView
+                android:id="@+id/stock_detail_percentage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="percentage" />
+
+            <Button
+                android:id="@+id/stock_detail_modify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="modify" />
+
+            <Button
+                android:id="@+id/stock_detail_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="delete" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".rateList.RateListFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_sleeve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sleeve" />
+
+        <Button
+            android:id="@+id/button_varnish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Varnish" />
+
+        <Button
+            android:id="@+id/button_lead_wire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lead Wire" />
+
+        <Button
+            android:id="@+id/button_glass_tape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Glass Tape" />
+
+        <Button
+            android:id="@+id/button_tax_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tax Rate" />
+    </LinearLayout>
+
+</layout>

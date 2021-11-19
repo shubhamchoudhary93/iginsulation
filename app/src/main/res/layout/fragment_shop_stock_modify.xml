@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".shopStock.ShopStockModifyFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/shop_stock_modify_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="name"
+            android:inputType="textPersonName"
+            android:autofillHints="name" />
+
+        <AutoCompleteTextView
+            android:id="@+id/shop_stock_modify_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="category"
+            android:inputType="textPersonName"
+            android:autofillHints="category" />
+
+        <AutoCompleteTextView
+            android:id="@+id/shop_stock_modify_sub_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="sub category"
+            android:inputType="textPersonName"
+            android:autofillHints="sub category" />
+
+        <EditText
+            android:id="@+id/shop_stock_modify_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="quantity"
+            android:inputType="numberDecimal"
+            android:autofillHints="rate" />
+
+        <EditText
+            android:id="@+id/shop_stock_modify_min_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="min quantity"
+            android:inputType="numberDecimal"
+            android:autofillHints="rate" />
+
+        <EditText
+            android:id="@+id/shop_stock_modify_default_reduce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="default reduce"
+            android:inputType="numberDecimal"
+            android:autofillHints="rate" />
+
+        <EditText
+            android:id="@+id/shop_stock_modify_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="rate"
+            android:inputType="numberDecimal"
+            android:autofillHints="rate" />
+
+        <EditText
+            android:id="@+id/shop_stock_modify_seller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="seller"
+            android:inputType="text"
+            android:autofillHints="percentage" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shop_stock_modify_modify"
+            android:text="modify"/>
+    </LinearLayout>
+    </ScrollView>
+</layout>

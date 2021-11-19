@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".rateList.TaxRateFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="pucca to kachha copnversion" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rate" />
+
+                <EditText
+                    android:id="@+id/tax_first"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="tax_first"
+                    android:text="9" />
+
+                <EditText
+                    android:id="@+id/tax_two"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="tax_two"
+                    android:text="12" />
+
+                <EditText
+                    android:id="@+id/tax_three"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="tax_three"
+                    android:text="15" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/first_rate"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Rate" />
+
+                <TextView
+                    android:id="@+id/first_first"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/first_two"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/first_three"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/second_rate"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Rate" />
+
+                <TextView
+                    android:id="@+id/second_first"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/second_two"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/second_three"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/third_rate"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Rate" />
+
+                <TextView
+                    android:id="@+id/third_first"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/third_two"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/third_three"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/fourth_rate"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Rate" />
+
+                <TextView
+                    android:id="@+id/fourth_first"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/fourth_two"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/fourth_three"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/fifth_rate"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Rate" />
+
+                <TextView
+                    android:id="@+id/fifth_first"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/fifth_two"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/fifth_three"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="kachha to pakka conversion" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/reverse_rate"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Rate" />
+
+                <TextView
+                    android:id="@+id/reverse_value"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
