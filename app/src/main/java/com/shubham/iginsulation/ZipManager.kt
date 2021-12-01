@@ -1,5 +1,6 @@
 package com.shubham.iginsulation
 
+import android.util.Log
 import java.io.*
 import java.util.zip.ZipEntry
 import java.util.zip.ZipInputStream
@@ -35,38 +36,45 @@ object ZipManager {
         }
     }
 
-    @Throws(IOException::class)
     fun unzip(zipFile: String?, location: String) {
         try {
-            val f = File(location)
-            if (!f.isDirectory) {
-                f.mkdirs()
-            }
-            val zIn = ZipInputStream(FileInputStream(zipFile))
-            zIn.use { zIn1 ->
-                var ze: ZipEntry?
-                while (zIn1.nextEntry.also { ze = it } != null) {
-                    val path = location + File.separator.toString() + ze!!.name
-                    if (ze!!.isDirectory) {
-                        val unzipFile = File(path)
-                        if (!unzipFile.isDirectory) {
-                            unzipFile.mkdirs()
-                        }
-                    } else {
-                        val fOut = FileOutputStream(path, false)
-                        fOut.use { fOut1 ->
-                            var c: Int = zIn1.read()
-                            while (c != -1) {
-                                fOut1.write(c)
-                                c = zIn1.read()
-                            }
-                            zIn1.closeEntry()
-                        }
+            val inputStream = FileInputStream(zipFile)
+            val zipStream = ZipInputStream(inputStream)
+            var zEntry: ZipEntry? = null
+            while (zipStream.nextEntry.also { zEntry = it } != null) {
+                Log.d(
+                    "Unzip", "Unzipping " + zEntry!!.name + " at "
+                            + location
+                )
+                if (zEntry!!.isDirectory) {
+                    handleDirectory(zEntry!!.name,location)
+                } else {
+                    val fout = FileOutputStream(
+                        location + "/" + zEntry!!.name
+                    )
+                    val bufout = BufferedOutputStream(fout)
+                    val buffer = ByteArray(1024)
+                    var read = 0
+                    while (zipStream.read(buffer).also { read = it } != -1) {
+                        bufout.write(buffer, 0, read)
                     }
+                    zipStream.closeEntry()
+                    bufout.close()
+                    fout.close()
                 }
             }
-        } catch (e: Exception) {
+            zipStream.close()
+            Log.d("Unzip", "Unzipping complete. path :  $location")
+        } catch (e: java.lang.Exception) {
+            Log.d("Unzip", "Unzipping failed")
             e.printStackTrace()
+        }
+    }
+
+    private fun handleDirectory(dir: String, location: String) {
+        val f = File(location + dir)
+        if (!f.isDirectory) {
+            f.mkdirs()
         }
     }
 }

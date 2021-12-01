@@ -13,9 +13,9 @@ android {
     defaultConfig {
         applicationId "com.shubham.iginsulation"
         minSdkVersion 29
-        targetSdkVersion 31
-        versionCode 101
-        versionName "2.01"
+        targetSdkVersion 29
+        versionCode 102
+        versionName "2.04"
     }
 
     buildTypes {
