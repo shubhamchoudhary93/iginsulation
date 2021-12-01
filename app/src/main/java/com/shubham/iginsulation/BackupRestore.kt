@@ -3,8 +3,6 @@ package com.shubham.iginsulation
 import android.app.ProgressDialog
 import android.content.Context
 import android.net.Uri
-import android.os.Environment
-import android.os.Environment.getExternalStorageDirectory
 import android.widget.Toast
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
@@ -15,33 +13,47 @@ object BackupRestore {
 
     fun backup(context: Context?) {
         try {
-            val f = File(getExternalStorageDirectory().path + "/IGIBackup")
+            val f = File(context?.getExternalFilesDir(null)?.path + "/IGIBackup")
             f.mkdirs()
             val tableNames = listOf(
                 "customer_data_table",
                 "customer_data_table-journal",
+                "customer_data_table-shm",
+                "customer_data_table-wal",
                 "sale_data_table",
                 "sale_data_table-journal",
+                "sale_data_table-shm",
+                "sale_data_table-wal",
                 "sale_details_data_table",
                 "sale_details_data_table-journal",
+                "sale_details_data_table-shm",
+                "sale_details_data_table-wal",
                 "stock_data_table",
                 "stock_data_table-journal",
+                "stock_data_table-shm",
+                "stock_data_table-wal",
                 "shop_stock_data_table",
                 "shop_stock_data_table-journal",
+                "shop_stock_data_table-shm",
+                "shop_stock_data_table-wal",
                 "shop_stock_transaction_data_table",
                 "shop_stock_transaction_data_table-journal",
+                "shop_stock_transaction_data_table-shm",
+                "shop_stock_transaction_data_table-wal",
                 "transaction_data_table",
                 "transaction_data_table-journal",
+                "transaction_data_table-shm",
+                "transaction_data_table-wal",
             )
 
             val backupDBPath =
-                getExternalStorageDirectory().path + "/IGIBackup/"
+                context?.getExternalFilesDir(null)?.path + "/IGIBackup/"
             val s = arrayOfNulls<String>(tableNames.size)
             for ((i, item) in tableNames.withIndex()) {
                 context?.getDatabasePath(item)?.let {
                     copyDataFromOneToAnother(
                         it.path,
-                        getExternalStorageDirectory().path + "/IGIBackup/" + "backup_" + item
+                        context?.getExternalFilesDir(null)?.path + "/IGIBackup/" + "backup_" + item
                     )
                 }
 
@@ -95,7 +107,7 @@ object BackupRestore {
         val storage = FirebaseStorage.getInstance()
         val storageRef = storage.reference
         val riversRef: StorageReference = storageRef.child("igi_backup/igiBackup.zip")
-        val rootPath = File(Environment.getExternalStorageDirectory(), "IGIBackup")
+        val rootPath = File(context?.getExternalFilesDir(null)?.path, "IGIBackup")
         if (!rootPath.exists()) {
             rootPath.mkdirs()
         }
@@ -106,35 +118,48 @@ object BackupRestore {
         riversRef.getFile(localFile)
             .addOnSuccessListener { //if the upload is successfull
                 //hiding the progress dialog
-
-
                 try {
                     val tableNames = listOf(
                         "customer_data_table",
                         "customer_data_table-journal",
+                        "customer_data_table-shm",
+                        "customer_data_table-wal",
                         "sale_data_table",
                         "sale_data_table-journal",
+                        "sale_data_table-shm",
+                        "sale_data_table-wal",
                         "sale_details_data_table",
                         "sale_details_data_table-journal",
+                        "sale_details_data_table-shm",
+                        "sale_details_data_table-wal",
                         "stock_data_table",
                         "stock_data_table-journal",
+                        "stock_data_table-shm",
+                        "stock_data_table-wal",
                         "shop_stock_data_table",
                         "shop_stock_data_table-journal",
+                        "shop_stock_data_table-shm",
+                        "shop_stock_data_table-wal",
                         "shop_stock_transaction_data_table",
                         "shop_stock_transaction_data_table-journal",
+                        "shop_stock_transaction_data_table-shm",
+                        "shop_stock_transaction_data_table-wal",
                         "transaction_data_table",
                         "transaction_data_table-journal",
+                        "transaction_data_table-shm",
+                        "transaction_data_table-wal",
                     )
 
-                    val backupDBPath = getExternalStorageDirectory().path + "/IGIBackup/"
+                    val backupDBPath = context?.getExternalFilesDir(null)?.path + "/IGIBackup/"
 
                     val backupDBFolder = File(backupDBPath)
                     ZipManager.unzip("$backupDBPath/igiBackup.zip", backupDBFolder.path)
 
                     for (item in tableNames) {
+                        println("inside loop")
                         context?.getDatabasePath(item)?.let {
                             copyDataFromOneToAnother(
-                                getExternalStorageDirectory().path + "/IGIBackup/" + "backup_" + item,
+                                context.getExternalFilesDir(null)?.path + "/IGIBackup/" + "backup_" + item,
                                 it.path
                             )
                         }
@@ -169,6 +194,7 @@ object BackupRestore {
         val inStream = File(fromPath).inputStream()
         val outStream = FileOutputStream(toPath)
 
+        println("copying from $fromPath to $toPath")
         inStream.use { input ->
             outStream.use { output ->
                 input.copyTo(output)

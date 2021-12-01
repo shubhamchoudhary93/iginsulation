@@ -42,10 +42,6 @@ object ZipManager {
             val zipStream = ZipInputStream(inputStream)
             var zEntry: ZipEntry? = null
             while (zipStream.nextEntry.also { zEntry = it } != null) {
-                Log.d(
-                    "Unzip", "Unzipping " + zEntry!!.name + " at "
-                            + location
-                )
                 if (zEntry!!.isDirectory) {
                     handleDirectory(zEntry!!.name,location)
                 } else {
@@ -64,9 +60,7 @@ object ZipManager {
                 }
             }
             zipStream.close()
-            Log.d("Unzip", "Unzipping complete. path :  $location")
         } catch (e: java.lang.Exception) {
-            Log.d("Unzip", "Unzipping failed")
             e.printStackTrace()
         }
     }
