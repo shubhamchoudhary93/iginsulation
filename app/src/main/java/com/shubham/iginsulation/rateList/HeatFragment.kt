@@ -4,14 +4,72 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.shubham.iginsulation.IDAssign
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.databinding.FragmentHeatBinding
+import java.math.RoundingMode
+import java.text.DecimalFormat
+import kotlin.math.roundToInt
 
 class HeatFragment : Fragment() {
 
     private lateinit var binding: FragmentHeatBinding
+    private var buttonOneValue = 42F
+    private var buttonTwoValue = 40F
+    private var buttonThreeValue = 35F
+    private var buttonFourValue = 30F
+    private var buttonFiveValue = 25F
+    private var buttonSixValue = 15F
+
+    private var rateList = listOf(
+        6F,
+        5F,
+        2.1F,
+        2.5F,
+        2.9F,
+        3.8F,
+        4.25F,
+        4.6F,
+        5.5F,
+        6.4F,
+        7.3F,
+        7.7F,
+        8.6F,
+        7.5F,
+        7.85F,
+        8.5F,
+        9.3F,
+        10.2F,
+        11F,
+        11.7F,
+        12.5F,
+        14.5F,
+        16.5F,
+        19F,
+        23.75F,
+        25F,
+        31F,
+        37.75F,
+        42.5F,
+        51.5F,
+        54.8F,
+        69.5F,
+        77F,
+        85F,
+        92.5F,
+        123F,
+        157F,
+        175F,
+        225F,
+        285F,
+        375F,
+        470F,
+        650F
+    )
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,179 +81,111 @@ class HeatFragment : Fragment() {
         )
 
         setListeners()
+        IDAssign.assign(binding)
 
         binding.valuesLayout.visibility = View.GONE
+
+        val buttonOneText = "$buttonOneValue%"
+        val buttonTwoText = "$buttonTwoValue%"
+        val buttonThreeText = "$buttonThreeValue%"
+        val buttonFourText = "$buttonFourValue%"
+        val buttonFiveText = "$buttonFiveValue%"
+        val buttonSixText = "$buttonSixValue%"
+
+        binding.buttonOne.text = buttonOneText
+        binding.buttonTwo.text = buttonTwoText
+        binding.buttonThree.text = buttonThreeText
+        binding.buttonFour.text = buttonFourText
+        binding.buttonFive.text = buttonFiveText
+        binding.buttonSix.text = buttonSixText
+
         return binding.root
     }
 
     private fun setListeners() {
+
         binding.buttonOne.setOnClickListener {
             binding.percentageLayout.visibility = View.GONE
             binding.valuesLayout.visibility = View.VISIBLE
-            binding.pointSix.text = String.format("%.4f", (6 * 0.58))
-            binding.pointEight.text = String.format("%.4f", (5 * 0.58))
-            binding.one.text = String.format("%.4f", (2.1 * 0.58))
-            binding.onePointFive.text = String.format("%.4f", (2.5 * 0.58))
-            binding.two.text = String.format("%.4f", (2.9 * 0.58))
-            binding.twoPointFive.text = String.format("%.4f", (3.8 * 0.58))
-            binding.three.text = String.format("%.4f", (4.25 * 0.58))
-            binding.threePointFive.text = String.format("%.4f", (4.6 * 0.58))
-            binding.four.text = String.format("%.4f", (5.5 * 0.58))
-            binding.fourPointFive.text = String.format("%.4f", (6.4 * 0.58))
-            binding.five.text = String.format("%.4f", (7.3 * 0.58))
-            binding.fivePointFive.text = String.format("%.4f", (7.7 * 0.58))
-            binding.six.text = String.format("%.4f", (8.6 * 0.58))
-            binding.seven.text = String.format("%.4f", (7.85 * 0.58))
-            binding.eight.text = String.format("%.4f", (8.5 * 0.58))
-            binding.nine.text = String.format("%.4f", (9.3 * 0.58))
-            binding.ten.text = String.format("%.4f", (10.2 * 0.58))
-            binding.eleven.text = String.format("%.4f", (11 * 0.58))
-            binding.twelve.text = String.format("%.4f", (11.7 * 0.58))
+            binding.headRate.text = buttonOneValue.toString()
+            for (i in 1..42) {
+                val j = 50000 + i
+                val num = rateList[i - 1] * (1 - (buttonOneValue / 100))
+                val df = DecimalFormat("#.###")
+                df.roundingMode = RoundingMode.CEILING
+                binding.root.findViewById<TextView>(j).text =
+                    df.format(num).toString()
+            }
         }
+
         binding.buttonTwo.setOnClickListener {
             binding.percentageLayout.visibility = View.GONE
             binding.valuesLayout.visibility = View.VISIBLE
-            binding.pointSix.text = String.format("%.4f", (6 * 0.6))
-            binding.pointEight.text = String.format("%.4f", (5 * 0.6))
-            binding.one.text = String.format("%.4f", (2.1 * 0.6))
-            binding.onePointFive.text = String.format("%.4f", (2.5 * 0.6))
-            binding.two.text = String.format("%.4f", (2.9 * 0.6))
-            binding.twoPointFive.text = String.format("%.4f", (3.8 * 0.6))
-            binding.three.text = String.format("%.4f", (4.25 * 0.6))
-            binding.threePointFive.text = String.format("%.4f", (4.6 * 0.6))
-            binding.four.text = String.format("%.4f", (5.5 * 0.6))
-            binding.fourPointFive.text = String.format("%.4f", (6.4 * 0.6))
-            binding.five.text = String.format("%.4f", (7.3 * 0.6))
-            binding.fivePointFive.text = String.format("%.4f", (7.7 * 0.6))
-            binding.six.text = String.format("%.4f", (8.6 * 0.6))
-            binding.seven.text = String.format("%.4f", (7.85 * 0.6))
-            binding.eight.text = String.format("%.4f", (8.5 * 0.6))
-            binding.nine.text = String.format("%.4f", (9.3 * 0.6))
-            binding.ten.text = String.format("%.4f", (10.2 * 0.6))
-            binding.eleven.text = String.format("%.4f", (11 * 0.6))
-            binding.twelve.text = String.format("%.4f", (11.7 * 0.6))
+            binding.headRate.text = buttonTwoValue.toString()
+            for (i in 1..42) {
+                val j = 50000 + i
+                binding.root.findViewById<TextView>(j).text =
+                    (rateList[i - 1] * (1 - (buttonTwoValue / 100))).toString()
+            }
         }
+
         binding.buttonThree.setOnClickListener {
             binding.percentageLayout.visibility = View.GONE
             binding.valuesLayout.visibility = View.VISIBLE
-            binding.pointSix.text = String.format("%.4f", (6 * 0.65))
-            binding.pointEight.text = String.format("%.4f", (5 * 0.65))
-            binding.one.text = String.format("%.4f", (2.1 * 0.65))
-            binding.onePointFive.text = String.format("%.4f", (2.5 * 0.65))
-            binding.two.text = String.format("%.4f", (2.9 * 0.65))
-            binding.twoPointFive.text = String.format("%.4f", (3.8 * 0.65))
-            binding.three.text = String.format("%.4f", (4.25 * 0.65))
-            binding.threePointFive.text = String.format("%.4f", (4.6 * 0.65))
-            binding.four.text = String.format("%.4f", (5.5 * 0.65))
-            binding.fourPointFive.text = String.format("%.4f", (6.4 * 0.65))
-            binding.five.text = String.format("%.4f", (7.3 * 0.65))
-            binding.fivePointFive.text = String.format("%.4f", (7.7 * 0.65))
-            binding.six.text = String.format("%.4f", (8.6 * 0.65))
-            binding.seven.text = String.format("%.4f", (7.85 * 0.65))
-            binding.eight.text = String.format("%.4f", (8.5 * 0.65))
-            binding.nine.text = String.format("%.4f", (9.3 * 0.65))
-            binding.ten.text = String.format("%.4f", (10.2 * 0.65))
-            binding.eleven.text = String.format("%.4f", (11 * 0.65))
-            binding.twelve.text = String.format("%.4f", (11.7 * 0.65))
+            binding.headRate.text = buttonThreeValue.toString()
+            for (i in 1..42) {
+                val j = 50000 + i
+                binding.root.findViewById<TextView>(j).text =
+                    (rateList[i - 1] * (1 - (buttonThreeValue / 100))).toString()
+            }
         }
+
         binding.buttonFour.setOnClickListener {
             binding.percentageLayout.visibility = View.GONE
             binding.valuesLayout.visibility = View.VISIBLE
-            binding.pointSix.text = String.format("%.4f", (6 * 0.7))
-            binding.pointEight.text = String.format("%.4f", (5 * 0.7))
-            binding.one.text = String.format("%.4f", (2.1 * 0.7))
-            binding.onePointFive.text = String.format("%.4f", (2.5 * 0.7))
-            binding.two.text = String.format("%.4f", (2.9 * 0.7))
-            binding.twoPointFive.text = String.format("%.4f", (3.8 * 0.7))
-            binding.three.text = String.format("%.4f", (4.25 * 0.7))
-            binding.threePointFive.text = String.format("%.4f", (4.6 * 0.7))
-            binding.four.text = String.format("%.4f", (5.5 * 0.7))
-            binding.fourPointFive.text = String.format("%.4f", (6.4 * 0.7))
-            binding.five.text = String.format("%.4f", (7.3 * 0.7))
-            binding.fivePointFive.text = String.format("%.4f", (7.7 * 0.7))
-            binding.six.text = String.format("%.4f", (8.6 * 0.7))
-            binding.seven.text = String.format("%.4f", (7.85 * 0.7))
-            binding.eight.text = String.format("%.4f", (8.5 * 0.7))
-            binding.nine.text = String.format("%.4f", (9.3 * 0.7))
-            binding.ten.text = String.format("%.4f", (10.2 * 0.7))
-            binding.eleven.text = String.format("%.4f", (11 * 0.7))
-            binding.twelve.text = String.format("%.4f", (11.7 * 0.7))
+            binding.headRate.text = buttonFourValue.toString()
+            for (i in 1..42) {
+                val j = 50000 + i
+                binding.root.findViewById<TextView>(j).text =
+                    (rateList[i - 1] * (1 - (buttonFourValue / 100))).toString()
+            }
         }
+
         binding.buttonFive.setOnClickListener {
             binding.percentageLayout.visibility = View.GONE
             binding.valuesLayout.visibility = View.VISIBLE
-            binding.pointSix.text = String.format("%.4f", (6 * 0.75))
-            binding.pointEight.text = String.format("%.4f", (5 * 0.75))
-            binding.one.text = String.format("%.4f", (2.1 * 0.75))
-            binding.onePointFive.text = String.format("%.4f", (2.5 * 0.75))
-            binding.two.text = String.format("%.4f", (2.9 * 0.75))
-            binding.twoPointFive.text = String.format("%.4f", (3.8 * 0.75))
-            binding.three.text = String.format("%.4f", (4.25 * 0.75))
-            binding.threePointFive.text = String.format("%.4f", (4.6 * 0.75))
-            binding.four.text = String.format("%.4f", (5.5 * 0.75))
-            binding.fourPointFive.text = String.format("%.4f", (6.4 * 0.75))
-            binding.five.text = String.format("%.4f", (7.3 * 0.75))
-            binding.fivePointFive.text = String.format("%.4f", (7.7 * 0.75))
-            binding.six.text = String.format("%.4f", (8.6 * 0.75))
-            binding.seven.text = String.format("%.4f", (7.85 * 0.75))
-            binding.eight.text = String.format("%.4f", (8.5 * 0.75))
-            binding.nine.text = String.format("%.4f", (9.3 * 0.75))
-            binding.ten.text = String.format("%.4f", (10.2 * 0.75))
-            binding.eleven.text = String.format("%.4f", (11 * 0.75))
-            binding.twelve.text = String.format("%.4f", (11.7 * 0.75))
+            binding.headRate.text = buttonFiveValue.toString()
+            for (i in 1..42) {
+                val j = 50000 + i
+                binding.root.findViewById<TextView>(j).text =
+                    (rateList[i - 1] * (1 - (buttonFiveValue / 100))).toString()
+            }
         }
+
         binding.buttonSix.setOnClickListener {
             binding.percentageLayout.visibility = View.GONE
             binding.valuesLayout.visibility = View.VISIBLE
-            binding.pointSix.text = String.format("%.4f", (6 * 0.8))
-            binding.pointEight.text = String.format("%.4f", (5 * 0.8))
-            binding.one.text = String.format("%.4f", (2.1 * 0.8))
-            binding.onePointFive.text = String.format("%.4f", (2.5 * 0.8))
-            binding.two.text = String.format("%.4f", (2.9 * 0.8))
-            binding.twoPointFive.text = String.format("%.4f", (3.8 * 0.8))
-            binding.three.text = String.format("%.4f", (4.25 * 0.8))
-            binding.threePointFive.text = String.format("%.4f", (4.6 * 0.8))
-            binding.four.text = String.format("%.4f", (5.5 * 0.8))
-            binding.fourPointFive.text = String.format("%.4f", (6.4 * 0.8))
-            binding.five.text = String.format("%.4f", (7.3 * 0.8))
-            binding.fivePointFive.text = String.format("%.4f", (7.7 * 0.8))
-            binding.six.text = String.format("%.4f", (8.6 * 0.8))
-            binding.seven.text = String.format("%.4f", (7.85 * 0.8))
-            binding.eight.text = String.format("%.4f", (8.5 * 0.8))
-            binding.nine.text = String.format("%.4f", (9.3 * 0.8))
-            binding.ten.text = String.format("%.4f", (10.2 * 0.8))
-            binding.eleven.text = String.format("%.4f", (11 * 0.8))
-            binding.twelve.text = String.format("%.4f", (11.7 * 0.8))
+            binding.headRate.text = buttonSixValue.toString()
+            for (i in 1..42) {
+                val j = 50000 + i
+                binding.root.findViewById<TextView>(j).text =
+                    (rateList[i - 1] * (1 - (buttonSixValue / 100))).toString()
+            }
         }
+
         binding.buttonGo.setOnClickListener {
             binding.percentageLayout.visibility = View.GONE
             binding.valuesLayout.visibility = View.VISIBLE
 
-            var perc = binding.percentage.text.toString().toFloatOrNull()
+            val perc = binding.percentage.text.toString().toFloatOrNull()
+            binding.headRate.text = perc.toString()
             if (perc != null) {
-                perc = 1f - perc / 100
-                binding.pointSix.text = String.format("%.4f", (6 * perc))
-                binding.pointEight.text = String.format("%.4f", (5 * perc))
-                binding.one.text = String.format("%.4f", (2.1 * perc))
-                binding.onePointFive.text = String.format("%.4f", (2.5 * perc))
-                binding.two.text = String.format("%.4f", (2.9 * perc))
-                binding.twoPointFive.text = String.format("%.4f", (3.8 * perc))
-                binding.three.text = String.format("%.4f", (4.25 * perc))
-                binding.threePointFive.text = String.format("%.4f", (4.6 * perc))
-                binding.four.text = String.format("%.4f", (5.5 * perc))
-                binding.fourPointFive.text = String.format("%.4f", (6.4 * perc))
-                binding.five.text = String.format("%.4f", (7.3 * perc))
-                binding.fivePointFive.text = String.format("%.4f", (7.7 * perc))
-                binding.six.text = String.format("%.4f", (8.6 * perc))
-                binding.seven.text = String.format("%.4f", (7.85 * perc))
-                binding.eight.text = String.format("%.4f", (8.5 * perc))
-                binding.nine.text = String.format("%.4f", (9.3 * perc))
-                binding.ten.text = String.format("%.4f", (10.2 * perc))
-                binding.eleven.text = String.format("%.4f", (11 * perc))
-                binding.twelve.text = String.format("%.4f", (11.7 * perc))
+                for (i in 1..42) {
+                    val j = 50000 + i
+                    binding.root.findViewById<TextView>(j).text =
+                        (rateList[i - 1] * (1 - (perc / 100))).toString()
+                }
             }
         }
-
-
     }
 }

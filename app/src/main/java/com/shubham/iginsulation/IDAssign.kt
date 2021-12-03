@@ -1,6 +1,7 @@
 package com.shubham.iginsulation
 
 import com.shubham.iginsulation.databinding.FragmentBClassBinding
+import com.shubham.iginsulation.databinding.FragmentHeatBinding
 import com.shubham.iginsulation.databinding.FragmentSaleDetailBinding
 import com.shubham.iginsulation.databinding.FragmentSaleNewBinding
 
@@ -22,6 +23,52 @@ object IDAssign {
         40013.also { binding.twelvePacket.id = it }
         40014.also { binding.sixteen.id = it }
         40015.also { binding.sixteenPacket.id = it }
+    }
+
+    fun assign(binding: FragmentHeatBinding) {
+        50001.also { binding.pointSix.id = it }
+        50002.also { binding.pointEight.id = it }
+        50003.also { binding.one.id = it }
+        50004.also { binding.onePointFive.id = it }
+        50005.also { binding.two.id = it }
+        50006.also { binding.twoPointFive.id = it }
+        50007.also { binding.three.id = it }
+        50008.also { binding.threePointFive.id = it }
+        50009.also { binding.four.id = it }
+        50010.also { binding.fourPointFive.id = it }
+        50011.also { binding.five.id = it }
+        50012.also { binding.fivePointFive.id = it }
+        50013.also { binding.sixRound.id = it }
+        50014.also { binding.sixFlat.id = it }
+        50015.also { binding.seven.id = it }
+        50016.also { binding.eight.id = it }
+        50017.also { binding.nine.id = it }
+        50018.also { binding.ten.id = it }
+        50019.also { binding.eleven.id = it }
+        50020.also { binding.twelve.id = it }
+        50021.also { binding.thirteen.id = it }
+        50022.also { binding.fourteen.id = it }
+        50023.also { binding.fifteen.id = it }
+        50024.also { binding.sixteen.id = it }
+        50025.also { binding.seventeen.id = it }
+        50026.also { binding.eighteen.id = it }
+        50027.also { binding.twenty.id = it }
+        50028.also { binding.twentyTwo.id = it }
+        50029.also { binding.twentyFive.id = it }
+        50030.also { binding.twentyEight.id = it }
+        50031.also { binding.thirty.id = it }
+        50032.also { binding.thirtyFive.id = it }
+        50033.also { binding.forty.id = it }
+        50034.also { binding.fortyFive.id = it }
+        50035.also { binding.fifty.id = it }
+        50036.also { binding.sixty.id = it }
+        50037.also { binding.seventy.id = it }
+        50038.also { binding.eighty.id = it }
+        50039.also { binding.ninety.id = it }
+        50040.also { binding.hundred.id = it }
+        50041.also { binding.oneTwenty.id = it }
+        50042.also { binding.oneFifty.id = it }
+        50043.also { binding.oneEighty.id = it }
     }
 
     fun assign(binding: FragmentSaleNewBinding) {

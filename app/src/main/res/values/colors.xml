@@ -7,4 +7,5 @@
     <color name="green">#00FF00</color>
     <color name="button_select">#009688</color>
     <color name="button_not_select">#CFD3AA</color>
+    <color name="grey">#81877E</color>
 </resources>
