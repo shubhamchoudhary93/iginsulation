@@ -31,6 +31,9 @@ interface ShopStockDatabaseDao {
     @Query("SELECT * from shop_stock_data_table ORDER BY name")
     fun getList(): List<ShopStock>
 
+    @Query("SELECT * from shop_stock_data_table WHERE sub_category = :filter ORDER BY name")
+    fun getListByFilter(filter: String): List<ShopStock>
+
     @Query("SELECT DISTINCT name from shop_stock_data_table ORDER BY name")
     fun getShopStockNames(): List<String>
 

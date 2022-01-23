@@ -7,9 +7,18 @@
         android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:orientation="vertical">
+
+        <AutoCompleteTextView
+            android:id="@+id/category_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints="name"
+            android:ems="10"
+            android:hint="Category"
+            android:inputType="textPersonName" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,16 +26,14 @@
             android:orientation="horizontal">
 
             <TextView
-                style="@style/list_column_one"
-                android:text="Name"/>
+                style="@style/list_shop_stock_column_one"
+                android:text="Name"
+                android:textSize="30sp"/>
 
             <TextView
-                style="@style/list_column_two"
-                android:text="Cat"/>
-
-            <TextView
-                style="@style/list_column_two"
-                android:text="Quantity"/>
+                style="@style/list_shop_stock_column_two"
+                android:text="Quantity"
+                android:textSize="30sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -37,15 +44,11 @@
 
             <TextView
                 android:id="@+id/shop_stock_one_name"
-                style="@style/list_column_one"/>
-
-            <TextView
-                android:id="@+id/shop_stock_one_category"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_one"/>
 
             <TextView
                 android:id="@+id/shop_stock_one_quantity"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -56,15 +59,11 @@
 
             <TextView
                 android:id="@+id/shop_stock_two_name"
-                style="@style/list_column_one"/>
-
-            <TextView
-                android:id="@+id/shop_stock_two_category"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_one"/>
 
             <TextView
                 android:id="@+id/shop_stock_two_quantity"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -75,15 +74,11 @@
 
             <TextView
                 android:id="@+id/shop_stock_three_name"
-                style="@style/list_column_one"/>
-
-            <TextView
-                android:id="@+id/shop_stock_three_category"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_one"/>
 
             <TextView
                 android:id="@+id/shop_stock_three_quantity"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -94,15 +89,11 @@
 
             <TextView
                 android:id="@+id/shop_stock_four_name"
-                style="@style/list_column_one"/>
-
-            <TextView
-                android:id="@+id/shop_stock_four_category"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_one"/>
 
             <TextView
                 android:id="@+id/shop_stock_four_quantity"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -113,15 +104,11 @@
 
             <TextView
                 android:id="@+id/shop_stock_five_name"
-                style="@style/list_column_one"/>
-
-            <TextView
-                android:id="@+id/shop_stock_five_category"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_one"/>
 
             <TextView
                 android:id="@+id/shop_stock_five_quantity"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -132,15 +119,11 @@
 
             <TextView
                 android:id="@+id/shop_stock_six_name"
-                style="@style/list_column_one"/>
-
-            <TextView
-                android:id="@+id/shop_stock_six_category"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_one"/>
 
             <TextView
                 android:id="@+id/shop_stock_six_quantity"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -151,15 +134,11 @@
 
             <TextView
                 android:id="@+id/shop_stock_seven_name"
-                style="@style/list_column_one"/>
-
-            <TextView
-                android:id="@+id/shop_stock_seven_category"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_one"/>
 
             <TextView
                 android:id="@+id/shop_stock_seven_quantity"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -170,15 +149,11 @@
 
             <TextView
                 android:id="@+id/shop_stock_eight_name"
-                style="@style/list_column_one"/>
-
-            <TextView
-                android:id="@+id/shop_stock_eight_category"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_one"/>
 
             <TextView
                 android:id="@+id/shop_stock_eight_quantity"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -189,15 +164,11 @@
 
             <TextView
                 android:id="@+id/shop_stock_nine_name"
-                style="@style/list_column_one"/>
-
-            <TextView
-                android:id="@+id/shop_stock_nine_category"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_one"/>
 
             <TextView
                 android:id="@+id/shop_stock_nine_quantity"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -208,15 +179,11 @@
 
             <TextView
                 android:id="@+id/shop_stock_ten_name"
-                style="@style/list_column_one"/>
-
-            <TextView
-                android:id="@+id/shop_stock_ten_category"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_one"/>
 
             <TextView
                 android:id="@+id/shop_stock_ten_quantity"
-                style="@style/list_column_two"/>
+                style="@style/list_shop_stock_column_two"/>
         </LinearLayout>
 
         <LinearLayout

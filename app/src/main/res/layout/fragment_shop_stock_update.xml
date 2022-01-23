@@ -13,21 +13,26 @@
             android:layout_margin="20dp"
             android:orientation="vertical">
 
+            <AutoCompleteTextView
+                android:id="@+id/category_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="name"
+                android:ems="10"
+                android:hint="Category"
+                android:inputType="textPersonName" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/list_column_one"
+                    style="@style/list_shop_stock_column_one"
                     android:text="Name" />
 
                 <TextView
-                    style="@style/list_column_two"
-                    android:text="Cat" />
-
-                <TextView
-                    style="@style/list_column_two"
+                    style="@style/list_shop_stock_column_two"
                     android:text="Quantity" />
             </LinearLayout>
 
@@ -39,15 +44,11 @@
 
                 <TextView
                     android:id="@+id/shop_stock_update_one_name"
-                    style="@style/list_column_one" />
-
-                <TextView
-                    android:id="@+id/shop_stock_update_one_sub_category"
-                    style="@style/list_column_two" />
+                    style="@style/list_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_one_quantity"
-                    style="@style/list_column_two"
+                    style="@style/list_shop_stock_column_two"
                     android:imeOptions="actionNext"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
@@ -62,15 +63,11 @@
 
                 <TextView
                     android:id="@+id/shop_stock_update_two_name"
-                    style="@style/list_column_one" />
-
-                <TextView
-                    android:id="@+id/shop_stock_update_two_sub_category"
-                    style="@style/list_column_two" />
+                    style="@style/list_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_two_quantity"
-                    style="@style/list_column_two"
+                    style="@style/list_shop_stock_column_two"
                     android:imeOptions="actionNext"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
@@ -85,15 +82,11 @@
 
                 <TextView
                     android:id="@+id/shop_stock_update_three_name"
-                    style="@style/list_column_one" />
-
-                <TextView
-                    android:id="@+id/shop_stock_update_three_sub_category"
-                    style="@style/list_column_two" />
+                    style="@style/list_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_three_quantity"
-                    style="@style/list_column_two"
+                    style="@style/list_shop_stock_column_two"
                     android:imeOptions="actionNext"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
@@ -108,15 +101,11 @@
 
                 <TextView
                     android:id="@+id/shop_stock_update_four_name"
-                    style="@style/list_column_one" />
-
-                <TextView
-                    android:id="@+id/shop_stock_update_four_sub_category"
-                    style="@style/list_column_two" />
+                    style="@style/list_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_four_quantity"
-                    style="@style/list_column_two"
+                    style="@style/list_shop_stock_column_two"
                     android:imeOptions="actionNext"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
@@ -131,15 +120,11 @@
 
                 <TextView
                     android:id="@+id/shop_stock_update_five_name"
-                    style="@style/list_column_one" />
-
-                <TextView
-                    android:id="@+id/shop_stock_update_five_sub_category"
-                    style="@style/list_column_two" />
+                    style="@style/list_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_five_quantity"
-                    style="@style/list_column_two"
+                    style="@style/list_shop_stock_column_two"
                     android:imeOptions="actionNext"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
@@ -154,15 +139,11 @@
 
                 <TextView
                     android:id="@+id/shop_stock_update_six_name"
-                    style="@style/list_column_one" />
-
-                <TextView
-                    android:id="@+id/shop_stock_update_six_sub_category"
-                    style="@style/list_column_two" />
+                    style="@style/list_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_six_quantity"
-                    style="@style/list_column_two"
+                    style="@style/list_shop_stock_column_two"
                     android:imeOptions="actionNext"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
@@ -177,15 +158,11 @@
 
                 <TextView
                     android:id="@+id/shop_stock_update_seven_name"
-                    style="@style/list_column_one" />
-
-                <TextView
-                    android:id="@+id/shop_stock_update_seven_sub_category"
-                    style="@style/list_column_two" />
+                    style="@style/list_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_seven_quantity"
-                    style="@style/list_column_two"
+                    style="@style/list_shop_stock_column_two"
                     android:imeOptions="actionNext"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
@@ -200,15 +177,11 @@
 
                 <TextView
                     android:id="@+id/shop_stock_update_eight_name"
-                    style="@style/list_column_one" />
-
-                <TextView
-                    android:id="@+id/shop_stock_update_eight_sub_category"
-                    style="@style/list_column_two" />
+                    style="@style/list_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_eight_quantity"
-                    style="@style/list_column_two"
+                    style="@style/list_shop_stock_column_two"
                     android:imeOptions="actionNext"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
@@ -223,15 +196,11 @@
 
                 <TextView
                     android:id="@+id/shop_stock_update_nine_name"
-                    style="@style/list_column_one" />
-
-                <TextView
-                    android:id="@+id/shop_stock_update_nine_sub_category"
-                    style="@style/list_column_two" />
+                    style="@style/list_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_nine_quantity"
-                    style="@style/list_column_two"
+                    style="@style/list_shop_stock_column_two"
                     android:imeOptions="actionNext"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
@@ -246,15 +215,11 @@
 
                 <TextView
                     android:id="@+id/shop_stock_update_ten_name"
-                    style="@style/list_column_one" />
-
-                <TextView
-                    android:id="@+id/shop_stock_update_ten_sub_category"
-                    style="@style/list_column_two" />
+                    style="@style/list_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_ten_quantity"
-                    style="@style/list_column_two"
+                    style="@style/list_shop_stock_column_two"
                     android:imeOptions="actionNext"
                     android:inputType="numberDecimal"
                     android:maxLines="1"

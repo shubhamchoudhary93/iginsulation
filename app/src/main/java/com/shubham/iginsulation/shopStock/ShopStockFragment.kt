@@ -72,26 +72,26 @@ class ShopStockFragment : Fragment() {
             val quantity = binding.shopStockQuantity.text.toString()
             if (stock != null) {
                 if (quantity.toIntOrNull() == null) {
-                    Toast.makeText(context, "percentage should be numeric", Toast.LENGTH_SHORT)
+                    Toast.makeText(context, "quantity should be numeric", Toast.LENGTH_SHORT)
                         .show()
                 } else {
                     stock.quantity += quantity.toInt()
                     shopStockDatabase.update(stock)
                     binding.shopStockQuantityShow.text = stock.quantity.toString()
+                    val date = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).format(Date())
+                    shopStockTransactionDatabase.insert(
+                        ShopStockTransaction(
+                            0L, true, name, if (quantity == "")
+                                0
+                            else
+                                quantity.toInt(), date, ""
+                        )
+                    )
                 }
             }
-
-            val date = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).format(Date())
-            shopStockTransactionDatabase.insert(
-                ShopStockTransaction(
-                    0L, true, name, if (quantity == "")
-                        0
-                    else
-                        quantity.toInt(), date, ""
-                )
-            )
+            binding.shopStockName.setText("")
+            binding.shopStockQuantity.setText("")
             fetchAdaptor()
-
         }
 
         binding.shopStockMinus.setOnClickListener {
@@ -101,25 +101,26 @@ class ShopStockFragment : Fragment() {
             val quantity = binding.shopStockQuantity.text.toString()
             if (stock != null) {
                 if (quantity.toIntOrNull() == null) {
-                    Toast.makeText(context, "percentage should be numeric", Toast.LENGTH_SHORT)
+                    Toast.makeText(context, "quantity should be numeric", Toast.LENGTH_SHORT)
                         .show()
                 } else {
                     stock.quantity -= quantity.toInt()
                     shopStockDatabase.update(stock)
                     binding.shopStockQuantityShow.text = stock.quantity.toString()
+                    val date = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).format(Date())
+                    shopStockTransactionDatabase.insert(
+                        ShopStockTransaction(
+                            0L, false, name, if (quantity == "")
+                                0
+                            else
+                                quantity.toInt(), date, ""
+                        )
+                    )
                 }
             }
 
-            val date = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).format(Date())
-            shopStockTransactionDatabase.insert(
-                ShopStockTransaction(
-                    0L, false, name, if (quantity == "")
-                        0
-                    else
-                        quantity.toInt(), date, ""
-                )
-            )
-
+            binding.shopStockName.setText("")
+            binding.shopStockQuantity.setText("")
             fetchAdaptor()
         }
 

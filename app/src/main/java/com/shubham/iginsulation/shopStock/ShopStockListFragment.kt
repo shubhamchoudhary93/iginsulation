@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -21,6 +22,7 @@ class ShopStockListFragment : Fragment() {
     private var currentPage = 1
     private var totalPage = 1
     private lateinit var shopStockList: List<ShopStock>
+    private lateinit var shopStockListFilter: List<ShopStock>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,12 +50,29 @@ class ShopStockListFragment : Fragment() {
 
         fetchShopStockList()
 
+        val category = shopStockDatabase.getAllSubCategory()
+        val adapterStock: ArrayAdapter<String> = ArrayAdapter<String>(
+            this.requireContext(),
+            android.R.layout.simple_list_item_1,
+            category
+        )
+        binding.categoryFilter.threshold = 1
+        binding.categoryFilter.setAdapter(adapterStock)
+
+        binding.categoryFilter.setOnItemClickListener { parent, _, position, _ ->
+            val selectedItem = parent.getItemAtPosition(position).toString()
+            currentPage = 1
+            shopStockListFilter = shopStockDatabase.getListByFilter(selectedItem)
+            setShopStockData()
+        }
+
         return binding.root
     }
 
     private fun fetchShopStockList() {
         try {
             shopStockList = shopStockDatabase.getList()
+            shopStockListFilter = shopStockList
             setShopStockData()
         } catch (e: Exception) {
             e.printStackTrace()
@@ -62,8 +81,8 @@ class ShopStockListFragment : Fragment() {
 
     private fun setShopStockData() {
         //calculating number of pages
-        totalPage = shopStockList.size / 10
-        if (shopStockList.size % 10 > 0)
+        totalPage = shopStockListFilter.size / 10
+        if (shopStockListFilter.size % 10 > 0)
             totalPage += 1
 
         binding.page.text = currentPage.toString()
@@ -97,19 +116,18 @@ class ShopStockListFragment : Fragment() {
         val numberOfItems: Int = if (totalPage > currentPage)
             10
         else
-            shopStockList.size % 10
+            shopStockListFilter.size % 10
 
         if (numberOfItems > 0) {
             binding.shopStockOne.visibility = View.VISIBLE
-            binding.shopStockOneName.text = shopStockList[startingIndex].name
-            binding.shopStockOneCategory.text = shopStockList[startingIndex].category
-            binding.shopStockOneQuantity.text = shopStockList[startingIndex].quantity.toString()
-            if (shopStockList[startingIndex].quantity <= shopStockList[startingIndex].minQuantity) {
+            binding.shopStockOneName.text = shopStockListFilter[startingIndex].name
+            binding.shopStockOneQuantity.text = shopStockListFilter[startingIndex].quantity.toString()
+            if (shopStockListFilter[startingIndex].quantity <= shopStockListFilter[startingIndex].minQuantity) {
                 binding.shopStockOneQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
                 binding.shopStockOneQuantity.setTextColor(Color.parseColor("#FFFFFF"))
             }
-            if (shopStockList[startingIndex].quantity <= shopStockList[startingIndex].minQuantity) {
+            if (shopStockListFilter[startingIndex].quantity <= shopStockListFilter[startingIndex].minQuantity) {
                 binding.shopStockOneQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
                 binding.shopStockOneQuantity.setTextColor(Color.parseColor("#FFFFFF"))
@@ -117,7 +135,7 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockOne.setOnClickListener {
                 view?.findNavController()?.navigate(
                     ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockList[startingIndex].id
+                        shopStockListFilter[startingIndex].id
                     )
                 )
             }
@@ -125,10 +143,9 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockOne.visibility = View.GONE
         if (numberOfItems > 1) {
             binding.shopStockTwo.visibility = View.VISIBLE
-            binding.shopStockTwoName.text = shopStockList[startingIndex + 1].name
-            binding.shopStockTwoCategory.text = shopStockList[startingIndex + 1].category
-            binding.shopStockTwoQuantity.text = shopStockList[startingIndex + 1].quantity.toString()
-            if (shopStockList[startingIndex + 1].quantity <= shopStockList[startingIndex + 1].minQuantity) {
+            binding.shopStockTwoName.text = shopStockListFilter[startingIndex + 1].name
+            binding.shopStockTwoQuantity.text = shopStockListFilter[startingIndex + 1].quantity.toString()
+            if (shopStockListFilter[startingIndex + 1].quantity <= shopStockListFilter[startingIndex + 1].minQuantity) {
                 binding.shopStockTwoQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
                 binding.shopStockTwoQuantity.setTextColor(Color.parseColor("#FFFFFF"))
@@ -136,7 +153,7 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockTwo.setOnClickListener {
                 view?.findNavController()?.navigate(
                     ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockList[startingIndex + 1].id
+                        shopStockListFilter[startingIndex + 1].id
                     )
                 )
             }
@@ -144,11 +161,10 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockTwo.visibility = View.GONE
         if (numberOfItems > 2) {
             binding.shopStockThree.visibility = View.VISIBLE
-            binding.shopStockThreeName.text = shopStockList[startingIndex + 2].name
-            binding.shopStockThreeCategory.text = shopStockList[startingIndex + 2].category
+            binding.shopStockThreeName.text = shopStockListFilter[startingIndex + 2].name
             binding.shopStockThreeQuantity.text =
-                shopStockList[startingIndex + 2].quantity.toString()
-            if (shopStockList[startingIndex + 2].quantity <= shopStockList[startingIndex + 2].minQuantity) {
+                shopStockListFilter[startingIndex + 2].quantity.toString()
+            if (shopStockListFilter[startingIndex + 2].quantity <= shopStockListFilter[startingIndex + 2].minQuantity) {
                 binding.shopStockThreeQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
                 binding.shopStockThreeQuantity.setTextColor(Color.parseColor("#FFFFFF"))
@@ -156,7 +172,7 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockThree.setOnClickListener {
                 view?.findNavController()?.navigate(
                     ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockList[startingIndex + 2].id
+                        shopStockListFilter[startingIndex + 2].id
                     )
                 )
             }
@@ -164,11 +180,10 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockThree.visibility = View.GONE
         if (numberOfItems > 3) {
             binding.shopStockFour.visibility = View.VISIBLE
-            binding.shopStockFourName.text = shopStockList[startingIndex + 3].name
-            binding.shopStockFourCategory.text = shopStockList[startingIndex + 3].category
+            binding.shopStockFourName.text = shopStockListFilter[startingIndex + 3].name
             binding.shopStockFourQuantity.text =
-                shopStockList[startingIndex + 3].quantity.toString()
-            if (shopStockList[startingIndex + 3].quantity <= shopStockList[startingIndex + 3].minQuantity) {
+                shopStockListFilter[startingIndex + 3].quantity.toString()
+            if (shopStockListFilter[startingIndex + 3].quantity <= shopStockListFilter[startingIndex + 3].minQuantity) {
                 binding.shopStockFourQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
                 binding.shopStockFourQuantity.setTextColor(Color.parseColor("#FFFFFF"))
@@ -176,7 +191,7 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockFour.setOnClickListener {
                 view?.findNavController()?.navigate(
                     ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockList[startingIndex + 3].id
+                        shopStockListFilter[startingIndex + 3].id
                     )
                 )
             }
@@ -184,11 +199,10 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockFour.visibility = View.GONE
         if (numberOfItems > 4) {
             binding.shopStockFive.visibility = View.VISIBLE
-            binding.shopStockFiveName.text = shopStockList[startingIndex + 4].name
-            binding.shopStockFiveCategory.text = shopStockList[startingIndex + 4].category
+            binding.shopStockFiveName.text = shopStockListFilter[startingIndex + 4].name
             binding.shopStockFiveQuantity.text =
-                shopStockList[startingIndex + 4].quantity.toString()
-            if (shopStockList[startingIndex + 4].quantity <= shopStockList[startingIndex + 4].minQuantity) {
+                shopStockListFilter[startingIndex + 4].quantity.toString()
+            if (shopStockListFilter[startingIndex + 4].quantity <= shopStockListFilter[startingIndex + 4].minQuantity) {
                 binding.shopStockFiveQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
                 binding.shopStockFiveQuantity.setTextColor(Color.parseColor("#FFFFFF"))
@@ -196,7 +210,7 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockFive.setOnClickListener {
                 view?.findNavController()?.navigate(
                     ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockList[startingIndex + 4].id
+                        shopStockListFilter[startingIndex + 4].id
                     )
                 )
             }
@@ -204,10 +218,9 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockFive.visibility = View.GONE
         if (numberOfItems > 5) {
             binding.shopStockSix.visibility = View.VISIBLE
-            binding.shopStockSixName.text = shopStockList[startingIndex + 5].name
-            binding.shopStockSixCategory.text = shopStockList[startingIndex + 5].category
-            binding.shopStockSixQuantity.text = shopStockList[startingIndex + 5].quantity.toString()
-            if (shopStockList[startingIndex + 5].quantity <= shopStockList[startingIndex + 5].minQuantity) {
+            binding.shopStockSixName.text = shopStockListFilter[startingIndex + 5].name
+            binding.shopStockSixQuantity.text = shopStockListFilter[startingIndex + 5].quantity.toString()
+            if (shopStockListFilter[startingIndex + 5].quantity <= shopStockListFilter[startingIndex + 5].minQuantity) {
                 binding.shopStockSixQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
                 binding.shopStockSixQuantity.setTextColor(Color.parseColor("#FFFFFF"))
@@ -215,7 +228,7 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockSix.setOnClickListener {
                 view?.findNavController()?.navigate(
                     ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockList[startingIndex + 5].id
+                        shopStockListFilter[startingIndex + 5].id
                     )
                 )
             }
@@ -223,11 +236,10 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockSix.visibility = View.GONE
         if (numberOfItems > 6) {
             binding.shopStockSeven.visibility = View.VISIBLE
-            binding.shopStockSevenName.text = shopStockList[startingIndex + 6].name
-            binding.shopStockSevenCategory.text = shopStockList[startingIndex + 6].category
+            binding.shopStockSevenName.text = shopStockListFilter[startingIndex + 6].name
             binding.shopStockSevenQuantity.text =
-                shopStockList[startingIndex + 6].quantity.toString()
-            if (shopStockList[startingIndex + 6].quantity <= shopStockList[startingIndex + 6].minQuantity) {
+                shopStockListFilter[startingIndex + 6].quantity.toString()
+            if (shopStockListFilter[startingIndex + 6].quantity <= shopStockListFilter[startingIndex + 6].minQuantity) {
                 binding.shopStockSevenQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
                 binding.shopStockSevenQuantity.setTextColor(Color.parseColor("#FFFFFF"))
@@ -235,7 +247,7 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockSeven.setOnClickListener {
                 view?.findNavController()?.navigate(
                     ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockList[startingIndex + 6].id
+                        shopStockListFilter[startingIndex + 6].id
                     )
                 )
             }
@@ -243,11 +255,10 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockSeven.visibility = View.GONE
         if (numberOfItems > 7) {
             binding.shopStockEight.visibility = View.VISIBLE
-            binding.shopStockEightName.text = shopStockList[startingIndex + 7].name
-            binding.shopStockEightCategory.text = shopStockList[startingIndex + 7].category
+            binding.shopStockEightName.text = shopStockListFilter[startingIndex + 7].name
             binding.shopStockEightQuantity.text =
-                shopStockList[startingIndex + 7].quantity.toString()
-            if (shopStockList[startingIndex + 7].quantity <= shopStockList[startingIndex + 7].minQuantity) {
+                shopStockListFilter[startingIndex + 7].quantity.toString()
+            if (shopStockListFilter[startingIndex + 7].quantity <= shopStockListFilter[startingIndex + 7].minQuantity) {
                 binding.shopStockEightQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
                 binding.shopStockEightQuantity.setTextColor(Color.parseColor("#FFFFFF"))
@@ -255,7 +266,7 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockEight.setOnClickListener {
                 view?.findNavController()?.navigate(
                     ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockList[startingIndex + 7].id
+                        shopStockListFilter[startingIndex + 7].id
                     )
                 )
             }
@@ -263,11 +274,10 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockEight.visibility = View.GONE
         if (numberOfItems > 8) {
             binding.shopStockNine.visibility = View.VISIBLE
-            binding.shopStockNineName.text = shopStockList[startingIndex + 8].name
-            binding.shopStockNineCategory.text = shopStockList[startingIndex + 8].category
+            binding.shopStockNineName.text = shopStockListFilter[startingIndex + 8].name
             binding.shopStockNineQuantity.text =
-                shopStockList[startingIndex + 8].quantity.toString()
-            if (shopStockList[startingIndex + 8].quantity <= shopStockList[startingIndex + 8].minQuantity) {
+                shopStockListFilter[startingIndex + 8].quantity.toString()
+            if (shopStockListFilter[startingIndex + 8].quantity <= shopStockListFilter[startingIndex + 8].minQuantity) {
                 binding.shopStockNineQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
                 binding.shopStockNineQuantity.setTextColor(Color.parseColor("#FFFFFF"))
@@ -275,7 +285,7 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockNine.setOnClickListener {
                 view?.findNavController()?.navigate(
                     ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockList[startingIndex + 8].id
+                        shopStockListFilter[startingIndex + 8].id
                     )
                 )
             }
@@ -283,10 +293,9 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockNine.visibility = View.GONE
         if (numberOfItems > 9) {
             binding.shopStockTen.visibility = View.VISIBLE
-            binding.shopStockTenName.text = shopStockList[startingIndex + 9].name
-            binding.shopStockTenCategory.text = shopStockList[startingIndex + 9].category
-            binding.shopStockTenQuantity.text = shopStockList[startingIndex + 9].quantity.toString()
-            if (shopStockList[startingIndex + 9].quantity <= shopStockList[startingIndex + 9].minQuantity) {
+            binding.shopStockTenName.text = shopStockListFilter[startingIndex + 9].name
+            binding.shopStockTenQuantity.text = shopStockListFilter[startingIndex + 9].quantity.toString()
+            if (shopStockListFilter[startingIndex + 9].quantity <= shopStockListFilter[startingIndex + 9].minQuantity) {
                 binding.shopStockTenQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
                 binding.shopStockTenQuantity.setTextColor(Color.parseColor("#FFFFFF"))
@@ -294,7 +303,7 @@ class ShopStockListFragment : Fragment() {
             binding.shopStockTen.setOnClickListener {
                 view?.findNavController()?.navigate(
                     ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockList[startingIndex + 9].id
+                        shopStockListFilter[startingIndex + 9].id
                     )
                 )
             }

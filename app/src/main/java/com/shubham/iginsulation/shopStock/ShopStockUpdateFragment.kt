@@ -1,13 +1,12 @@
 package com.shubham.iginsulation.shopStock
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.shopstock.ShopStock
 import com.shubham.iginsulation.database.shopstock.ShopStockDatabase
@@ -47,6 +46,22 @@ class ShopStockUpdateFragment : Fragment() {
         binding.buttonPreviousPage.visibility = View.GONE
 
         fetchShopStockList()
+
+        val category = shopStockDatabase.getAllSubCategory()
+        val adapterStock: ArrayAdapter<String> = ArrayAdapter<String>(
+            this.requireContext(),
+            android.R.layout.simple_list_item_1,
+            category
+        )
+        binding.categoryFilter.threshold = 1
+        binding.categoryFilter.setAdapter(adapterStock)
+
+        binding.categoryFilter.setOnItemClickListener { parent, _, position, _ ->
+            val selectedItem = parent.getItemAtPosition(position).toString()
+            currentPage = 1
+            shopStockUpdateList = shopStockDatabase.getListByFilter(selectedItem)
+            setShopStockData()
+        }
 
         return binding.root
     }
@@ -106,196 +121,61 @@ class ShopStockUpdateFragment : Fragment() {
         if (numberOfItems > 0) {
             binding.shopStockUpdateOne.visibility = View.VISIBLE
             binding.shopStockUpdateOneName.text = shopStockUpdateList[startingIndex].name
-            binding.shopStockUpdateOneSubCategory.text = shopStockUpdateList[startingIndex].subCategory
             binding.shopStockUpdateOneQuantity.setText(shopStockUpdateList[startingIndex].quantity.toString())
-            if (shopStockUpdateList[startingIndex].quantity <= shopStockUpdateList[startingIndex].minQuantity) {
-                binding.shopStockUpdateOneQuantity.setTextColor(Color.parseColor("#FF0000"))
-            } else {
-                binding.shopStockUpdateOneQuantity.setTextColor(Color.parseColor("#FFFFFF"))
-            }
-            if (shopStockUpdateList[startingIndex].quantity <= shopStockUpdateList[startingIndex].minQuantity) {
-                binding.shopStockUpdateOneQuantity.setTextColor(Color.parseColor("#FF0000"))
-            } else {
-                binding.shopStockUpdateOneQuantity.setTextColor(Color.parseColor("#FFFFFF"))
-            }
-            binding.shopStockUpdateOne.setOnClickListener {
-                view?.findNavController()?.navigate(
-                    ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockUpdateList[startingIndex].id
-                    )
-                )
-            }
         } else
             binding.shopStockUpdateOne.visibility = View.GONE
         if (numberOfItems > 1) {
             binding.shopStockUpdateTwo.visibility = View.VISIBLE
             binding.shopStockUpdateTwoName.text = shopStockUpdateList[startingIndex + 1].name
-            binding.shopStockUpdateTwoSubCategory.text = shopStockUpdateList[startingIndex + 1].subCategory
             binding.shopStockUpdateTwoQuantity.setText(shopStockUpdateList[startingIndex + 1].quantity.toString())
-            if (shopStockUpdateList[startingIndex + 1].quantity <= shopStockUpdateList[startingIndex + 1].minQuantity) {
-                binding.shopStockUpdateTwoQuantity.setTextColor(Color.parseColor("#FF0000"))
-            } else {
-                binding.shopStockUpdateTwoQuantity.setTextColor(Color.parseColor("#FFFFFF"))
-            }
-            binding.shopStockUpdateTwo.setOnClickListener {
-                view?.findNavController()?.navigate(
-                    ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockUpdateList[startingIndex + 1].id
-                    )
-                )
-            }
         } else
             binding.shopStockUpdateTwo.visibility = View.GONE
         if (numberOfItems > 2) {
             binding.shopStockUpdateThree.visibility = View.VISIBLE
             binding.shopStockUpdateThreeName.text = shopStockUpdateList[startingIndex + 2].name
-            binding.shopStockUpdateThreeSubCategory.text = shopStockUpdateList[startingIndex + 2].subCategory
             binding.shopStockUpdateThreeQuantity.setText(shopStockUpdateList[startingIndex + 2].quantity.toString())
-            if (shopStockUpdateList[startingIndex + 2].quantity <= shopStockUpdateList[startingIndex + 2].minQuantity) {
-                binding.shopStockUpdateThreeQuantity.setTextColor(Color.parseColor("#FF0000"))
-            } else {
-                binding.shopStockUpdateThreeQuantity.setTextColor(Color.parseColor("#FFFFFF"))
-            }
-            binding.shopStockUpdateThree.setOnClickListener {
-                view?.findNavController()?.navigate(
-                    ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockUpdateList[startingIndex + 2].id
-                    )
-                )
-            }
         } else
             binding.shopStockUpdateThree.visibility = View.GONE
         if (numberOfItems > 3) {
             binding.shopStockUpdateFour.visibility = View.VISIBLE
             binding.shopStockUpdateFourName.text = shopStockUpdateList[startingIndex + 3].name
-            binding.shopStockUpdateFourSubCategory.text = shopStockUpdateList[startingIndex + 3].subCategory
             binding.shopStockUpdateFourQuantity.setText(shopStockUpdateList[startingIndex + 3].quantity.toString())
-            if (shopStockUpdateList[startingIndex + 3].quantity <= shopStockUpdateList[startingIndex + 3].minQuantity) {
-                binding.shopStockUpdateFourQuantity.setTextColor(Color.parseColor("#FF0000"))
-            } else {
-                binding.shopStockUpdateFourQuantity.setTextColor(Color.parseColor("#FFFFFF"))
-            }
-            binding.shopStockUpdateFour.setOnClickListener {
-                view?.findNavController()?.navigate(
-                    ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockUpdateList[startingIndex + 3].id
-                    )
-                )
-            }
         } else
             binding.shopStockUpdateFour.visibility = View.GONE
         if (numberOfItems > 4) {
             binding.shopStockUpdateFive.visibility = View.VISIBLE
             binding.shopStockUpdateFiveName.text = shopStockUpdateList[startingIndex + 4].name
-            binding.shopStockUpdateFiveSubCategory.text = shopStockUpdateList[startingIndex + 4].subCategory
             binding.shopStockUpdateFiveQuantity.setText(shopStockUpdateList[startingIndex + 4].quantity.toString())
-            if (shopStockUpdateList[startingIndex + 4].quantity <= shopStockUpdateList[startingIndex + 4].minQuantity) {
-                binding.shopStockUpdateFiveQuantity.setTextColor(Color.parseColor("#FF0000"))
-            } else {
-                binding.shopStockUpdateFiveQuantity.setTextColor(Color.parseColor("#FFFFFF"))
-            }
-            binding.shopStockUpdateFive.setOnClickListener {
-                view?.findNavController()?.navigate(
-                    ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockUpdateList[startingIndex + 4].id
-                    )
-                )
-            }
         } else
             binding.shopStockUpdateFive.visibility = View.GONE
         if (numberOfItems > 5) {
             binding.shopStockUpdateSix.visibility = View.VISIBLE
             binding.shopStockUpdateSixName.text = shopStockUpdateList[startingIndex + 5].name
-            binding.shopStockUpdateSixSubCategory.text = shopStockUpdateList[startingIndex + 5].subCategory
             binding.shopStockUpdateSixQuantity.setText(shopStockUpdateList[startingIndex + 5].quantity.toString())
-            if (shopStockUpdateList[startingIndex + 5].quantity <= shopStockUpdateList[startingIndex + 5].minQuantity) {
-                binding.shopStockUpdateSixQuantity.setTextColor(Color.parseColor("#FF0000"))
-            } else {
-                binding.shopStockUpdateSixQuantity.setTextColor(Color.parseColor("#FFFFFF"))
-            }
-            binding.shopStockUpdateSix.setOnClickListener {
-                view?.findNavController()?.navigate(
-                    ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockUpdateList[startingIndex + 5].id
-                    )
-                )
-            }
         } else
             binding.shopStockUpdateSix.visibility = View.GONE
         if (numberOfItems > 6) {
             binding.shopStockUpdateSeven.visibility = View.VISIBLE
             binding.shopStockUpdateSevenName.text = shopStockUpdateList[startingIndex + 6].name
-            binding.shopStockUpdateSevenSubCategory.text = shopStockUpdateList[startingIndex + 6].subCategory
             binding.shopStockUpdateSevenQuantity.setText(shopStockUpdateList[startingIndex + 6].quantity.toString())
-            if (shopStockUpdateList[startingIndex + 6].quantity <= shopStockUpdateList[startingIndex + 6].minQuantity) {
-                binding.shopStockUpdateSevenQuantity.setTextColor(Color.parseColor("#FF0000"))
-            } else {
-                binding.shopStockUpdateSevenQuantity.setTextColor(Color.parseColor("#FFFFFF"))
-            }
-            binding.shopStockUpdateSeven.setOnClickListener {
-                view?.findNavController()?.navigate(
-                    ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockUpdateList[startingIndex + 6].id
-                    )
-                )
-            }
         } else
             binding.shopStockUpdateSeven.visibility = View.GONE
         if (numberOfItems > 7) {
             binding.shopStockUpdateEight.visibility = View.VISIBLE
             binding.shopStockUpdateEightName.text = shopStockUpdateList[startingIndex + 7].name
-            binding.shopStockUpdateEightSubCategory.text = shopStockUpdateList[startingIndex + 7].subCategory
             binding.shopStockUpdateEightQuantity.setText(shopStockUpdateList[startingIndex + 7].quantity.toString())
-            if (shopStockUpdateList[startingIndex + 7].quantity <= shopStockUpdateList[startingIndex + 7].minQuantity) {
-                binding.shopStockUpdateEightQuantity.setTextColor(Color.parseColor("#FF0000"))
-            } else {
-                binding.shopStockUpdateEightQuantity.setTextColor(Color.parseColor("#FFFFFF"))
-            }
-            binding.shopStockUpdateEight.setOnClickListener {
-                view?.findNavController()?.navigate(
-                    ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockUpdateList[startingIndex + 7].id
-                    )
-                )
-            }
         } else
             binding.shopStockUpdateEight.visibility = View.GONE
         if (numberOfItems > 8) {
             binding.shopStockUpdateNine.visibility = View.VISIBLE
             binding.shopStockUpdateNineName.text = shopStockUpdateList[startingIndex + 8].name
-            binding.shopStockUpdateNineSubCategory.text = shopStockUpdateList[startingIndex + 8].subCategory
             binding.shopStockUpdateNineQuantity.setText(shopStockUpdateList[startingIndex + 8].quantity.toString())
-            if (shopStockUpdateList[startingIndex + 8].quantity <= shopStockUpdateList[startingIndex + 8].minQuantity) {
-                binding.shopStockUpdateNineQuantity.setTextColor(Color.parseColor("#FF0000"))
-            } else {
-                binding.shopStockUpdateNineQuantity.setTextColor(Color.parseColor("#FFFFFF"))
-            }
-            binding.shopStockUpdateNine.setOnClickListener {
-                view?.findNavController()?.navigate(
-                    ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockUpdateList[startingIndex + 8].id
-                    )
-                )
-            }
         } else
             binding.shopStockUpdateNine.visibility = View.GONE
         if (numberOfItems > 9) {
             binding.shopStockUpdateTen.visibility = View.VISIBLE
             binding.shopStockUpdateTenName.text = shopStockUpdateList[startingIndex + 9].name
-            binding.shopStockUpdateTenSubCategory.text = shopStockUpdateList[startingIndex + 9].subCategory
             binding.shopStockUpdateTenQuantity.setText(shopStockUpdateList[startingIndex + 9].quantity.toString())
-            if (shopStockUpdateList[startingIndex + 9].quantity <= shopStockUpdateList[startingIndex + 9].minQuantity) {
-                binding.shopStockUpdateTenQuantity.setTextColor(Color.parseColor("#FF0000"))
-            } else {
-                binding.shopStockUpdateTenQuantity.setTextColor(Color.parseColor("#FFFFFF"))
-            }
-            binding.shopStockUpdateTen.setOnClickListener {
-                view?.findNavController()?.navigate(
-                    ShopStockListFragmentDirections.actionShopStockListFragmentToShopStockDetailFragment(
-                        shopStockUpdateList[startingIndex + 9].id
-                    )
-                )
-            }
         } else
             binding.shopStockUpdateTen.visibility = View.GONE
     }
