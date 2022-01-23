@@ -31,6 +31,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/values_layout"
                 android:layout_width="match_parent"
@@ -44,11 +45,13 @@
 
                     <TextView
                         style="@style/list_column_two"
-                        android:text="1" />
+                        android:text="1"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/one"
-                        style="@style/list_column_two" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -59,11 +62,13 @@
 
                     <TextView
                         style="@style/list_column_two"
-                        android:text="1.5" />
+                        android:text="1.5"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/one_point_five"
-                        style="@style/list_column_two" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -74,11 +79,13 @@
 
                     <TextView
                         style="@style/list_column_two"
-                        android:text="2" />
+                        android:text="2"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/two"
-                        style="@style/list_column_two" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -89,11 +96,13 @@
 
                     <TextView
                         style="@style/list_column_two"
-                        android:text="3" />
+                        android:text="3"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/three"
-                        style="@style/list_column_two" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -104,11 +113,13 @@
 
                     <TextView
                         style="@style/list_column_two"
-                        android:text="4" />
+                        android:text="4"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/four"
-                        style="@style/list_column_two" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -119,11 +130,13 @@
 
                     <TextView
                         style="@style/list_column_two"
-                        android:text="5" />
+                        android:text="5"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/five"
-                        style="@style/list_column_two" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -134,11 +147,13 @@
 
                     <TextView
                         style="@style/list_column_two"
-                        android:text="6" />
+                        android:text="6"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/six"
-                        style="@style/list_column_two" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -149,19 +164,23 @@
 
                     <TextView
                         style="@style/list_column_two"
-                        android:text="8" />
+                        android:text="8"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/eight"
-                        style="@style/list_column_two" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/eight_packet"
-                        style="@style/list_column_two" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         style="@style/list_column_two"
-                        android:text="for 50mtr" />
+                        android:text="for 50mtr"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -172,19 +191,23 @@
 
                     <TextView
                         style="@style/list_column_two"
-                        android:text="10" />
+                        android:text="10"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/ten"
-                        style="@style/list_column_two" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/ten_packet"
-                        style="@style/list_column_two" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         style="@style/list_column_two"
-                        android:text="for 50mtr" />
+                        android:text="for 50mtr"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -195,19 +218,23 @@
 
                     <TextView
                         style="@style/list_column_two"
-                        android:text="12" />
+                        android:text="12"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/twelve"
-                        style="@style/list_column_two" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/twelve_packet"
-                        style="@style/list_column_two" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         style="@style/list_column_two"
-                        android:text="for 25mtr" />
+                        android:text="for 25mtr"
+                        android:textIsSelectable="true" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -217,21 +244,31 @@
 
                     <TextView
                         style="@style/list_column_two"
-                        android:text="16" />
+                        android:text="16"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/sixteen"
-                        style="@style/list_column_two" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/sixteen_packet"
-                        style="@style/list_column_two" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         style="@style/list_column_two"
-                        android:text="for 25mtr" />
+                        android:text="for 25mtr"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/copy_text"
+                    android:text="Copy Text"/>
 
             </LinearLayout>
 
@@ -304,6 +341,7 @@
                         android:text="Go" />
 
                 </LinearLayout>
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

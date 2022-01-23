@@ -31,5 +31,5 @@ data class ShopStock(
     var rate: Float = 0F,
 
     @ColumnInfo(name = "seller")
-    var seller: String = "",
+    var seller: String = ""
 )

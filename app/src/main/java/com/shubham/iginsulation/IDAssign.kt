@@ -1,9 +1,6 @@
 package com.shubham.iginsulation
 
-import com.shubham.iginsulation.databinding.FragmentBClassBinding
-import com.shubham.iginsulation.databinding.FragmentHeatBinding
-import com.shubham.iginsulation.databinding.FragmentSaleDetailBinding
-import com.shubham.iginsulation.databinding.FragmentSaleNewBinding
+import com.shubham.iginsulation.databinding.*
 
 object IDAssign {
 
@@ -23,8 +20,147 @@ object IDAssign {
         40013.also { binding.twelvePacket.id = it }
         40014.also { binding.sixteen.id = it }
         40015.also { binding.sixteenPacket.id = it }
+
+        50001.also { binding.buttonOne.id = it }
+        50002.also { binding.buttonTwo.id = it }
+        50003.also { binding.buttonThree.id = it }
+        50004.also { binding.buttonFour.id = it }
+        50005.also { binding.buttonFive.id = it }
+        50006.also { binding.buttonSix.id = it }
     }
 
+    fun assign(binding: FragmentFClassBinding) {
+        40001.also { binding.one.id = it }
+        40002.also { binding.onePointFive.id = it }
+        40003.also { binding.two.id = it }
+        40004.also { binding.three.id = it }
+        40005.also { binding.four.id = it }
+        40006.also { binding.five.id = it }
+        40007.also { binding.six.id = it }
+        40008.also { binding.eight.id = it }
+        40009.also { binding.eightPacket.id = it }
+        40010.also { binding.ten.id = it }
+        40011.also { binding.tenPacket.id = it }
+        40012.also { binding.twelve.id = it }
+        40013.also { binding.twelvePacket.id = it }
+        40014.also { binding.sixteen.id = it }
+        40015.also { binding.sixteenPacket.id = it }
+
+        50001.also { binding.buttonOne.id = it }
+        50002.also { binding.buttonTwo.id = it }
+        50003.also { binding.buttonThree.id = it }
+        50004.also { binding.buttonFour.id = it }
+        50005.also { binding.buttonFive.id = it }
+        50006.also { binding.buttonSix.id = it }
+    }
+
+    fun assign(binding: FragmentHClassBinding) {
+        40001.also { binding.one.id = it }
+        40002.also { binding.onePointFive.id = it }
+        40003.also { binding.two.id = it }
+        40004.also { binding.three.id = it }
+        40005.also { binding.four.id = it }
+        40006.also { binding.five.id = it }
+        40007.also { binding.six.id = it }
+        40008.also { binding.eight.id = it }
+        40009.also { binding.eightPacket.id = it }
+        40010.also { binding.ten.id = it }
+        40011.also { binding.tenPacket.id = it }
+        40012.also { binding.twelve.id = it }
+        40013.also { binding.twelvePacket.id = it }
+        40014.also { binding.sixteen.id = it }
+        40015.also { binding.sixteenPacket.id = it }
+
+        50001.also { binding.buttonOneOne.id = it }
+        50002.also { binding.buttonOnePointFiveOne.id = it }
+        50003.also { binding.buttonTwoOne.id = it }
+        50004.also { binding.buttonThreeOne.id = it }
+        50005.also { binding.buttonFourOne.id = it }
+        50006.also { binding.buttonFiveOne.id = it }
+        50007.also { binding.buttonSixOne.id = it }
+        50008.also { binding.buttonEightOne.id = it }
+        50009.also { binding.buttonTenOne.id = it }
+        50010.also { binding.buttonTwelveOne.id = it }
+        50011.also { binding.buttonSixteenOne.id = it }
+
+        60001.also { binding.buttonOneTwo.id = it }
+        60002.also { binding.buttonOnePointFiveTwo.id = it }
+        60003.also { binding.buttonTwoTwo.id = it }
+        60004.also { binding.buttonThreeTwo.id = it }
+        60005.also { binding.buttonFourTwo.id = it }
+        60006.also { binding.buttonFiveTwo.id = it }
+        60007.also { binding.buttonSixTwo.id = it }
+        60008.also { binding.buttonEightTwo.id = it }
+        60009.also { binding.buttonTenTwo.id = it }
+        60010.also { binding.buttonTwelveTwo.id = it }
+        60011.also { binding.buttonSixteenTwo.id = it }
+
+        70001.also { binding.percentageOne.id = it }
+        70002.also { binding.percentageOnePointFive.id = it }
+        70003.also { binding.percentageTwo.id = it }
+        70004.also { binding.percentageThree.id = it }
+        70005.also { binding.percentageFour.id = it }
+        70006.also { binding.percentageFive.id = it }
+        70007.also { binding.percentageSix.id = it }
+        70008.also { binding.percentageEight.id = it }
+        70009.also { binding.percentageTen.id = it }
+        70010.also { binding.percentageTwelve.id = it }
+        70011.also { binding.percentageSixteen.id = it }
+    }
+
+    fun assign(binding: FragmentChinaBinding) {
+        40001.also { binding.one.id = it }
+        40002.also { binding.onePointFive.id = it }
+        40003.also { binding.two.id = it }
+        40004.also { binding.three.id = it }
+        40005.also { binding.four.id = it }
+        40006.also { binding.five.id = it }
+        40007.also { binding.six.id = it }
+        40008.also { binding.eight.id = it }
+        40009.also { binding.eightPacket.id = it }
+        40010.also { binding.ten.id = it }
+        40011.also { binding.tenPacket.id = it }
+        40012.also { binding.twelve.id = it }
+        40013.also { binding.twelvePacket.id = it }
+        40014.also { binding.sixteen.id = it }
+        40015.also { binding.sixteenPacket.id = it }
+
+        50001.also { binding.buttonOneOne.id = it }
+        50002.also { binding.buttonOnePointFiveOne.id = it }
+        50003.also { binding.buttonTwoOne.id = it }
+        50004.also { binding.buttonThreeOne.id = it }
+        50005.also { binding.buttonFourOne.id = it }
+        50006.also { binding.buttonFiveOne.id = it }
+        50007.also { binding.buttonSixOne.id = it }
+        50008.also { binding.buttonEightOne.id = it }
+        50009.also { binding.buttonTenOne.id = it }
+        50010.also { binding.buttonTwelveOne.id = it }
+        50011.also { binding.buttonSixteenOne.id = it }
+
+        60001.also { binding.buttonOneTwo.id = it }
+        60002.also { binding.buttonOnePointFiveTwo.id = it }
+        60003.also { binding.buttonTwoTwo.id = it }
+        60004.also { binding.buttonThreeTwo.id = it }
+        60005.also { binding.buttonFourTwo.id = it }
+        60006.also { binding.buttonFiveTwo.id = it }
+        60007.also { binding.buttonSixTwo.id = it }
+        60008.also { binding.buttonEightTwo.id = it }
+        60009.also { binding.buttonTenTwo.id = it }
+        60010.also { binding.buttonTwelveTwo.id = it }
+        60011.also { binding.buttonSixteenTwo.id = it }
+
+        70001.also { binding.percentageOne.id = it }
+        70002.also { binding.percentageOnePointFive.id = it }
+        70003.also { binding.percentageTwo.id = it }
+        70004.also { binding.percentageThree.id = it }
+        70005.also { binding.percentageFour.id = it }
+        70006.also { binding.percentageFive.id = it }
+        70007.also { binding.percentageSix.id = it }
+        70008.also { binding.percentageEight.id = it }
+        70009.also { binding.percentageTen.id = it }
+        70010.also { binding.percentageTwelve.id = it }
+        70011.also { binding.percentageSixteen.id = it }
+    }
     fun assign(binding: FragmentHeatBinding) {
         50001.also { binding.pointSix.id = it }
         50002.also { binding.pointEight.id = it }

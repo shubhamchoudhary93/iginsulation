@@ -124,8 +124,11 @@ class HeatFragment : Fragment() {
             binding.headRate.text = buttonTwoValue.toString()
             for (i in 1..42) {
                 val j = 50000 + i
+                val num = rateList[i - 1] * (1 - (buttonTwoValue / 100))
+                val df = DecimalFormat("#.###")
+                df.roundingMode = RoundingMode.CEILING
                 binding.root.findViewById<TextView>(j).text =
-                    (rateList[i - 1] * (1 - (buttonTwoValue / 100))).toString()
+                    df.format(num).toString()
             }
         }
 
@@ -135,8 +138,11 @@ class HeatFragment : Fragment() {
             binding.headRate.text = buttonThreeValue.toString()
             for (i in 1..42) {
                 val j = 50000 + i
+                val num = rateList[i - 1] * (1 - (buttonThreeValue / 100))
+                val df = DecimalFormat("#.###")
+                df.roundingMode = RoundingMode.CEILING
                 binding.root.findViewById<TextView>(j).text =
-                    (rateList[i - 1] * (1 - (buttonThreeValue / 100))).toString()
+                    df.format(num).toString()
             }
         }
 
@@ -146,8 +152,11 @@ class HeatFragment : Fragment() {
             binding.headRate.text = buttonFourValue.toString()
             for (i in 1..42) {
                 val j = 50000 + i
+                val num = rateList[i - 1] * (1 - (buttonFourValue / 100))
+                val df = DecimalFormat("#.###")
+                df.roundingMode = RoundingMode.CEILING
                 binding.root.findViewById<TextView>(j).text =
-                    (rateList[i - 1] * (1 - (buttonFourValue / 100))).toString()
+                    df.format(num).toString()
             }
         }
 
@@ -157,8 +166,11 @@ class HeatFragment : Fragment() {
             binding.headRate.text = buttonFiveValue.toString()
             for (i in 1..42) {
                 val j = 50000 + i
+                val num = rateList[i - 1] * (1 - (buttonFiveValue / 100))
+                val df = DecimalFormat("#.###")
+                df.roundingMode = RoundingMode.CEILING
                 binding.root.findViewById<TextView>(j).text =
-                    (rateList[i - 1] * (1 - (buttonFiveValue / 100))).toString()
+                    df.format(num).toString()
             }
         }
 
@@ -168,8 +180,11 @@ class HeatFragment : Fragment() {
             binding.headRate.text = buttonSixValue.toString()
             for (i in 1..42) {
                 val j = 50000 + i
+                val num = rateList[i - 1] * (1 - (buttonSixValue / 100))
+                val df = DecimalFormat("#.###")
+                df.roundingMode = RoundingMode.CEILING
                 binding.root.findViewById<TextView>(j).text =
-                    (rateList[i - 1] * (1 - (buttonSixValue / 100))).toString()
+                    df.format(num).toString()
             }
         }
 
@@ -182,8 +197,11 @@ class HeatFragment : Fragment() {
             if (perc != null) {
                 for (i in 1..42) {
                     val j = 50000 + i
+                    val num = rateList[i - 1] * (1 - (perc / 100))
+                    val df = DecimalFormat("#.###")
+                    df.roundingMode = RoundingMode.CEILING
                     binding.root.findViewById<TextView>(j).text =
-                        (rateList[i - 1] * (1 - (perc / 100))).toString()
+                        df.format(num).toString()
                 }
             }
         }

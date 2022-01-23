@@ -29,12 +29,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Heat list at "
+                        android:textIsSelectable="true"
                         android:textSize="20dp" />
 
                     <TextView
                         android:id="@+id/head_rate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textIsSelectable="true"
                         android:textSize="20dp" />
                 </LinearLayout>
 
@@ -49,28 +51,35 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="Size" />
+                            android:text="Size"
+                            android:textIsSelectable="true" />
 
-                        <TextView
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content"
-                            android:text="Rate"/>
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="Rolls/Box"/>
+                            android:text="Rate"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="Meter"/>
+                            android:text="Rolls/Box"
+                            android:textIsSelectable="true" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="Meter"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -79,45 +88,57 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="0.6" />
+                            android:text="0.6"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/point_six"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="18"/>
+                            android:text="18"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="400"/>
+                            android:text="400"
+                            android:textIsSelectable="true" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="0.8" />
+                            android:text="0.8"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/point_eight"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="18"/>
+                            android:text="18"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="400"/>
+                            android:text="400"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -129,46 +150,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="1" />
+                            android:text="1"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/one"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="10"/>
+                            android:text="10"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="400"/>
+                            android:text="400"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="1.5" />
+                            android:text="1.5"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/one_point_five"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="8"/>
+                            android:text="8"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="400"/>
+                            android:text="400"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -180,46 +213,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="2" />
+                            android:text="2"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/two"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="10"/>
+                            android:text="10"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="400"/>
+                            android:text="400"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="2.5" />
+                            android:text="2.5"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/two_point_five"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="8"/>
+                            android:text="8"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="400"/>
+                            android:text="400"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -231,46 +276,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="3" />
+                            android:text="3"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/three"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="6"/>
+                            android:text="6"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="400"/>
+                            android:text="400"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="3.5" />
+                            android:text="3.5"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/three_point_five"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="5"/>
+                            android:text="5"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="400"/>
+                            android:text="400"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -282,46 +339,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="4" />
+                            android:text="4"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/four"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="4"/>
+                            android:text="4"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="400"/>
+                            android:text="400"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="4.5" />
+                            android:text="4.5"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/four_point_five"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="6"/>
+                            android:text="6"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="200"/>
+                            android:text="200"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -333,46 +402,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="5" />
+                            android:text="5"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/five"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="5"/>
+                            android:text="5"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="200"/>
+                            android:text="200"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="5.5" />
+                            android:text="5.5"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/five_point_five"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="5"/>
+                            android:text="5"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="200"/>
+                            android:text="200"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -384,46 +465,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="6 Round" />
+                            android:text="6 Round"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/six_round"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="4"/>
+                            android:text="4"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="200"/>
+                            android:text="200"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="6 Flat" />
+                            android:text="6 Flat"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/six_flat"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="15"/>
+                            android:text="15"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -435,46 +528,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="7" />
+                            android:text="7"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/seven"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="14"/>
+                            android:text="14"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="8" />
+                            android:text="8"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/eight"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="13"/>
+                            android:text="13"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -486,46 +591,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="9" />
+                            android:text="9"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/nine"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="12"/>
+                            android:text="12"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="10" />
+                            android:text="10"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/ten"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="11"/>
+                            android:text="11"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -537,46 +654,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="11" />
+                            android:text="11"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/eleven"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="11"/>
+                            android:text="11"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="12" />
+                            android:text="12"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/twelve"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="10"/>
+                            android:text="10"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -588,46 +717,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="13" />
+                            android:text="13"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/thirteen"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="9"/>
+                            android:text="9"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="14" />
+                            android:text="14"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/fourteen"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="9"/>
+                            android:text="9"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -639,46 +780,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="15" />
+                            android:text="15"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/fifteen"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="8"/>
+                            android:text="8"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="16" />
+                            android:text="16"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/sixteen"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="8"/>
+                            android:text="8"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -690,54 +843,70 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="17" />
+                            android:text="17"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/seventeen"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="7"/>
-                        <TextView
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text="7"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text=""/>
+                            android:text="100"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text=""
+                            android:textIsSelectable="true" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="18" />
+                            android:text="18"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/eighteen"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="7"/>
+                            android:text="7"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -749,46 +918,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="20" />
+                            android:text="20"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/twenty"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="6"/>
+                            android:text="6"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="22" />
+                            android:text="22"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/twenty_two"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="6"/>
+                            android:text="6"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100"/>
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -800,46 +981,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="25" />
+                            android:text="25"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/twenty_five"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="6"/>
+                            android:text="6"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="50"/>
+                            android:text="50"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="28" />
+                            android:text="28"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/twenty_eight"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="5"/>
+                            android:text="5"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="50"/>
+                            android:text="50"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -851,46 +1044,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="30" />
+                            android:text="30"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/thirty"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="5"/>
+                            android:text="5"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="50"/>
+                            android:text="50"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="35" />
+                            android:text="35"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/thirty_five"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="4"/>
+                            android:text="4"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="50"/>
+                            android:text="50"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -902,46 +1107,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="40" />
+                            android:text="40"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/forty"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="4"/>
+                            android:text="4"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="50"/>
+                            android:text="50"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="45" />
+                            android:text="45"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/forty_five"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="5"/>
+                            android:text="5"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="25"/>
+                            android:text="25"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -953,46 +1170,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="50" />
+                            android:text="50"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/fifty"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="5"/>
+                            android:text="5"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="25"/>
+                            android:text="25"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="60" />
+                            android:text="60"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/sixty"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="4"/>
+                            android:text="4"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="25"/>
+                            android:text="25"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -1004,46 +1233,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="70" />
+                            android:text="70"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/seventy"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="3"/>
+                            android:text="3"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="25"/>
+                            android:text="25"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="80" />
+                            android:text="80"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/eighty"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="3"/>
+                            android:text="3"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="25"/>
+                            android:text="25"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -1055,46 +1296,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="90" />
+                            android:text="90"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/ninety"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="2"/>
+                            android:text="2"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="25"/>
+                            android:text="25"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="100" />
+                            android:text="100"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/hundred"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="2"/>
+                            android:text="2"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="25"/>
+                            android:text="25"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -1106,46 +1359,58 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="120" />
+                            android:text="120"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/one_twenty"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="2"/>
+                            android:text="2"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="25"/>
+                            android:text="25"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@color/grey">
+                        android:background="@color/grey"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="150" />
+                            android:text="150"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/one_fifty"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="2"/>
+                            android:text="2"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="25"/>
+                            android:text="25"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 
@@ -1157,20 +1422,26 @@
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="180" />
+                            android:text="180"
+                            android:textIsSelectable="true" />
 
                         <TextView
                             android:id="@+id/one_eighty"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:textIsSelectable="true" />
+
                         <TextView
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="1"/>
+                            android:text="1"
+                            android:textIsSelectable="true" />
+
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:text="25"/>
+                            android:text="25"
+                            android:textIsSelectable="true" />
 
                     </LinearLayout>
 

@@ -1,9 +1,13 @@
 package com.shubham.iginsulation.rateList
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -15,14 +19,29 @@ import kotlin.math.roundToInt
 class BClassFragment : Fragment() {
 
     private lateinit var binding: FragmentBClassBinding
-    private var buttonOneValue = 5F
-    private var buttonTwoValue = 10F
-    private var buttonThreeValue = 15F
-    private var buttonFourValue = 20F
-    private var buttonFiveValue = 25F
-    private var buttonSixValue = 30F
 
-    private var rateList = listOf(98F, 128F, 138F, 177F, 274F, 325F, 485F, 485F, 625F, 625F, 800F, 800F, 1390F, 1390F)
+    private var buttonValue = listOf(
+        5F,
+        10F,
+        15F,
+        20F,
+        25F,
+        30F
+    )
+
+    private var rateList = listOf(
+        98F,
+        128F,
+        138F,
+        177F,
+        222F,
+        274F,
+        325F,
+        485F,
+        625F,
+        800F,
+        1390F
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,99 +52,90 @@ class BClassFragment : Fragment() {
             R.layout.fragment_b_class, container, false
         )
 
-        setListeners()
         assign(binding)
+        setListeners()
 
         binding.valuesLayout.visibility = View.GONE
 
-        val buttonOneText = "$buttonOneValue%"
-        val buttonTwoText = "$buttonTwoValue%"
-        val buttonThreeText = "$buttonThreeValue%"
-        val buttonFourText = "$buttonFourValue%"
-        val buttonFiveText = "$buttonFiveValue%"
-        val buttonSixText = "$buttonSixValue%"
-
-        binding.buttonOne.text = buttonOneText
-        binding.buttonTwo.text = buttonTwoText
-        binding.buttonThree.text = buttonThreeText
-        binding.buttonFour.text = buttonFourText
-        binding.buttonFive.text = buttonFiveText
-        binding.buttonSix.text = buttonSixText
+        for (i in 1..6) {
+            binding.root.findViewById<Button>(50000 + i).text = buttonValue[i - 1].toString()
+        }
 
         return binding.root
     }
 
     private fun setListeners() {
-        binding.buttonOne.setOnClickListener {
-            binding.percentageLayout.visibility = View.GONE
-            binding.valuesLayout.visibility = View.VISIBLE
-            binding.headRate.text = buttonOneValue.toString()
-            for (i in 1..15) {
-                val j = 40000 + i
-                binding.root.findViewById<TextView>(j).text = (rateList[i - 1] * (1 + (buttonOneValue / 100))).roundToInt().toString()
-            }
-        }
 
-        binding.buttonTwo.setOnClickListener {
-            binding.percentageLayout.visibility = View.GONE
-            binding.valuesLayout.visibility = View.VISIBLE
-            binding.headRate.text = buttonTwoValue.toString()
-
-            for (i in 1..15) {
-                val j = 40000 + i
-                binding.root.findViewById<TextView>(j).text = (rateList[i - 1] * (1 + (buttonTwoValue / 100))).roundToInt().toString()
-            }
-        }
-        binding.buttonThree.setOnClickListener {
-            binding.percentageLayout.visibility = View.GONE
-            binding.valuesLayout.visibility = View.VISIBLE
-            binding.headRate.text = buttonThreeValue.toString()
-            for (i in 1..15) {
-                val j = 40000 + i
-                binding.root.findViewById<TextView>(j).text = (rateList[i - 1] * (1 + (buttonThreeValue / 100))).roundToInt().toString()
-            }
-        }
-        binding.buttonFour.setOnClickListener {
-            binding.percentageLayout.visibility = View.GONE
-            binding.valuesLayout.visibility = View.VISIBLE
-            binding.headRate.text = buttonFourValue.toString()
-            for (i in 1..15) {
-                val j = 40000 + i
-                binding.root.findViewById<TextView>(j).text = (rateList[i - 1] * (1 + (buttonFourValue / 100))).roundToInt().toString()
-            }
-        }
-        binding.buttonFive.setOnClickListener {
-            binding.percentageLayout.visibility = View.GONE
-            binding.valuesLayout.visibility = View.VISIBLE
-            binding.headRate.text = buttonFiveValue.toString()
-            for (i in 1..15) {
-                val j = 40000 + i
-                binding.root.findViewById<TextView>(j).text = (rateList[i - 1] * (1 + (buttonFiveValue / 100))).roundToInt().toString()
-            }
-        }
-        binding.buttonSix.setOnClickListener {
-            binding.percentageLayout.visibility = View.GONE
-            binding.valuesLayout.visibility = View.VISIBLE
-            binding.headRate.text = buttonSixValue.toString()
-            for (i in 1..15) {
-                val j = 40000 + i
-                binding.root.findViewById<TextView>(j).text = (rateList[i - 1] * (1 + (buttonSixValue / 100))).roundToInt().toString()
-            }
-        }
-        binding.buttonGo.setOnClickListener {
-            binding.percentageLayout.visibility = View.GONE
-            binding.valuesLayout.visibility = View.VISIBLE
-
-            val perc = binding.percentage.text.toString().toFloatOrNull()
-            binding.headRate.text = perc.toString()
-            if (perc != null) {
+        for (j in 1..6) {
+            binding.root.findViewById<Button>(50000 + j).setOnClickListener {
+                binding.percentageLayout.visibility = View.GONE
+                binding.valuesLayout.visibility = View.VISIBLE
+                val percentage = buttonValue[j - 1]
+                binding.headRate.text = percentage.toString()
+                var k = 0
                 for (i in 1..15) {
-                    val j = 40000 + i
-                    binding.root.findViewById<TextView>(j).text = (rateList[i - 1] * (1 + (perc / 100))).roundToInt().toString()
+                    if (i == 9 || i == 11) {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] / 2 * (1 + (percentage / 100))).roundToInt().toString()
+                        k++
+                    } else if (i == 13 || i == 15) {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] / 4 * (1 + (percentage / 100))).roundToInt().toString()
+                        k++
+                    } else if (i == 8 || i == 10 || i == 12 || i == 14) {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] * (1 + (percentage / 100))).roundToInt().toString()
+                    } else {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] * (1 + (percentage / 100))).roundToInt().toString()
+                        k++
+                    }
                 }
             }
         }
 
+        binding.buttonGo.setOnClickListener {
+            binding.percentageLayout.visibility = View.GONE
+            binding.valuesLayout.visibility = View.VISIBLE
 
+            val percentage = binding.percentage.text.toString().toFloatOrNull()
+            binding.headRate.text = percentage.toString()
+            if (percentage != null) {
+                var k = 0
+                for (i in 1..15) {
+                    if (i == 9 || i == 11) {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] / 2 * (1 + (percentage / 100))).roundToInt().toString()
+                        k++
+                    } else if (i == 13 || i == 15) {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] / 4 * (1 + (percentage / 100))).roundToInt().toString()
+                        k++
+                    } else if (i == 8 || i == 10 || i == 12 || i == 14) {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] * (1 + (percentage / 100))).roundToInt().toString()
+                    } else {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] * (1 + (percentage / 100))).roundToInt().toString()
+                        k++
+                    }
+                }
+            }
+        }
+        binding.copyText.setOnClickListener {
+            var string = "China rate list :\n"
+            val mm = listOf(
+                1,1.5,2,3,4,5,6,8,10,12,16
+            )
+            for (i in 1..11) {
+                string = string + mm[i-1] + "mm - " + binding.root.findViewById<TextView>(40000 + i).text.toString()+"\n"
+            }
+            string += "per 100mtr"
+
+            val clipboardManager = activity?.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            val myClip: ClipData = ClipData.newPlainText("iginsulation", string)
+            clipboardManager.setPrimaryClip(myClip)
+
+        }
     }
 }

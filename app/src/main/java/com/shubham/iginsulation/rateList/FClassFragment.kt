@@ -1,11 +1,17 @@
 package com.shubham.iginsulation.rateList
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.shubham.iginsulation.IDAssign
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.databinding.FragmentFClassBinding
 import kotlin.math.roundToInt
@@ -13,6 +19,35 @@ import kotlin.math.roundToInt
 class FClassFragment : Fragment() {
 
     private lateinit var binding: FragmentFClassBinding
+
+    private var buttonValue = listOf(
+        45F,
+        50F,
+        55F,
+        58F,
+        60F,
+        65F
+    )
+    private var buttonOneValue = 45F
+    private var buttonTwoValue = 50F
+    private var buttonThreeValue = 55F
+    private var buttonFourValue = 58F
+    private var buttonFiveValue = 60F
+    private var buttonSixValue = 65F
+
+    private var rateList = listOf(
+        98F,
+        128F,
+        138F,
+        177F,
+        222F,
+        274F,
+        325F,
+        485F,
+        625F,
+        800F,
+        1390F
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,153 +57,91 @@ class FClassFragment : Fragment() {
             inflater,
             R.layout.fragment_f_class, container, false
         )
-
+        IDAssign.assign(binding)
         setListeners()
 
         binding.valuesLayout.visibility = View.GONE
+
+        for (i in 1..6) {
+            binding.root.findViewById<Button>(50000 + i).text = buttonValue[i - 1].toString()
+        }
+
         return binding.root
     }
 
     private fun setListeners() {
-        binding.buttonOne.setOnClickListener {
-            binding.percentageLayout.visibility = View.GONE
-            binding.valuesLayout.visibility = View.VISIBLE
-            binding.one.text = (98 * 1.4).roundToInt().toString()
-            binding.onePointFive.text = (128 * 1.4).roundToInt().toString()
-            binding.two.text = (138 * 1.4).roundToInt().toString()
-            binding.three.text = (177 * 1.4).roundToInt().toString()
-            binding.four.text = (222 * 1.4).roundToInt().toString()
-            binding.five.text = (274 * 1.4).roundToInt().toString()
-            binding.six.text = (325 * 1.4).roundToInt().toString()
-            binding.eight.text = (485 * 1.4).roundToInt().toString()
-            binding.eightPacket.text = (485 / 2 * 1.4).roundToInt().toString()
-            binding.ten.text = (625 * 1.4).roundToInt().toString()
-            binding.tenPacket.text = (625 / 2 * 1.4).roundToInt().toString()
-            binding.twelve.text = (800 * 1.4).roundToInt().toString()
-            binding.twelvePacket.text = (800 / 4 * 1.4).roundToInt().toString()
-            binding.sixteen.text = (1120 * 1.4).roundToInt().toString()
-            binding.sixteenPacket.text = (1120 / 4 * 1.4).roundToInt().toString()
+
+        for (j in 1..6) {
+            binding.root.findViewById<Button>(50000 + j).setOnClickListener {
+                binding.percentageLayout.visibility = View.GONE
+                binding.valuesLayout.visibility = View.VISIBLE
+                val percentage = buttonValue[j - 1]
+                binding.headRate.text = percentage.toString()
+                var k = 0
+                for (i in 1..15) {
+                    if (i == 9 || i == 11) {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] / 2 * (1 + (percentage / 100))).roundToInt().toString()
+                        k++
+                    } else if (i == 13 || i == 15) {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] / 4 * (1 + (percentage / 100))).roundToInt().toString()
+                        k++
+                    } else if (i == 8 || i == 10 || i == 12 || i == 14) {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] * (1 + (percentage / 100))).roundToInt().toString()
+                    } else {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] * (1 + (percentage / 100))).roundToInt().toString()
+                        k++
+                    }
+                }
+            }
         }
-        binding.buttonTwo.setOnClickListener {
-            binding.percentageLayout.visibility = View.GONE
-            binding.valuesLayout.visibility = View.VISIBLE
-            binding.one.text = (98 * 1.45).roundToInt().toString()
-            binding.onePointFive.text = (128 * 1.45).roundToInt().toString()
-            binding.two.text = (138 * 1.45).roundToInt().toString()
-            binding.three.text = (177 * 1.45).roundToInt().toString()
-            binding.four.text = (222 * 1.45).roundToInt().toString()
-            binding.five.text = (274 * 1.45).roundToInt().toString()
-            binding.six.text = (325 * 1.45).roundToInt().toString()
-            binding.eight.text = (485 * 1.45).roundToInt().toString()
-            binding.eightPacket.text = (485 / 2 * 1.45).roundToInt().toString()
-            binding.ten.text = (625 * 1.45).roundToInt().toString()
-            binding.tenPacket.text = (625 / 2 * 1.45).roundToInt().toString()
-            binding.twelve.text = (800 * 1.45).roundToInt().toString()
-            binding.twelvePacket.text = (800 / 4 * 1.45).roundToInt().toString()
-            binding.sixteen.text = (1120 * 1.45).roundToInt().toString()
-            binding.sixteenPacket.text = (1120 / 4 * 1.45).roundToInt().toString()
-        }
-        binding.buttonThree.setOnClickListener {
-            binding.percentageLayout.visibility = View.GONE
-            binding.valuesLayout.visibility = View.VISIBLE
-            binding.one.text = (98 * 1.48).roundToInt().toString()
-            binding.onePointFive.text = (128 * 1.48).roundToInt().toString()
-            binding.two.text = (138 * 1.48).roundToInt().toString()
-            binding.three.text = (177 * 1.48).roundToInt().toString()
-            binding.four.text = (222 * 1.48).roundToInt().toString()
-            binding.five.text = (274 * 1.48).roundToInt().toString()
-            binding.six.text = (325 * 1.48).roundToInt().toString()
-            binding.eight.text = (485 * 1.48).roundToInt().toString()
-            binding.eightPacket.text = (485 / 2 * 1.48).roundToInt().toString()
-            binding.ten.text = (625 * 1.48).roundToInt().toString()
-            binding.tenPacket.text = (625 / 2 * 1.48).roundToInt().toString()
-            binding.twelve.text = (800 * 1.48).roundToInt().toString()
-            binding.twelvePacket.text = (800 / 4 * 1.48).roundToInt().toString()
-            binding.sixteen.text = (1120 * 1.48).roundToInt().toString()
-            binding.sixteenPacket.text = (1120 / 4 * 1.48).roundToInt().toString()
-        }
-        binding.buttonFour.setOnClickListener {
-            binding.percentageLayout.visibility = View.GONE
-            binding.valuesLayout.visibility = View.VISIBLE
-            binding.one.text = (98 * 1.5).roundToInt().toString()
-            binding.onePointFive.text = (128 * 1.5).roundToInt().toString()
-            binding.two.text = (138 * 1.5).roundToInt().toString()
-            binding.three.text = (177 * 1.5).roundToInt().toString()
-            binding.four.text = (222 * 1.5).roundToInt().toString()
-            binding.five.text = (274 * 1.5).roundToInt().toString()
-            binding.six.text = (325 * 1.5).roundToInt().toString()
-            binding.eight.text = (485 * 1.5).roundToInt().toString()
-            binding.eightPacket.text = (485 / 2 * 1.5).roundToInt().toString()
-            binding.ten.text = (625 * 1.5).roundToInt().toString()
-            binding.tenPacket.text = (625 / 2 * 1.5).roundToInt().toString()
-            binding.twelve.text = (800 * 1.5).roundToInt().toString()
-            binding.twelvePacket.text = (800 / 4 * 1.5).roundToInt().toString()
-            binding.sixteen.text = (1120 * 1.5).roundToInt().toString()
-            binding.sixteenPacket.text = (1120 / 4 * 1.5).roundToInt().toString()
-        }
-        binding.buttonFive.setOnClickListener {
-            binding.percentageLayout.visibility = View.GONE
-            binding.valuesLayout.visibility = View.VISIBLE
-            binding.one.text = (98 * 1.55).roundToInt().toString()
-            binding.onePointFive.text = (128 * 1.55).roundToInt().toString()
-            binding.two.text = (138 * 1.55).roundToInt().toString()
-            binding.three.text = (177 * 1.55).roundToInt().toString()
-            binding.four.text = (222 * 1.55).roundToInt().toString()
-            binding.five.text = (274 * 1.55).roundToInt().toString()
-            binding.six.text = (325 * 1.55).roundToInt().toString()
-            binding.eight.text = (485 * 1.55).roundToInt().toString()
-            binding.eightPacket.text = (485 / 2 * 1.55).roundToInt().toString()
-            binding.ten.text = (625 * 1.55).roundToInt().toString()
-            binding.tenPacket.text = (625 / 2 * 1.55).roundToInt().toString()
-            binding.twelve.text = (800 * 1.55).roundToInt().toString()
-            binding.twelvePacket.text = (800 / 4 * 1.55).roundToInt().toString()
-            binding.sixteen.text = (1120 * 1.55).roundToInt().toString()
-            binding.sixteenPacket.text = (1120 / 4 * 1.55).roundToInt().toString()
-        }
-        binding.buttonSix.setOnClickListener {
-            binding.percentageLayout.visibility = View.GONE
-            binding.valuesLayout.visibility = View.VISIBLE
-            binding.one.text = (98 * 1.6).roundToInt().toString()
-            binding.onePointFive.text = (128 * 1.6).roundToInt().toString()
-            binding.two.text = (138 * 1.6).roundToInt().toString()
-            binding.three.text = (177 * 1.6).roundToInt().toString()
-            binding.four.text = (222 * 1.6).roundToInt().toString()
-            binding.five.text = (274 * 1.6).roundToInt().toString()
-            binding.six.text = (325 * 1.6).roundToInt().toString()
-            binding.eight.text = (485 * 1.6).roundToInt().toString()
-            binding.eightPacket.text = (485 / 2 * 1.6).roundToInt().toString()
-            binding.ten.text = (625 * 1.6).roundToInt().toString()
-            binding.tenPacket.text = (625 / 2 * 1.6).roundToInt().toString()
-            binding.twelve.text = (800 * 1.6).roundToInt().toString()
-            binding.twelvePacket.text = (800 / 4 * 1.6).roundToInt().toString()
-            binding.sixteen.text = (1120 * 1.6).roundToInt().toString()
-            binding.sixteenPacket.text = (1120 / 4 * 1.6).roundToInt().toString()
-        }
+
         binding.buttonGo.setOnClickListener {
             binding.percentageLayout.visibility = View.GONE
             binding.valuesLayout.visibility = View.VISIBLE
 
-            var perc = binding.percentage.text.toString().toFloatOrNull()
-            if (perc != null) {
-                perc = perc / 100 + 1
-                binding.one.text = (98 * perc).roundToInt().toString()
-                binding.onePointFive.text = (128 * perc).roundToInt().toString()
-                binding.two.text = (138 * perc).roundToInt().toString()
-                binding.three.text = (177 * perc).roundToInt().toString()
-                binding.four.text = (222 * perc).roundToInt().toString()
-                binding.five.text = (274 * perc).roundToInt().toString()
-                binding.six.text = (325 * perc).roundToInt().toString()
-                binding.eight.text = (485 * perc).roundToInt().toString()
-                binding.eightPacket.text = (485 / 2 * perc).roundToInt().toString()
-                binding.ten.text = (625 * perc).roundToInt().toString()
-                binding.tenPacket.text = (625 / 2 * perc).roundToInt().toString()
-                binding.twelve.text = (800 * perc).roundToInt().toString()
-                binding.twelvePacket.text = (800 / 4 * perc).roundToInt().toString()
-                binding.sixteen.text = (1120 * perc).roundToInt().toString()
-                binding.sixteenPacket.text = (1120 / 4 * perc).roundToInt().toString()
+            val percentage = binding.percentage.text.toString().toFloatOrNull()
+            binding.headRate.text = percentage.toString()
+            if (percentage != null) {
+                var k = 0
+                for (i in 1..15) {
+                    if (i == 9 || i == 11) {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] / 2 * (1 + (percentage / 100))).roundToInt().toString()
+                        k++
+                    } else if (i == 13 || i == 15) {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] / 4 * (1 + (percentage / 100))).roundToInt().toString()
+                        k++
+                    } else if (i == 8 || i == 10 || i == 12 || i == 14) {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] * (1 + (percentage / 100))).roundToInt().toString()
+                    } else {
+                        binding.root.findViewById<TextView>(40000 + i).text =
+                            (rateList[k] * (1 + (percentage / 100))).roundToInt().toString()
+                        k++
+                    }
+                }
             }
         }
 
+        binding.copyText.setOnClickListener {
+            var string = "China rate list :\n"
+            val mm = listOf(
+                1,1.5,2,3,4,5,6,8,10,12,16
+            )
+            for (i in 1..11) {
+                string = string + mm[i-1] + "mm - " + binding.root.findViewById<TextView>(40000 + i).text.toString()+"\n"
+            }
+            string += "per 100mtr"
 
+            val clipboardManager = activity?.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            val myClip: ClipData = ClipData.newPlainText("iginsulation", string)
+            clipboardManager.setPrimaryClip(myClip)
+
+        }
     }
 }

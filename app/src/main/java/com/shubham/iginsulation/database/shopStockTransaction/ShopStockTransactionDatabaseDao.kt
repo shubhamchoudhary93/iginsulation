@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+import com.shubham.iginsulation.database.shopstock.ShopStock
 
 @Dao
 interface ShopStockTransactionDatabaseDao {
@@ -27,4 +28,7 @@ interface ShopStockTransactionDatabaseDao {
 
     @Query("SELECT * FROM shop_stock_transaction_data_table ORDER BY id DESC LIMIT 1")
     fun getLastShopStockTransaction(): ShopStockTransaction
+
+    @Query("SELECT * FROM shop_stock_transaction_data_table WHERE transaction_date = :date ORDER BY id DESC")
+    fun getByDate(date: String): MutableList<ShopStockTransaction>?
 }

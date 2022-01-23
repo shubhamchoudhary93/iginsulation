@@ -1,6 +1,7 @@
 package com.shubham.iginsulation.shopStock
 
 import android.os.Bundle
+import android.text.format.DateFormat.format
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,9 +14,11 @@ import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransaction
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabase
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabaseDao
+import com.shubham.iginsulation.database.shopstock.ShopStock
 import com.shubham.iginsulation.database.shopstock.ShopStockDatabase
 import com.shubham.iginsulation.database.shopstock.ShopStockDatabaseDao
 import com.shubham.iginsulation.databinding.FragmentShopStockBinding
+import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.roundToInt
@@ -49,6 +52,7 @@ class ShopStockFragment : Fragment() {
         binding.shopStockName.threshold = 1
         binding.shopStockName.setAdapter(adapterStock)
 
+        fetchAdaptor()
         setListeners()
         return binding.root
     }
@@ -86,6 +90,7 @@ class ShopStockFragment : Fragment() {
                         quantity.toInt(), date, ""
                 )
             )
+            fetchAdaptor()
 
         }
 
@@ -114,6 +119,8 @@ class ShopStockFragment : Fragment() {
                         quantity.toInt(), date, ""
                 )
             )
+
+            fetchAdaptor()
         }
 
         binding.buttonNewShopStock.setOnClickListener {
@@ -133,5 +140,19 @@ class ShopStockFragment : Fragment() {
             view?.findNavController()
                 ?.navigate(ShopStockFragmentDirections.actionShopStockFragmentToShopStockUpdateFragment())
         }
+    }
+
+    private fun fetchAdaptor() {
+        val d = Date()
+        val str: CharSequence = format("dd/MM/yyyy", d.time)
+        val list = shopStockTransactionDatabase.getByDate(str as String)
+
+        val adapter = ShopStockAdaptor(ShopStockAdaptor.ShopStockTransactionListener {
+            Toast.makeText(context,"selected - $id",Toast.LENGTH_SHORT).show()
+        })
+
+        binding.list.adapter = adapter
+
+        adapter.submitList(list)
     }
 }

@@ -9,10 +9,23 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="China rate list "
+                    android:textSize="20dp" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/values_layout"
@@ -26,20 +39,14 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="1" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="150" />
+                        style="@style/list_column_two"
+                        android:text="1"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/one"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="150" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -49,20 +56,14 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="1.5" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="200" />
+                        style="@style/list_column_two"
+                        android:text="1.5"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/one_point_five"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="200" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -72,20 +73,14 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="2" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="200" />
+                        style="@style/list_column_two"
+                        android:text="2"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/two"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="200" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -95,20 +90,14 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="3" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="300" />
+                        style="@style/list_column_two"
+                        android:text="3"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/three"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="300" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -118,20 +107,14 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="4" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="400" />
+                        style="@style/list_column_two"
+                        android:text="4"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/four"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="400" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -141,20 +124,14 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="5" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="500" />
+                        style="@style/list_column_two"
+                        android:text="5"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/five"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="500" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -164,20 +141,14 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="6" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="600" />
+                        style="@style/list_column_two"
+                        android:text="6"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/six"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="600" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -187,26 +158,24 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="8" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="800" />
+                        style="@style/list_column_two"
+                        android:text="8"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/eight"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="800" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/eight_packet"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="400" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="for 50mtr"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -216,26 +185,24 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="10" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="1000" />
+                        style="@style/list_column_two"
+                        android:text="10"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/ten"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="1000" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/ten_packet"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="500" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="for 50mtr"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
 
@@ -245,26 +212,24 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="12" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="1200" />
+                        style="@style/list_column_two"
+                        android:text="12"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/twelve"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="1200" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/twelve_packet"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="600" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="for 25mtr"
+                        android:textIsSelectable="true" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -273,28 +238,32 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="16" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="1600" />
+                        style="@style/list_column_two"
+                        android:text="16"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/sixteen"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="1600" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
 
                     <TextView
                         android:id="@+id/sixteen_packet"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="800" />
+                        style="@style/list_column_two"
+                        android:textIsSelectable="true" />
+
+                    <TextView
+                        style="@style/list_column_two"
+                        android:text="for 25mtr"
+                        android:textIsSelectable="true" />
 
                 </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/copy_text"
+                    android:text="Copy Text"/>
 
             </LinearLayout>
 
@@ -312,19 +281,18 @@
                     <TextView
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="1 to 8" />
+                        android:text="1"
+                        android:textIsSelectable="true" />
 
                     <Button
                         android:id="@+id/button_one_one"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="20%" />
+                        android:layout_height="wrap_content" />
 
                     <Button
                         android:id="@+id/button_one_two"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="25%" />
+                        android:layout_height="wrap_content" />
 
                     <EditText
                         android:id="@+id/percentage_one"
@@ -341,57 +309,30 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/button_one_three"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="30%" />
-
-                    <Button
-                        android:id="@+id/button_one_four"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="35%" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                        android:text="1.5"
+                        android:textIsSelectable="true" />
 
                     <Button
-                        android:id="@+id/button_one_five"
+                        android:id="@+id/button_one_point_five_one"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="37%" />
+                        android:layout_height="wrap_content" />
 
                     <Button
-                        android:id="@+id/button_one_six"
+                        android:id="@+id/button_one_point_five_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/percentage_one_point_five"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="38%" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/button_one_seven"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="39%" />
-
-                    <Button
-                        android:id="@+id/button_one_eight"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="40%" />
-
+                        android:autofillHints="Percentage"
+                        android:ems="10"
+                        android:hint="Percentage"
+                        android:inputType="numberDecimal" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -402,19 +343,18 @@
                     <TextView
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="10, 12" />
+                        android:text="2"
+                        android:textIsSelectable="true" />
 
                     <Button
                         android:id="@+id/button_two_one"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="22%" />
+                        android:layout_height="wrap_content" />
 
                     <Button
                         android:id="@+id/button_two_two"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="25%" />
+                        android:layout_height="wrap_content" />
 
                     <EditText
                         android:id="@+id/percentage_two"
@@ -434,22 +374,238 @@
                     <TextView
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="16" />
+                        android:text="3"
+                        android:textIsSelectable="true" />
 
                     <Button
                         android:id="@+id/button_three_one"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="+35%" />
+                        android:layout_height="wrap_content" />
 
                     <Button
                         android:id="@+id/button_three_two"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="+40%" />
+                        android:layout_height="wrap_content" />
 
                     <EditText
                         android:id="@+id/percentage_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Percentage"
+                        android:ems="10"
+                        android:hint="Percentage"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textIsSelectable="true" />
+
+                    <Button
+                        android:id="@+id/button_four_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/button_four_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/percentage_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Percentage"
+                        android:ems="10"
+                        android:hint="Percentage"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textIsSelectable="true" />
+
+                    <Button
+                        android:id="@+id/button_five_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/button_five_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/percentage_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Percentage"
+                        android:ems="10"
+                        android:hint="Percentage"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:textIsSelectable="true" />
+
+                    <Button
+                        android:id="@+id/button_six_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/button_six_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/percentage_six"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Percentage"
+                        android:ems="10"
+                        android:hint="Percentage"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="8"
+                        android:textIsSelectable="true" />
+
+                    <Button
+                        android:id="@+id/button_eight_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/button_eight_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/percentage_eight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Percentage"
+                        android:ems="10"
+                        android:hint="Percentage"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textIsSelectable="true" />
+
+                    <Button
+                        android:id="@+id/button_ten_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/button_ten_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/percentage_ten"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Percentage"
+                        android:ems="10"
+                        android:hint="Percentage"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:textIsSelectable="true" />
+
+                    <Button
+                        android:id="@+id/button_twelve_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/button_twelve_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/percentage_twelve"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Percentage"
+                        android:ems="10"
+                        android:hint="Percentage"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="16"
+                        android:textIsSelectable="true" />
+
+                    <Button
+                        android:id="@+id/button_sixteen_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/button_sixteen_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/percentage_sixteen"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:autofillHints="Percentage"
