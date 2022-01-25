@@ -2,26 +2,37 @@ package com.shubham.iginsulation
 
 import com.shubham.iginsulation.database.customer.Customer
 import com.shubham.iginsulation.database.customer.CustomerDatabaseDao
+import com.shubham.iginsulation.database.sale.SaleDatabaseDao
+import com.shubham.iginsulation.database.saledetails.SaleDetailsDatabaseDao
+import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabaseDao
 import com.shubham.iginsulation.database.shopstock.ShopStock
 import com.shubham.iginsulation.database.shopstock.ShopStockDatabaseDao
 import com.shubham.iginsulation.database.stock.Stock
 import com.shubham.iginsulation.database.stock.StockDatabaseDao
+import com.shubham.iginsulation.database.transaction.TransactionDatabaseDao
 
 object DummyData {
 
     fun populate(
         customerDatabase: CustomerDatabaseDao,
         stockDatabase: StockDatabaseDao,
-        shopStockDatabase: ShopStockDatabaseDao
+        shopStockDatabase: ShopStockDatabaseDao,
+        saleDatabase: SaleDatabaseDao,
+        saleDetailsDatabase: SaleDetailsDatabaseDao,
+        shopStockTransactionDatabase: ShopStockTransactionDatabaseDao,
+        transactionDatabase: TransactionDatabaseDao
     ) {
 
         customerDatabase.clear()
         stockDatabase.clear()
         shopStockDatabase.clear()
+        saleDatabase.clear()
+        saleDetailsDatabase.clear()
+        shopStockTransactionDatabase.clear()
+        transactionDatabase.clear()
+
 
         customerDatabase.insert(Customer(0, "Akash", 9999999999, "Kashipur", 0F, 0F))
-
-        customerDatabase.insert(Customer(0, "Sonu", 9999999999, "Muzzaffarpur", 0F, 0F))
 
         stockDatabase.insert(Stock(0, "F class 1mm", "Sleeve", "F class", 98F, 1.65F))
         stockDatabase.insert(Stock(0, "F class 1.5mm", "Sleeve", "F class", 128F, 1.65F))

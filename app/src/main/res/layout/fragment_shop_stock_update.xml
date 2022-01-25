@@ -13,6 +13,15 @@
             android:layout_margin="20dp"
             android:orientation="vertical">
 
+            <EditText
+                android:id="@+id/name_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="name"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName" />
+
             <AutoCompleteTextView
                 android:id="@+id/category_filter"
                 android:layout_width="wrap_content"

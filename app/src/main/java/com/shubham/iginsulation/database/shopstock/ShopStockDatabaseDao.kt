@@ -54,4 +54,10 @@ interface ShopStockDatabaseDao {
 
     @Query("SELECT name from shop_stock_data_table WHERE name = :searchText")
     fun checkShopStock(searchText: String): List<String>
+
+    @Query("SELECT * from shop_stock_data_table WHERE name LIKE '%' || :string || '%'")
+    fun getListByName(string: String): List<ShopStock>
+
+    @Query("SELECT * from shop_stock_data_table WHERE min_quantity>quantity")
+    fun getListlow(): List<ShopStock>
 }

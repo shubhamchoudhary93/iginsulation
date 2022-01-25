@@ -78,7 +78,7 @@ class ShopStockFragment : Fragment() {
                     stock.quantity += quantity.toInt()
                     shopStockDatabase.update(stock)
                     binding.shopStockQuantityShow.text = stock.quantity.toString()
-                    val date = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).format(Date())
+                    val date = SimpleDateFormat("dd/M/yyyy", Locale.ENGLISH).format(Date())
                     shopStockTransactionDatabase.insert(
                         ShopStockTransaction(
                             0L, true, name, if (quantity == "")
@@ -107,7 +107,7 @@ class ShopStockFragment : Fragment() {
                     stock.quantity -= quantity.toInt()
                     shopStockDatabase.update(stock)
                     binding.shopStockQuantityShow.text = stock.quantity.toString()
-                    val date = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).format(Date())
+                    val date = SimpleDateFormat("dd/M/yyyy", Locale.ENGLISH).format(Date())
                     shopStockTransactionDatabase.insert(
                         ShopStockTransaction(
                             0L, false, name, if (quantity == "")
@@ -145,7 +145,7 @@ class ShopStockFragment : Fragment() {
 
     private fun fetchAdaptor() {
         val d = Date()
-        val str: CharSequence = format("dd/MM/yyyy", d.time)
+        val str: CharSequence = format("dd/M/yyyy", d.time)
         val list = shopStockTransactionDatabase.getByDate(str as String)
 
         val adapter = ShopStockAdaptor(ShopStockAdaptor.ShopStockTransactionListener {

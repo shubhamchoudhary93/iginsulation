@@ -13,8 +13,12 @@ import com.google.firebase.auth.FirebaseAuth
 import com.shubham.iginsulation.BackupRestore.backup
 import com.shubham.iginsulation.BackupRestore.restore
 import com.shubham.iginsulation.database.customer.CustomerDatabase
+import com.shubham.iginsulation.database.sale.SaleDatabase
+import com.shubham.iginsulation.database.saledetails.SaleDetailsDatabase
+import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabase
 import com.shubham.iginsulation.database.shopstock.ShopStockDatabase
 import com.shubham.iginsulation.database.stock.StockDatabase
+import com.shubham.iginsulation.database.transaction.TransactionDatabase
 import com.shubham.iginsulation.databinding.FragmentStartBinding
 
 class StartFragment : Fragment() {
@@ -104,11 +108,19 @@ class StartFragment : Fragment() {
 
             val customerDatabase =
                 CustomerDatabase.getInstance(requireContext()).customerDatabaseDao
-            val stockDatabase = StockDatabase.getInstance(requireContext()).stockDatabaseDao
+            val saleDatabase = SaleDatabase.getInstance(requireContext()).saleDatabaseDao
+            val saleDetailsDatabase =
+                SaleDetailsDatabase.getInstance(requireContext()).saleDetailsDatabaseDao
             val shopStockDatabase =
                 ShopStockDatabase.getInstance(requireContext()).shopStockDatabaseDao
+            val shopStockTransactionDatabase =
+                ShopStockTransactionDatabase.getInstance(requireContext()).shopStockTransactionDatabaseDao
+            val stockDatabase =
+                StockDatabase.getInstance(requireContext()).stockDatabaseDao
+            val transactionDatabase =
+                TransactionDatabase.getInstance(requireContext()).transactionDatabaseDao
 
-            DummyData.populate(customerDatabase, stockDatabase, shopStockDatabase)
+            DummyData.populate(customerDatabase, stockDatabase, shopStockDatabase, saleDatabase, saleDetailsDatabase, shopStockTransactionDatabase, transactionDatabase)
         }
 
         binding.buttonBackup.setOnClickListener {

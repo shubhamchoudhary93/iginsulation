@@ -1,7 +1,10 @@
 package com.shubham.iginsulation.shopStock
 
+import android.app.DatePickerDialog
 import android.graphics.Color
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +16,7 @@ import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransacti
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabase
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabaseDao
 import com.shubham.iginsulation.databinding.FragmentShopStockTransactionListBinding
+import java.util.*
 
 class ShopStockTransactionListFragment : Fragment() {
 
@@ -47,6 +51,41 @@ class ShopStockTransactionListFragment : Fragment() {
         binding.buttonPreviousPage.visibility = View.GONE
 
         fetchShopStockTransactionList()
+
+        binding.nameFilter.addTextChangedListener(object: TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                transactionList = shopStockTransactionDatabase.getListByName(s.toString())
+                currentPage = 1
+                setShopStockTransactionData()
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) { }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) { }
+        })
+
+        binding.dateFilter.setOnClickListener {
+
+            val c = Calendar.getInstance()
+            val year = c.get(Calendar.YEAR)
+            val month = c.get(Calendar.MONTH)
+            val day = c.get(Calendar.DAY_OF_MONTH)
+
+            val datePickerDialog = DatePickerDialog(
+                this.requireContext(),
+                { _, yearPick, monthOfYear, dayOfMonth ->
+                    val text = dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + yearPick
+                    binding.dateFilter.setText(text)
+                    transactionList = shopStockTransactionDatabase.getByDate(text) as List<ShopStockTransaction>
+                    currentPage = 1
+                    setShopStockTransactionData()
+                },
+                year,
+                month,
+                day
+            )
+            datePickerDialog.show()
+        }
 
         return binding.root
     }

@@ -31,4 +31,8 @@ interface ShopStockTransactionDatabaseDao {
 
     @Query("SELECT * FROM shop_stock_transaction_data_table WHERE transaction_date = :date ORDER BY id DESC")
     fun getByDate(date: String): MutableList<ShopStockTransaction>?
+
+    @Query("SELECT * from shop_stock_transaction_data_table WHERE transaction_stock LIKE '%' || :string || '%'")
+    fun getListByName(string: String): List<ShopStockTransaction>
+
 }
