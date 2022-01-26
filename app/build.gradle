@@ -14,8 +14,8 @@ android {
         applicationId "com.shubham.iginsulation"
         minSdkVersion 29
         targetSdkVersion 31
-        versionCode 110
-        versionName "2.20"
+        versionCode 116
+        versionName "2.32"
     }
 
     buildTypes {

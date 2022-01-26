@@ -20,6 +20,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Please Login :"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="20dp"/>
                 <EditText
                     android:id="@+id/username"
                     android:layout_width="match_parent"
@@ -30,7 +36,8 @@
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="password" />
+                    android:hint="password"
+                    android:layout_marginBottom="20dp"/>
 
                 <Button
                     android:id="@+id/login"
@@ -46,28 +53,12 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button_customer"
+                    android:id="@+id/button_billing"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Customer" />
+                    android:text="Billing" />
 
-                <Button
-                    android:id="@+id/button_stock"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Stock" />
 
-                <Button
-                    android:id="@+id/button_transaction"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Transaction" />
-
-                <Button
-                    android:id="@+id/button_sale"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sale" />
 
                 <Button
                     android:id="@+id/button_rate_list"
@@ -95,22 +86,10 @@
                     android:text="Custom Ledgers" />
 
                 <Button
-                    android:id="@+id/button_dummy"
+                    android:id="@+id/button_settings"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Populate Dummy" />
-
-                <Button
-                    android:id="@+id/button_backup"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Backup" />
-
-                <Button
-                    android:id="@+id/button_restore"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Restore" />
+                    android:text="Settings" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

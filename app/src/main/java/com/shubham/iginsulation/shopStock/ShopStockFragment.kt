@@ -14,14 +14,11 @@ import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransaction
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabase
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabaseDao
-import com.shubham.iginsulation.database.shopstock.ShopStock
 import com.shubham.iginsulation.database.shopstock.ShopStockDatabase
 import com.shubham.iginsulation.database.shopstock.ShopStockDatabaseDao
 import com.shubham.iginsulation.databinding.FragmentShopStockBinding
-import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.math.roundToInt
 
 class ShopStockFragment : Fragment() {
 
@@ -54,6 +51,7 @@ class ShopStockFragment : Fragment() {
 
         fetchAdaptor()
         setListeners()
+        binding.notifications.text = "Ready"
         return binding.root
     }
 
@@ -72,8 +70,7 @@ class ShopStockFragment : Fragment() {
             val quantity = binding.shopStockQuantity.text.toString()
             if (stock != null) {
                 if (quantity.toIntOrNull() == null) {
-                    Toast.makeText(context, "quantity should be numeric", Toast.LENGTH_SHORT)
-                        .show()
+                    binding.notifications.text = "quantity should be numeric"
                 } else {
                     stock.quantity += quantity.toInt()
                     shopStockDatabase.update(stock)
@@ -87,10 +84,13 @@ class ShopStockFragment : Fragment() {
                                 quantity.toInt(), date, ""
                         )
                     )
+                    binding.notifications.text = name + " updated to " + stock.quantity
                 }
             }
+
             binding.shopStockName.setText("")
             binding.shopStockQuantity.setText("")
+            binding.shopStockQuantityShow.text = ""
             fetchAdaptor()
         }
 
@@ -101,8 +101,7 @@ class ShopStockFragment : Fragment() {
             val quantity = binding.shopStockQuantity.text.toString()
             if (stock != null) {
                 if (quantity.toIntOrNull() == null) {
-                    Toast.makeText(context, "quantity should be numeric", Toast.LENGTH_SHORT)
-                        .show()
+                    binding.notifications.text = "quantity should be numeric"
                 } else {
                     stock.quantity -= quantity.toInt()
                     shopStockDatabase.update(stock)
@@ -116,11 +115,13 @@ class ShopStockFragment : Fragment() {
                                 quantity.toInt(), date, ""
                         )
                     )
+                    binding.notifications.text = name + " updated to " + stock.quantity
                 }
             }
 
             binding.shopStockName.setText("")
             binding.shopStockQuantity.setText("")
+            binding.shopStockQuantityShow.text = ""
             fetchAdaptor()
         }
 
@@ -149,7 +150,7 @@ class ShopStockFragment : Fragment() {
         val list = shopStockTransactionDatabase.getByDate(str as String)
 
         val adapter = ShopStockAdaptor(ShopStockAdaptor.ShopStockTransactionListener {
-            Toast.makeText(context,"selected - $id",Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "selected - $id", Toast.LENGTH_SHORT).show()
         })
 
         binding.list.adapter = adapter

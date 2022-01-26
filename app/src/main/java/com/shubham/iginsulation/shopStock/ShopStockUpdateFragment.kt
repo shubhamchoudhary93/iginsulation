@@ -102,16 +102,19 @@ class ShopStockUpdateFragment : Fragment() {
 
         binding.buttonNextPage.setOnClickListener {
             currentPage += 1
+            binding.notifications.text = ""
             calculatePageData()
         }
 
         binding.buttonPreviousPage.setOnClickListener {
             currentPage -= 1
+            binding.notifications.text = ""
             calculatePageData()
         }
 
         binding.buttonUpdate.setOnClickListener {
             update()
+            binding.notifications.text = "Updated"
         }
     }
 
@@ -252,5 +255,6 @@ class ShopStockUpdateFragment : Fragment() {
             shopStockUpdate.quantity = binding.shopStockUpdateTenQuantity.text.toString().toIntOrNull() ?: 0
             shopStockDatabase.update(shopStockUpdate)
         }
+
     }
 }

@@ -23,26 +23,20 @@
         android:label="fragment_start"
         tools:layout="@layout/fragment_start">
         <action
-            android:id="@+id/action_startFragment_to_customerFragment"
-            app:destination="@id/customerFragment" />
-        <action
-            android:id="@+id/action_startFragment_to_stockFragment"
-            app:destination="@id/stockFragment" />
-        <action
-            android:id="@+id/action_startFragment_to_transactionFragment"
-            app:destination="@id/transactionFragment" />
-        <action
-            android:id="@+id/action_startFragment_to_rateListFragment"
-            app:destination="@id/rateListFragment" />
-        <action
-            android:id="@+id/action_startFragment_to_saleFragment"
-            app:destination="@id/saleFragment" />
-        <action
             android:id="@+id/action_startFragment_to_committeeFragment"
             app:destination="@id/committeeFragment" />
         <action
             android:id="@+id/action_startFragment_to_shopStockFragment"
             app:destination="@id/shopStockFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_billingFragment"
+            app:destination="@id/billingFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_rateListFragment"
+            app:destination="@id/rateListFragment" />
     </fragment>
     <fragment
         android:id="@+id/customerNewFragment"
@@ -433,7 +427,8 @@
     <fragment
         android:id="@+id/shopStockDetailFragment"
         android:name="com.shubham.iginsulation.shopStock.ShopStockDetailFragment"
-        android:label="ShopStockDetailFragment" >
+        android:label="ShopStockDetailFragment"
+        tools:layout="@layout/fragment_shop_stock_detail">
         <argument
             android:name="id"
             app:argType="long"
@@ -448,7 +443,8 @@
     <fragment
         android:id="@+id/shopStockListFragment"
         android:name="com.shubham.iginsulation.shopStock.ShopStockListFragment"
-        android:label="ShopStockListFragment" >
+        android:label="ShopStockListFragment"
+        tools:layout="@layout/fragment_shop_stock_list">
         <action
             android:id="@+id/action_shopStockListFragment_to_shopStockDetailFragment"
             app:destination="@id/shopStockDetailFragment" />
@@ -516,5 +512,29 @@
         <action
             android:id="@+id/action_shopStockUpdateFragment_to_shopStockFragment"
             app:destination="@id/shopStockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/billingFragment"
+        android:name="com.shubham.iginsulation.BillingFragment"
+        android:label="BillingFragment"
+        tools:layout="@layout/fragment_billing">
+        <action
+            android:id="@+id/action_billingFragment_to_customerFragment"
+            app:destination="@id/customerFragment" />
+        <action
+            android:id="@+id/action_billingFragment_to_saleFragment"
+            app:destination="@id/saleFragment" />
+        <action
+            android:id="@+id/action_billingFragment_to_stockFragment"
+            app:destination="@id/stockFragment" />
+        <action
+            android:id="@+id/action_billingFragment_to_transactionFragment"
+            app:destination="@id/transactionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.shubham.iginsulation.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings">
     </fragment>
 </navigation>

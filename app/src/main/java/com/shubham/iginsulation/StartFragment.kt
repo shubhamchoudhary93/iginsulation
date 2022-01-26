@@ -10,15 +10,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.google.firebase.auth.FirebaseAuth
-import com.shubham.iginsulation.BackupRestore.backup
-import com.shubham.iginsulation.BackupRestore.restore
-import com.shubham.iginsulation.database.customer.CustomerDatabase
-import com.shubham.iginsulation.database.sale.SaleDatabase
-import com.shubham.iginsulation.database.saledetails.SaleDetailsDatabase
-import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabase
-import com.shubham.iginsulation.database.shopstock.ShopStockDatabase
-import com.shubham.iginsulation.database.stock.StockDatabase
-import com.shubham.iginsulation.database.transaction.TransactionDatabase
 import com.shubham.iginsulation.databinding.FragmentStartBinding
 
 class StartFragment : Fragment() {
@@ -69,24 +60,10 @@ class StartFragment : Fragment() {
                     }
                 }
         }
-        binding.buttonCustomer.setOnClickListener {
-            view?.findNavController()
-                ?.navigate(StartFragmentDirections.actionStartFragmentToCustomerFragment())
-        }
 
-        binding.buttonStock.setOnClickListener {
+        binding.buttonBilling.setOnClickListener {
             view?.findNavController()
-                ?.navigate(StartFragmentDirections.actionStartFragmentToStockFragment())
-        }
-
-        binding.buttonSale.setOnClickListener {
-            view?.findNavController()
-                ?.navigate(StartFragmentDirections.actionStartFragmentToSaleFragment())
-        }
-
-        binding.buttonTransaction.setOnClickListener {
-            view?.findNavController()
-                ?.navigate(StartFragmentDirections.actionStartFragmentToTransactionFragment())
+                ?.navigate(StartFragmentDirections.actionStartFragmentToBillingFragment())
         }
 
         binding.buttonRateList.setOnClickListener {
@@ -104,31 +81,9 @@ class StartFragment : Fragment() {
                 ?.navigate(StartFragmentDirections.actionStartFragmentToCommitteeFragment())
         }
 
-        binding.buttonDummy.setOnClickListener {
-
-            val customerDatabase =
-                CustomerDatabase.getInstance(requireContext()).customerDatabaseDao
-            val saleDatabase = SaleDatabase.getInstance(requireContext()).saleDatabaseDao
-            val saleDetailsDatabase =
-                SaleDetailsDatabase.getInstance(requireContext()).saleDetailsDatabaseDao
-            val shopStockDatabase =
-                ShopStockDatabase.getInstance(requireContext()).shopStockDatabaseDao
-            val shopStockTransactionDatabase =
-                ShopStockTransactionDatabase.getInstance(requireContext()).shopStockTransactionDatabaseDao
-            val stockDatabase =
-                StockDatabase.getInstance(requireContext()).stockDatabaseDao
-            val transactionDatabase =
-                TransactionDatabase.getInstance(requireContext()).transactionDatabaseDao
-
-            DummyData.populate(customerDatabase, stockDatabase, shopStockDatabase, saleDatabase, saleDetailsDatabase, shopStockTransactionDatabase, transactionDatabase)
-        }
-
-        binding.buttonBackup.setOnClickListener {
-            backup(requireContext())
-        }
-
-        binding.buttonRestore.setOnClickListener {
-            restore(requireContext())
+        binding.buttonSettings.setOnClickListener {
+            view?.findNavController()
+                ?.navigate(StartFragmentDirections.actionStartFragmentToSettingsFragment())
         }
     }
 }
