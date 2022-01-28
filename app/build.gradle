@@ -14,8 +14,8 @@ android {
         applicationId "com.shubham.iginsulation"
         minSdkVersion 29
         targetSdkVersion 31
-        versionCode 116
-        versionName "2.32"
+        versionCode 126
+        versionName "2.52"
     }
 
     buildTypes {
@@ -48,4 +48,5 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
     implementation 'com.google.firebase:firebase-auth:21.0.1'
     implementation 'com.google.firebase:firebase-storage:20.0.0'
+    implementation 'com.google.android.material:material:1.5.0'
 }

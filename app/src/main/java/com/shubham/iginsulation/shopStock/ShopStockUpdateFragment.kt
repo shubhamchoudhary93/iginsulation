@@ -62,6 +62,7 @@ class ShopStockUpdateFragment : Fragment() {
             val selectedItem = parent.getItemAtPosition(position).toString()
             currentPage = 1
             shopStockUpdateList = shopStockDatabase.getListByFilter(selectedItem)
+            binding.notifications.text = ""
             setShopStockData()
         }
 
@@ -69,6 +70,7 @@ class ShopStockUpdateFragment : Fragment() {
             override fun afterTextChanged(s: Editable?) {
                 shopStockUpdateList = shopStockDatabase.getListByName(s.toString())
                 currentPage = 1
+                binding.notifications.text = ""
                 setShopStockData()
             }
 

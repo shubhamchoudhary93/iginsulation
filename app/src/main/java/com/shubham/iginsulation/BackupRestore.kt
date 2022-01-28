@@ -6,30 +6,38 @@ import android.net.Uri
 import android.widget.Toast
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import com.shubham.iginsulation.databinding.FragmentSettingsBinding
 import java.io.File
 import java.io.FileOutputStream
 
 object BackupRestore {
 
-    fun backup(context: Context?) {
+    fun backup(context: Context?, binding: FragmentSettingsBinding) {
         try {
             val f = File(context?.getExternalFilesDir(null)?.path + "/IGIBackup")
             f.mkdirs()
             val tableNames = listOf(
                 "customer_data_table",
-                "customer_data_table-journal",
+                "customer_data_table-shm",
+                "customer_data_table-wal",
                 "sale_data_table",
-                "sale_data_table-journal",
+                "sale_data_table-shm",
+                "sale_data_table-wal",
                 "sale_details_data_table",
-                "sale_details_data_table-journal",
+                "sale_details_data_table-shm",
+                "sale_details_data_table-wal",
                 "stock_data_table",
-                "stock_data_table-journal",
+                "stock_data_table-shm",
+                "stock_data_table-wal",
                 "shop_stock_data_table",
-                "shop_stock_data_table-journal",
+                "shop_stock_data_table-shm",
+                "shop_stock_data_table-wal",
                 "shop_stock_transaction_data_table",
-                "shop_stock_transaction_data_table-journal",
+                "shop_stock_transaction_data_table-shm",
+                "shop_stock_transaction_data_table-wal",
                 "transaction_data_table",
-                "transaction_data_table-journal",
+                "transaction_data_table-shm",
+                "transaction_data_table-wal"
             )
 
             val backupDBPath =
@@ -39,7 +47,8 @@ object BackupRestore {
                 context?.getDatabasePath(item)?.let {
                     copyDataFromOneToAnother(
                         it.path,
-                        context.getExternalFilesDir(null)?.path + "/IGIBackup/" + "backup_" + item
+                        context.getExternalFilesDir(null)?.path + "/IGIBackup/" + "backup_" + item,
+                        binding
                     )
                 }
 
@@ -76,11 +85,12 @@ object BackupRestore {
             }
 
         } catch (e: Exception) {
+            binding.notifications.text = binding.notifications.text.toString() + "\n" + e.stackTraceToString()
             e.printStackTrace()
-        }
+                    }
     }
 
-    fun restore(context: Context?) {
+    fun restore(context: Context?, binding: FragmentSettingsBinding) {
 
         val storage = FirebaseStorage.getInstance()
         val storageRef = storage.reference
@@ -98,19 +108,26 @@ object BackupRestore {
                 try {
                     val tableNames = listOf(
                         "customer_data_table",
-                        "customer_data_table-journal",
+                        "customer_data_table-shm",
+                        "customer_data_table-wal",
                         "sale_data_table",
-                        "sale_data_table-journal",
+                        "sale_data_table-shm",
+                        "sale_data_table-wal",
                         "sale_details_data_table",
-                        "sale_details_data_table-journal",
+                        "sale_details_data_table-shm",
+                        "sale_details_data_table-wal",
                         "stock_data_table",
-                        "stock_data_table-journal",
+                        "stock_data_table-shm",
+                        "stock_data_table-wal",
                         "shop_stock_data_table",
-                        "shop_stock_data_table-journal",
+                        "shop_stock_data_table-shm",
+                        "shop_stock_data_table-wal",
                         "shop_stock_transaction_data_table",
-                        "shop_stock_transaction_data_table-journal",
+                        "shop_stock_transaction_data_table-shm",
+                        "shop_stock_transaction_data_table-wal",
                         "transaction_data_table",
-                        "transaction_data_table-journal",
+                        "transaction_data_table-shm",
+                        "transaction_data_table-wal"
                     )
 
                     val backupDBPath = context?.getExternalFilesDir(null)?.path + "/IGIBackup/"
@@ -123,7 +140,8 @@ object BackupRestore {
                         context?.getDatabasePath(item)?.let {
                             copyDataFromOneToAnother(
                                 context.getExternalFilesDir(null)?.path + "/IGIBackup/" + "backup_" + item,
-                                it.path
+                                it.path,
+                                binding
                             )
                         }
                     }
@@ -144,10 +162,15 @@ object BackupRestore {
             }
     }
 
-    private fun copyDataFromOneToAnother(fromPath: String, toPath: String) {
+    private fun copyDataFromOneToAnother(
+        fromPath: String,
+        toPath: String,
+        binding: FragmentSettingsBinding
+    ) {
+        binding.notifications.text = binding.notifications.text.toString() + "\ncopying from $fromPath to $toPath"
         val inStream = File(fromPath).inputStream()
         val outStream = FileOutputStream(toPath)
-        println("copying from $fromPath to $toPath")
+
         inStream.use { input ->
             outStream.use { output ->
                 input.copyTo(output)

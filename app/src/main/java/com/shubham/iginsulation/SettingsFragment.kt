@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.shubham.iginsulation.database.customer.CustomerDatabase
 import com.shubham.iginsulation.database.sale.SaleDatabase
 import com.shubham.iginsulation.database.saledetails.SaleDetailsDatabase
@@ -14,10 +14,9 @@ import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransacti
 import com.shubham.iginsulation.database.shopstock.ShopStockDatabase
 import com.shubham.iginsulation.database.stock.StockDatabase
 import com.shubham.iginsulation.database.transaction.TransactionDatabase
-import com.shubham.iginsulation.databinding.FragmentBillingBinding
 import com.shubham.iginsulation.databinding.FragmentSettingsBinding
 
-class SettingsFragment: Fragment() {
+class SettingsFragment : Fragment() {
 
     private lateinit var binding: FragmentSettingsBinding
 
@@ -53,17 +52,57 @@ class SettingsFragment: Fragment() {
             val transactionDatabase =
                 TransactionDatabase.getInstance(requireContext()).transactionDatabaseDao
 
-            DummyData.populate(customerDatabase, stockDatabase, shopStockDatabase, saleDatabase, saleDetailsDatabase, shopStockTransactionDatabase, transactionDatabase)
+            DummyData.populate(
+                customerDatabase,
+                stockDatabase,
+                shopStockDatabase,
+                saleDatabase,
+                saleDetailsDatabase,
+                shopStockTransactionDatabase,
+                transactionDatabase
+            )
             binding.notifications.text = "dummy data created"
         }
 
         binding.buttonBackup.setOnClickListener {
-            BackupRestore.backup(requireContext())
-            binding.notifications.text = "data backup done"
+            context?.let { it1 ->
+                MaterialAlertDialogBuilder(it1)
+                    .setTitle("Confirm")
+                    .setMessage(
+                        "This option will backup your mobile data to server.\n" +
+                                "You sure about this?"
+                    )
+                    .setNegativeButton("No") { dialog, _ ->
+                        dialog.dismiss()
+                    }
+                    .setPositiveButton("Yes") { _, _ ->
+                        BackupRestore.backup(requireContext(), binding)
+                        binding.notifications.text =
+                            binding.notifications.text.toString() + "\ndata backup done"
+                    }
+                    .show()
+            }
+
         }
 
         binding.buttonRestore.setOnClickListener {
-            BackupRestore.restore(requireContext())
+            context?.let { it1 ->
+                MaterialAlertDialogBuilder(it1)
+                    .setTitle("Confirm")
+                    .setMessage(
+                        "This option will restore server data to mobile.\n" +
+                                "You sure about this?"
+                    )
+                    .setNegativeButton("No") { dialog, _ ->
+                        dialog.dismiss()
+                    }
+                    .setPositiveButton("Yes") { _, _ ->
+                        BackupRestore.restore(requireContext(), binding)
+                        binding.notifications.text = "data restore done"
+                    }
+                    .show()
+            }
+            BackupRestore.restore(requireContext(), binding)
             binding.notifications.text = "data restore done"
         }
     }
