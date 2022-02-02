@@ -137,6 +137,7 @@ class ShopStockListFragment : Fragment() {
         else
             shopStockListFilter.size % 10
 
+        val originalTextColor = binding.shopStockOneName.textColors
         if (numberOfItems > 0) {
             binding.shopStockOne.visibility = View.VISIBLE
             binding.shopStockOneName.text = shopStockListFilter[startingIndex].name
@@ -144,12 +145,7 @@ class ShopStockListFragment : Fragment() {
             if (shopStockListFilter[startingIndex].quantity <= shopStockListFilter[startingIndex].minQuantity) {
                 binding.shopStockOneQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
-                binding.shopStockOneQuantity.setTextColor(Color.parseColor("#FFFFFF"))
-            }
-            if (shopStockListFilter[startingIndex].quantity <= shopStockListFilter[startingIndex].minQuantity) {
-                binding.shopStockOneQuantity.setTextColor(Color.parseColor("#FF0000"))
-            } else {
-                binding.shopStockOneQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.shopStockOneQuantity.setTextColor(originalTextColor)
             }
             binding.shopStockOne.setOnClickListener {
                 view?.findNavController()?.navigate(
@@ -167,7 +163,7 @@ class ShopStockListFragment : Fragment() {
             if (shopStockListFilter[startingIndex + 1].quantity <= shopStockListFilter[startingIndex + 1].minQuantity) {
                 binding.shopStockTwoQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
-                binding.shopStockTwoQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.shopStockTwoQuantity.setTextColor(originalTextColor)
             }
             binding.shopStockTwo.setOnClickListener {
                 view?.findNavController()?.navigate(
@@ -186,7 +182,7 @@ class ShopStockListFragment : Fragment() {
             if (shopStockListFilter[startingIndex + 2].quantity <= shopStockListFilter[startingIndex + 2].minQuantity) {
                 binding.shopStockThreeQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
-                binding.shopStockThreeQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.shopStockThreeQuantity.setTextColor(originalTextColor)
             }
             binding.shopStockThree.setOnClickListener {
                 view?.findNavController()?.navigate(
@@ -205,7 +201,7 @@ class ShopStockListFragment : Fragment() {
             if (shopStockListFilter[startingIndex + 3].quantity <= shopStockListFilter[startingIndex + 3].minQuantity) {
                 binding.shopStockFourQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
-                binding.shopStockFourQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.shopStockFourQuantity.setTextColor(originalTextColor)
             }
             binding.shopStockFour.setOnClickListener {
                 view?.findNavController()?.navigate(
@@ -224,7 +220,7 @@ class ShopStockListFragment : Fragment() {
             if (shopStockListFilter[startingIndex + 4].quantity <= shopStockListFilter[startingIndex + 4].minQuantity) {
                 binding.shopStockFiveQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
-                binding.shopStockFiveQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.shopStockFiveQuantity.setTextColor(originalTextColor)
             }
             binding.shopStockFive.setOnClickListener {
                 view?.findNavController()?.navigate(
@@ -242,7 +238,7 @@ class ShopStockListFragment : Fragment() {
             if (shopStockListFilter[startingIndex + 5].quantity <= shopStockListFilter[startingIndex + 5].minQuantity) {
                 binding.shopStockSixQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
-                binding.shopStockSixQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.shopStockSixQuantity.setTextColor(originalTextColor)
             }
             binding.shopStockSix.setOnClickListener {
                 view?.findNavController()?.navigate(
@@ -261,7 +257,7 @@ class ShopStockListFragment : Fragment() {
             if (shopStockListFilter[startingIndex + 6].quantity <= shopStockListFilter[startingIndex + 6].minQuantity) {
                 binding.shopStockSevenQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
-                binding.shopStockSevenQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.shopStockSevenQuantity.setTextColor(originalTextColor)
             }
             binding.shopStockSeven.setOnClickListener {
                 view?.findNavController()?.navigate(
@@ -280,7 +276,7 @@ class ShopStockListFragment : Fragment() {
             if (shopStockListFilter[startingIndex + 7].quantity <= shopStockListFilter[startingIndex + 7].minQuantity) {
                 binding.shopStockEightQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
-                binding.shopStockEightQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.shopStockEightQuantity.setTextColor(originalTextColor)
             }
             binding.shopStockEight.setOnClickListener {
                 view?.findNavController()?.navigate(
@@ -299,7 +295,7 @@ class ShopStockListFragment : Fragment() {
             if (shopStockListFilter[startingIndex + 8].quantity <= shopStockListFilter[startingIndex + 8].minQuantity) {
                 binding.shopStockNineQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
-                binding.shopStockNineQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.shopStockNineQuantity.setTextColor(originalTextColor)
             }
             binding.shopStockNine.setOnClickListener {
                 view?.findNavController()?.navigate(
@@ -317,7 +313,7 @@ class ShopStockListFragment : Fragment() {
             if (shopStockListFilter[startingIndex + 9].quantity <= shopStockListFilter[startingIndex + 9].minQuantity) {
                 binding.shopStockTenQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
-                binding.shopStockTenQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.shopStockTenQuantity.setTextColor(originalTextColor)
             }
             binding.shopStockTen.setOnClickListener {
                 view?.findNavController()?.navigate(

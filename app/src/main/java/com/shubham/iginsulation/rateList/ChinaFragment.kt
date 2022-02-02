@@ -1,7 +1,8 @@
 package com.shubham.iginsulation.rateList
 
+import android.content.ClipData
 import android.content.ClipboardManager
-import android.content.Context
+import android.content.Context.CLIPBOARD_SERVICE
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,23 +10,12 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.shubham.iginsulation.IDAssign
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.databinding.FragmentChinaBinding
 import kotlin.math.roundToInt
-import android.content.ClipData
-import android.content.Context.CLIPBOARD_SERVICE
-
-import androidx.core.content.ContextCompat.getSystemService
-
-
-
-
-
-
 
 class ChinaFragment : Fragment() {
 
@@ -177,7 +167,6 @@ class ChinaFragment : Fragment() {
             val clipboardManager = activity?.getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
             val myClip: ClipData = ClipData.newPlainText("iginsulation", string)
             clipboardManager.setPrimaryClip(myClip)
-
         }
     }
 }

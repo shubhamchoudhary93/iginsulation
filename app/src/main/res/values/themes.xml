@@ -1,5 +1,5 @@
 <resources>
-    <style name="Theme.IGInsulation" parent="Theme.Material3.DayNight">
+    <style name="Theme.IGInsulation" parent="Theme.MaterialComponents.DayNight">
         <item name="colorPrimary">#B9F6CA</item>
         <item name="android:textSize">16sp</item>
     </style>
@@ -16,18 +16,28 @@
         <item name="android:layout_marginTop">5dp</item>
     </style>
 
+    <style name="transaction_list_column_one">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="transaction_list_column_two">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
     <style name="list_shop_stock_column_one">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">200dp</item>
         <item name="android:layout_marginTop">5dp</item>
-        <item name="android:textSize">18sp</item>
     </style>
 
     <style name="list_shop_stock_column_two">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_marginTop">5dp</item>
-        <item name="android:textSize">18sp</item>
     </style>
 
     <style name="list_column_sale_name">

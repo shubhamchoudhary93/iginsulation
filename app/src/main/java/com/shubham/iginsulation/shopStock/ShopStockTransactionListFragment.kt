@@ -137,19 +137,19 @@ class ShopStockTransactionListFragment : Fragment() {
             10
         else
             transactionList.size % 10
-
+        val originalTextColor = binding.transactionOneName.textColors
         if (numberOfItems > 0) {
             binding.transactionOne.visibility = View.VISIBLE
             binding.transactionOneName.text = transactionList[startingIndex].stock
             binding.transactionOneDate.text = transactionList[startingIndex].date
             binding.transactionOneQuantity.text = transactionList[startingIndex].quantity.toString()
             if (transactionList[startingIndex].add) {
-                binding.transactionOneQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionOneQuantity.setTextColor(originalTextColor)
             } else {
                 binding.transactionOneQuantity.setTextColor(Color.parseColor("#FF0000"))
             }
             if (transactionList[startingIndex].add) {
-                binding.transactionOneQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionOneQuantity.setTextColor(originalTextColor)
             } else {
                 binding.transactionOneQuantity.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -168,7 +168,7 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionTwoDate.text = transactionList[startingIndex + 1].date
             binding.transactionTwoQuantity.text = transactionList[startingIndex + 1].quantity.toString()
             if (transactionList[startingIndex + 1].add) {
-                binding.transactionTwoQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionTwoQuantity.setTextColor(originalTextColor)
             } else {
                 binding.transactionTwoQuantity.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -187,7 +187,7 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionThreeDate.text = transactionList[startingIndex + 2].date
             binding.transactionThreeQuantity.text = transactionList[startingIndex + 2].quantity.toString()
             if (transactionList[startingIndex + 2].add) {
-                binding.transactionThreeQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionThreeQuantity.setTextColor(originalTextColor)
             } else {
                 binding.transactionThreeQuantity.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -206,7 +206,7 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionFourDate.text = transactionList[startingIndex + 3].date
             binding.transactionFourQuantity.text = transactionList[startingIndex + 3].quantity.toString()
             if (transactionList[startingIndex + 3].add) {
-                binding.transactionFourQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionFourQuantity.setTextColor(originalTextColor)
             } else {
                 binding.transactionFourQuantity.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -225,7 +225,7 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionFiveDate.text = transactionList[startingIndex + 4].date
             binding.transactionFiveQuantity.text = transactionList[startingIndex + 4].quantity.toString()
             if (transactionList[startingIndex + 4].add) {
-                binding.transactionFiveQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionFiveQuantity.setTextColor(originalTextColor)
             } else {
                 binding.transactionFiveQuantity.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -244,7 +244,7 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionSixDate.text = transactionList[startingIndex + 5].date
             binding.transactionSixQuantity.text = transactionList[startingIndex + 5].quantity.toString()
             if (transactionList[startingIndex + 5].add) {
-                binding.transactionSixQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionSixQuantity.setTextColor(originalTextColor)
             } else {
                 binding.transactionSixQuantity.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -263,7 +263,7 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionSevenDate.text = transactionList[startingIndex + 6].date
             binding.transactionSevenQuantity.text = transactionList[startingIndex + 6].quantity.toString()
             if (transactionList[startingIndex + 6].add) {
-                binding.transactionSevenQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionSevenQuantity.setTextColor(originalTextColor)
             } else {
                 binding.transactionSevenQuantity.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -282,7 +282,7 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionEightDate.text = transactionList[startingIndex + 7].date
             binding.transactionEightQuantity.text = transactionList[startingIndex + 7].quantity.toString()
             if (transactionList[startingIndex + 7].add) {
-                binding.transactionEightQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionEightQuantity.setTextColor(originalTextColor)
             } else {
                 binding.transactionEightQuantity.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -301,7 +301,7 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionNineDate.text = transactionList[startingIndex + 8].date
             binding.transactionNineQuantity.text = transactionList[startingIndex + 8].quantity.toString()
             if (transactionList[startingIndex + 8].add) {
-                binding.transactionNineQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionNineQuantity.setTextColor(originalTextColor)
             } else {
                 binding.transactionNineQuantity.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -320,7 +320,7 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionTenDate.text = transactionList[startingIndex + 9].date
             binding.transactionTenQuantity.text = transactionList[startingIndex + 9].quantity.toString()
             if (transactionList[startingIndex + 9].add) {
-                binding.transactionTenQuantity.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionTenQuantity.setTextColor(originalTextColor)
             } else {
                 binding.transactionTenQuantity.setTextColor(Color.parseColor("#FF0000"))
             }

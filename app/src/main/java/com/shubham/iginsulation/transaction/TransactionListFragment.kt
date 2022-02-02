@@ -98,14 +98,14 @@ class TransactionListFragment : Fragment() {
             10
         else
             transactionList.size % 10
-
+        val originalTextColor = binding.transactionOneName.textColors
         if (numberOfItems > 0) {
             binding.transactionOne.visibility = View.VISIBLE
             binding.transactionOneName.text = transactionList[startingIndex].name
             binding.transactionOneDate.text = transactionList[startingIndex].date
             binding.transactionOneAmount.text = transactionList[startingIndex].amount.toString()
             if (transactionList[startingIndex + 1].receipt) {
-                binding.transactionOneAmount.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionOneAmount.setTextColor(originalTextColor)
             } else {
                 binding.transactionOneAmount.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -124,7 +124,7 @@ class TransactionListFragment : Fragment() {
             binding.transactionTwoDate.text = transactionList[startingIndex + 1].date
             binding.transactionTwoAmount.text = transactionList[startingIndex + 1].amount.toString()
             if (transactionList[startingIndex + 1].receipt) {
-                binding.transactionTwoAmount.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionTwoAmount.setTextColor(originalTextColor)
             } else {
                 binding.transactionTwoAmount.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -143,7 +143,7 @@ class TransactionListFragment : Fragment() {
             binding.transactionThreeDate.text = transactionList[startingIndex + 2].date
             binding.transactionThreeAmount.text = transactionList[startingIndex + 2].amount.toString()
             if (transactionList[startingIndex + 1].receipt) {
-                binding.transactionThreeAmount.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionThreeAmount.setTextColor(originalTextColor)
             } else {
                 binding.transactionThreeAmount.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -162,7 +162,7 @@ class TransactionListFragment : Fragment() {
             binding.transactionFourDate.text = transactionList[startingIndex + 3].date
             binding.transactionFourAmount.text = transactionList[startingIndex + 3].amount.toString()
             if (transactionList[startingIndex + 1].receipt) {
-                binding.transactionFourAmount.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionFourAmount.setTextColor(originalTextColor)
             } else {
                 binding.transactionFourAmount.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -181,7 +181,7 @@ class TransactionListFragment : Fragment() {
             binding.transactionFiveDate.text = transactionList[startingIndex + 4].date
             binding.transactionFiveAmount.text = transactionList[startingIndex + 4].amount.toString()
             if (transactionList[startingIndex + 1].receipt) {
-                binding.transactionFiveAmount.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionFiveAmount.setTextColor(originalTextColor)
             } else {
                 binding.transactionFiveAmount.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -200,7 +200,7 @@ class TransactionListFragment : Fragment() {
             binding.transactionSixDate.text = transactionList[startingIndex + 5].date
             binding.transactionSixAmount.text = transactionList[startingIndex + 5].amount.toString()
             if (transactionList[startingIndex + 1].receipt) {
-                binding.transactionSixAmount.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionSixAmount.setTextColor(originalTextColor)
             } else {
                 binding.transactionSixAmount.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -219,7 +219,7 @@ class TransactionListFragment : Fragment() {
             binding.transactionSevenDate.text = transactionList[startingIndex + 6].date
             binding.transactionSevenAmount.text = transactionList[startingIndex + 6].amount.toString()
             if (transactionList[startingIndex + 1].receipt) {
-                binding.transactionSevenAmount.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionSevenAmount.setTextColor(originalTextColor)
             } else {
                 binding.transactionSevenAmount.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -238,7 +238,7 @@ class TransactionListFragment : Fragment() {
             binding.transactionEightDate.text = transactionList[startingIndex + 7].date
             binding.transactionEightAmount.text = transactionList[startingIndex + 7].amount.toString()
             if (transactionList[startingIndex + 1].receipt) {
-                binding.transactionEightAmount.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionEightAmount.setTextColor(originalTextColor)
             } else {
                 binding.transactionEightAmount.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -257,7 +257,7 @@ class TransactionListFragment : Fragment() {
             binding.transactionNineDate.text = transactionList[startingIndex + 8].date
             binding.transactionNineAmount.text = transactionList[startingIndex + 8].amount.toString()
             if (transactionList[startingIndex + 1].receipt) {
-                binding.transactionNineAmount.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionNineAmount.setTextColor(originalTextColor)
             } else {
                 binding.transactionNineAmount.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -276,7 +276,7 @@ class TransactionListFragment : Fragment() {
             binding.transactionTenDate.text = transactionList[startingIndex + 9].date
             binding.transactionTenAmount.text = transactionList[startingIndex + 9].amount.toString()
             if (transactionList[startingIndex + 1].receipt) {
-                binding.transactionTenAmount.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.transactionTenAmount.setTextColor(originalTextColor)
             } else {
                 binding.transactionTenAmount.setTextColor(Color.parseColor("#FF0000"))
             }

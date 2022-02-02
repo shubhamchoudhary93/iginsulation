@@ -37,15 +37,15 @@
             android:orientation="horizontal">
 
             <TextView
-                style="@style/list_column_one"
+                style="@style/transaction_list_column_one"
                 android:text="Date"/>
 
             <TextView
-                style="@style/list_column_two"
+                style="@style/transaction_list_column_two"
                 android:text="Name"/>
 
             <TextView
-                style="@style/list_column_two"
+                style="@style/transaction_list_column_two"
                 android:text="Quantity"/>
         </LinearLayout>
 
@@ -57,15 +57,15 @@
 
             <TextView
                 android:id="@+id/transaction_one_date"
-                style="@style/list_column_one"/>
+                style="@style/transaction_list_column_one"/>
 
             <TextView
                 android:id="@+id/transaction_one_name"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
 
             <TextView
                 android:id="@+id/transaction_one_quantity"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -76,15 +76,15 @@
 
             <TextView
                 android:id="@+id/transaction_two_date"
-                style="@style/list_column_one"/>
+                style="@style/transaction_list_column_one"/>
 
             <TextView
                 android:id="@+id/transaction_two_name"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
 
             <TextView
                 android:id="@+id/transaction_two_quantity"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -95,15 +95,15 @@
 
             <TextView
                 android:id="@+id/transaction_three_date"
-                style="@style/list_column_one"/>
+                style="@style/transaction_list_column_one"/>
 
             <TextView
                 android:id="@+id/transaction_three_name"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
 
             <TextView
                 android:id="@+id/transaction_three_quantity"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -114,15 +114,15 @@
 
             <TextView
                 android:id="@+id/transaction_four_date"
-                style="@style/list_column_one"/>
+                style="@style/transaction_list_column_one"/>
 
             <TextView
                 android:id="@+id/transaction_four_name"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
 
             <TextView
                 android:id="@+id/transaction_four_quantity"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -133,15 +133,15 @@
 
             <TextView
                 android:id="@+id/transaction_five_date"
-                style="@style/list_column_one"/>
+                style="@style/transaction_list_column_one"/>
 
             <TextView
                 android:id="@+id/transaction_five_name"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
 
             <TextView
                 android:id="@+id/transaction_five_quantity"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -152,15 +152,15 @@
 
             <TextView
                 android:id="@+id/transaction_six_date"
-                style="@style/list_column_one"/>
+                style="@style/transaction_list_column_one"/>
 
             <TextView
                 android:id="@+id/transaction_six_name"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
 
             <TextView
                 android:id="@+id/transaction_six_quantity"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -171,15 +171,15 @@
 
             <TextView
                 android:id="@+id/transaction_seven_date"
-                style="@style/list_column_one"/>
+                style="@style/transaction_list_column_one"/>
 
             <TextView
                 android:id="@+id/transaction_seven_name"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
 
             <TextView
                 android:id="@+id/transaction_seven_quantity"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -190,15 +190,15 @@
 
             <TextView
                 android:id="@+id/transaction_eight_date"
-                style="@style/list_column_one"/>
+                style="@style/transaction_list_column_one"/>
 
             <TextView
                 android:id="@+id/transaction_eight_name"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
 
             <TextView
                 android:id="@+id/transaction_eight_quantity"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -209,15 +209,15 @@
 
             <TextView
                 android:id="@+id/transaction_nine_date"
-                style="@style/list_column_one"/>
+                style="@style/transaction_list_column_one"/>
 
             <TextView
                 android:id="@+id/transaction_nine_name"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
 
             <TextView
                 android:id="@+id/transaction_nine_quantity"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
         </LinearLayout>
 
         <LinearLayout
@@ -228,15 +228,15 @@
 
             <TextView
                 android:id="@+id/transaction_ten_date"
-                style="@style/list_column_one"/>
+                style="@style/transaction_list_column_one"/>
 
             <TextView
                 android:id="@+id/transaction_ten_name"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
 
             <TextView
                 android:id="@+id/transaction_ten_quantity"
-                style="@style/list_column_two"/>
+                style="@style/transaction_list_column_two"/>
         </LinearLayout>
 
         <LinearLayout

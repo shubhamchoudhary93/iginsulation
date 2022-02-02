@@ -98,13 +98,13 @@ class CustomerListFragment : Fragment() {
             10
         else
             customerList.size % 10
-
+        val originalTextColor = binding.customerOneName.textColors
         if (numberOfItems > 0) {
             binding.customerOne.visibility = View.VISIBLE
             binding.customerOneName.text = customerList[startingIndex].name
             binding.customerOneBalance.text = customerList[startingIndex].current.toString()
             if (customerList[startingIndex].current >= 0) {
-                binding.customerOneBalance.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.customerOneBalance.setTextColor(originalTextColor)
             } else {
                 binding.customerOneBalance.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -122,7 +122,7 @@ class CustomerListFragment : Fragment() {
             binding.customerTwoName.text = customerList[startingIndex + 1].name
             binding.customerTwoBalance.text = customerList[startingIndex + 1].current.toString()
             if (customerList[startingIndex + 1].current >= 0) {
-                binding.customerTwoBalance.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.customerTwoBalance.setTextColor(originalTextColor)
             } else {
                 binding.customerTwoBalance.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -140,7 +140,7 @@ class CustomerListFragment : Fragment() {
             binding.customerThreeName.text = customerList[startingIndex + 2].name
             binding.customerThreeBalance.text = customerList[startingIndex + 2].current.toString()
             if (customerList[startingIndex + 2].current >= 0) {
-                binding.customerThreeBalance.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.customerThreeBalance.setTextColor(originalTextColor)
             } else {
                 binding.customerThreeBalance.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -158,7 +158,7 @@ class CustomerListFragment : Fragment() {
             binding.customerFourName.text = customerList[startingIndex + 3].name
             binding.customerFourBalance.text = customerList[startingIndex + 3].current.toString()
             if (customerList[startingIndex + 3].current >= 0) {
-                binding.customerFourBalance.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.customerFourBalance.setTextColor(originalTextColor)
             } else {
                 binding.customerFourBalance.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -176,7 +176,7 @@ class CustomerListFragment : Fragment() {
             binding.customerFiveName.text = customerList[startingIndex + 4].name
             binding.customerFiveBalance.text = customerList[startingIndex + 4].current.toString()
             if (customerList[startingIndex + 4].current >= 0) {
-                binding.customerFiveBalance.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.customerFiveBalance.setTextColor(originalTextColor)
             } else {
                 binding.customerFiveBalance.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -194,7 +194,7 @@ class CustomerListFragment : Fragment() {
             binding.customerSixName.text = customerList[startingIndex + 5].name
             binding.customerSixBalance.text = customerList[startingIndex + 5].current.toString()
             if (customerList[startingIndex + 5].current >= 0) {
-                binding.customerSixBalance.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.customerSixBalance.setTextColor(originalTextColor)
             } else {
                 binding.customerSixBalance.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -212,7 +212,7 @@ class CustomerListFragment : Fragment() {
             binding.customerSevenName.text = customerList[startingIndex + 6].name
             binding.customerSevenBalance.text = customerList[startingIndex + 6].current.toString()
             if (customerList[startingIndex + 6].current >= 0) {
-                binding.customerSevenBalance.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.customerSevenBalance.setTextColor(originalTextColor)
             } else {
                 binding.customerSevenBalance.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -230,7 +230,7 @@ class CustomerListFragment : Fragment() {
             binding.customerEightName.text = customerList[startingIndex + 7].name
             binding.customerEightBalance.text = customerList[startingIndex + 7].current.toString()
             if (customerList[startingIndex + 7].current >= 0) {
-                binding.customerEightBalance.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.customerEightBalance.setTextColor(originalTextColor)
             } else {
                 binding.customerEightBalance.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -248,7 +248,7 @@ class CustomerListFragment : Fragment() {
             binding.customerNineName.text = customerList[startingIndex + 8].name
             binding.customerNineBalance.text = customerList[startingIndex + 8].current.toString()
             if (customerList[startingIndex + 8].current >= 0) {
-                binding.customerNineBalance.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.customerNineBalance.setTextColor(originalTextColor)
             } else {
                 binding.customerNineBalance.setTextColor(Color.parseColor("#FF0000"))
             }
@@ -266,7 +266,7 @@ class CustomerListFragment : Fragment() {
             binding.customerTenName.text = customerList[startingIndex + 9].name
             binding.customerTenBalance.text = customerList[startingIndex + 9].current.toString()
             if (customerList[startingIndex + 9].current >= 0) {
-                binding.customerTenBalance.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.customerTenBalance.setTextColor(originalTextColor)
             } else {
                 binding.customerTenBalance.setTextColor(Color.parseColor("#FF0000"))
             }
