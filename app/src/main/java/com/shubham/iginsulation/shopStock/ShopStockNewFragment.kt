@@ -39,8 +39,8 @@ class ShopStockNewFragment : Fragment() {
             android.R.layout.simple_list_item_1,
             categoryList
         )
-        binding.shopStockNewCategory.threshold = 1
-        binding.shopStockNewCategory.setAdapter(adapterCategory)
+        binding.categoryAuto.threshold = 1
+        binding.categoryAuto.setAdapter(adapterCategory)
 
         subCategoryList = shopStockDatabase.getAllSubCategory()
         val adapterSubCategory: ArrayAdapter<String> = ArrayAdapter<String>(
@@ -48,8 +48,9 @@ class ShopStockNewFragment : Fragment() {
             android.R.layout.simple_list_item_1,
             subCategoryList
         )
-        binding.shopStockNewSubCategory.threshold = 1
-        binding.shopStockNewSubCategory.setAdapter(adapterSubCategory)
+
+        binding.subCategoryAuto.threshold = 1
+        binding.subCategoryAuto.setAdapter(adapterSubCategory)
 
         setListeners()
         return binding.root
@@ -58,45 +59,40 @@ class ShopStockNewFragment : Fragment() {
     private fun setListeners() {
         binding.shopStockNewAdd.setOnClickListener {
 
-            val name = binding.shopStockNewName.text.toString()
-            val category = binding.shopStockNewCategory.text.toString()
-            val subCategory = binding.shopStockNewSubCategory.text.toString()
-            var rate = binding.shopStockNewRate.text.toString()
+            val name = binding.shopStockNewName.editText?.text.toString()
+            val category = binding.shopStockNewCategory.editText?.text.toString()
+            val subCategory = binding.shopStockNewSubCategory.editText?.text.toString()
+            var rate = binding.shopStockNewRate.editText?.text.toString()
             if (rate.toFloatOrNull() == null) {
                 Toast.makeText(context, "rate should be numeric", Toast.LENGTH_SHORT).show()
                 rate = ""
             }
-            var quantity = binding.shopStockNewQuantity.text.toString()
+            var quantity = binding.shopStockNewQuantity.editText?.text.toString()
             if (quantity.toIntOrNull() == null) {
                 Toast.makeText(context, "percentage should be numeric", Toast.LENGTH_SHORT).show()
                 quantity = ""
             }
 
-            var minQuantity = binding.shopStockNewMinQuantity.text.toString()
+            var minQuantity = binding.shopStockNewMinQuantity.editText?.text.toString()
             if (minQuantity.toIntOrNull() == null) {
                 Toast.makeText(context, "minQuantity should be numeric", Toast.LENGTH_SHORT).show()
                 minQuantity = ""
             }
 
-            var defaultReduce = binding.shopStockNewDefaultReduce.text.toString()
+            var defaultReduce = binding.shopStockNewDefaultReduce.editText?.text.toString()
             if (defaultReduce.toIntOrNull() == null) {
-                Toast.makeText(context, "defaultReduce should be numeric", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "defaultReduce should be numeric", Toast.LENGTH_SHORT)
+                    .show()
                 defaultReduce = ""
             }
 
-            val seller = binding.shopStockNewSeller.text.toString()
+            val seller = binding.shopStockNewSeller.editText?.text.toString()
 
             if (name != "") {
                 insertShopStock(
                     name,
-                    if (category == "")
-                        "category"
-                    else
-                        category,
-                    if (subCategory == "")
-                        "subCategory"
-                    else
-                        subCategory,
+                    category,
+                    subCategory,
                     if (quantity == "")
                         0
                     else

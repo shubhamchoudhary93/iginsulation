@@ -2,83 +2,183 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".shopStock.ShopStockDetailFragment">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/shop_stock_detail_name"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="name" />
+            android:layout_margin="20dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/shop_stock_detail_category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="category" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/shop_stock_detail_sub_category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="subCategory" />
+                <TextView
+                    android:id="@+id/name_text"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/shop_stock_detail_quantity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="quantity" />
+                <TextView
+                    android:id="@+id/name_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10" />
 
-        <TextView
-            android:id="@+id/shop_stock_detail_min_quantity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="min quantity" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/shop_stock_detail_default_reduce"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="default reduce" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/shop_stock_detail_rate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="rate" />
+                <TextView
+                    android:id="@+id/category_text"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/shop_stock_detail_seller"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="seller" />
+                <TextView
+                    android:id="@+id/category_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10" />
+            </LinearLayout>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/shop_stock_detail_modify"
-            android:text="modify"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/shop_stock_detail_delete"
-            android:text="delete"/>
+                <TextView
+                    android:id="@+id/sub_category_text"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sub Category"
+                    android:textStyle="bold" />
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/sub_category_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/quantity_text"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/quantity_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/min_quantity_text"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Min Quantity"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/min_quantity_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/default_reduce_text"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Default Reduce"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/default_reduce_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/rate_text"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rate"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rate_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/seller_text"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Seller"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/seller_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/modify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="modify" />
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="delete" />
+
+        </LinearLayout>
     </ScrollView>
 </layout>

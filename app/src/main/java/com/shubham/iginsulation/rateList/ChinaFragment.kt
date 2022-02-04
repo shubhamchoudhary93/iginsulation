@@ -32,7 +32,7 @@ class ChinaFragment : Fragment() {
         -25F,
         -16F,
         -16F,
-        35F
+        40F
     )
 
     private var buttonTwoValue = listOf(
@@ -46,7 +46,7 @@ class ChinaFragment : Fragment() {
         -27F,
         -18F,
         -18F,
-        40F
+        35F
     )
 
     private var rateList = listOf(

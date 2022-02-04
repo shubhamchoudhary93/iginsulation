@@ -36,16 +36,18 @@ class ShopStockDetailFragment : Fragment() {
 
         fetchShopStock(id)
 
-        binding.shopStockDetailDelete.setOnClickListener {
+        binding.delete.setOnClickListener {
             shopStockDatabase.delete(id)
             view?.findNavController()?.navigate(
                 ShopStockDetailFragmentDirections.actionShopStockDetailFragmentToShopStockListFragment()
             )
         }
 
-        binding.shopStockDetailModify.setOnClickListener {
+        binding.modify.setOnClickListener {
             view?.findNavController()?.navigate(
-                ShopStockDetailFragmentDirections.actionShopStockDetailFragmentToShopStockModifyFragment(id)
+                ShopStockDetailFragmentDirections.actionShopStockDetailFragmentToShopStockModifyFragment(
+                    id
+                )
             )
         }
 
@@ -72,14 +74,49 @@ class ShopStockDetailFragment : Fragment() {
     }
 
     private fun setShopStockData(shopStock: ShopStock) {
-        binding.shopStockDetailName.text = shopStock.name
-        binding.shopStockDetailCategory.text = shopStock.category
-        binding.shopStockDetailSubCategory.text = shopStock.subCategory
-        binding.shopStockDetailQuantity.text = shopStock.quantity.toString()
-        binding.shopStockDetailMinQuantity.text = shopStock.minQuantity.toString()
-        binding.shopStockDetailDefaultReduce.text = shopStock.defaultReduce.toString()
-        binding.shopStockDetailRate.text = shopStock.rate.toString()
-        binding.shopStockDetailSeller.text = shopStock.seller
+        if (shopStock.name != "")
+            binding.nameValue.text = shopStock.name
+        else {
+            binding.nameValue.visibility = View.GONE
+            binding.nameText.visibility = View.GONE
+        }
+        if (shopStock.category != "")
+            binding.categoryValue.text = shopStock.category
+        else {
+            binding.categoryText.visibility = View.GONE
+            binding.categoryValue.visibility = View.GONE
+        }
+        if (shopStock.subCategory != "")
+            binding.subCategoryValue.text = shopStock.subCategory
+        else {
+            binding.subCategoryText.visibility = View.GONE
+            binding.subCategoryValue.visibility = View.GONE
+        }
+        binding.quantityValue.text = shopStock.quantity.toString()
 
+        if (shopStock.minQuantity != 0)
+            binding.minQuantityValue.text = shopStock.minQuantity.toString()
+        else {
+            binding.minQuantityText.visibility = View.GONE
+            binding.minQuantityValue.visibility = View.GONE
+        }
+        if (shopStock.defaultReduce != 0)
+            binding.defaultReduceValue.text = shopStock.defaultReduce.toString()
+        else {
+            binding.defaultReduceText.visibility = View.GONE
+            binding.defaultReduceValue.visibility = View.GONE
+        }
+        if (shopStock.rate != 0F)
+            binding.rateValue.text = shopStock.rate.toString()
+        else {
+            binding.rateText.visibility = View.GONE
+            binding.rateValue.visibility = View.GONE
+        }
+        if (shopStock.seller != "")
+            binding.sellerValue.text = shopStock.seller
+        else {
+            binding.sellerText.visibility = View.GONE
+            binding.sellerValue.visibility = View.GONE
+        }
     }
 }
