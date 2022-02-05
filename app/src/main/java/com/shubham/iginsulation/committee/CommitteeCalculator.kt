@@ -4,17 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import com.shubham.iginsulation.R
-import com.shubham.iginsulation.database.customer.Customer
-import com.shubham.iginsulation.database.customer.CustomerDatabase
-import com.shubham.iginsulation.database.customer.CustomerDatabaseDao
 import com.shubham.iginsulation.databinding.FragmentCommitteeCalculatorBinding
-import com.shubham.iginsulation.databinding.FragmentCustomerNewBinding
-import kotlin.math.roundToInt
 
 class CommitteeCalculator : Fragment() {
 
@@ -30,6 +23,9 @@ class CommitteeCalculator : Fragment() {
         )
 
         setListeners()
+        binding.committeeCalculatedBidText.visibility = View.GONE
+        binding.committeeCalculatedInstallmentText.visibility = View.GONE
+        binding.committeeCalculatedInterestText.visibility = View.GONE
         return binding.root
     }
 
@@ -37,12 +33,13 @@ class CommitteeCalculator : Fragment() {
         binding.committeeCalculateInstallment.setOnClickListener {
 
             val committeeIdealInstallment =
-                binding.committeeIdealInstallment.text.toString().toFloatOrNull()
-            val committeeTotalMember = binding.committeeTotalMember.text.toString().toFloatOrNull()
+                binding.committeeIdealInstallment.editText?.text.toString().toFloatOrNull()
+            val committeeTotalMember =
+                binding.committeeTotalMember.editText?.text.toString().toFloatOrNull()
             val committeeCurrentMonth =
-                binding.committeeCurrentMonth.text.toString().toFloatOrNull()
+                binding.committeeCurrentMonth.editText?.text.toString().toFloatOrNull()
 
-            val committeeBid = binding.committeeBid.text.toString().toFloatOrNull()
+            val committeeBid = binding.committeeBid.editText?.text.toString().toFloatOrNull()
 
             var calculatedInstallment = 0F
             var calculatedInterest = 0F
@@ -53,19 +50,22 @@ class CommitteeCalculator : Fragment() {
                     (100 * committeeBid) / ((committeeTotalMember * calculatedInstallment) * (committeeTotalMember - committeeCurrentMonth))
             }
 
+            binding.committeeCalculatedInstallmentText.visibility = View.GONE
+            binding.committeeCalculatedInterestText.visibility = View.GONE
             binding.committeeCalculatedInstallment.text = calculatedInstallment.toString()
             binding.committeeCalculatedInterest.text = calculatedInterest.toString()
         }
 
         binding.committeeCalculateBid.setOnClickListener {
             val committeeIdealInstallment =
-                binding.committeeIdealInstallment.text.toString().toFloatOrNull()
-            val committeeTotalMember = binding.committeeTotalMember.text.toString().toFloatOrNull()
+                binding.committeeIdealInstallment.editText?.text.toString().toFloatOrNull()
+            val committeeTotalMember =
+                binding.committeeTotalMember.editText?.text.toString().toFloatOrNull()
             val committeeCurrentMonth =
-                binding.committeeCurrentMonth.text.toString().toFloatOrNull()
+                binding.committeeCurrentMonth.editText?.text.toString().toFloatOrNull()
 
             val projectedInterest =
-                binding.committeeProjectedInterest.text.toString().toFloatOrNull()
+                binding.committeeProjectedInterest.editText?.text.toString().toFloatOrNull()
 
             var calculatedBid = 0F
             if (committeeIdealInstallment != null && committeeTotalMember != null && committeeCurrentMonth != null && projectedInterest != null) {
@@ -73,6 +73,7 @@ class CommitteeCalculator : Fragment() {
                     (committeeIdealInstallment * committeeTotalMember * projectedInterest * (committeeTotalMember - committeeCurrentMonth)) / (100 + (projectedInterest * (committeeTotalMember - committeeCurrentMonth)))
             }
 
+            binding.committeeCalculatedBidText.visibility = View.GONE
             binding.committeeCalculatedBid.text = calculatedBid.toString()
         }
     }

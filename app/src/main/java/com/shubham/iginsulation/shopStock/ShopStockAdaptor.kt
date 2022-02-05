@@ -52,7 +52,7 @@ class ShopStockAdaptor(val clickListener: ShopStockTransactionListener) :
         }
     }
 
-    class ShopStockTransactionListener(val clickListener: (inventoryId: Long) -> Unit) {
+    class ShopStockTransactionListener(val clickListener: (shopStockTransactionId: Long) -> Unit) {
         fun onClick(shopStockTransaction: ShopStockTransaction) = clickListener(shopStockTransaction.id)
     }
 }

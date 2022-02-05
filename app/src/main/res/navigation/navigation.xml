@@ -413,6 +413,9 @@
         <action
             android:id="@+id/action_shopStockFragment_to_shopStockUpdateFragment"
             app:destination="@id/shopStockUpdateFragment" />
+        <action
+            android:id="@+id/action_shopStockFragment_to_shopStockTransactionDetailFragment"
+            app:destination="@id/shopStockTransactionDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/shopStockNewFragment"

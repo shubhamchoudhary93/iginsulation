@@ -1,91 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".committee.committeeCalculatorFragment">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/committee_ideal_installment"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="ideal installment"
-            android:ems="10"
-            android:hint="ideal installment"
-            android:inputType="number" />
+            android:layout_margin="20dp"
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/committee_total_member"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/committee_ideal_installment"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ideal Installment per person"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/committee_total_member"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Total Members"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/committee_current_month"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Current Month"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/committee_bid"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bid per person"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/committee_calculate_installment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculate installment" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/committee_calculated_installment_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Installment : " />
+
+                <TextView
+                    android:id="@+id/committee_calculated_installment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp" />
+            </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="total members"
-            android:ems="10"
-            android:hint="total members"
-            android:inputType="number" />
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/committee_current_month"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:autofillHints="current month"
-            android:ems="10"
-            android:hint="current month"
-            android:inputType="number" />
+            <TextView
+                android:id="@+id/committee_calculated_interest_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Calculated Interest : " />
+            <TextView
+                android:id="@+id/committee_calculated_interest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp" />
+        </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/committee_projected_interest"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Projected Interest"
+                app:endIconMode="clear_text">
 
-        <EditText
-            android:id="@+id/committee_bid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints="bid"
-            android:ems="10"
-            android:hint="bid"
-            android:inputType="number" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/committee_calculate_installment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Calculate installment" />
+            <Button
+                android:id="@+id/committee_calculate_bid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="calculate Bid" />
 
-        <TextView
-            android:id="@+id/committee_calculated_installment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/committee_calculated_interest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp" />
+                <TextView
+                    android:id="@+id/committee_calculated_bid_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Installment : " />
 
-        <EditText
-            android:id="@+id/committee_projected_interest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints="projected interest"
-            android:ems="10"
-            android:hint="projected interest"
-            android:inputType="numberDecimal" />
-
-        <Button
-            android:id="@+id/committee_calculate_bid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="calculate Bid" />
-
-        <TextView
-            android:id="@+id/committee_calculated_bid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/committee_calculated_bid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp" />
+            </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 </layout>
