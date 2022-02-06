@@ -188,18 +188,15 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+            <LinearLayout style="@style/general_horizontal_linear_layout">
 
                 <Button
                     android:id="@+id/button_previous_page"
-                    style="@style/list_previous_button" />
+                    style="@style/page_button_previous" />
 
                 <Button
                     android:id="@+id/button_next_page"
-                    style="@style/list_next_button" />
+                    style="@style/page_button_next" />
             </LinearLayout>
 
             <LinearLayout
