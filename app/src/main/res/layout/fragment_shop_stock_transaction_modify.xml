@@ -2,62 +2,67 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".shopStock.ShopStockTransactionModifyFragment">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
 
-        <CheckBox
-            android:id="@+id/add"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add" />
+            android:layout_margin="20dp"
+            android:orientation="vertical">
 
-        <AutoCompleteTextView
-            android:id="@+id/shop_stock_transaction_modify_stock"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="customer name"
-            android:inputType="textPersonName"
-            android:autofillHints="name"  />
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Add" />
 
-        <EditText
-            android:id="@+id/shop_stock_transaction_modify_quantity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="quantity"
-            android:inputType="numberDecimal"
-            android:autofillHints="amount" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Customer Name">
 
-        <EditText
-            android:id="@+id/shop_stock_transaction_modify_date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="date"
-            android:clickable="true"
-            android:autofillHints="22/08/21" />
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/name"
+                    style="@style/new_edit_auto_input_layout"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/shop_stock_transaction_modify_detail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="detail"
-            android:inputType="text"
-            android:autofillHints="detail" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Quantity">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/shop_stock_transaction_modify"
-            android:text="modify"/>
-    </LinearLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/quantity"
+                    style="@style/new_edit_input_layout"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Date">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/date"
+                    style="@style/new_edit_input_layout"
+                    android:inputType="date" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Detail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/detail"
+                    style="@style/new_edit_input_layout"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/modify"
+                style="@style/detail_edit_button" />
+        </LinearLayout>
     </ScrollView>
 </layout>

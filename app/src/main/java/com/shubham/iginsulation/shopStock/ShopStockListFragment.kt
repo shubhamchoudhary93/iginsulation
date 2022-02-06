@@ -58,26 +58,26 @@ class ShopStockListFragment : Fragment() {
             android.R.layout.simple_list_item_1,
             category
         )
-        binding.categoryFilter.threshold = 1
-        binding.categoryFilter.setAdapter(adapterStock)
+        binding.category.threshold = 1
+        binding.category.setAdapter(adapterStock)
 
-        binding.categoryFilter.setOnItemClickListener { parent, _, position, _ ->
+        binding.category.setOnItemClickListener { parent, _, position, _ ->
             val selectedItem = parent.getItemAtPosition(position).toString()
             currentPage = 1
             shopStockListFilter = shopStockDatabase.getListByFilter(selectedItem)
             setShopStockData()
         }
 
-        binding.nameFilter.addTextChangedListener(object: TextWatcher {
+        binding.name.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 shopStockListFilter = shopStockDatabase.getListByName(s.toString())
                 currentPage = 1
                 setShopStockData()
             }
 
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) { }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) { }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
 
         binding.low.setOnClickListener {
@@ -141,7 +141,8 @@ class ShopStockListFragment : Fragment() {
         if (numberOfItems > 0) {
             binding.shopStockOne.visibility = View.VISIBLE
             binding.shopStockOneName.text = shopStockListFilter[startingIndex].name
-            binding.shopStockOneQuantity.text = shopStockListFilter[startingIndex].quantity.toString()
+            binding.shopStockOneQuantity.text =
+                shopStockListFilter[startingIndex].quantity.toString()
             if (shopStockListFilter[startingIndex].quantity <= shopStockListFilter[startingIndex].minQuantity) {
                 binding.shopStockOneQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
@@ -159,7 +160,8 @@ class ShopStockListFragment : Fragment() {
         if (numberOfItems > 1) {
             binding.shopStockTwo.visibility = View.VISIBLE
             binding.shopStockTwoName.text = shopStockListFilter[startingIndex + 1].name
-            binding.shopStockTwoQuantity.text = shopStockListFilter[startingIndex + 1].quantity.toString()
+            binding.shopStockTwoQuantity.text =
+                shopStockListFilter[startingIndex + 1].quantity.toString()
             if (shopStockListFilter[startingIndex + 1].quantity <= shopStockListFilter[startingIndex + 1].minQuantity) {
                 binding.shopStockTwoQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
@@ -234,7 +236,8 @@ class ShopStockListFragment : Fragment() {
         if (numberOfItems > 5) {
             binding.shopStockSix.visibility = View.VISIBLE
             binding.shopStockSixName.text = shopStockListFilter[startingIndex + 5].name
-            binding.shopStockSixQuantity.text = shopStockListFilter[startingIndex + 5].quantity.toString()
+            binding.shopStockSixQuantity.text =
+                shopStockListFilter[startingIndex + 5].quantity.toString()
             if (shopStockListFilter[startingIndex + 5].quantity <= shopStockListFilter[startingIndex + 5].minQuantity) {
                 binding.shopStockSixQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {
@@ -309,7 +312,8 @@ class ShopStockListFragment : Fragment() {
         if (numberOfItems > 9) {
             binding.shopStockTen.visibility = View.VISIBLE
             binding.shopStockTenName.text = shopStockListFilter[startingIndex + 9].name
-            binding.shopStockTenQuantity.text = shopStockListFilter[startingIndex + 9].quantity.toString()
+            binding.shopStockTenQuantity.text =
+                shopStockListFilter[startingIndex + 9].quantity.toString()
             if (shopStockListFilter[startingIndex + 9].quantity <= shopStockListFilter[startingIndex + 9].minQuantity) {
                 binding.shopStockTenQuantity.setTextColor(Color.parseColor("#FF0000"))
             } else {

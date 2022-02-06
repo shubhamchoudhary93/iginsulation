@@ -50,8 +50,8 @@ class CommitteeCalculator : Fragment() {
                     (100 * committeeBid) / ((committeeTotalMember * calculatedInstallment) * (committeeTotalMember - committeeCurrentMonth))
             }
 
-            binding.committeeCalculatedInstallmentText.visibility = View.GONE
-            binding.committeeCalculatedInterestText.visibility = View.GONE
+            binding.committeeCalculatedInstallmentText.visibility = View.VISIBLE
+            binding.committeeCalculatedInterestText.visibility = View.VISIBLE
             binding.committeeCalculatedInstallment.text = calculatedInstallment.toString()
             binding.committeeCalculatedInterest.text = calculatedInterest.toString()
         }
@@ -73,7 +73,7 @@ class CommitteeCalculator : Fragment() {
                     (committeeIdealInstallment * committeeTotalMember * projectedInterest * (committeeTotalMember - committeeCurrentMonth)) / (100 + (projectedInterest * (committeeTotalMember - committeeCurrentMonth)))
             }
 
-            binding.committeeCalculatedBidText.visibility = View.GONE
+            binding.committeeCalculatedBidText.visibility = View.VISIBLE
             binding.committeeCalculatedBid.text = calculatedBid.toString()
         }
     }

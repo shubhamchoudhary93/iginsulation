@@ -39,15 +39,15 @@ class ShopStockModifyFragment : Fragment() {
         id = args.id
 
         fetchStock(id)
-        
+
         categoryList = shopStockDatabase.getAllCategory()
         val adapterCategory: ArrayAdapter<String> = ArrayAdapter<String>(
             this.requireContext(),
             android.R.layout.simple_list_item_1,
             categoryList
         )
-        binding.shopStockModifyCategory.threshold = 1
-        binding.shopStockModifyCategory.setAdapter(adapterCategory)
+        binding.categoryAuto.threshold = 1
+        binding.categoryAuto.setAdapter(adapterCategory)
 
         subCategoryList = shopStockDatabase.getAllSubCategory()
         val adapterSubCategory: ArrayAdapter<String> = ArrayAdapter<String>(
@@ -55,43 +55,44 @@ class ShopStockModifyFragment : Fragment() {
             android.R.layout.simple_list_item_1,
             subCategoryList
         )
-        binding.shopStockModifySubCategory.threshold = 1
-        binding.shopStockModifySubCategory.setAdapter(adapterSubCategory)
+        binding.subCategoryAuto.threshold = 1
+        binding.subCategoryAuto.setAdapter(adapterSubCategory)
 
         setListeners()
         return binding.root
     }
 
     private fun setListeners() {
-        binding.shopStockModifyModify.setOnClickListener {
+        binding.modify.setOnClickListener {
 
-            val name = binding.shopStockModifyName.text.toString()
-            val category = binding.shopStockModifyCategory.text.toString()
-            val subCategory = binding.shopStockModifySubCategory.text.toString()
-            var rate = binding.shopStockModifyRate.text.toString()
+            val name = binding.name.text.toString()
+            val category = binding.categoryAuto.text.toString()
+            val subCategory = binding.subCategoryAuto.text.toString()
+            var rate = binding.rate.text.toString()
             if (rate.toFloatOrNull() == null) {
                 Toast.makeText(context, "rate should be numeric", Toast.LENGTH_SHORT).show()
                 rate = ""
             }
-            var quantity = binding.shopStockModifyQuantity.text.toString()
+            var quantity = binding.quantity.text.toString()
             if (quantity.toIntOrNull() == null) {
                 Toast.makeText(context, "percentage should be numeric", Toast.LENGTH_SHORT).show()
                 quantity = ""
             }
 
-            var minQuantity = binding.shopStockModifyMinQuantity.text.toString()
+            var minQuantity = binding.minQuantity.text.toString()
             if (minQuantity.toIntOrNull() == null) {
                 Toast.makeText(context, "minQuantity should be numeric", Toast.LENGTH_SHORT).show()
                 minQuantity = ""
             }
 
-            var defaultReduce = binding.shopStockModifyDefaultReduce.text.toString()
+            var defaultReduce = binding.defaultReduce.text.toString()
             if (defaultReduce.toIntOrNull() == null) {
-                Toast.makeText(context, "defaultReduce should be numeric", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "defaultReduce should be numeric", Toast.LENGTH_SHORT)
+                    .show()
                 defaultReduce = ""
             }
 
-            val seller = binding.shopStockModifySeller.text.toString()
+            val seller = binding.seller.text.toString()
 
             if (name != "") {
                 modifyStock(
@@ -154,11 +155,11 @@ class ShopStockModifyFragment : Fragment() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
-                view?.findNavController()?.navigate(
-                    ShopStockModifyFragmentDirections.actionShopStockModifyFragmentToShopStockDetailFragment(
-                        id
-                    )
-                )
+        view?.findNavController()?.navigate(
+            ShopStockModifyFragmentDirections.actionShopStockModifyFragmentToShopStockDetailFragment(
+                id
+            )
+        )
     }
 
     private fun fetchStock(id: Long) {
@@ -181,13 +182,13 @@ class ShopStockModifyFragment : Fragment() {
     }
 
     private fun setStockData(shopStock: ShopStock) {
-        binding.shopStockModifyName.setText(shopStock.name)
-        binding.shopStockModifyCategory.setText(shopStock.category)
-        binding.shopStockModifySubCategory.setText(shopStock.subCategory)
-        binding.shopStockModifyQuantity.setText(shopStock.quantity.toString())
-        binding.shopStockModifyMinQuantity.setText(shopStock.minQuantity.toString())
-        binding.shopStockModifyDefaultReduce.setText(shopStock.defaultReduce.toString())
-        binding.shopStockModifyRate.setText(shopStock.rate.toString())
-        binding.shopStockModifySeller.setText(shopStock.seller)
+        binding.name.setText(shopStock.name)
+        binding.categoryAuto.setText(shopStock.category)
+        binding.subCategoryAuto.setText(shopStock.subCategory)
+        binding.quantity.setText(shopStock.quantity.toString())
+        binding.minQuantity.setText(shopStock.minQuantity.toString())
+        binding.defaultReduce.setText(shopStock.defaultReduce.toString())
+        binding.rate.setText(shopStock.rate.toString())
+        binding.seller.setText(shopStock.seller)
     }
 }

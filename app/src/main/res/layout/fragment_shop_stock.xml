@@ -4,69 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".shopStock.ShopStockFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ScrollView style="@style/outer_scroll_view">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="vertical">
+        <LinearLayout style="@style/outer_vertical_linear_layout">
 
             <TextView
                 android:id="@+id/notifications"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                style="@style/notification_text_top" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="20dp"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/general_vertical_linear_layout">
 
-                <AutoCompleteTextView
-                    android:id="@+id/shop_stock_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:autofillHints="name"
-                    android:ems="10"
-                    android:hint="name"
-                    android:inputType="textPersonName" />
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/new_text_input_layout"
+                    android:hint="Name">
 
-                <TextView
-                    android:id="@+id/shop_stock_quantity_show"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/name"
+                        style="@style/new_edit_auto_input_layout"
+                        android:inputType="textPersonName" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/shop_stock_quantity"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content" />
+                <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Current Stock : " />
+
+                    <TextView
+                        android:id="@+id/shop_stock_quantity_show"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/new_text_input_layout"
+                    android:hint="Quantity">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/shop_stock_quantity"
+                        style="@style/new_edit_auto_input_layout"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="20dp"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/general_horizontal_linear_layout">
 
                 <Button
                     android:id="@+id/shop_stock_add"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/green"
-                    android:text="add" />
+                    style="@style/shop_stock_add"/>
 
                 <Button
                     android:id="@+id/shop_stock_minus"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/red"
-                    android:text="minus" />
+                    style="@style/shop_stock_minus"/>
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -78,26 +70,22 @@
 
             <Button
                 android:id="@+id/button_new_shop_stock"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/general_button"
                 android:text="New Stock" />
 
             <Button
                 android:id="@+id/button_view_shop_stock"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/general_button"
                 android:text="View Stock" />
 
             <Button
                 android:id="@+id/button_update_shop_stock"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/general_button"
                 android:text="Update Stock" />
 
             <Button
                 android:id="@+id/button_view_shop_stock_transaction"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/general_button"
                 android:text="View Stock Transaction" />
         </LinearLayout>
     </ScrollView>

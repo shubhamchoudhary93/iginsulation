@@ -3,180 +3,115 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".shopStock.ShopStockDetailFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ScrollView style="@style/outer_scroll_view">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="vertical">
+        <LinearLayout style="@style/outer_vertical_linear_layout">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/name_text"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:text="Name"
-                    android:textStyle="bold" />
+                    style="@style/detail_text_textview"
+                    android:text="Name" />
 
                 <TextView
                     android:id="@+id/name_value"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10" />
+                    style="@style/detail_value_textview" />
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/category_text"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:text="Category"
-                    android:textStyle="bold" />
+                    style="@style/detail_text_textview"
+                    android:text="Category" />
 
                 <TextView
                     android:id="@+id/category_value"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10" />
+                    style="@style/detail_value_textview" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/sub_category_text"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:text="Sub Category"
-                    android:textStyle="bold" />
+                    style="@style/detail_text_textview"
+                    android:text="Sub Category" />
 
                 <TextView
                     android:id="@+id/sub_category_value"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10" />
+                    style="@style/detail_value_textview" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/quantity_text"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:text="Quantity"
-                    android:textStyle="bold" />
+                    style="@style/detail_text_textview"
+                    android:text="Quantity" />
 
                 <TextView
                     android:id="@+id/quantity_value"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10" />
+                    style="@style/detail_value_textview" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/min_quantity_text"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:text="Min Quantity"
-                    android:textStyle="bold" />
+                    style="@style/detail_text_textview"
+                    android:text="Min Quantity" />
 
                 <TextView
                     android:id="@+id/min_quantity_value"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10" />
+                    style="@style/detail_value_textview" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/default_reduce_text"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:text="Default Reduce"
-                    android:textStyle="bold" />
+                    style="@style/detail_text_textview"
+                    android:text="Default Reduce" />
 
                 <TextView
                     android:id="@+id/default_reduce_value"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10" />
+                    style="@style/detail_value_textview" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/rate_text"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:text="Rate"
-                    android:textStyle="bold" />
+                    style="@style/detail_text_textview"
+                    android:text="Rate" />
 
                 <TextView
                     android:id="@+id/rate_value"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10" />
+                    style="@style/detail_value_textview" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/seller_text"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:text="Seller"
-                    android:textStyle="bold" />
+                    style="@style/detail_text_textview"
+                    android:text="Seller" />
 
                 <TextView
                     android:id="@+id/seller_value"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10" />
+                    style="@style/detail_value_textview" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/modify"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                style="@style/detail_edit_button"
                 android:text="modify" />
 
             <Button
                 android:id="@+id/delete"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/detail_delete_button"
                 android:text="delete" />
 
         </LinearLayout>

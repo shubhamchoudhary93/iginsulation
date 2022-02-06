@@ -35,7 +35,8 @@ class ShopStockTransactionListFragment : Fragment() {
             R.layout.fragment_shop_stock_transaction_list, container, false
         )
 
-        shopStockTransactionDatabase = ShopStockTransactionDatabase.getInstance(requireContext()).shopStockTransactionDatabaseDao
+        shopStockTransactionDatabase =
+            ShopStockTransactionDatabase.getInstance(requireContext()).shopStockTransactionDatabaseDao
 
         binding.transactionOne.visibility = View.GONE
         binding.transactionTwo.visibility = View.GONE
@@ -52,19 +53,19 @@ class ShopStockTransactionListFragment : Fragment() {
 
         fetchShopStockTransactionList()
 
-        binding.nameFilter.addTextChangedListener(object: TextWatcher {
+        binding.name.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 transactionList = shopStockTransactionDatabase.getListByName(s.toString())
                 currentPage = 1
                 setShopStockTransactionData()
             }
 
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) { }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) { }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
 
-        binding.dateFilter.setOnClickListener {
+        binding.date.setOnClickListener {
 
             val c = Calendar.getInstance()
             val year = c.get(Calendar.YEAR)
@@ -75,8 +76,9 @@ class ShopStockTransactionListFragment : Fragment() {
                 this.requireContext(),
                 { _, yearPick, monthOfYear, dayOfMonth ->
                     val text = dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + yearPick
-                    binding.dateFilter.setText(text)
-                    transactionList = shopStockTransactionDatabase.getByDate(text) as List<ShopStockTransaction>
+                    binding.date.setText(text)
+                    transactionList =
+                        shopStockTransactionDatabase.getByDate(text) as List<ShopStockTransaction>
                     currentPage = 1
                     setShopStockTransactionData()
                 },
@@ -166,7 +168,8 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionTwo.visibility = View.VISIBLE
             binding.transactionTwoName.text = transactionList[startingIndex + 1].stock
             binding.transactionTwoDate.text = transactionList[startingIndex + 1].date
-            binding.transactionTwoQuantity.text = transactionList[startingIndex + 1].quantity.toString()
+            binding.transactionTwoQuantity.text =
+                transactionList[startingIndex + 1].quantity.toString()
             if (transactionList[startingIndex + 1].add) {
                 binding.transactionTwoQuantity.setTextColor(originalTextColor)
             } else {
@@ -185,7 +188,8 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionThree.visibility = View.VISIBLE
             binding.transactionThreeName.text = transactionList[startingIndex + 2].stock
             binding.transactionThreeDate.text = transactionList[startingIndex + 2].date
-            binding.transactionThreeQuantity.text = transactionList[startingIndex + 2].quantity.toString()
+            binding.transactionThreeQuantity.text =
+                transactionList[startingIndex + 2].quantity.toString()
             if (transactionList[startingIndex + 2].add) {
                 binding.transactionThreeQuantity.setTextColor(originalTextColor)
             } else {
@@ -204,7 +208,8 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionFour.visibility = View.VISIBLE
             binding.transactionFourName.text = transactionList[startingIndex + 3].stock
             binding.transactionFourDate.text = transactionList[startingIndex + 3].date
-            binding.transactionFourQuantity.text = transactionList[startingIndex + 3].quantity.toString()
+            binding.transactionFourQuantity.text =
+                transactionList[startingIndex + 3].quantity.toString()
             if (transactionList[startingIndex + 3].add) {
                 binding.transactionFourQuantity.setTextColor(originalTextColor)
             } else {
@@ -223,7 +228,8 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionFive.visibility = View.VISIBLE
             binding.transactionFiveName.text = transactionList[startingIndex + 4].stock
             binding.transactionFiveDate.text = transactionList[startingIndex + 4].date
-            binding.transactionFiveQuantity.text = transactionList[startingIndex + 4].quantity.toString()
+            binding.transactionFiveQuantity.text =
+                transactionList[startingIndex + 4].quantity.toString()
             if (transactionList[startingIndex + 4].add) {
                 binding.transactionFiveQuantity.setTextColor(originalTextColor)
             } else {
@@ -242,7 +248,8 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionSix.visibility = View.VISIBLE
             binding.transactionSixName.text = transactionList[startingIndex + 5].stock
             binding.transactionSixDate.text = transactionList[startingIndex + 5].date
-            binding.transactionSixQuantity.text = transactionList[startingIndex + 5].quantity.toString()
+            binding.transactionSixQuantity.text =
+                transactionList[startingIndex + 5].quantity.toString()
             if (transactionList[startingIndex + 5].add) {
                 binding.transactionSixQuantity.setTextColor(originalTextColor)
             } else {
@@ -261,7 +268,8 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionSeven.visibility = View.VISIBLE
             binding.transactionSevenName.text = transactionList[startingIndex + 6].stock
             binding.transactionSevenDate.text = transactionList[startingIndex + 6].date
-            binding.transactionSevenQuantity.text = transactionList[startingIndex + 6].quantity.toString()
+            binding.transactionSevenQuantity.text =
+                transactionList[startingIndex + 6].quantity.toString()
             if (transactionList[startingIndex + 6].add) {
                 binding.transactionSevenQuantity.setTextColor(originalTextColor)
             } else {
@@ -280,7 +288,8 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionEight.visibility = View.VISIBLE
             binding.transactionEightName.text = transactionList[startingIndex + 7].stock
             binding.transactionEightDate.text = transactionList[startingIndex + 7].date
-            binding.transactionEightQuantity.text = transactionList[startingIndex + 7].quantity.toString()
+            binding.transactionEightQuantity.text =
+                transactionList[startingIndex + 7].quantity.toString()
             if (transactionList[startingIndex + 7].add) {
                 binding.transactionEightQuantity.setTextColor(originalTextColor)
             } else {
@@ -299,7 +308,8 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionNine.visibility = View.VISIBLE
             binding.transactionNineName.text = transactionList[startingIndex + 8].stock
             binding.transactionNineDate.text = transactionList[startingIndex + 8].date
-            binding.transactionNineQuantity.text = transactionList[startingIndex + 8].quantity.toString()
+            binding.transactionNineQuantity.text =
+                transactionList[startingIndex + 8].quantity.toString()
             if (transactionList[startingIndex + 8].add) {
                 binding.transactionNineQuantity.setTextColor(originalTextColor)
             } else {
@@ -318,7 +328,8 @@ class ShopStockTransactionListFragment : Fragment() {
             binding.transactionTen.visibility = View.VISIBLE
             binding.transactionTenName.text = transactionList[startingIndex + 9].stock
             binding.transactionTenDate.text = transactionList[startingIndex + 9].date
-            binding.transactionTenQuantity.text = transactionList[startingIndex + 9].quantity.toString()
+            binding.transactionTenQuantity.text =
+                transactionList[startingIndex + 9].quantity.toString()
             if (transactionList[startingIndex + 9].add) {
                 binding.transactionTenQuantity.setTextColor(originalTextColor)
             } else {

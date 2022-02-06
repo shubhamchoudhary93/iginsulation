@@ -44,7 +44,7 @@ class ShopStockTransactionDetailFragment : Fragment() {
 
         fetchShopStockTransaction(id)
 
-        binding.shopStockTransactionDetailDelete.setOnClickListener {
+        binding.delete.setOnClickListener {
             shopStockTransactionDatabase.delete(id)
             val oldCurrentBalance =
                 customerDatabase.getCustomerCurrentBalance(shopStockTransaction.stock)
@@ -60,9 +60,11 @@ class ShopStockTransactionDetailFragment : Fragment() {
             )
         }
 
-        binding.shopStockTransactionDetailModify.setOnClickListener {
+        binding.modify.setOnClickListener {
             view?.findNavController()?.navigate(
-                ShopStockTransactionDetailFragmentDirections.actionShopStockTransactionDetailFragmentToShopStockTransactionModifyFragment(id)
+                ShopStockTransactionDetailFragmentDirections.actionShopStockTransactionDetailFragmentToShopStockTransactionModifyFragment(
+                    id
+                )
             )
         }
 
@@ -90,9 +92,29 @@ class ShopStockTransactionDetailFragment : Fragment() {
 
     private fun setShopStockTransactionData(shopStockTransaction: ShopStockTransaction) {
         binding.add.text = shopStockTransaction.add.toString()
-        binding.shopStockTransactionDetailStock.text = shopStockTransaction.stock
-        binding.shopStockTransactionDetailQuantity.text = shopStockTransaction.quantity.toString()
-        binding.shopStockTransactionDetailDate.text = shopStockTransaction.date
-        binding.shopStockTransactionDetailDetail.text = shopStockTransaction.detail
+        if (shopStockTransaction.stock != "")
+            binding.stockValue.text = shopStockTransaction.stock
+        else {
+            binding.stockValue.visibility = View.GONE
+            binding.stockText.visibility = View.GONE
+        }
+        if (shopStockTransaction.quantity != 0)
+            binding.quantityValue.text = shopStockTransaction.quantity.toString()
+        else {
+            binding.quantityText.visibility = View.GONE
+            binding.quantityValue.visibility = View.GONE
+        }
+        if (shopStockTransaction.date != "")
+            binding.dateValue.text = shopStockTransaction.date
+        else {
+            binding.dateValue.visibility = View.GONE
+            binding.dateText.visibility = View.GONE
+        }
+        if (shopStockTransaction.detail != "")
+            binding.detailValue.text = shopStockTransaction.detail
+        else {
+            binding.detailValue.visibility = View.GONE
+            binding.detailText.visibility = View.GONE
+        }
     }
 }

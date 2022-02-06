@@ -45,8 +45,8 @@ class ShopStockFragment : Fragment() {
             android.R.layout.simple_list_item_1,
             stockList
         )
-        binding.shopStockName.threshold = 1
-        binding.shopStockName.setAdapter(adapterStock)
+        binding.name.threshold = 1
+        binding.name.setAdapter(adapterStock)
 
         fetchAdaptor()
         setListeners()
@@ -55,7 +55,7 @@ class ShopStockFragment : Fragment() {
     }
 
     private fun setListeners() {
-        binding.shopStockName.setOnItemClickListener { parent, _, position, _ ->
+        binding.name.setOnItemClickListener { parent, _, position, _ ->
             val selectedItem = parent.getItemAtPosition(position).toString()
             val stockDetailReturn = shopStockDatabase.get(selectedItem)
             binding.shopStockQuantity.setText(stockDetailReturn?.defaultReduce.toString())
@@ -63,7 +63,7 @@ class ShopStockFragment : Fragment() {
         }
 
         binding.shopStockAdd.setOnClickListener {
-            val name = binding.shopStockName.text.toString()
+            val name = binding.name.text.toString()
             val stock = shopStockDatabase.get(name)
 
             val quantity = binding.shopStockQuantity.text.toString()
@@ -87,14 +87,14 @@ class ShopStockFragment : Fragment() {
                 }
             }
 
-            binding.shopStockName.setText("")
+            binding.name.setText("")
             binding.shopStockQuantity.setText("")
             binding.shopStockQuantityShow.text = ""
             fetchAdaptor()
         }
 
         binding.shopStockMinus.setOnClickListener {
-            val name = binding.shopStockName.text.toString()
+            val name = binding.name.text.toString()
             val stock = shopStockDatabase.get(name)
 
             val quantity = binding.shopStockQuantity.text.toString()
@@ -118,7 +118,7 @@ class ShopStockFragment : Fragment() {
                 }
             }
 
-            binding.shopStockName.setText("")
+            binding.name.setText("")
             binding.shopStockQuantity.setText("")
             binding.shopStockQuantityShow.text = ""
             fetchAdaptor()

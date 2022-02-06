@@ -4,6 +4,65 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="outer_scroll_view">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+
+    <style name="general_vertical_linear_layout">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="general_horizontal_linear_layout">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="outer_vertical_linear_layout">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="detail_text_textview">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">120dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="detail_value_textview">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="detail_edit_button" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="icon">@drawable/ic_edit_24dp</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">Edit</item>
+    </style>
+
+    <style name="detail_delete_button" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="icon">@drawable/ic_delete_24dp</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">Delete</item>
+    </style>
+
+    <style name="notification_text_top">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
     <style name="list_column_one">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">120dp</item>
@@ -28,16 +87,83 @@
         <item name="android:layout_marginTop">5dp</item>
     </style>
 
+    <style name="update_shop_stock_column_one">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">3</item>
+    </style>
+
+    <style name="update_shop_stock_column_two">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">end</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="page_button_previous" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="icon">@drawable/ic_previous_24dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:text">Previous</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="page_button_next" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="icon">@drawable/ic_next_24dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:text">Next</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="iconGravity">end</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">50dp</item>
+    </style>
+
+    <style name="update_button" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="icon">@drawable/ic_edit_24dp</item>
+        <item name="android:text">Update</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
     <style name="list_shop_stock_column_one">
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">200dp</item>
-        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">3</item>
     </style>
 
     <style name="list_shop_stock_column_two">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:gravity">end</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="list_shop_stock_transaction_column_one">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="list_shop_stock_transaction_column_two">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="list_shop_stock_transaction_column_three">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">end</item>
+        <item name="android:layout_weight">1</item>
     </style>
 
     <style name="list_column_sale_name">
@@ -56,17 +182,61 @@
         <item name="android:gravity">end</item>
     </style>
 
-    <style name="list_previous_button">
-        <item name="android:layout_height">40dp</item>
-        <item name="android:layout_width">130dp</item>
-        <item name="android:layout_marginTop">20dp</item>
-        <item name="android:text">previous page</item>
+    <style name="new_text_input_layout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="endIconMode">clear_text</item>
     </style>
 
-    <style name="list_next_button">
-        <item name="android:layout_height">40dp</item>
-        <item name="android:layout_width">130dp</item>
-        <item name="android:layout_marginTop">5dp</item>
-        <item name="android:text">next page</item>
+    <style name="new_edit_input_layout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="new_edit_auto_input_layout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">16dp</item>
+    </style>
+
+    <style name="new_add_button" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="icon">@drawable/ic_add_24dp</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">Add</item>
+    </style>
+
+    <style name="low_button" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">show low quantity</item>
+    </style>
+
+    <style name="shop_stock_add" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="icon">@drawable/ic_add_24dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:text">Add</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/green</item>
+    </style>
+
+    <style name="shop_stock_minus" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="icon">@drawable/ic_minus_24dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:text">Minus</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="iconGravity">end</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">50dp</item>
+        <item name="android:backgroundTint">@color/red</item>
+    </style>
+
+    <style name="general_button" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 </resources>

@@ -2,92 +2,95 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".shopStock.ShopStockModifyFragment">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/shop_stock_modify_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="name"
-            android:inputType="textPersonName"
-            android:autofillHints="name" />
+    <ScrollView style="@style/outer_scroll_view">
 
-        <AutoCompleteTextView
-            android:id="@+id/shop_stock_modify_category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="category"
-            android:inputType="textPersonName"
-            android:autofillHints="category" />
+        <LinearLayout style="@style/outer_vertical_linear_layout">
 
-        <AutoCompleteTextView
-            android:id="@+id/shop_stock_modify_sub_category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="sub category"
-            android:inputType="textPersonName"
-            android:autofillHints="sub category" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Name">
 
-        <EditText
-            android:id="@+id/shop_stock_modify_quantity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="quantity"
-            android:inputType="numberDecimal"
-            android:autofillHints="rate" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name"
+                    style="@style/new_edit_input_layout"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/shop_stock_modify_min_quantity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="min quantity"
-            android:inputType="numberDecimal"
-            android:autofillHints="rate" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Category">
 
-        <EditText
-            android:id="@+id/shop_stock_modify_default_reduce"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="default reduce"
-            android:inputType="numberDecimal"
-            android:autofillHints="rate" />
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/category_auto"
+                    style="@style/new_edit_auto_input_layout"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/shop_stock_modify_rate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="rate"
-            android:inputType="numberDecimal"
-            android:autofillHints="rate" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Sub Category">
 
-        <EditText
-            android:id="@+id/shop_stock_modify_seller"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="seller"
-            android:inputType="text"
-            android:autofillHints="percentage" />
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/sub_category_auto"
+                    style="@style/new_edit_auto_input_layout"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/shop_stock_modify_modify"
-            android:text="modify"/>
-    </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Quantity">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/quantity"
+                    style="@style/new_edit_input_layout"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Min Quantity">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/min_quantity"
+                    style="@style/new_edit_input_layout"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Default Reduce">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/default_reduce"
+                    style="@style/new_edit_input_layout"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Rate">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/rate"
+                    style="@style/new_edit_input_layout"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Seller">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/seller"
+                    style="@style/new_edit_input_layout"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/modify"
+                style="@style/new_add_button"
+                android:text="modify" />
+        </LinearLayout>
     </ScrollView>
 </layout>

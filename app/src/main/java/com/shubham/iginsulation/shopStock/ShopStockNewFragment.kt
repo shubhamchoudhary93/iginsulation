@@ -57,36 +57,36 @@ class ShopStockNewFragment : Fragment() {
     }
 
     private fun setListeners() {
-        binding.shopStockNewAdd.setOnClickListener {
+        binding.add.setOnClickListener {
 
-            val name = binding.shopStockNewName.editText?.text.toString()
-            val category = binding.shopStockNewCategory.editText?.text.toString()
-            val subCategory = binding.shopStockNewSubCategory.editText?.text.toString()
-            var rate = binding.shopStockNewRate.editText?.text.toString()
+            val name = binding.name.text.toString()
+            val category = binding.categoryAuto.text.toString()
+            val subCategory = binding.subCategoryAuto.text.toString()
+            var rate = binding.rate.text.toString()
             if (rate.toFloatOrNull() == null) {
                 Toast.makeText(context, "rate should be numeric", Toast.LENGTH_SHORT).show()
                 rate = ""
             }
-            var quantity = binding.shopStockNewQuantity.editText?.text.toString()
+            var quantity = binding.quantity.text.toString()
             if (quantity.toIntOrNull() == null) {
                 Toast.makeText(context, "percentage should be numeric", Toast.LENGTH_SHORT).show()
                 quantity = ""
             }
 
-            var minQuantity = binding.shopStockNewMinQuantity.editText?.text.toString()
+            var minQuantity = binding.minQuantity.text.toString()
             if (minQuantity.toIntOrNull() == null) {
                 Toast.makeText(context, "minQuantity should be numeric", Toast.LENGTH_SHORT).show()
                 minQuantity = ""
             }
 
-            var defaultReduce = binding.shopStockNewDefaultReduce.editText?.text.toString()
+            var defaultReduce = binding.defaultReduce.text.toString()
             if (defaultReduce.toIntOrNull() == null) {
                 Toast.makeText(context, "defaultReduce should be numeric", Toast.LENGTH_SHORT)
                     .show()
                 defaultReduce = ""
             }
 
-            val seller = binding.shopStockNewSeller.editText?.text.toString()
+            val seller = binding.seller.text.toString()
 
             if (name != "") {
                 insertShopStock(

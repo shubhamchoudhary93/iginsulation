@@ -2,60 +2,85 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".shopStock.ShopStockTransactionDetailFragment">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/add"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Add" />
+    <ScrollView style="@style/outer_scroll_view">
 
-        <TextView
-            android:id="@+id/shop_stock_transaction_detail_stock"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:text="stock" />
+        <LinearLayout style="@style/outer_vertical_linear_layout">
 
-        <TextView
-            android:id="@+id/shop_stock_transaction_detail_quantity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:text="quantity" />
+            <LinearLayout style="@style/general_horizontal_linear_layout">
 
-        <TextView
-            android:id="@+id/shop_stock_transaction_detail_date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:text="22/08/21" />
+                <TextView
+                    android:id="@+id/add"
+                    style="@style/detail_text_textview"
+                    android:text="Add" />
 
-        <TextView
-            android:id="@+id/shop_stock_transaction_detail_detail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:text="detail" />
+                <TextView
+                    android:id="@+id/add_value"
+                    style="@style/detail_value_textview" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/shop_stock_transaction_detail_modify"
-            android:text="modify"/>
+            </LinearLayout>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/shop_stock_transaction_detail_delete"
-            android:text="delete"/>
-    </LinearLayout>
+            <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                <TextView
+                    android:id="@+id/stock_text"
+                    style="@style/detail_text_textview"
+                    android:text="Stock" />
+
+                <TextView
+                    android:id="@+id/stock_value"
+                    style="@style/detail_value_textview" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                <TextView
+                    android:id="@+id/quantity_text"
+                    style="@style/detail_text_textview"
+                    android:text="Quantity" />
+
+                <TextView
+                    android:id="@+id/quantity_value"
+                    style="@style/detail_value_textview" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                <TextView
+                    android:id="@+id/date_text"
+                    style="@style/detail_text_textview"
+                    android:text="Date" />
+
+                <TextView
+                    android:id="@+id/date_value"
+                    style="@style/detail_value_textview" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                <TextView
+                    android:id="@+id/detail_text"
+                    style="@style/detail_text_textview"
+                    android:text="Detail" />
+
+                <TextView
+                    android:id="@+id/detail_value"
+                    style="@style/detail_value_textview" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/modify"
+                style="@style/detail_edit_button"
+                android:text="modify" />
+
+            <Button
+                android:id="@+id/delete"
+                style="@style/detail_delete_button"
+                android:text="delete" />
+        </LinearLayout>
     </ScrollView>
 </layout>

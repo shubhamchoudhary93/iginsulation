@@ -3,285 +3,255 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".shopStock.ShopStockTransactionListFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ScrollView style="@style/outer_scroll_view">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
+        <LinearLayout style="@style/outer_vertical_linear_layout">
 
-        <EditText
-            android:id="@+id/name_filter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:autofillHints="name"
-            android:ems="10"
-            android:hint="Name"
-            android:inputType="textPersonName" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Name">
 
-        <EditText
-            android:id="@+id/date_filter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:autofillHints="name"
-            android:ems="10"
-            android:hint="Date"
-            android:inputType="date" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name"
+                    style="@style/new_edit_input_layout"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Date">
 
-            <TextView
-                style="@style/transaction_list_column_one"
-                android:text="Date"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/date"
+                    style="@style/new_edit_auto_input_layout"
+                    android:inputType="date" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                style="@style/transaction_list_column_two"
-                android:text="Name"/>
+            <LinearLayout style="@style/general_horizontal_linear_layout">
 
-            <TextView
-                style="@style/transaction_list_column_two"
-                android:text="Quantity"/>
+                <TextView
+                    style="@style/list_shop_stock_transaction_column_one"
+                    android:text="Date"
+                    android:textSize="30sp" />
+
+                <TextView
+                    style="@style/list_shop_stock_transaction_column_two"
+                    android:text="Stock"
+                    android:textSize="30sp" />
+
+                <TextView
+                    style="@style/list_shop_stock_transaction_column_three"
+                    android:text="Quantity"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transaction_one"
+                style="@style/general_horizontal_linear_layout">
+
+                <TextView
+                    android:id="@+id/transaction_one_date"
+                    style="@style/list_shop_stock_transaction_column_one" />
+
+                <TextView
+                    android:id="@+id/transaction_one_name"
+                    style="@style/list_shop_stock_transaction_column_two" />
+
+                <TextView
+                    android:id="@+id/transaction_one_quantity"
+                    style="@style/list_shop_stock_transaction_column_three" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transaction_two"
+                style="@style/general_horizontal_linear_layout">
+
+                <TextView
+                    android:id="@+id/transaction_two_date"
+                    style="@style/list_shop_stock_transaction_column_one" />
+
+                <TextView
+                    android:id="@+id/transaction_two_name"
+                    style="@style/list_shop_stock_transaction_column_two" />
+
+                <TextView
+                    android:id="@+id/transaction_two_quantity"
+                    style="@style/list_shop_stock_transaction_column_three" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transaction_three"
+                style="@style/general_horizontal_linear_layout">
+
+                <TextView
+                    android:id="@+id/transaction_three_date"
+                    style="@style/list_shop_stock_transaction_column_one" />
+
+                <TextView
+                    android:id="@+id/transaction_three_name"
+                    style="@style/list_shop_stock_transaction_column_two" />
+
+                <TextView
+                    android:id="@+id/transaction_three_quantity"
+                    style="@style/list_shop_stock_transaction_column_three" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transaction_four"
+                style="@style/general_horizontal_linear_layout">
+
+                <TextView
+                    android:id="@+id/transaction_four_date"
+                    style="@style/list_shop_stock_transaction_column_one" />
+
+                <TextView
+                    android:id="@+id/transaction_four_name"
+                    style="@style/list_shop_stock_transaction_column_two" />
+
+                <TextView
+                    android:id="@+id/transaction_four_quantity"
+                    style="@style/list_shop_stock_transaction_column_three" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transaction_five"
+                style="@style/general_horizontal_linear_layout">
+
+                <TextView
+                    android:id="@+id/transaction_five_date"
+                    style="@style/list_shop_stock_transaction_column_one" />
+
+                <TextView
+                    android:id="@+id/transaction_five_name"
+                    style="@style/list_shop_stock_transaction_column_two" />
+
+                <TextView
+                    android:id="@+id/transaction_five_quantity"
+                    style="@style/list_shop_stock_transaction_column_three" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transaction_six"
+                style="@style/general_horizontal_linear_layout">
+
+                <TextView
+                    android:id="@+id/transaction_six_date"
+                    style="@style/list_shop_stock_transaction_column_one" />
+
+                <TextView
+                    android:id="@+id/transaction_six_name"
+                    style="@style/list_shop_stock_transaction_column_two" />
+
+                <TextView
+                    android:id="@+id/transaction_six_quantity"
+                    style="@style/list_shop_stock_transaction_column_three" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transaction_seven"
+                style="@style/general_horizontal_linear_layout">
+
+                <TextView
+                    android:id="@+id/transaction_seven_date"
+                    style="@style/list_shop_stock_transaction_column_one" />
+
+                <TextView
+                    android:id="@+id/transaction_seven_name"
+                    style="@style/list_shop_stock_transaction_column_two" />
+
+                <TextView
+                    android:id="@+id/transaction_seven_quantity"
+                    style="@style/list_shop_stock_transaction_column_three" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transaction_eight"
+                style="@style/general_horizontal_linear_layout">
+
+                <TextView
+                    android:id="@+id/transaction_eight_date"
+                    style="@style/list_shop_stock_transaction_column_one" />
+
+                <TextView
+                    android:id="@+id/transaction_eight_name"
+                    style="@style/list_shop_stock_transaction_column_two" />
+
+                <TextView
+                    android:id="@+id/transaction_eight_quantity"
+                    style="@style/list_shop_stock_transaction_column_three" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transaction_nine"
+                style="@style/general_horizontal_linear_layout">
+
+                <TextView
+                    android:id="@+id/transaction_nine_date"
+                    style="@style/list_shop_stock_transaction_column_one" />
+
+                <TextView
+                    android:id="@+id/transaction_nine_name"
+                    style="@style/list_shop_stock_transaction_column_two" />
+
+                <TextView
+                    android:id="@+id/transaction_nine_quantity"
+                    style="@style/list_shop_stock_transaction_column_three" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transaction_ten"
+                style="@style/general_horizontal_linear_layout">
+
+                <TextView
+                    android:id="@+id/transaction_ten_date"
+                    style="@style/list_shop_stock_transaction_column_one" />
+
+                <TextView
+                    android:id="@+id/transaction_ten_name"
+                    style="@style/list_shop_stock_transaction_column_two" />
+
+                <TextView
+                    android:id="@+id/transaction_ten_quantity"
+                    style="@style/list_shop_stock_transaction_column_three" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                <Button
+                    android:id="@+id/button_previous_page"
+                    style="@style/page_button_previous" />
+
+                <Button
+                    android:id="@+id/button_next_page"
+                    style="@style/page_button_next" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/general_horizontal_linear_layout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Page - " />
+
+                <TextView
+                    android:id="@+id/page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" of " />
+
+                <TextView
+                    android:id="@+id/total_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+            </LinearLayout>
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/transaction_one"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/transaction_one_date"
-                style="@style/transaction_list_column_one"/>
-
-            <TextView
-                android:id="@+id/transaction_one_name"
-                style="@style/transaction_list_column_two"/>
-
-            <TextView
-                android:id="@+id/transaction_one_quantity"
-                style="@style/transaction_list_column_two"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/transaction_two"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/transaction_two_date"
-                style="@style/transaction_list_column_one"/>
-
-            <TextView
-                android:id="@+id/transaction_two_name"
-                style="@style/transaction_list_column_two"/>
-
-            <TextView
-                android:id="@+id/transaction_two_quantity"
-                style="@style/transaction_list_column_two"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/transaction_three"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/transaction_three_date"
-                style="@style/transaction_list_column_one"/>
-
-            <TextView
-                android:id="@+id/transaction_three_name"
-                style="@style/transaction_list_column_two"/>
-
-            <TextView
-                android:id="@+id/transaction_three_quantity"
-                style="@style/transaction_list_column_two"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/transaction_four"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/transaction_four_date"
-                style="@style/transaction_list_column_one"/>
-
-            <TextView
-                android:id="@+id/transaction_four_name"
-                style="@style/transaction_list_column_two"/>
-
-            <TextView
-                android:id="@+id/transaction_four_quantity"
-                style="@style/transaction_list_column_two"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/transaction_five"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/transaction_five_date"
-                style="@style/transaction_list_column_one"/>
-
-            <TextView
-                android:id="@+id/transaction_five_name"
-                style="@style/transaction_list_column_two"/>
-
-            <TextView
-                android:id="@+id/transaction_five_quantity"
-                style="@style/transaction_list_column_two"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/transaction_six"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/transaction_six_date"
-                style="@style/transaction_list_column_one"/>
-
-            <TextView
-                android:id="@+id/transaction_six_name"
-                style="@style/transaction_list_column_two"/>
-
-            <TextView
-                android:id="@+id/transaction_six_quantity"
-                style="@style/transaction_list_column_two"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/transaction_seven"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/transaction_seven_date"
-                style="@style/transaction_list_column_one"/>
-
-            <TextView
-                android:id="@+id/transaction_seven_name"
-                style="@style/transaction_list_column_two"/>
-
-            <TextView
-                android:id="@+id/transaction_seven_quantity"
-                style="@style/transaction_list_column_two"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/transaction_eight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/transaction_eight_date"
-                style="@style/transaction_list_column_one"/>
-
-            <TextView
-                android:id="@+id/transaction_eight_name"
-                style="@style/transaction_list_column_two"/>
-
-            <TextView
-                android:id="@+id/transaction_eight_quantity"
-                style="@style/transaction_list_column_two"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/transaction_nine"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/transaction_nine_date"
-                style="@style/transaction_list_column_one"/>
-
-            <TextView
-                android:id="@+id/transaction_nine_name"
-                style="@style/transaction_list_column_two"/>
-
-            <TextView
-                android:id="@+id/transaction_nine_quantity"
-                style="@style/transaction_list_column_two"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/transaction_ten"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/transaction_ten_date"
-                style="@style/transaction_list_column_one"/>
-
-            <TextView
-                android:id="@+id/transaction_ten_name"
-                style="@style/transaction_list_column_two"/>
-
-            <TextView
-                android:id="@+id/transaction_ten_quantity"
-                style="@style/transaction_list_column_two"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/button_previous_page"
-                style="@style/list_previous_button" />
-
-            <Button
-                android:id="@+id/button_next_page"
-                style="@style/list_next_button" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Page - " />
-
-            <TextView
-                android:id="@+id/page"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" of " />
-
-            <TextView
-                android:id="@+id/total_page"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1" />
-
-        </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
 </layout>

@@ -3,262 +3,209 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".shopStock.ShopStockUpdateFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ScrollView style="@style/outer_scroll_view">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="vertical">
+        <LinearLayout style="@style/outer_vertical_linear_layout">
 
             <TextView
                 android:id="@+id/notifications"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                style="@style/notification_text_top" />
 
-            <EditText
-                android:id="@+id/name_filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:autofillHints="name"
-                android:ems="10"
-                android:hint="Name"
-                android:inputType="textPersonName" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Seller">
 
-            <AutoCompleteTextView
-                android:id="@+id/category_filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:autofillHints="name"
-                android:ems="10"
-                android:hint="Category"
-                android:inputType="textPersonName" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_filter"
+                    style="@style/new_edit_input_layout"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/new_text_input_layout"
+                android:hint="Category">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/category_filter"
+                    style="@style/new_edit_auto_input_layout"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/general_horizontal_linear_layout"
+                android:layout_marginTop="20dp">
 
                 <TextView
-                    style="@style/list_shop_stock_column_one"
-                    android:text="Name" />
+                    style="@style/update_shop_stock_column_one"
+                    android:text="Name"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
                 <TextView
-                    style="@style/list_shop_stock_column_two"
-                    android:text="Quantity" />
+                    style="@style/update_shop_stock_column_two"
+                    android:text="Quantity"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/shop_stock_update_one"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/shop_stock_update_one_name"
-                    style="@style/list_shop_stock_column_one" />
+                    style="@style/update_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_one_quantity"
-                    style="@style/list_shop_stock_column_two"
-                    android:imeOptions="actionNext"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
+                    style="@style/update_shop_stock_column_two"
                     android:nextFocusDown="@id/shop_stock_update_two_quantity" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/shop_stock_update_two"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/shop_stock_update_two_name"
-                    style="@style/list_shop_stock_column_one" />
+                    style="@style/update_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_two_quantity"
-                    style="@style/list_shop_stock_column_two"
-                    android:imeOptions="actionNext"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
+                    style="@style/update_shop_stock_column_two"
                     android:nextFocusDown="@id/shop_stock_update_three_quantity" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/shop_stock_update_three"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/shop_stock_update_three_name"
-                    style="@style/list_shop_stock_column_one" />
+                    style="@style/update_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_three_quantity"
-                    style="@style/list_shop_stock_column_two"
-                    android:imeOptions="actionNext"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
+                    style="@style/update_shop_stock_column_two"
                     android:nextFocusDown="@id/shop_stock_update_four_quantity" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/shop_stock_update_four"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/shop_stock_update_four_name"
-                    style="@style/list_shop_stock_column_one" />
+                    style="@style/update_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_four_quantity"
-                    style="@style/list_shop_stock_column_two"
-                    android:imeOptions="actionNext"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
+                    style="@style/update_shop_stock_column_two"
                     android:nextFocusDown="@id/shop_stock_update_five_quantity" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/shop_stock_update_five"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/shop_stock_update_five_name"
-                    style="@style/list_shop_stock_column_one" />
+                    style="@style/update_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_five_quantity"
-                    style="@style/list_shop_stock_column_two"
-                    android:imeOptions="actionNext"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
+                    style="@style/update_shop_stock_column_two"
                     android:nextFocusDown="@id/shop_stock_update_six_quantity" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/shop_stock_update_six"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/shop_stock_update_six_name"
-                    style="@style/list_shop_stock_column_one" />
+                    style="@style/update_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_six_quantity"
-                    style="@style/list_shop_stock_column_two"
-                    android:imeOptions="actionNext"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
+                    style="@style/update_shop_stock_column_two"
                     android:nextFocusDown="@id/shop_stock_update_seven_quantity" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/shop_stock_update_seven"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/shop_stock_update_seven_name"
-                    style="@style/list_shop_stock_column_one" />
+                    style="@style/update_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_seven_quantity"
-                    style="@style/list_shop_stock_column_two"
-                    android:imeOptions="actionNext"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
+                    style="@style/update_shop_stock_column_two"
                     android:nextFocusDown="@id/shop_stock_update_eight_quantity" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/shop_stock_update_eight"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/shop_stock_update_eight_name"
-                    style="@style/list_shop_stock_column_one" />
+                    style="@style/update_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_eight_quantity"
-                    style="@style/list_shop_stock_column_two"
-                    android:imeOptions="actionNext"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
+                    style="@style/update_shop_stock_column_two"
                     android:nextFocusDown="@id/shop_stock_update_nine_quantity" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/shop_stock_update_nine"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/shop_stock_update_nine_name"
-                    style="@style/list_shop_stock_column_one" />
+                    style="@style/update_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_nine_quantity"
-                    style="@style/list_shop_stock_column_two"
-                    android:imeOptions="actionNext"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
+                    style="@style/update_shop_stock_column_two"
                     android:nextFocusDown="@id/shop_stock_update_ten_quantity" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/shop_stock_update_ten"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                style="@style/general_horizontal_linear_layout">
 
                 <TextView
                     android:id="@+id/shop_stock_update_ten_name"
-                    style="@style/list_shop_stock_column_one" />
+                    style="@style/update_shop_stock_column_one" />
 
                 <EditText
                     android:id="@+id/shop_stock_update_ten_quantity"
-                    style="@style/list_shop_stock_column_two"
-                    android:imeOptions="actionNext"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
+                    style="@style/update_shop_stock_column_two"
                     android:nextFocusDown="@id/sale_new_two_name" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/button_previous_page"
-                    style="@style/list_previous_button" />
+                    style="@style/page_button_previous" />
 
                 <Button
                     android:id="@+id/button_next_page"
-                    style="@style/list_next_button" />
+                    style="@style/page_button_next" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
+                style="@style/general_horizontal_linear_layout"
+                android:layout_marginTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -286,9 +233,7 @@
 
             <Button
                 android:id="@+id/button_update"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="update" />
+                style="@style/update_button" />
         </LinearLayout>
     </ScrollView>
 </layout>

@@ -1,140 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".shopStock.ShopStockNewFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ScrollView style="@style/outer_scroll_view">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="vertical">
+        <LinearLayout style="@style/outer_vertical_linear_layout">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/shop_stock_new_name"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Name"
-                app:endIconMode="clear_text">
+                style="@style/new_text_input_layout"
+                android:hint="Name">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/name"
+                    style="@style/new_edit_input_layout"
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/shop_stock_new_category"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Category"
-                app:endIconMode="clear_text">
+                style="@style/new_text_input_layout"
+                android:hint="Category">
 
                 <com.google.android.material.textfield.MaterialAutoCompleteTextView
                     android:id="@+id/category_auto"
-                    android:paddingStart="16dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/new_edit_auto_input_layout"
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/shop_stock_new_sub_category"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Sub Category"
-                app:endIconMode="clear_text">
+                style="@style/new_text_input_layout"
+                android:hint="Sub Category">
 
                 <com.google.android.material.textfield.MaterialAutoCompleteTextView
                     android:id="@+id/sub_category_auto"
-                    android:paddingStart="16dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/new_edit_auto_input_layout"
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/shop_stock_new_quantity"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Quantity"
-                app:endIconMode="clear_text">
+                style="@style/new_text_input_layout"
+                android:hint="Quantity">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/quantity"
+                    style="@style/new_edit_input_layout"
                     android:inputType="numberDecimal" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/shop_stock_new_min_quantity"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Min Quantity"
-                app:endIconMode="clear_text">
+                style="@style/new_text_input_layout"
+                android:hint="Min Quantity">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/min_quantity"
+                    style="@style/new_edit_input_layout"
                     android:inputType="numberDecimal" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/shop_stock_new_default_reduce"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Default Reduce"
-                app:endIconMode="clear_text">
+                style="@style/new_text_input_layout"
+                android:hint="Default Reduce">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/default_reduce"
+                    style="@style/new_edit_input_layout"
                     android:inputType="numberDecimal" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/shop_stock_new_rate"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Rate"
-                app:endIconMode="clear_text">
+                style="@style/new_text_input_layout"
+                android:hint="Rate">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/rate"
+                    style="@style/new_edit_input_layout"
                     android:inputType="numberDecimal" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/shop_stock_new_seller"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Seller"
-                app:endIconMode="clear_text">
+                style="@style/new_text_input_layout"
+                android:hint="Seller">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/seller"
+                    style="@style/new_edit_input_layout"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/shop_stock_new_add"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="add" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add"
+                style="@style/new_add_button"/>
         </LinearLayout>
     </ScrollView>
 </layout>

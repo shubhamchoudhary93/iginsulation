@@ -66,7 +66,7 @@ class ShopStockUpdateFragment : Fragment() {
             setShopStockData()
         }
 
-        binding.nameFilter.addTextChangedListener(object: TextWatcher {
+        binding.nameFilter.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 shopStockUpdateList = shopStockDatabase.getListByName(s.toString())
                 currentPage = 1
@@ -74,9 +74,9 @@ class ShopStockUpdateFragment : Fragment() {
                 setShopStockData()
             }
 
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) { }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) { }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
 
         return binding.root
@@ -209,52 +209,62 @@ class ShopStockUpdateFragment : Fragment() {
 
         if (numberOfItems > 0) {
             val shopStockUpdate = shopStockUpdateList[startingIndex]
-            shopStockUpdate.quantity = binding.shopStockUpdateOneQuantity.text.toString().toIntOrNull() ?: 0
+            shopStockUpdate.quantity =
+                binding.shopStockUpdateOneQuantity.text.toString().toIntOrNull() ?: 0
             shopStockDatabase.update(shopStockUpdate)
         }
         if (numberOfItems > 1) {
             val shopStockUpdate = shopStockUpdateList[startingIndex + 1]
-            shopStockUpdate.quantity = binding.shopStockUpdateTwoQuantity.text.toString().toIntOrNull() ?: 0
+            shopStockUpdate.quantity =
+                binding.shopStockUpdateTwoQuantity.text.toString().toIntOrNull() ?: 0
             shopStockDatabase.update(shopStockUpdate)
         }
         if (numberOfItems > 2) {
             val shopStockUpdate = shopStockUpdateList[startingIndex + 2]
-            shopStockUpdate.quantity = binding.shopStockUpdateThreeQuantity.text.toString().toIntOrNull() ?: 0
+            shopStockUpdate.quantity =
+                binding.shopStockUpdateThreeQuantity.text.toString().toIntOrNull() ?: 0
             shopStockDatabase.update(shopStockUpdate)
         }
         if (numberOfItems > 3) {
             val shopStockUpdate = shopStockUpdateList[startingIndex + 3]
-            shopStockUpdate.quantity = binding.shopStockUpdateFourQuantity.text.toString().toIntOrNull() ?: 0
+            shopStockUpdate.quantity =
+                binding.shopStockUpdateFourQuantity.text.toString().toIntOrNull() ?: 0
             shopStockDatabase.update(shopStockUpdate)
         }
         if (numberOfItems > 4) {
             val shopStockUpdate = shopStockUpdateList[startingIndex + 4]
-            shopStockUpdate.quantity = binding.shopStockUpdateFiveQuantity.text.toString().toIntOrNull() ?: 0
+            shopStockUpdate.quantity =
+                binding.shopStockUpdateFiveQuantity.text.toString().toIntOrNull() ?: 0
             shopStockDatabase.update(shopStockUpdate)
         }
         if (numberOfItems > 5) {
             val shopStockUpdate = shopStockUpdateList[startingIndex + 5]
-            shopStockUpdate.quantity = binding.shopStockUpdateSixQuantity.text.toString().toIntOrNull() ?: 0
+            shopStockUpdate.quantity =
+                binding.shopStockUpdateSixQuantity.text.toString().toIntOrNull() ?: 0
             shopStockDatabase.update(shopStockUpdate)
         }
         if (numberOfItems > 6) {
             val shopStockUpdate = shopStockUpdateList[startingIndex + 6]
-            shopStockUpdate.quantity = binding.shopStockUpdateSevenQuantity.text.toString().toIntOrNull() ?: 0
+            shopStockUpdate.quantity =
+                binding.shopStockUpdateSevenQuantity.text.toString().toIntOrNull() ?: 0
             shopStockDatabase.update(shopStockUpdate)
         }
         if (numberOfItems > 7) {
             val shopStockUpdate = shopStockUpdateList[startingIndex + 7]
-            shopStockUpdate.quantity = binding.shopStockUpdateEightQuantity.text.toString().toIntOrNull() ?: 0
+            shopStockUpdate.quantity =
+                binding.shopStockUpdateEightQuantity.text.toString().toIntOrNull() ?: 0
             shopStockDatabase.update(shopStockUpdate)
         }
         if (numberOfItems > 8) {
             val shopStockUpdate = shopStockUpdateList[startingIndex + 8]
-            shopStockUpdate.quantity = binding.shopStockUpdateNineQuantity.text.toString().toIntOrNull() ?: 0
+            shopStockUpdate.quantity =
+                binding.shopStockUpdateNineQuantity.text.toString().toIntOrNull() ?: 0
             shopStockDatabase.update(shopStockUpdate)
         }
         if (numberOfItems > 9) {
             val shopStockUpdate = shopStockUpdateList[startingIndex + 9]
-            shopStockUpdate.quantity = binding.shopStockUpdateTenQuantity.text.toString().toIntOrNull() ?: 0
+            shopStockUpdate.quantity =
+                binding.shopStockUpdateTenQuantity.text.toString().toIntOrNull() ?: 0
             shopStockDatabase.update(shopStockUpdate)
         }
 

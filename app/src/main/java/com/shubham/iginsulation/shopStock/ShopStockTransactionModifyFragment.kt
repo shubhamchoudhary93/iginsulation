@@ -11,11 +11,11 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.shubham.iginsulation.R
-import com.shubham.iginsulation.database.shopstock.ShopStockDatabase
-import com.shubham.iginsulation.database.shopstock.ShopStockDatabaseDao
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransaction
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabase
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabaseDao
+import com.shubham.iginsulation.database.shopstock.ShopStockDatabase
+import com.shubham.iginsulation.database.shopstock.ShopStockDatabaseDao
 import com.shubham.iginsulation.databinding.FragmentShopStockTransactionModifyBinding
 import java.util.*
 import kotlin.math.roundToInt
@@ -52,8 +52,8 @@ class ShopStockTransactionModifyFragment : Fragment() {
             android.R.layout.simple_list_item_1,
             shopStocks
         )
-        binding.shopStockTransactionModifyStock.threshold = 1
-        binding.shopStockTransactionModifyStock.setAdapter(adapterCategory)
+        binding.name.threshold = 1
+        binding.name.setAdapter(adapterCategory)
 
         val args = ShopStockTransactionModifyFragmentArgs.fromBundle(requireArguments())
         id = args.id
@@ -65,16 +65,16 @@ class ShopStockTransactionModifyFragment : Fragment() {
     }
 
     private fun setListeners() {
-        binding.shopStockTransactionModify.setOnClickListener {
+        binding.modify.setOnClickListener {
 
-            val name = binding.shopStockTransactionModifyStock.text.toString()
-            var quantity = binding.shopStockTransactionModifyQuantity.text.toString()
+            val name = binding.name.text.toString()
+            var quantity = binding.quantity.text.toString()
             if (quantity.toFloatOrNull() == null) {
                 Toast.makeText(context, "quantity should be numeric", Toast.LENGTH_SHORT).show()
                 quantity = ""
             }
-            val date = binding.shopStockTransactionModifyDate.text.toString()
-            val detail = binding.shopStockTransactionModifyDetail.text.toString()
+            val date = binding.date.text.toString()
+            val detail = binding.detail.text.toString()
 
             if (name != "" || shopStocks.contains(name)) {
                 modifyShopStockTransaction(
@@ -87,7 +87,7 @@ class ShopStockTransactionModifyFragment : Fragment() {
                     date,
                     detail
                 )
-                if(oldName == name) {
+                if (oldName == name) {
                     val oldQuantity1 = shopStockDatabase.getShopStockQuantity(name)
                     val newQuantity = if (oldAdd && binding.add.isChecked) {
                         oldQuantity1 - oldQuantity + quantity.toFloat()
@@ -99,7 +99,7 @@ class ShopStockTransactionModifyFragment : Fragment() {
                         oldQuantity1 + oldQuantity - quantity.toFloat()
                     } else 0F
                     shopStockDatabase.setShopStockQuantity(newQuantity, name)
-                } else{
+                } else {
                     val oldQuantityOldName = shopStockDatabase.getShopStockQuantity(oldName)
                     val newQuantityOldName = if (oldAdd) {
                         oldQuantityOldName - oldQuantity
@@ -120,7 +120,7 @@ class ShopStockTransactionModifyFragment : Fragment() {
                 Toast.makeText(context, "shopStock doesn't exist", Toast.LENGTH_SHORT).show()
         }
 
-        binding.shopStockTransactionModifyDate.setOnClickListener {
+        binding.date.setOnClickListener {
 
             val c = Calendar.getInstance()
             val year = c.get(Calendar.YEAR)
@@ -131,7 +131,7 @@ class ShopStockTransactionModifyFragment : Fragment() {
                 this.requireContext(),
                 { _, yearPick, monthOfYear, dayOfMonth ->
                     val text = dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + yearPick
-                    binding.shopStockTransactionModifyDate.setText(text)
+                    binding.date.setText(text)
                 },
                 year,
                 month,
@@ -149,7 +149,16 @@ class ShopStockTransactionModifyFragment : Fragment() {
         detail: String
     ) {
         try {
-            shopStockTransactionDatabase.update(ShopStockTransaction(id, add, name, quantity, date, detail))
+            shopStockTransactionDatabase.update(
+                ShopStockTransaction(
+                    id,
+                    add,
+                    name,
+                    quantity,
+                    date,
+                    detail
+                )
+            )
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -183,10 +192,10 @@ class ShopStockTransactionModifyFragment : Fragment() {
 
     private fun setShopStockTransactionData(shopStockTransaction: ShopStockTransaction) {
         binding.add.isChecked = shopStockTransaction.add
-        binding.shopStockTransactionModifyStock.setText(shopStockTransaction.stock)
-        binding.shopStockTransactionModifyQuantity.setText(shopStockTransaction.quantity.toString())
-        binding.shopStockTransactionModifyDate.setText(shopStockTransaction.date)
-        binding.shopStockTransactionModifyDetail.setText(shopStockTransaction.detail)
+        binding.name.setText(shopStockTransaction.stock)
+        binding.quantity.setText(shopStockTransaction.quantity.toString())
+        binding.date.setText(shopStockTransaction.date)
+        binding.detail.setText(shopStockTransaction.detail)
 
         oldAdd = shopStockTransaction.add
         oldQuantity = shopStockTransaction.quantity.toFloat()
