@@ -50,6 +50,13 @@ class ShopStockFragment : Fragment() {
 
         fetchAdaptor()
         setListeners()
+
+        binding.shopStockQuantity.post {
+            val params: ViewGroup.LayoutParams = binding.name.layoutParams
+            params.height = binding.shopStockQuantity.height
+            binding.name.layoutParams = params
+        }
+
         binding.notifications.text = "Ready"
         return binding.root
     }

@@ -21,10 +21,10 @@
                 android:text="Add" />
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/new_text_input_layout"
-                android:hint="Customer Name">
+                style="@style/new_text_auto_input_layout"
+                android:hint="Stock Name">
 
-                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                <AutoCompleteTextView
                     android:id="@+id/name"
                     style="@style/new_edit_auto_input_layout"
                     android:inputType="textPersonName" />

@@ -36,34 +36,6 @@ class SettingsFragment : Fragment() {
 
     private fun setListeners() {
 
-        binding.buttonDummy.setOnClickListener {
-
-            val customerDatabase =
-                CustomerDatabase.getInstance(requireContext()).customerDatabaseDao
-            val saleDatabase = SaleDatabase.getInstance(requireContext()).saleDatabaseDao
-            val saleDetailsDatabase =
-                SaleDetailsDatabase.getInstance(requireContext()).saleDetailsDatabaseDao
-            val shopStockDatabase =
-                ShopStockDatabase.getInstance(requireContext()).shopStockDatabaseDao
-            val shopStockTransactionDatabase =
-                ShopStockTransactionDatabase.getInstance(requireContext()).shopStockTransactionDatabaseDao
-            val stockDatabase =
-                StockDatabase.getInstance(requireContext()).stockDatabaseDao
-            val transactionDatabase =
-                TransactionDatabase.getInstance(requireContext()).transactionDatabaseDao
-
-            DummyData.populate(
-                customerDatabase,
-                stockDatabase,
-                shopStockDatabase,
-                saleDatabase,
-                saleDetailsDatabase,
-                shopStockTransactionDatabase,
-                transactionDatabase
-            )
-            binding.notifications.text = "dummy data created"
-        }
-
         binding.buttonBackup.setOnClickListener {
             context?.let { it1 ->
                 MaterialAlertDialogBuilder(it1)
@@ -77,8 +49,6 @@ class SettingsFragment : Fragment() {
                     }
                     .setPositiveButton("Yes") { _, _ ->
                         BackupRestore.backup(requireContext(), binding)
-                        binding.notifications.text =
-                            binding.notifications.text.toString() + "\ndata backup done"
                     }
                     .show()
             }
@@ -98,12 +68,9 @@ class SettingsFragment : Fragment() {
                     }
                     .setPositiveButton("Yes") { _, _ ->
                         BackupRestore.restore(requireContext(), binding)
-                        binding.notifications.text = "data restore done"
                     }
                     .show()
             }
-            BackupRestore.restore(requireContext(), binding)
-            binding.notifications.text = "data restore done"
         }
     }
 }

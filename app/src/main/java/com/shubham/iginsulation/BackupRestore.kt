@@ -40,6 +40,7 @@ object BackupRestore {
                 "transaction_data_table-wal"
             )
 
+            binding.notifications.text = "Backup Started"
             val backupDBPath =
                 context?.getExternalFilesDir(null)?.path + "/IGIBackup/"
             val s = arrayOfNulls<String>(tableNames.size)
@@ -47,8 +48,7 @@ object BackupRestore {
                 context?.getDatabasePath(item)?.let {
                     copyDataFromOneToAnother(
                         it.path,
-                        context.getExternalFilesDir(null)?.path + "/IGIBackup/" + "backup_" + item,
-                        binding
+                        context.getExternalFilesDir(null)?.path + "/IGIBackup/" + "backup_" + item
                     )
                 }
 
@@ -58,6 +58,8 @@ object BackupRestore {
 
             ZipManager.zip(s, "$backupDBPath/igiBackup.zip")
 
+            binding.notifications.text =
+                binding.notifications.text.toString() + "\nBackup File created."
             val filePath: Uri? = Uri.fromFile(File("$backupDBPath/igiBackup.zip"))
 
             if (filePath != null) {
@@ -70,7 +72,9 @@ object BackupRestore {
                 riversRef.putFile(filePath)
                     .addOnSuccessListener {
                         progressDialog.dismiss()
-                        Toast.makeText(context, "File Uploaded ", Toast.LENGTH_LONG).show()
+
+                        binding.notifications.text =
+                            binding.notifications.text.toString() + "\nBackup File uploaded."
                     }
                     .addOnFailureListener { exception ->
                         progressDialog.dismiss()
@@ -85,13 +89,15 @@ object BackupRestore {
             }
 
         } catch (e: Exception) {
-            binding.notifications.text = binding.notifications.text.toString() + "\n" + e.stackTraceToString()
+            binding.notifications.text =
+                binding.notifications.text.toString() + "\n" + e.stackTraceToString()
             e.printStackTrace()
-                    }
+        }
     }
 
     fun restore(context: Context?, binding: FragmentSettingsBinding) {
 
+        binding.notifications.text = "Restore Started"
         val storage = FirebaseStorage.getInstance()
         val storageRef = storage.reference
         val riversRef: StorageReference = storageRef.child("igi_backup/igiBackup.zip")
@@ -100,11 +106,17 @@ object BackupRestore {
             rootPath.mkdirs()
         }
         val localFile = File(rootPath, "igiBackup.zip")
+        binding.notifications.text =
+            binding.notifications.text.toString() + "\nBackup File downloading."
         val progressDialog = ProgressDialog(context)
         progressDialog.setTitle("Downloading")
         progressDialog.show()
+
         riversRef.getFile(localFile)
             .addOnSuccessListener {
+
+                binding.notifications.text =
+                    binding.notifications.text.toString() + "\nBackup File downloaded."
                 try {
                     val tableNames = listOf(
                         "customer_data_table",
@@ -136,20 +148,20 @@ object BackupRestore {
                     ZipManager.unzip("$backupDBPath/igiBackup.zip", backupDBFolder.path)
 
                     for (item in tableNames) {
-                        println("inside loop")
                         context?.getDatabasePath(item)?.let {
                             copyDataFromOneToAnother(
                                 context.getExternalFilesDir(null)?.path + "/IGIBackup/" + "backup_" + item,
-                                it.path,
-                                binding
+                                it.path
                             )
                         }
                     }
+
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
                 progressDialog.dismiss()
-                Toast.makeText(context, "File Downloaded ", Toast.LENGTH_LONG).show()
+                binding.notifications.text =
+                    binding.notifications.text.toString() + "\nRestore Done."
             }
             .addOnFailureListener { exception ->
                 progressDialog.dismiss()
@@ -164,10 +176,8 @@ object BackupRestore {
 
     private fun copyDataFromOneToAnother(
         fromPath: String,
-        toPath: String,
-        binding: FragmentSettingsBinding
+        toPath: String
     ) {
-        binding.notifications.text = binding.notifications.text.toString() + "\ncopying from $fromPath to $toPath"
         val inStream = File(fromPath).inputStream()
         val outStream = FileOutputStream(toPath)
 

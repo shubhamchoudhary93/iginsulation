@@ -15,10 +15,10 @@
             <LinearLayout style="@style/general_vertical_linear_layout">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    style="@style/new_text_input_layout"
+                    style="@style/new_text_auto_input_layout"
                     android:hint="Name">
 
-                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    <AutoCompleteTextView
                         android:id="@+id/name"
                         style="@style/new_edit_auto_input_layout"
                         android:inputType="textPersonName" />
@@ -45,7 +45,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/shop_stock_quantity"
-                        style="@style/new_edit_auto_input_layout"
+                        style="@style/new_edit_input_layout"
                         android:inputType="number" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>

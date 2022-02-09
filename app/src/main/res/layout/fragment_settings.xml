@@ -14,12 +14,6 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button_dummy"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Populate Dummy" />
-
-            <Button
                 android:id="@+id/button_backup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

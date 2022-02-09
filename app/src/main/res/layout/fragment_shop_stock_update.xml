@@ -23,10 +23,10 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/new_text_input_layout"
+                style="@style/new_text_auto_input_layout"
                 android:hint="Category">
 
-                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                <AutoCompleteTextView
                     android:id="@+id/category_filter"
                     style="@style/new_edit_auto_input_layout"
                     android:inputType="textPersonName" />

@@ -188,12 +188,18 @@
         <item name="endIconMode">clear_text</item>
     </style>
 
+    <style name="new_text_auto_input_layout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="endIconMode">clear_text</item>
+    </style>
+
     <style name="new_edit_input_layout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="new_edit_auto_input_layout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <style name="new_edit_auto_input_layout">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingStart">16dp</item>
