@@ -216,7 +216,11 @@
         android:id="@+id/cottonFragment"
         android:name="com.shubham.iginsulation.rateList.CottonFragment"
         android:label="fragment_cotton"
-        tools:layout="@layout/fragment_cotton" />
+        tools:layout="@layout/fragment_cotton" >
+        <action
+            android:id="@+id/action_cottonFragment_to_cottonEditFragment"
+            app:destination="@id/cottonEditFragment" />
+    </fragment>
     <fragment
         android:id="@+id/varnishFragment"
         android:name="com.shubham.iginsulation.rateList.VarnishFragment"
@@ -552,6 +556,19 @@
         <action
             android:id="@+id/action_varnishEditFragment_to_varnishFragment"
             app:destination="@id/varnishFragment" />
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/cottonEditFragment"
+        android:name="com.shubham.iginsulation.rateList.CottonEditFragment"
+        android:label="CottonEditFragment"
+        tools:layout="@layout/fragment_cotton_edit">
+        <action
+            android:id="@+id/action_cottonEditFragment_to_cottonFragment"
+            app:destination="@id/cottonFragment" />
         <argument
             android:name="id"
             app:argType="long"

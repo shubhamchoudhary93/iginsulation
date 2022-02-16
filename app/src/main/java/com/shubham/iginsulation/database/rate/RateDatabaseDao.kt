@@ -30,4 +30,7 @@ interface RateDatabaseDao {
 
     @Query("SELECT name from rate_data_table WHERE name = :searchText")
     fun checkRate(searchText: String): List<String>
+
+    @Query("SELECT * from rate_data_table WHERE name = :id")
+    fun get(id: String): Rate?
 }

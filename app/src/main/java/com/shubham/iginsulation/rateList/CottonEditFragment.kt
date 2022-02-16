@@ -12,13 +12,14 @@ import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.rate.Rate
 import com.shubham.iginsulation.database.rate.RateDatabase
 import com.shubham.iginsulation.database.rate.RateDatabaseDao
-import com.shubham.iginsulation.databinding.FragmentVarnishEditBinding
+import com.shubham.iginsulation.databinding.FragmentCottonEditBinding
+
 import java.text.SimpleDateFormat
 import java.util.*
 
-class VarnishEditFragment : Fragment() {
+class CottonEditFragment : Fragment() {
 
-    private lateinit var binding: FragmentVarnishEditBinding
+    private lateinit var binding: FragmentCottonEditBinding
     private lateinit var rateDatabase: RateDatabaseDao
 
     private var id = 0L
@@ -29,12 +30,12 @@ class VarnishEditFragment : Fragment() {
     ): View {
         binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_varnish_edit, container, false
+            R.layout.fragment_cotton_edit, container, false
         )
 
         rateDatabase = RateDatabase.getInstance(requireContext()).rateDatabaseDao
 
-        val args = VarnishEditFragmentArgs.fromBundle(requireArguments())
+        val args =  CottonEditFragmentArgs.fromBundle(requireArguments())
         id = args.id
 
         fetchRate(id)
@@ -47,22 +48,10 @@ class VarnishEditFragment : Fragment() {
         binding.modify.setOnClickListener {
 
             val name = binding.name.text.toString()
-            var billCostPrice = binding.billCostPrice.text.toString()
-            if (billCostPrice.toFloatOrNull() == null) {
-                Toast.makeText(context, "Bill Cost Price should be numeric", Toast.LENGTH_SHORT)
-                    .show()
-                billCostPrice = ""
-            }
             var costPrice = binding.costPrice.text.toString()
             if (costPrice.toFloatOrNull() == null) {
                 Toast.makeText(context, "Cost Price should be numeric", Toast.LENGTH_SHORT).show()
                 costPrice = ""
-            }
-            var billSellPrice = binding.billSellPrice.text.toString()
-            if (billSellPrice.toFloatOrNull() == null) {
-                Toast.makeText(context, "Bill Sell Price should be numeric", Toast.LENGTH_SHORT)
-                    .show()
-                billSellPrice = ""
             }
             var sellPrice = binding.sellPrice.text.toString()
             if (sellPrice.toFloatOrNull() == null) {
@@ -70,27 +59,16 @@ class VarnishEditFragment : Fragment() {
                 sellPrice = ""
             }
 
-            val seller = binding.seller.text.toString()
-
             modifyRate(
                 name,
-                if (billCostPrice == "")
-                    0F
-                else
-                    billCostPrice.toFloat(),
                 if (costPrice == "")
                     0F
                 else
                     costPrice.toFloat(),
-                if (billSellPrice == "")
-                    0F
-                else
-                    billSellPrice.toFloat(),
                 if (sellPrice == "")
                     0F
                 else
                     sellPrice.toFloat(),
-                seller,
                 SimpleDateFormat("d/M/yyyy", Locale.ENGLISH).format(Date())
             )
         }
@@ -98,21 +76,18 @@ class VarnishEditFragment : Fragment() {
 
     private fun modifyRate(
         name: String,
-        billCostPrice: Float,
         costPrice: Float,
-        billSellPrice: Float,
         sellPrice: Float,
-        seller: String,
         date: String
     ) {
         val rate = Rate()
         rate.id = id
         rate.name = name
-        rate.billCostPrice = billCostPrice
+        rate.billCostPrice = 0F
         rate.costPrice = costPrice
-        rate.billSellPrice = billSellPrice
+        rate.billSellPrice = 0F
         rate.sellPrice = sellPrice
-        rate.seller = seller
+        rate.seller = ""
         rate.date = date
 
         try {
@@ -121,7 +96,7 @@ class VarnishEditFragment : Fragment() {
             e.printStackTrace()
         }
         view?.findNavController()?.navigate(
-            VarnishEditFragmentDirections.actionVarnishEditFragmentToVarnishFragment()
+             CottonEditFragmentDirections.actionCottonEditFragmentToCottonFragment()
         )
     }
 
@@ -146,10 +121,7 @@ class VarnishEditFragment : Fragment() {
 
     private fun setRateData(rate: Rate) {
         binding.name.text = rate.name
-        binding.billCostPrice.setText(rate.billCostPrice.toString())
         binding.costPrice.setText(rate.costPrice.toString())
-        binding.billSellPrice.setText(rate.billSellPrice.toString())
         binding.sellPrice.setText(rate.sellPrice.toString())
-        binding.seller.setText(rate.seller)
     }
 }

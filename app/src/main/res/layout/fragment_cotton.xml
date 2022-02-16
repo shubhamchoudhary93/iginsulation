@@ -3,150 +3,200 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".rateList.CottonFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ScrollView style="@style/outer_scroll_view">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="vertical">
+        <LinearLayout style="@style/outer_vertical_linear_layout">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/varnish_horizontal_linear_layout"
+                android:background="@color/grey">
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="1" />
+                    style="@style/cotton_textview"
+                    android:text="Size"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="30" />
+                    style="@style/cotton_textview_rate"
+                    android:text="Rate"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
+            <LinearLayout style="@style/varnish_horizontal_linear_layout">
+
+                <TextView
+                    style="@style/cotton_textview"
+                    android:text="1mm" />
+
+                <TextView
+                    android:id="@+id/one"
+                    style="@style/cotton_textview_rate" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/varnish_horizontal_linear_layout"
+                android:background="@color/grey">
+
+                <TextView
+                    style="@style/cotton_textview"
+                    android:text="2mm" />
+
+                <TextView
+                    android:id="@+id/two"
+                    style="@style/cotton_textview_rate" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/varnish_horizontal_linear_layout">
+
+                <TextView
+                    style="@style/cotton_textview"
+                    android:text="3mm" />
+
+                <TextView
+                    android:id="@+id/three"
+                    style="@style/cotton_textview_rate" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/varnish_horizontal_linear_layout"
+                android:background="@color/grey">
+
+                <TextView
+                    style="@style/cotton_textview"
+                    android:text="4mm" />
+
+                <TextView
+                    android:id="@+id/four"
+                    style="@style/cotton_textview_rate" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/varnish_horizontal_linear_layout">
+
+                <TextView
+                    style="@style/cotton_textview"
+                    android:text="5mm" />
+
+                <TextView
+                    android:id="@+id/five"
+                    style="@style/cotton_textview_rate" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/varnish_horizontal_linear_layout"
+                android:background="@color/grey">
+
+                <TextView
+                    style="@style/cotton_textview"
+                    android:text="6mm" />
+
+                <TextView
+                    android:id="@+id/six"
+                    style="@style/cotton_textview_rate" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/varnish_horizontal_linear_layout">
+
+                <TextView
+                    style="@style/cotton_textview"
+                    android:text="8mm" />
+
+                <TextView
+                    android:id="@+id/eight"
+                    style="@style/cotton_textview_rate" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/varnish_horizontal_linear_layout"
+                android:background="@color/grey">
+
+                <TextView
+                    style="@style/cotton_textview"
+                    android:text="10mm" />
+
+                <TextView
+                    android:id="@+id/ten"
+                    style="@style/cotton_textview_rate" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/varnish_horizontal_linear_layout">
+
+                <TextView
+                    style="@style/cotton_textview"
+                    android:text="Shubham 2mm" />
+
+                <TextView
+                    android:id="@+id/shubham_two"
+                    style="@style/cotton_textview_rate" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/varnish_horizontal_linear_layout"
+                android:background="@color/grey">
+
+                <TextView
+                    style="@style/cotton_textview"
+                    android:text="Ganga 2mm" />
+
+                <TextView
+                    android:id="@+id/ganga_two"
+                    style="@style/cotton_textview_rate" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:id="@+id/details"
+                style="@style/general_vertical_linear_layout"
+                android:layout_margin="5dp">
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2" />
+                <LinearLayout style="@style/general_horizontal_linear_layout">
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="40" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name : " />
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                <LinearLayout style="@style/general_horizontal_linear_layout">
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="3" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cost Price : " />
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="60" />
+                    <TextView
+                        android:id="@+id/cost_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
 
-            </LinearLayout>
+                <LinearLayout style="@style/general_horizontal_linear_layout">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sell Price : " />
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="4" />
+                    <TextView
+                        android:id="@+id/sell_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="90" />
+                <LinearLayout style="@style/general_horizontal_linear_layout">
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date : " />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="5" />
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="120" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="6" />
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="130" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="8" />
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="90" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="10" />
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="140" />
-
+                <Button
+                    android:id="@+id/edit"
+                    style="@style/general_button"
+                    android:text="Edit" />
             </LinearLayout>
 
         </LinearLayout>

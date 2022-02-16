@@ -462,4 +462,17 @@ object IDAssign {
         20059.also { binding.jyoti5.id = it}
         20060.also { binding.jyoti20.id = it}
     }
+
+    fun assign(binding: FragmentCottonBinding) {
+        20001.also { binding.one.id = it }
+        20002.also { binding.two.id = it }
+        20003.also { binding.three.id = it}
+        20004.also { binding.four.id = it}
+        20005.also { binding.five.id = it}
+        20006.also { binding.six.id = it }
+        20007.also { binding.eight.id = it }
+        20008.also { binding.ten.id = it}
+        20009.also { binding.shubhamTwo.id = it}
+        20010.also { binding.gangaTwo.id = it}
+    }
 }

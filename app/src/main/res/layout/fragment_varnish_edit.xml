@@ -53,16 +53,6 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/new_text_input_layout"
-                android:hint="Min Quantity">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/min_quantity"
-                    style="@style/new_edit_input_layout"
-                    android:inputType="numberDecimal" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/new_text_input_layout"
                 android:hint="Seller">
 
                 <com.google.android.material.textfield.TextInputEditText

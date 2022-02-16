@@ -44,7 +44,6 @@ class VarnishFragment : Fragment() {
                 id = i.toLong()+115
                 binding.details.visibility = View.VISIBLE
                 val rate = rateDatabase.get(i.toLong()+115)
-                println(" i === $id name === ${rate?.name}")
                 binding.name.text = rate?.name
                 binding.costPrice.text = rate?.costPrice.toString()
                 binding.billCostPrice.text = rate?.billCostPrice.toString()
