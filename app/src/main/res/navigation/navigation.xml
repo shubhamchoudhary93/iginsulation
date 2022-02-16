@@ -221,7 +221,11 @@
         android:id="@+id/varnishFragment"
         android:name="com.shubham.iginsulation.rateList.VarnishFragment"
         android:label="fragment_varnish"
-        tools:layout="@layout/fragment_varnish" />
+        tools:layout="@layout/fragment_varnish" >
+        <action
+            android:id="@+id/action_varnishFragment_to_varnishEditFragment"
+            app:destination="@id/varnishEditFragment" />
+    </fragment>
     <fragment
         android:id="@+id/leadWireFragment"
         android:name="com.shubham.iginsulation.rateList.LeadWireFragment"
@@ -539,5 +543,18 @@
         android:name="com.shubham.iginsulation.SettingsFragment"
         android:label="SettingsFragment"
         tools:layout="@layout/fragment_settings">
+    </fragment>
+    <fragment
+        android:id="@+id/varnishEditFragment"
+        android:name="com.shubham.iginsulation.rateList.VarnishEditFragment"
+        android:label="VarnishEditFragment"
+        tools:layout="@layout/fragment_varnish_edit">
+        <action
+            android:id="@+id/action_varnishEditFragment_to_varnishFragment"
+            app:destination="@id/varnishFragment" />
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
     </fragment>
 </navigation>

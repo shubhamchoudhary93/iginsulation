@@ -3,421 +3,488 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".rateList.VarnishFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ScrollView style="@style/outer_scroll_view">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="20dp"
-            android:orientation="vertical">
+        <LinearLayout style="@style/outer_vertical_linear_layout">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/varnish_horizontal_linear_layout">
+
+                <TextView style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text=" " />
+                    style="@style/varnish_textview"
+                    android:text="200ml"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="200ml" />
+                    style="@style/varnish_textview"
+                    android:text="500ml"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="500ml" />
+                    style="@style/varnish_textview"
+                    android:text="1l"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="1l" />
+                    style="@style/varnish_textview"
+                    android:text="5l"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="5l" />
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="20l" />
+                    style="@style/varnish_textview"
+                    android:text="20l"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
+                style="@style/varnish_horizontal_linear_layout"
+                android:background="@color/grey">
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="Mak" />
+                    style="@style/varnish_textview"
+                    android:text="Mak"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="3150" />
+                    android:id="@+id/mak_200"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2700" />
+                    android:id="@+id/mak_500"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2550" />
+                    android:id="@+id/mak_1"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="3220" />
+                    android:id="@+id/mak_5"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="3200" />
+                    android:id="@+id/mak_20"
+                    style="@style/varnish_textview" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/varnish_horizontal_linear_layout">
+
+                <TextView
+                    style="@style/varnish_textview"
+                    android:text="Pio"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/pio_200"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/pio_500"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/pio_1"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/pio_5"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/pio_20"
+                    style="@style/varnish_textview" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
+                style="@style/varnish_horizontal_linear_layout"
+                android:background="@color/grey">
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="Pio" />
+                    style="@style/varnish_textview"
+                    android:text="Ray"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text=" " />
+                    android:id="@+id/ray_200"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2450" />
+                    android:id="@+id/ray_500"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2350" />
+                    android:id="@+id/ray_1"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="3000" />
+                    android:id="@+id/ray_5"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2950" />
+                    android:id="@+id/ray_20"
+                    style="@style/varnish_textview" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/varnish_horizontal_linear_layout">
+
+                <TextView
+                    style="@style/varnish_textview"
+                    android:text="Bake"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/bake_200"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/bake_500"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/bake_1"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/bake_5"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/bake_20"
+                    style="@style/varnish_textview" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
+                style="@style/varnish_horizontal_linear_layout"
+                android:background="@color/grey">
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="Ray" />
+                    style="@style/varnish_textview"
+                    android:text="Super"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2180" />
+                    android:id="@+id/super_200"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2150" />
+                    android:id="@+id/super_500"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2120" />
+                    android:id="@+id/super_1"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2120" />
+                    android:id="@+id/super_5"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2120" />
+                    android:id="@+id/super_20"
+                    style="@style/varnish_textview" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/varnish_horizontal_linear_layout">
+
+                <TextView
+                    style="@style/varnish_textview"
+                    android:text="Dia"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dia_200"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/dia_500"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/dia_1"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/dia_5"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/dia_20"
+                    style="@style/varnish_textview" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
+                style="@style/varnish_horizontal_linear_layout"
+                android:background="@color/grey">
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="Bake" />
+                    style="@style/varnish_textview"
+                    android:text="Wil"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2700" />
+                    android:id="@+id/wil_200"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2800" />
+                    android:id="@+id/wil_500"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2600" />
+                    android:id="@+id/wil_1"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text=" " />
+                    android:id="@+id/wil_5"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text=" " />
+                    android:id="@+id/wil_20"
+                    style="@style/varnish_textview" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/varnish_horizontal_linear_layout">
+
+                <TextView
+                    style="@style/varnish_textview"
+                    android:text="Insu"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/insu_200"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/insu_500"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/insu_1"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/insu_5"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/insu_20"
+                    style="@style/varnish_textview" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
+                style="@style/varnish_horizontal_linear_layout"
+                android:background="@color/grey">
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="DM" />
+                    style="@style/varnish_textview"
+                    android:text="A1"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="3100" />
+                    android:id="@+id/a1_200"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2300" />
+                    android:id="@+id/a1_500"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2200" />
+                    android:id="@+id/a1_1"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text=" " />
+                    android:id="@+id/a1_5"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text=" " />
+                    android:id="@+id/a1_20"
+                    style="@style/varnish_textview" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/varnish_horizontal_linear_layout">
+
+                <TextView
+                    style="@style/varnish_textview"
+                    android:text="A1 W"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/a1w_200"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/a1w_500"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/a1w_1"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/a1w_5"
+                    style="@style/varnish_textview" />
+
+                <TextView
+                    android:id="@+id/a1w_20"
+                    style="@style/varnish_textview" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
+                style="@style/varnish_horizontal_linear_layout"
+                android:background="@color/grey">
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="Dia" />
+                    style="@style/varnish_textview"
+                    android:text="Beck"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2554" />
+                    android:id="@+id/beck_200"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2850" />
+                    android:id="@+id/beck_500"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2680" />
+                    android:id="@+id/beck_1"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2622" />
+                    android:id="@+id/beck_5"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2555" />
+                    android:id="@+id/beck_20"
+                    style="@style/varnish_textview" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
+                style="@style/varnish_horizontal_linear_layout">
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="Wil" />
+                    style="@style/varnish_textview"
+                    android:text="Jyoti"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="3458" />
+                    android:id="@+id/jyoti_200"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="3344" />
+                    android:id="@+id/jyoti_500"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="3059" />
+                    android:id="@+id/jyoti_1"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2888" />
+                    android:id="@+id/jyoti_5"
+                    style="@style/varnish_textview" />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2803" />
+                    android:id="@+id/jyoti_20"
+                    style="@style/varnish_textview" />
             </LinearLayout>
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
+                android:id="@+id/details"
+                style="@style/general_vertical_linear_layout"
+                android:layout_margin="5dp">
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="Insu" />
+                <LinearLayout style="@style/general_horizontal_linear_layout">
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text=" " />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name : " />
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text=" " />
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2700" />
+                <LinearLayout style="@style/general_horizontal_linear_layout">
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="3500" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cost Price : " />
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="4250" />
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/cost_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
+                <LinearLayout style="@style/general_horizontal_linear_layout">
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="A1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bill Cost Price : " />
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2800/ 3540" />
+                    <TextView
+                        android:id="@+id/bill_cost_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2650" />
+                <LinearLayout style="@style/general_horizontal_linear_layout">
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2500" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sell Price : " />
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text=" " />
+                    <TextView
+                        android:id="@+id/sell_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="2940/ 140pc" />
-            </LinearLayout>
+                <LinearLayout style="@style/general_horizontal_linear_layout">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bill Sell Price : " />
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="A1 W" />
+                    <TextView
+                        android:id="@+id/bill_sell_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="4100" />
+                <LinearLayout style="@style/general_horizontal_linear_layout">
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="3160" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seller : " />
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text="3025" />
+                    <TextView
+                        android:id="@+id/seller"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text=" " />
+                <LinearLayout style="@style/general_horizontal_linear_layout">
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:text=" " />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date : " />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/edit"
+                    style="@style/general_button"
+                    android:text="Edit" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

@@ -7,18 +7,15 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.shubham.iginsulation.database.customer.CustomerDatabase
-import com.shubham.iginsulation.database.sale.SaleDatabase
-import com.shubham.iginsulation.database.saledetails.SaleDetailsDatabase
-import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabase
-import com.shubham.iginsulation.database.shopstock.ShopStockDatabase
-import com.shubham.iginsulation.database.stock.StockDatabase
-import com.shubham.iginsulation.database.transaction.TransactionDatabase
+import com.shubham.iginsulation.database.rate.Rate
+import com.shubham.iginsulation.database.rate.RateDatabase
+import com.shubham.iginsulation.database.rate.RateDatabaseDao
 import com.shubham.iginsulation.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
 
     private lateinit var binding: FragmentSettingsBinding
+    private lateinit var rateDatabase: RateDatabaseDao
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -72,5 +69,77 @@ class SettingsFragment : Fragment() {
                     .show()
             }
         }
+
+//        binding.createRateListDatabase.setOnClickListener {
+//            rateDatabase = RateDatabase.getInstance(requireContext()).rateDatabaseDao
+//
+//            rateDatabase.clear()
+//            val data = arrayOf(
+//                Rate(0, "Mak 200ml"),
+//                Rate(0, "Mak 500ml"),
+//                Rate(0, "Mak 1l"),
+//                Rate(0, "Mak 5l"),
+//                Rate(0, "Mak 20l"),
+//                Rate(0, "Pio 200ml"),
+//                Rate(0, "Pio 500ml"),
+//                Rate(0, "Pio 1l"),
+//                Rate(0, "Pio 5l"),
+//                Rate(0, "Pio 20l"),
+//                Rate(0, "Ray 200ml"),
+//                Rate(0, "Ray 500ml"),
+//                Rate(0, "Ray 1l"),
+//                Rate(0, "Ray 5l"),
+//                Rate(0, "Ray 20l"),
+//                Rate(0, "Bake 200ml"),
+//                Rate(0, "Bake 500ml"),
+//                Rate(0, "Bake 1l"),
+//                Rate(0, "Bake 5l"),
+//                Rate(0, "Bake 20l"),
+//                Rate(0, "Super 200ml"),
+//                Rate(0, "Super 500ml"),
+//                Rate(0, "Super 1l"),
+//                Rate(0, "Super 5l"),
+//                Rate(0, "Super 20l"),
+//                Rate(0, "Dia 200ml"),
+//                Rate(0, "Dia 500ml"),
+//                Rate(0, "Dia 1l"),
+//                Rate(0, "Dia 5l"),
+//                Rate(0, "Dia 20l"),
+//                Rate(0, "Wil 200ml"),
+//                Rate(0, "Wil 500ml"),
+//                Rate(0, "Wil 1l"),
+//                Rate(0, "Wil 5l"),
+//                Rate(0, "Wil 20l"),
+//                Rate(0, "Insu 200ml"),
+//                Rate(0, "Insu 500ml"),
+//                Rate(0, "Insu 1l"),
+//                Rate(0, "Insu 5l"),
+//                Rate(0, "Insu 20l"),
+//                Rate(0, "A1 200ml"),
+//                Rate(0, "A1 500ml"),
+//                Rate(0, "A1 1l"),
+//                Rate(0, "A1 5l"),
+//                Rate(0, "A1 20l"),
+//                Rate(0, "A1W 200ml"),
+//                Rate(0, "A1W 500ml"),
+//                Rate(0, "A1W 1l"),
+//                Rate(0, "A1W 5l"),
+//                Rate(0, "A1W 20l"),
+//                Rate(0, "Beck 200ml"),
+//                Rate(0, "Beck 500ml"),
+//                Rate(0, "Beck 1l"),
+//                Rate(0, "Beck 5l"),
+//                Rate(0, "Beck 20l"),
+//                Rate(0, "Jyoti 200ml"),
+//                Rate(0, "Jyoti 500ml"),
+//                Rate(0, "Jyoti 1l"),
+//                Rate(0, "Jyoti 5l"),
+//                Rate(0, "Jyoti 20l")
+//            )
+//
+//            for (i in 0..59) {
+//                rateDatabase.insert(data[i])
+//            }
+//        }
     }
 }

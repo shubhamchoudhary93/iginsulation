@@ -23,6 +23,18 @@
         <item name="android:orientation">horizontal</item>
     </style>
 
+    <style name="varnish_horizontal_linear_layout">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="varnish_textview">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">50dp</item>
+    </style>
+
     <style name="outer_vertical_linear_layout">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>

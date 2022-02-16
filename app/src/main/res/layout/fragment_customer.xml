@@ -3,23 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".customer.StockFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
+    <LinearLayout style="@style/outer_scroll_view">
 
         <Button
             android:id="@+id/button_new_customer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/general_button"
             android:text="New Customer" />
 
         <Button
             android:id="@+id/button_view_customer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/general_button"
             android:text="View Customer" />
     </LinearLayout>
-
 </layout>

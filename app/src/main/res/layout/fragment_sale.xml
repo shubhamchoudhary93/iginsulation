@@ -3,23 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".sale.SaleFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
+    <LinearLayout style="@style/outer_vertical_linear_layout">
 
         <Button
             android:id="@+id/button_new_sale"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/general_button"
             android:text="New Sale" />
 
         <Button
             android:id="@+id/button_view_sale"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/general_button"
             android:text="View Sale" />
     </LinearLayout>
-
 </layout>

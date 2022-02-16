@@ -399,4 +399,67 @@ object IDAssign {
         30419.also { binding.saleDetailsNineteenTotal.id = it }
         30430.also { binding.saleDetailsTwentyTotal.id = it }
     }
+
+    fun assign(binding: FragmentVarnishBinding) {
+        20001.also { binding.mak200.id = it }
+        20002.also { binding.mak500.id = it }
+        20003.also { binding.mak1.id = it}
+        20004.also { binding.mak5.id = it}
+        20005.also { binding.mak20.id = it}
+        20006.also { binding.pio200.id = it }
+        20007.also { binding.pio500.id = it }
+        20008.also { binding.pio1.id = it}
+        20009.also { binding.pio5.id = it}
+        20010.also { binding.pio20.id = it}
+        20011.also { binding.ray200.id = it }
+        20012.also { binding.ray500.id = it }
+        20013.also { binding.ray1.id = it}
+        20014.also { binding.ray5.id = it}
+        20015.also { binding.ray20.id = it}
+        20016.also { binding.bake200.id = it }
+        20017.also { binding.bake500.id = it }
+        20018.also { binding.bake1.id = it}
+        20019.also { binding.bake5.id = it}
+        20020.also { binding.bake20.id = it}
+        20021.also { binding.super200.id = it }
+        20022.also { binding.super500.id = it }
+        20023.also { binding.super1.id = it}
+        20024.also { binding.super5.id = it}
+        20025.also { binding.super20.id = it}
+        20026.also { binding.dia200.id = it }
+        20027.also { binding.dia500.id = it }
+        20028.also { binding.dia1.id = it}
+        20029.also { binding.dia5.id = it}
+        20030.also { binding.dia20.id = it}
+        20031.also { binding.wil200.id = it }
+        20032.also { binding.wil500.id = it }
+        20033.also { binding.wil1.id = it}
+        20034.also { binding.wil5.id = it}
+        20035.also { binding.wil20.id = it}
+        20036.also { binding.insu200.id = it }
+        20037.also { binding.insu500.id = it }
+        20038.also { binding.insu1.id = it}
+        20039.also { binding.insu5.id = it}
+        20040.also { binding.insu20.id = it}
+        20041.also { binding.a1200.id = it }
+        20042.also { binding.a1500.id = it }
+        20043.also { binding.a11.id = it}
+        20044.also { binding.a15.id = it}
+        20045.also { binding.a120.id = it}
+        20046.also { binding.a1w200.id = it }
+        20047.also { binding.a1w500.id = it }
+        20048.also { binding.a1w1.id = it}
+        20049.also { binding.a1w5.id = it}
+        20050.also { binding.a1w20.id = it}
+        20051.also { binding.beck200.id = it }
+        20052.also { binding.beck500.id = it }
+        20053.also { binding.beck1.id = it}
+        20054.also { binding.beck5.id = it}
+        20055.also { binding.beck20.id = it}
+        20056.also { binding.jyoti200.id = it }
+        20057.also { binding.jyoti500.id = it }
+        20058.also { binding.jyoti1.id = it}
+        20059.also { binding.jyoti5.id = it}
+        20060.also { binding.jyoti20.id = it}
+    }
 }

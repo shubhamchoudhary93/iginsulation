@@ -25,6 +25,12 @@
                 android:layout_height="wrap_content"
                 android:text="Restore" />
 
+            <Button
+                android:id="@+id/create_rate_list_database"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create jyoti in database" />
+
             <TextView
                 android:id="@+id/notifications"
                 android:layout_width="match_parent"

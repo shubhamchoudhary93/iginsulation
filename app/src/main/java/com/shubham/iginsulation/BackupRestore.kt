@@ -37,7 +37,10 @@ object BackupRestore {
                 "shop_stock_transaction_data_table-wal",
                 "transaction_data_table",
                 "transaction_data_table-shm",
-                "transaction_data_table-wal"
+                "transaction_data_table-wal",
+                "rate_data_table",
+                "rate_data_table-shm",
+                "rate_data_table-wal"
             )
 
             binding.notifications.text = "Backup Started"
@@ -139,7 +142,10 @@ object BackupRestore {
                         "shop_stock_transaction_data_table-wal",
                         "transaction_data_table",
                         "transaction_data_table-shm",
-                        "transaction_data_table-wal"
+                        "transaction_data_table-wal",
+                        "rate_data_table",
+                        "rate_data_table-shm",
+                        "rate_data_table-wal"
                     )
 
                     val backupDBPath = context?.getExternalFilesDir(null)?.path + "/IGIBackup/"
