@@ -48,24 +48,24 @@ class VarnishEditFragment : Fragment() {
 
             val name = binding.name.text.toString()
             var billCostPrice = binding.billCostPrice.text.toString()
-            if (billCostPrice.toFloatOrNull() == null) {
+            if (billCostPrice.toIntOrNull() == null) {
                 Toast.makeText(context, "Bill Cost Price should be numeric", Toast.LENGTH_SHORT)
                     .show()
                 billCostPrice = ""
             }
             var costPrice = binding.costPrice.text.toString()
-            if (costPrice.toFloatOrNull() == null) {
+            if (costPrice.toIntOrNull() == null) {
                 Toast.makeText(context, "Cost Price should be numeric", Toast.LENGTH_SHORT).show()
                 costPrice = ""
             }
             var billSellPrice = binding.billSellPrice.text.toString()
-            if (billSellPrice.toFloatOrNull() == null) {
+            if (billSellPrice.toIntOrNull() == null) {
                 Toast.makeText(context, "Bill Sell Price should be numeric", Toast.LENGTH_SHORT)
                     .show()
                 billSellPrice = ""
             }
             var sellPrice = binding.sellPrice.text.toString()
-            if (sellPrice.toFloatOrNull() == null) {
+            if (sellPrice.toIntOrNull() == null) {
                 Toast.makeText(context, "Sell Price should be numeric", Toast.LENGTH_SHORT).show()
                 sellPrice = ""
             }
@@ -146,10 +146,10 @@ class VarnishEditFragment : Fragment() {
 
     private fun setRateData(rate: Rate) {
         binding.name.text = rate.name
-        binding.billCostPrice.setText(rate.billCostPrice.toString())
-        binding.costPrice.setText(rate.costPrice.toString())
-        binding.billSellPrice.setText(rate.billSellPrice.toString())
-        binding.sellPrice.setText(rate.sellPrice.toString())
+        binding.billCostPrice.setText(rate.billCostPrice.toInt().toString())
+        binding.costPrice.setText(rate.costPrice.toInt().toString())
+        binding.billSellPrice.setText(rate.billSellPrice.toInt().toString())
+        binding.sellPrice.setText(rate.sellPrice.toInt().toString())
         binding.seller.setText(rate.seller)
     }
 }

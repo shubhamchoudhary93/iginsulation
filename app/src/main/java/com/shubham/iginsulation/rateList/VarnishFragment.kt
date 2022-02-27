@@ -110,10 +110,10 @@ class VarnishFragment : Fragment() {
                 val rate = rateDatabase.get(name[i-1])
                 id = rate?.id!!
                 binding.name.text = rate.name
-                binding.costPrice.text = rate.costPrice.toString()
-                binding.billCostPrice.text = rate.billCostPrice.toString()
-                binding.sellPrice.text = rate.sellPrice.toString()
-                binding.billSellPrice.text = rate.billSellPrice.toString()
+                binding.costPrice.text = rate.costPrice.toInt().toString()
+                binding.billCostPrice.text = rate.billCostPrice.toInt().toString()
+                binding.sellPrice.text = rate.sellPrice.toInt().toString()
+                binding.billSellPrice.text = rate.billSellPrice.toInt().toString()
                 binding.seller.text = rate.seller
                 binding.date.text = rate.date
             }
@@ -128,7 +128,7 @@ class VarnishFragment : Fragment() {
 
     private fun setData() {
         for (i in 1..60) {
-            val text = rateDatabase.get(name[i-1])?.sellPrice.toString()
+            val text = rateDatabase.get(name[i-1])?.sellPrice?.toInt().toString()
             binding.root.findViewById<TextView>(20000 + i).text =
                 text
         }

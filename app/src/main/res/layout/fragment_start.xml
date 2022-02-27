@@ -2,6 +2,7 @@
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".StartFragment">
 
     <ScrollView style="@style/outer_scroll_view">
@@ -44,6 +45,24 @@
                     style="@style/general_button"
                     android:layout_marginTop="20dp"
                     android:text="login" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/restore_layout"
+                style="@style/general_vertical_linear_layout"
+                android:gravity="center">
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/loader"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:trackThickness="12dp"
+                    android:layout_marginEnd="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restoring..." />
             </LinearLayout>
 
             <LinearLayout

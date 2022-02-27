@@ -8,10 +8,14 @@
         <LinearLayout style="@style/outer_vertical_linear_layout">
 
             <TextView
-                    android:id="@+id/name"
-                    style="@style/new_edit_input_layout"/>
+                android:id="@+id/name"
+                style="@style/new_edit_input_layout"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-             <com.google.android.material.textfield.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 style="@style/new_text_input_layout"
                 android:hint="Bill Cost Price">
 
@@ -61,7 +65,7 @@
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
-             <com.google.android.material.button.MaterialButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/modify"
                 style="@style/new_add_button"
                 android:text="modify" />

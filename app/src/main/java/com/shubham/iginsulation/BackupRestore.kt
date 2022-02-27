@@ -3,12 +3,15 @@ package com.shubham.iginsulation
 import android.app.ProgressDialog
 import android.content.Context
 import android.net.Uri
+import android.view.View
 import android.widget.Toast
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.shubham.iginsulation.databinding.FragmentSettingsBinding
+import com.shubham.iginsulation.databinding.FragmentStartBinding
 import java.io.File
 import java.io.FileOutputStream
+
 
 object BackupRestore {
 
@@ -72,9 +75,16 @@ object BackupRestore {
                 val storage = FirebaseStorage.getInstance()
                 val storageReference = storage.reference
                 val riversRef: StorageReference = storageReference.child("igi_backup/igiBackup.zip")
+
                 riversRef.putFile(filePath)
                     .addOnSuccessListener {
                         progressDialog.dismiss()
+
+//                        val metadata = StorageMetadata.Builder()
+//                            .setCustomMetadata("version", "1")
+//                            .build()
+//
+//                        riversRef.updateMetadata(metadata)
 
                         binding.notifications.text =
                             binding.notifications.text.toString() + "\nBackup File uploaded."
@@ -98,28 +108,31 @@ object BackupRestore {
         }
     }
 
-    fun restore(context: Context?, binding: FragmentSettingsBinding) {
+    fun restore(context: Context?, binding: FragmentStartBinding) {
 
-        binding.notifications.text = "Restore Started"
         val storage = FirebaseStorage.getInstance()
         val storageRef = storage.reference
         val riversRef: StorageReference = storageRef.child("igi_backup/igiBackup.zip")
+
+//        riversRef.metadata.addOnSuccessListener {metadata ->
+//            val version = metadata.getCustomMetadata("version")
+//            println("version = $version")
+//        }.addOnFailureListener{
+//            println("problem")
+//        }
+
+        binding.loader.progress = 5
         val rootPath = File(context?.getExternalFilesDir(null)?.path, "IGIBackup")
         if (!rootPath.exists()) {
             rootPath.mkdirs()
         }
         val localFile = File(rootPath, "igiBackup.zip")
-        binding.notifications.text =
-            binding.notifications.text.toString() + "\nBackup File downloading."
-        val progressDialog = ProgressDialog(context)
-        progressDialog.setTitle("Downloading")
-        progressDialog.show()
+       binding.loader.progress += 10
 
         riversRef.getFile(localFile)
             .addOnSuccessListener {
 
-                binding.notifications.text =
-                    binding.notifications.text.toString() + "\nBackup File downloaded."
+                binding.loader.progress += 50
                 try {
                     val tableNames = listOf(
                         "customer_data_table",
@@ -153,30 +166,26 @@ object BackupRestore {
                     val backupDBFolder = File(backupDBPath)
                     ZipManager.unzip("$backupDBPath/igiBackup.zip", backupDBFolder.path)
 
+                    binding.loader.progress += 10
                     for (item in tableNames) {
                         context?.getDatabasePath(item)?.let {
                             copyDataFromOneToAnother(
                                 context.getExternalFilesDir(null)?.path + "/IGIBackup/" + "backup_" + item,
                                 it.path
                             )
+
+                            binding.loader.progress+= 1
                         }
                     }
 
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
-                progressDialog.dismiss()
-                binding.notifications.text =
-                    binding.notifications.text.toString() + "\nRestore Done."
+                binding.restoreLayout.visibility = View.GONE
+                binding.buttonsLayout.visibility = View.VISIBLE
             }
             .addOnFailureListener { exception ->
-                progressDialog.dismiss()
                 Toast.makeText(context, exception.message, Toast.LENGTH_LONG).show()
-            }
-            .addOnProgressListener { taskSnapshot ->
-                val progress =
-                    100.0 * taskSnapshot.bytesTransferred / taskSnapshot.totalByteCount
-                progressDialog.setMessage("Downloaded " + progress.toInt() + "%...")
             }
     }
 
