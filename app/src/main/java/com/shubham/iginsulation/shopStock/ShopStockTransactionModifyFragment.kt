@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.shubham.iginsulation.BackupRestore
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransaction
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabase
@@ -115,6 +116,9 @@ class ShopStockTransactionModifyFragment : Fragment() {
                         oldQuantityNewName - quantity.toFloat()
                     }
                     shopStockDatabase.setShopStockQuantity(newQuantityNewName, name)
+
+                    BackupRestore.backup(context, "shop_stock")
+                    BackupRestore.backup(context, "shop_stock_transaction")
                 }
             } else
                 Toast.makeText(context, "shopStock doesn't exist", Toast.LENGTH_SHORT).show()

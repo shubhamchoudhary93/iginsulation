@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.shubham.iginsulation.BackupRestore
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.stock.Stock
 import com.shubham.iginsulation.database.stock.StockDatabase
@@ -63,12 +63,12 @@ class StockNewFragment : Fragment() {
             val category = binding.stockNewCategory.text.toString()
             val subCategory = binding.stockNewSubCategory.text.toString()
             var rate = binding.stockNewRate.text.toString()
-            if (rate.toFloatOrNull() == null){
+            if (rate.toFloatOrNull() == null) {
                 Toast.makeText(context, "rate should be numeric", Toast.LENGTH_SHORT).show()
                 rate = ""
             }
             var percentage = binding.stockNewPercentage.text.toString()
-            if (percentage.toFloatOrNull() == null){
+            if (percentage.toFloatOrNull() == null) {
                 Toast.makeText(context, "percentage should be numeric", Toast.LENGTH_SHORT).show()
                 percentage = ""
             }
@@ -115,13 +115,14 @@ class StockNewFragment : Fragment() {
 
         try {
             stockDatabase.insert(stock)
+            BackupRestore.backup(context, "stock")
         } catch (e: Exception) {
             e.printStackTrace()
         }
-                view?.findNavController()?.navigate(
-                    StockNewFragmentDirections.actionStockNewFragmentToStockDetailFragment(
-                        0L
-                    )
-                )
+        view?.findNavController()?.navigate(
+            StockNewFragmentDirections.actionStockNewFragmentToStockDetailFragment(
+                0L
+            )
+        )
     }
 }

@@ -7,19 +7,20 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.shubham.iginsulation.BackupRestore
 import com.shubham.iginsulation.R
-import com.shubham.iginsulation.database.customer.CustomerDatabase
-import com.shubham.iginsulation.database.customer.CustomerDatabaseDao
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransaction
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabase
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabaseDao
+import com.shubham.iginsulation.database.shopstock.ShopStockDatabase
+import com.shubham.iginsulation.database.shopstock.ShopStockDatabaseDao
 import com.shubham.iginsulation.databinding.FragmentShopStockTransactionDetailBinding
 
 class ShopStockTransactionDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentShopStockTransactionDetailBinding
     private lateinit var shopStockTransactionDatabase: ShopStockTransactionDatabaseDao
-    private lateinit var customerDatabase: CustomerDatabaseDao
+    private lateinit var shopStockDatabase: ShopStockDatabaseDao
 
     private var id = 0L
     private var shopStockTransaction = ShopStockTransaction()
@@ -36,8 +37,8 @@ class ShopStockTransactionDetailFragment : Fragment() {
         shopStockTransactionDatabase =
             ShopStockTransactionDatabase.getInstance(requireContext()).shopStockTransactionDatabaseDao
 
-        customerDatabase =
-            CustomerDatabase.getInstance(requireContext()).customerDatabaseDao
+        shopStockDatabase =
+            ShopStockDatabase.getInstance(requireContext()).shopStockDatabaseDao
 
         val args = ShopStockTransactionDetailFragmentArgs.fromBundle(requireArguments())
         id = args.id
@@ -46,15 +47,18 @@ class ShopStockTransactionDetailFragment : Fragment() {
 
         binding.delete.setOnClickListener {
             shopStockTransactionDatabase.delete(id)
-            val oldCurrentBalance =
-                customerDatabase.getCustomerCurrentBalance(shopStockTransaction.stock)
-            val newBalanceO =
-                if (shopStockTransaction.add) oldCurrentBalance + shopStockTransaction.quantity
-                else oldCurrentBalance - shopStockTransaction.quantity
-            customerDatabase.setCustomerCurrentBalance(
-                newBalanceO,
+            val oldQuantity =
+                shopStockDatabase.getShopStockQuantity(shopStockTransaction.stock)
+            val newQuantity =
+                if (shopStockTransaction.add) oldQuantity + shopStockTransaction.quantity
+                else oldQuantity - shopStockTransaction.quantity
+            shopStockDatabase.setShopStockQuantity(
+                newQuantity,
                 shopStockTransaction.stock
             )
+
+            BackupRestore.backup(context, "shop_stock")
+            BackupRestore.backup(context, "shop_stock_transaction")
             view?.findNavController()?.navigate(
                 ShopStockTransactionDetailFragmentDirections.actionShopStockTransactionDetailFragmentToShopStockTransactionListFragment()
             )

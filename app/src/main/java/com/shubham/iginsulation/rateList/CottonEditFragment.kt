@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.shubham.iginsulation.BackupRestore
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.rate.Rate
 import com.shubham.iginsulation.database.rate.RateDatabase
@@ -92,6 +93,7 @@ class CottonEditFragment : Fragment() {
 
         try {
             rateDatabase.update(rate)
+            BackupRestore.backup(context, "rate")
         } catch (e: Exception) {
             e.printStackTrace()
         }

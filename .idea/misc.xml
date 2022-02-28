@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/drawable/ic_add_24dp.xml" value="0.184" />
+        <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/drawable/ic_backup_24dp.xml" value="0.1485" />
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/drawable/ic_delete_24dp.xml" value="0.184" />
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/drawable/ic_edit_24dp.xml" value="0.184" />
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/drawable/ic_minus_24dp.xml" value="0.104" />
@@ -62,6 +63,7 @@
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/layout/fragment_transaction_new.xml" value="0.1574074074074074" />
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/layout/fragment_varnish.xml" value="0.3333333333333333" />
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/layout/fragment_varnish_edit.xml" value="0.17552083333333332" />
+        <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/menu/top_app_bar.xml" value="0.17552083333333332" />
       </map>
     </option>
   </component>

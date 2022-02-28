@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.shubham.iginsulation.BackupRestore
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.shopstock.ShopStock
 import com.shubham.iginsulation.database.shopstock.ShopStockDatabase
@@ -38,6 +39,7 @@ class ShopStockDetailFragment : Fragment() {
 
         binding.delete.setOnClickListener {
             shopStockDatabase.delete(id)
+            BackupRestore.backup(context, "shop_stock")
             view?.findNavController()?.navigate(
                 ShopStockDetailFragmentDirections.actionShopStockDetailFragmentToShopStockListFragment()
             )

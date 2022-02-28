@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.shubham.iginsulation.BackupRestore
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.shopstock.ShopStock
 import com.shubham.iginsulation.database.shopstock.ShopStockDatabase
@@ -139,6 +140,7 @@ class ShopStockNewFragment : Fragment() {
 
         try {
             shopStockDatabase.insert(shopStock)
+            BackupRestore.backup(context, "shop_stock")
         } catch (e: Exception) {
             e.printStackTrace()
         }

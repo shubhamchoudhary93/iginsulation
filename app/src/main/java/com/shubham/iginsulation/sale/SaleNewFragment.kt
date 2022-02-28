@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.shubham.iginsulation.BackupRestore
 import com.shubham.iginsulation.IDAssign
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.customer.CustomerDatabase
@@ -146,6 +147,11 @@ class SaleNewFragment : Fragment() {
                     balance += total
                     customerDatabase.setCustomerCurrentBalance(balance, sale.name)
                 }
+
+                BackupRestore.backup(context, "sale")
+                BackupRestore.backup(context, "sale_details")
+                BackupRestore.backup(context, "customer")
+                BackupRestore.backup(context, "transaction")
                 view?.findNavController()?.navigate(
                     SaleNewFragmentDirections.actionSaleNewFragmentToSaleDetailFragment(id)
                 )

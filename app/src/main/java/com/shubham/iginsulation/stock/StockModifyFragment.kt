@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.shubham.iginsulation.BackupRestore
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.stock.Stock
 import com.shubham.iginsulation.database.stock.StockDatabase
@@ -39,7 +40,7 @@ class StockModifyFragment : Fragment() {
         id = args.id
 
         fetchStock(id)
-        
+
         categoryList = stockDatabase.getAllCategory()
         val adapterCategory: ArrayAdapter<String> = ArrayAdapter<String>(
             this.requireContext(),
@@ -69,12 +70,12 @@ class StockModifyFragment : Fragment() {
             val category = binding.stockModifyCategory.text.toString()
             val subCategory = binding.stockModifySubCategory.text.toString()
             var rate = binding.stockModifyRate.text.toString()
-            if (rate.toFloatOrNull() == null){
+            if (rate.toFloatOrNull() == null) {
                 Toast.makeText(context, "rate should be numeric", Toast.LENGTH_SHORT).show()
                 rate = ""
             }
             var percentage = binding.stockModifyPercentage.text.toString()
-            if (percentage.toFloatOrNull() == null){
+            if (percentage.toFloatOrNull() == null) {
                 Toast.makeText(context, "percentage should be numeric", Toast.LENGTH_SHORT).show()
                 percentage = ""
             }
@@ -122,14 +123,15 @@ class StockModifyFragment : Fragment() {
 
         try {
             stockDatabase.update(stock)
+            BackupRestore.backup(context, "stock")
         } catch (e: Exception) {
             e.printStackTrace()
         }
-                view?.findNavController()?.navigate(
-                    StockModifyFragmentDirections.actionStockModifyFragmentToStockDetailFragment(
-                        id
-                    )
-                )
+        view?.findNavController()?.navigate(
+            StockModifyFragmentDirections.actionStockModifyFragmentToStockDetailFragment(
+                id
+            )
+        )
     }
 
     private fun fetchStock(id: Long) {

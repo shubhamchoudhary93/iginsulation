@@ -1,5 +1,5 @@
 <resources>
-    <style name="Theme.IGInsulation" parent="Theme.MaterialComponents.DayNight">
+    <style name="Theme.IGInsulation" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">#B9F6CA</item>
         <item name="android:textSize">16sp</item>
     </style>

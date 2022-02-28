@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.shubham.iginsulation.BackupRestore
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.customer.CustomerDatabase
 import com.shubham.iginsulation.database.customer.CustomerDatabaseDao
@@ -55,6 +56,9 @@ class TransactionDetailFragment : Fragment() {
                 newBalanceO,
                 transaction.name
             )
+
+            BackupRestore.backup(context, "transaction")
+            BackupRestore.backup(context, "customer")
             view?.findNavController()?.navigate(
                 TransactionDetailFragmentDirections.actionTransactionDetailFragmentToTransactionListFragment()
             )

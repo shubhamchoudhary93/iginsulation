@@ -1,7 +1,5 @@
 package com.shubham.iginsulation.shopStock
 
-import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.format.DateFormat.format
 import android.view.LayoutInflater
@@ -11,7 +9,7 @@ import android.widget.ArrayAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.shubham.iginsulation.BackupRestore
+import com.shubham.iginsulation.BackupRestore.backup
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransaction
 import com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransactionDatabase
@@ -28,7 +26,6 @@ class ShopStockFragment : Fragment() {
     private lateinit var shopStockDatabase: ShopStockDatabaseDao
     private lateinit var shopStockTransactionDatabase: ShopStockTransactionDatabaseDao
     private lateinit var stockList: List<String>
-//    private lateinit var data: SharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -66,6 +63,17 @@ class ShopStockFragment : Fragment() {
     }
 
     private fun setListeners() {
+
+        binding.topAppBar.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.backup -> {
+                    backup(context, "shop_stock_transaction")
+                    true
+                }
+                else -> false
+            }
+        }
+
         binding.name.setOnItemClickListener { parent, _, position, _ ->
             val selectedItem = parent.getItemAtPosition(position).toString()
             val stockDetailReturn = shopStockDatabase.get(selectedItem)
@@ -94,12 +102,6 @@ class ShopStockFragment : Fragment() {
                                 quantity.toInt(), date, ""
                         )
                     )
-//                    data = requireActivity().getSharedPreferences("IGInsulation", Context.MODE_PRIVATE)
-//                    if(data.getString("DataUpdateRequired", "") != "1"){
-//                        val prefsEditor: SharedPreferences.Editor = data.edit()
-//                        prefsEditor.putString("DataUpdateRequired", "1")
-//                        prefsEditor.apply()
-//                    }
 
                     binding.notifications.text = name + " updated to " + stock.quantity
                 }
@@ -132,13 +134,6 @@ class ShopStockFragment : Fragment() {
                                 quantity.toInt(), date, ""
                         )
                     )
-
-//                    data = requireActivity().getSharedPreferences("IGInsulation", Context.MODE_PRIVATE)
-//                    if(data.getString("DataUpdateRequired", "") != "1"){
-//                        val prefsEditor: SharedPreferences.Editor = data.edit()
-//                        prefsEditor.putString("DataUpdateRequired", "1")
-//                        prefsEditor.apply()
-//                    }
 
                     binding.notifications.text = name + " updated to " + stock.quantity
                 }
@@ -184,14 +179,5 @@ class ShopStockFragment : Fragment() {
 
         binding.list.adapter = adapter
         adapter.submitList(list)
-    }
-
-    override fun onPause() {
-        super.onPause()
-
-    }
-
-    override fun onResume() {
-        super.onResume()
     }
 }

@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.shubham.iginsulation.BackupRestore
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.customer.Customer
 import com.shubham.iginsulation.database.customer.CustomerDatabase
@@ -105,6 +106,7 @@ class CustomerModifyFragment : Fragment() {
 
         try {
             customerDatabase.update(customer)
+            BackupRestore.backup(context, "customer")
         } catch (e: Exception) {
             e.printStackTrace()
         }

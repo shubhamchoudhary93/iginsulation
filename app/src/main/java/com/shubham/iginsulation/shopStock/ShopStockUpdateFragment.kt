@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.shubham.iginsulation.BackupRestore
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.shopstock.ShopStock
 import com.shubham.iginsulation.database.shopstock.ShopStockDatabase
@@ -268,5 +269,6 @@ class ShopStockUpdateFragment : Fragment() {
             shopStockDatabase.update(shopStockUpdate)
         }
 
+        BackupRestore.backup(context, "shop_stock")
     }
 }

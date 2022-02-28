@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.shubham.iginsulation.BackupRestore
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.customer.CustomerDatabase
 import com.shubham.iginsulation.database.customer.CustomerDatabaseDao
@@ -748,6 +749,9 @@ class SaleModifyFragment : Fragment() {
                     val balance2 = customerDatabase.getCustomerCurrentBalance(sale.name)
                     customerDatabase.setCustomerCurrentBalance(balance2 + total, sale.name)
                 }
+                BackupRestore.backup(context, "sale")
+                BackupRestore.backup(context, "sale_details")
+                BackupRestore.backup(context, "customer")
                 view?.findNavController()?.navigate(
                     SaleModifyFragmentDirections.actionSaleModifyFragmentToSaleDetailFragment(id)
                 )

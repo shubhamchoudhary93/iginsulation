@@ -17,6 +17,7 @@ import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.shubham.iginsulation.BackupRestore
 import com.shubham.iginsulation.IDAssign
 import com.shubham.iginsulation.R
 import com.shubham.iginsulation.database.customer.CustomerDatabase
@@ -74,16 +75,20 @@ class SaleDetailFragment : Fragment() {
 
         binding.saleDetailDelete.setOnClickListener {
             saleDatabase.delete(id)
+            BackupRestore.backup(context, "sale")
 
             if (!receipt) {
                 var balance = customerDatabase.getCustomerCurrentBalance(name)
                 balance -= total
                 customerDatabase.setCustomerCurrentBalance(balance, name)
+                BackupRestore.backup(context, "customer")
             } else {
                 transactionDatabase.deleteCashTransaction(date, total, name)
+                BackupRestore.backup(context, "transaction")
             }
 
             saleDetailsDatabase.deleteSaleId(id)
+            BackupRestore.backup(context, "sale_details")
             view?.findNavController()?.navigate(
                 SaleDetailFragmentDirections.actionSaleDetailFragmentToSaleListFragment()
             )
