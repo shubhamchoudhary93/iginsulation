@@ -17,7 +17,6 @@ class StartFragment : Fragment() {
 
     private lateinit var binding: FragmentStartBinding
     private var firebaseAuth: FirebaseAuth? = null
-//    private lateinit var data: SharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,13 +29,8 @@ class StartFragment : Fragment() {
 
         firebaseAuth = FirebaseAuth.getInstance()
         setListeners()
-//        data = requireActivity().getSharedPreferences("IGInsulation", Context.MODE_PRIVATE)
 
-//        if (data.contains("DataUpdateRequired")) {
-//            val prefsEditor: SharedPreferences.Editor = data.edit()
-//            prefsEditor.putString("DataUpdateRequired", "0")
-//            prefsEditor.apply()
-//        }
+        binding.buttonsLayout.visibility = View.GONE
 
         if (firebaseAuth!!.currentUser == null) {
             binding.loginLayout.visibility = View.VISIBLE
