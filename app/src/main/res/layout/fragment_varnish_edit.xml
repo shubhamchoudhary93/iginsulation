@@ -1,74 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".shopStock.ShopStockModifyFragment">
 
-    <ScrollView style="@style/outer_scroll_view">
+    <LinearLayout style="@style/general_vertical_linear_layout">
 
-        <LinearLayout style="@style/outer_vertical_linear_layout">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/name"
-                style="@style/new_edit_input_layout"
-                android:layout_margin="10dp"
-                android:gravity="center"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/top_app_bar"
+                app:title="Modify Varnish Rate" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/new_text_input_layout"
-                android:hint="Bill Cost Price">
+        </com.google.android.material.appbar.AppBarLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/bill_cost_price"
+        <ScrollView style="@style/outer_scroll_view">
+
+            <LinearLayout style="@style/outer_vertical_linear_layout">
+
+                <TextView
+                    android:id="@+id/name"
                     style="@style/new_edit_input_layout"
-                    android:inputType="numberDecimal" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/new_text_input_layout"
-                android:hint="Cost Price">
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/new_text_input_layout"
+                    android:hint="Bill Cost Price">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/cost_price"
-                    style="@style/new_edit_input_layout"
-                    android:inputType="numberDecimal" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/bill_cost_price"
+                        style="@style/new_edit_input_layout"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/new_text_input_layout"
-                android:hint="Bill Sell Price">
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/new_text_input_layout"
+                    android:hint="Cost Price">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/bill_sell_price"
-                    style="@style/new_edit_input_layout"
-                    android:inputType="numberDecimal" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cost_price"
+                        style="@style/new_edit_input_layout"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/new_text_input_layout"
-                android:hint="Sell Price">
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/new_text_input_layout"
+                    android:hint="Bill Sell Price">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/sell_price"
-                    style="@style/new_edit_input_layout"
-                    android:inputType="numberDecimal" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/bill_sell_price"
+                        style="@style/new_edit_input_layout"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/new_text_input_layout"
-                android:hint="Seller">
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/new_text_input_layout"
+                    android:hint="Sell Price">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/seller"
-                    style="@style/new_edit_input_layout"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/sell_price"
+                        style="@style/new_edit_input_layout"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/modify"
-                style="@style/new_add_button"
-                android:text="modify" />
-        </LinearLayout>
-    </ScrollView>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/new_text_input_layout"
+                    android:hint="Seller">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/seller"
+                        style="@style/new_edit_input_layout"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/modify"
+                    style="@style/new_add_button"
+                    android:text="modify" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 </layout>

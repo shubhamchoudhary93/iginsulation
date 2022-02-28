@@ -1,459 +1,469 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".rateList.NMFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <LinearLayout style="@style/general_vertical_linear_layout">
 
-        <LinearLayout
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="20dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:id="@+id/values_layout"
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                app:menu="@menu/top_app_bar"
+                app:title="NM Rate List"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="?attr/actionBarSize" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView style="@style/outer_scroll_view">
+
+            <LinearLayout style="@style/outer_vertical_linear_layout">
 
                 <LinearLayout
+                    android:id="@+id/values_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="50dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="0.5" />
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="50dp"
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="0.5" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="6" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="6" />
+                        android:orientation="horizontal">
 
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="0.75" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="8.50" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="1" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="5.60" />
+
+                        <TextView
+                            android:id="@+id/one"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="5.60" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="1.5" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="7.20" />
+
+                        <TextView
+                            android:id="@+id/one_point_five"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="7.20" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="2.5" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="9.95" />
+
+                        <TextView
+                            android:id="@+id/two_point_five"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="9.95" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="4" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="15.20" />
+
+                        <TextView
+                            android:id="@+id/four"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="15.20" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="6" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="21" />
+
+                        <TextView
+                            android:id="@+id/six"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="21" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="10" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="34.50" />
+
+                        <TextView
+                            android:id="@+id/ten"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="34.50" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="16" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="56" />
+
+                        <TextView
+                            android:id="@+id/sixteen"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="56" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="25" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="97" />
+
+                        <TextView
+                            android:id="@+id/twenty_five"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="97" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="35" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="135" />
+
+                        <TextView
+                            android:id="@+id/thirty_five"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="135" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="50" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="183" />
+
+                        <TextView
+                            android:id="@+id/fifty"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="183" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="70" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="270" />
+
+                        <TextView
+                            android:id="@+id/seventy"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="270" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="95" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="388" />
+
+                        <TextView
+                            android:id="@+id/ninty_five"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="388" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="120" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="442" />
+
+                        <TextView
+                            android:id="@+id/one_twenty"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="442" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="150" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="525" />
+
+                        <TextView
+                            android:id="@+id/one_fifty"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="525" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="185" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="1650" />
+
+                        <TextView
+                            android:id="@+id/one_eighty_five"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:text="1650" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/percentage_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="50dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="0.75" />
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="50dp"
+                        <Button
+                            android:id="@+id/button_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="80%" />
+
+                        <Button
+                            android:id="@+id/button_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="90%" />
+
+                        <Button
+                            android:id="@+id/button_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100%" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="8.50" />
+                        android:orientation="horizontal">
 
+                        <EditText
+                            android:id="@+id/percentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="Percentage"
+                            android:ems="10"
+                            android:hint="Percentage"
+                            android:inputType="numberSigned|numberDecimal" />
+
+                        <Button
+                            android:id="@+id/button_go"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Go" />
+                    </LinearLayout>
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="1" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="5.60" />
-
-                    <TextView
-                        android:id="@+id/one"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="5.60" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="1.5" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="7.20" />
-
-                    <TextView
-                        android:id="@+id/one_point_five"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="7.20" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="2.5" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="9.95" />
-
-                    <TextView
-                        android:id="@+id/two_point_five"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="9.95" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="4" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="15.20" />
-
-                    <TextView
-                        android:id="@+id/four"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="15.20" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="6" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="21" />
-
-                    <TextView
-                        android:id="@+id/six"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="21" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="10" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="34.50" />
-
-                    <TextView
-                        android:id="@+id/ten"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="34.50" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="16" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="56" />
-
-                    <TextView
-                        android:id="@+id/sixteen"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="56" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="25" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="97" />
-
-                    <TextView
-                        android:id="@+id/twenty_five"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="97" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="35" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="135" />
-
-                    <TextView
-                        android:id="@+id/thirty_five"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="135" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="50" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="183" />
-
-                    <TextView
-                        android:id="@+id/fifty"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="183" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="70" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="270" />
-
-                    <TextView
-                        android:id="@+id/seventy"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="270" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="95" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="388" />
-
-                    <TextView
-                        android:id="@+id/ninty_five"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="388" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="120" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="442" />
-
-                    <TextView
-                        android:id="@+id/one_twenty"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="442" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="150" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="525" />
-
-                    <TextView
-                        android:id="@+id/one_fifty"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="525" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="185" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="1650" />
-
-                    <TextView
-                        android:id="@+id/one_eighty_five"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="1650" />
-
-                </LinearLayout>
-
             </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/percentage_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/button_one"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="80%" />
-
-                    <Button
-                        android:id="@+id/button_two"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="90%" />
-
-                    <Button
-                        android:id="@+id/button_three"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="100%" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <EditText
-                        android:id="@+id/percentage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:autofillHints="Percentage"
-                        android:ems="10"
-                        android:hint="Percentage"
-                        android:inputType="numberSigned|numberDecimal" />
-
-                    <Button
-                        android:id="@+id/button_go"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Go" />
-
-
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
+    </LinearLayout>
 </layout>

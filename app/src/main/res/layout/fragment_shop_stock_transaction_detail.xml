@@ -1,86 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".shopStock.ShopStockTransactionDetailFragment">
 
-    <ScrollView style="@style/outer_scroll_view">
+    <LinearLayout style="@style/general_vertical_linear_layout">
 
-        <LinearLayout style="@style/outer_vertical_linear_layout">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <LinearLayout style="@style/general_horizontal_linear_layout">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/top_app_bar"
+                app:title="Shop Shop Transaction Details" />
 
-                <TextView
-                    android:id="@+id/add"
-                    style="@style/detail_text_textview"
-                    android:text="Add" />
+        </com.google.android.material.appbar.AppBarLayout>
 
-                <TextView
-                    android:id="@+id/add_value"
-                    style="@style/detail_value_textview" />
+        <ScrollView style="@style/outer_scroll_view">
 
+            <LinearLayout style="@style/outer_vertical_linear_layout">
+
+                <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/add"
+                        style="@style/detail_text_textview"
+                        android:text="Add" />
+
+                    <TextView
+                        android:id="@+id/add_value"
+                        style="@style/detail_value_textview" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/stock_text"
+                        style="@style/detail_text_textview"
+                        android:text="Stock" />
+
+                    <TextView
+                        android:id="@+id/stock_value"
+                        style="@style/detail_value_textview" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/quantity_text"
+                        style="@style/detail_text_textview"
+                        android:text="Quantity" />
+
+                    <TextView
+                        android:id="@+id/quantity_value"
+                        style="@style/detail_value_textview" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/date_text"
+                        style="@style/detail_text_textview"
+                        android:text="Date" />
+
+                    <TextView
+                        android:id="@+id/date_value"
+                        style="@style/detail_value_textview" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/detail_text"
+                        style="@style/detail_text_textview"
+                        android:text="Detail" />
+
+                    <TextView
+                        android:id="@+id/detail_value"
+                        style="@style/detail_value_textview" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/modify"
+                    style="@style/detail_edit_button"
+                    android:text="modify" />
+
+                <Button
+                    android:id="@+id/delete"
+                    style="@style/detail_delete_button"
+                    android:text="delete" />
             </LinearLayout>
-
-            <LinearLayout style="@style/general_horizontal_linear_layout">
-
-                <TextView
-                    android:id="@+id/stock_text"
-                    style="@style/detail_text_textview"
-                    android:text="Stock" />
-
-                <TextView
-                    android:id="@+id/stock_value"
-                    style="@style/detail_value_textview" />
-
-            </LinearLayout>
-
-            <LinearLayout style="@style/general_horizontal_linear_layout">
-
-                <TextView
-                    android:id="@+id/quantity_text"
-                    style="@style/detail_text_textview"
-                    android:text="Quantity" />
-
-                <TextView
-                    android:id="@+id/quantity_value"
-                    style="@style/detail_value_textview" />
-
-            </LinearLayout>
-
-            <LinearLayout style="@style/general_horizontal_linear_layout">
-
-                <TextView
-                    android:id="@+id/date_text"
-                    style="@style/detail_text_textview"
-                    android:text="Date" />
-
-                <TextView
-                    android:id="@+id/date_value"
-                    style="@style/detail_value_textview" />
-
-            </LinearLayout>
-
-            <LinearLayout style="@style/general_horizontal_linear_layout">
-
-                <TextView
-                    android:id="@+id/detail_text"
-                    style="@style/detail_text_textview"
-                    android:text="Detail" />
-
-                <TextView
-                    android:id="@+id/detail_value"
-                    style="@style/detail_value_textview" />
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/modify"
-                style="@style/detail_edit_button"
-                android:text="modify" />
-
-            <Button
-                android:id="@+id/delete"
-                style="@style/detail_delete_button"
-                android:text="delete" />
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
+    </LinearLayout>
 </layout>

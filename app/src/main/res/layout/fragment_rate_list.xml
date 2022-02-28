@@ -1,43 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".rateList.RateListFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
+    <LinearLayout style="@style/general_vertical_linear_layout">
 
-        <Button
-            android:id="@+id/button_sleeve"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sleeve" />
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/button_varnish"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Varnish" />
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/top_app_bar"
+                app:title="Rate List" />
 
-        <Button
-            android:id="@+id/button_lead_wire"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Lead Wire" />
+        </com.google.android.material.appbar.AppBarLayout>
 
-        <Button
-            android:id="@+id/button_glass_tape"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Glass Tape" />
+        <ScrollView style="@style/outer_scroll_view">
 
-        <Button
-            android:id="@+id/button_tax_rate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tax Rate" />
+            <LinearLayout style="@style/outer_vertical_linear_layout">
+
+                <Button
+                    android:id="@+id/button_sleeve"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sleeve" />
+
+                <Button
+                    android:id="@+id/button_varnish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Varnish" />
+
+                <Button
+                    android:id="@+id/button_lead_wire"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lead Wire" />
+
+                <Button
+                    android:id="@+id/button_glass_tape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Glass Tape" />
+
+                <Button
+                    android:id="@+id/button_tax_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tax Rate" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
-
 </layout>

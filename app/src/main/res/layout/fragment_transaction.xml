@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".transaction.TransactionFragment">
 
-    <LinearLayout style="@style/outer_vertical_linear_layout">
+    <LinearLayout style="@style/general_vertical_linear_layout">
 
-        <Button
-            android:id="@+id/button_new_transaction"
-            style="@style/general_button"
-            android:text="New Transaction" />
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/button_view_transaction"
-            style="@style/general_button"
-            android:text="View Transaction" />
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/top_app_bar"
+                app:title="Transaction" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView style="@style/outer_scroll_view">
+
+            <LinearLayout style="@style/outer_vertical_linear_layout">
+
+                <Button
+                    android:id="@+id/button_new_transaction"
+                    style="@style/general_button"
+                    android:text="New Transaction" />
+
+                <Button
+                    android:id="@+id/button_view_transaction"
+                    style="@style/general_button"
+                    android:text="View Transaction" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
-
 </layout>

@@ -28,7 +28,7 @@
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/layout/fragment_f_class.xml" value="0.3333333333333333" />
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/layout/fragment_glass_tape.xml" value="0.3333333333333333" />
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/layout/fragment_h_class.xml" value="0.1" />
-        <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/layout/fragment_heat.xml" value="0.3303921568627451" />
+        <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/layout/fragment_heat.xml" value="0.3218720152817574" />
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/layout/fragment_lead_wire.xml" value="0.184375" />
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/layout/fragment_nm.xml" value="0.3333333333333333" />
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/layout/fragment_rate_list.xml" value="0.1685185185185185" />
@@ -64,6 +64,7 @@
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/layout/fragment_varnish.xml" value="0.3333333333333333" />
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/layout/fragment_varnish_edit.xml" value="0.17552083333333332" />
         <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/menu/top_app_bar.xml" value="0.17552083333333332" />
+        <entry key="..\:/AndroidProjects/IGInsulation/app/src/main/res/menu/top_app_bar_common.xml" value="0.17552083333333332" />
       </map>
     </option>
   </component>

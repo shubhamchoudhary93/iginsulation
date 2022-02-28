@@ -1,239 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".shopStock.ShopStockUpdateFragment">
 
-    <ScrollView style="@style/outer_scroll_view">
+    <LinearLayout style="@style/general_vertical_linear_layout">
 
-        <LinearLayout style="@style/outer_vertical_linear_layout">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/notifications"
-                style="@style/notification_text_top" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/new_text_input_layout"
-                android:hint="Seller">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/name_filter"
-                    style="@style/new_edit_input_layout"
-                    android:inputType="textPersonName" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/new_text_auto_input_layout"
-                android:hint="Category">
-
-                <AutoCompleteTextView
-                    android:id="@+id/category_filter"
-                    style="@style/new_edit_auto_input_layout"
-                    android:inputType="textPersonName" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <LinearLayout
-                style="@style/general_horizontal_linear_layout"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    style="@style/update_shop_stock_column_one"
-                    android:text="Name"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    style="@style/update_shop_stock_column_two"
-                    android:text="Quantity"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/shop_stock_update_one"
-                style="@style/general_horizontal_linear_layout">
-
-                <TextView
-                    android:id="@+id/shop_stock_update_one_name"
-                    style="@style/update_shop_stock_column_one" />
-
-                <EditText
-                    android:id="@+id/shop_stock_update_one_quantity"
-                    style="@style/update_shop_stock_column_two"
-                    android:nextFocusDown="@id/shop_stock_update_two_quantity" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/shop_stock_update_two"
-                style="@style/general_horizontal_linear_layout">
-
-                <TextView
-                    android:id="@+id/shop_stock_update_two_name"
-                    style="@style/update_shop_stock_column_one" />
-
-                <EditText
-                    android:id="@+id/shop_stock_update_two_quantity"
-                    style="@style/update_shop_stock_column_two"
-                    android:nextFocusDown="@id/shop_stock_update_three_quantity" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/shop_stock_update_three"
-                style="@style/general_horizontal_linear_layout">
-
-                <TextView
-                    android:id="@+id/shop_stock_update_three_name"
-                    style="@style/update_shop_stock_column_one" />
-
-                <EditText
-                    android:id="@+id/shop_stock_update_three_quantity"
-                    style="@style/update_shop_stock_column_two"
-                    android:nextFocusDown="@id/shop_stock_update_four_quantity" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/shop_stock_update_four"
-                style="@style/general_horizontal_linear_layout">
-
-                <TextView
-                    android:id="@+id/shop_stock_update_four_name"
-                    style="@style/update_shop_stock_column_one" />
-
-                <EditText
-                    android:id="@+id/shop_stock_update_four_quantity"
-                    style="@style/update_shop_stock_column_two"
-                    android:nextFocusDown="@id/shop_stock_update_five_quantity" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/shop_stock_update_five"
-                style="@style/general_horizontal_linear_layout">
-
-                <TextView
-                    android:id="@+id/shop_stock_update_five_name"
-                    style="@style/update_shop_stock_column_one" />
-
-                <EditText
-                    android:id="@+id/shop_stock_update_five_quantity"
-                    style="@style/update_shop_stock_column_two"
-                    android:nextFocusDown="@id/shop_stock_update_six_quantity" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/shop_stock_update_six"
-                style="@style/general_horizontal_linear_layout">
-
-                <TextView
-                    android:id="@+id/shop_stock_update_six_name"
-                    style="@style/update_shop_stock_column_one" />
-
-                <EditText
-                    android:id="@+id/shop_stock_update_six_quantity"
-                    style="@style/update_shop_stock_column_two"
-                    android:nextFocusDown="@id/shop_stock_update_seven_quantity" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/shop_stock_update_seven"
-                style="@style/general_horizontal_linear_layout">
-
-                <TextView
-                    android:id="@+id/shop_stock_update_seven_name"
-                    style="@style/update_shop_stock_column_one" />
-
-                <EditText
-                    android:id="@+id/shop_stock_update_seven_quantity"
-                    style="@style/update_shop_stock_column_two"
-                    android:nextFocusDown="@id/shop_stock_update_eight_quantity" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/shop_stock_update_eight"
-                style="@style/general_horizontal_linear_layout">
-
-                <TextView
-                    android:id="@+id/shop_stock_update_eight_name"
-                    style="@style/update_shop_stock_column_one" />
-
-                <EditText
-                    android:id="@+id/shop_stock_update_eight_quantity"
-                    style="@style/update_shop_stock_column_two"
-                    android:nextFocusDown="@id/shop_stock_update_nine_quantity" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/shop_stock_update_nine"
-                style="@style/general_horizontal_linear_layout">
-
-                <TextView
-                    android:id="@+id/shop_stock_update_nine_name"
-                    style="@style/update_shop_stock_column_one" />
-
-                <EditText
-                    android:id="@+id/shop_stock_update_nine_quantity"
-                    style="@style/update_shop_stock_column_two"
-                    android:nextFocusDown="@id/shop_stock_update_ten_quantity" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/shop_stock_update_ten"
-                style="@style/general_horizontal_linear_layout">
-
-                <TextView
-                    android:id="@+id/shop_stock_update_ten_name"
-                    style="@style/update_shop_stock_column_one" />
-
-                <EditText
-                    android:id="@+id/shop_stock_update_ten_quantity"
-                    style="@style/update_shop_stock_column_two"
-                    android:nextFocusDown="@id/sale_new_two_name" />
-            </LinearLayout>
-
-            <LinearLayout
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/top_app_bar"
+                app:title="Shop Stock Update" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView style="@style/outer_scroll_view">
+
+            <LinearLayout style="@style/outer_vertical_linear_layout">
+
+                <TextView
+                    android:id="@+id/notifications"
+                    style="@style/notification_text_top" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/new_text_input_layout"
+                    android:hint="Seller">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name_filter"
+                        style="@style/new_edit_input_layout"
+                        android:inputType="textPersonName" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/new_text_auto_input_layout"
+                    android:hint="Category">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/category_filter"
+                        style="@style/new_edit_auto_input_layout"
+                        android:inputType="textPersonName" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    style="@style/general_horizontal_linear_layout"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        style="@style/update_shop_stock_column_one"
+                        android:text="Name"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        style="@style/update_shop_stock_column_two"
+                        android:text="Quantity"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shop_stock_update_one"
+                    style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/shop_stock_update_one_name"
+                        style="@style/update_shop_stock_column_one" />
+
+                    <EditText
+                        android:id="@+id/shop_stock_update_one_quantity"
+                        style="@style/update_shop_stock_column_two"
+                        android:nextFocusDown="@id/shop_stock_update_two_quantity" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shop_stock_update_two"
+                    style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/shop_stock_update_two_name"
+                        style="@style/update_shop_stock_column_one" />
+
+                    <EditText
+                        android:id="@+id/shop_stock_update_two_quantity"
+                        style="@style/update_shop_stock_column_two"
+                        android:nextFocusDown="@id/shop_stock_update_three_quantity" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shop_stock_update_three"
+                    style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/shop_stock_update_three_name"
+                        style="@style/update_shop_stock_column_one" />
+
+                    <EditText
+                        android:id="@+id/shop_stock_update_three_quantity"
+                        style="@style/update_shop_stock_column_two"
+                        android:nextFocusDown="@id/shop_stock_update_four_quantity" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shop_stock_update_four"
+                    style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/shop_stock_update_four_name"
+                        style="@style/update_shop_stock_column_one" />
+
+                    <EditText
+                        android:id="@+id/shop_stock_update_four_quantity"
+                        style="@style/update_shop_stock_column_two"
+                        android:nextFocusDown="@id/shop_stock_update_five_quantity" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shop_stock_update_five"
+                    style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/shop_stock_update_five_name"
+                        style="@style/update_shop_stock_column_one" />
+
+                    <EditText
+                        android:id="@+id/shop_stock_update_five_quantity"
+                        style="@style/update_shop_stock_column_two"
+                        android:nextFocusDown="@id/shop_stock_update_six_quantity" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shop_stock_update_six"
+                    style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/shop_stock_update_six_name"
+                        style="@style/update_shop_stock_column_one" />
+
+                    <EditText
+                        android:id="@+id/shop_stock_update_six_quantity"
+                        style="@style/update_shop_stock_column_two"
+                        android:nextFocusDown="@id/shop_stock_update_seven_quantity" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shop_stock_update_seven"
+                    style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/shop_stock_update_seven_name"
+                        style="@style/update_shop_stock_column_one" />
+
+                    <EditText
+                        android:id="@+id/shop_stock_update_seven_quantity"
+                        style="@style/update_shop_stock_column_two"
+                        android:nextFocusDown="@id/shop_stock_update_eight_quantity" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shop_stock_update_eight"
+                    style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/shop_stock_update_eight_name"
+                        style="@style/update_shop_stock_column_one" />
+
+                    <EditText
+                        android:id="@+id/shop_stock_update_eight_quantity"
+                        style="@style/update_shop_stock_column_two"
+                        android:nextFocusDown="@id/shop_stock_update_nine_quantity" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shop_stock_update_nine"
+                    style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/shop_stock_update_nine_name"
+                        style="@style/update_shop_stock_column_one" />
+
+                    <EditText
+                        android:id="@+id/shop_stock_update_nine_quantity"
+                        style="@style/update_shop_stock_column_two"
+                        android:nextFocusDown="@id/shop_stock_update_ten_quantity" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shop_stock_update_ten"
+                    style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/shop_stock_update_ten_name"
+                        style="@style/update_shop_stock_column_one" />
+
+                    <EditText
+                        android:id="@+id/shop_stock_update_ten_quantity"
+                        style="@style/update_shop_stock_column_two"
+                        android:nextFocusDown="@id/sale_new_two_name" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_previous_page"
+                        style="@style/page_button_previous" />
+
+                    <Button
+                        android:id="@+id/button_next_page"
+                        style="@style/page_button_next" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/general_horizontal_linear_layout"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Page - " />
+
+                    <TextView
+                        android:id="@+id/page"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" of " />
+
+                    <TextView
+                        android:id="@+id/total_page"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1" />
+
+                </LinearLayout>
 
                 <Button
-                    android:id="@+id/button_previous_page"
-                    style="@style/page_button_previous" />
-
-                <Button
-                    android:id="@+id/button_next_page"
-                    style="@style/page_button_next" />
+                    android:id="@+id/button_update"
+                    style="@style/update_button" />
             </LinearLayout>
-
-            <LinearLayout
-                style="@style/general_horizontal_linear_layout"
-                android:layout_marginTop="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Page - " />
-
-                <TextView
-                    android:id="@+id/page"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" of " />
-
-                <TextView
-                    android:id="@+id/total_page"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1" />
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/button_update"
-                style="@style/update_button" />
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
+    </LinearLayout>
 </layout>

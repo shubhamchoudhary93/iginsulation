@@ -1,204 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".rateList.CottonFragment">
 
-    <ScrollView style="@style/outer_scroll_view">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout style="@style/outer_vertical_linear_layout">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <LinearLayout style="@style/varnish_horizontal_linear_layout"
-                android:background="@color/grey">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/top_app_bar"
+                app:title="Cotton Rate List" />
 
-                <TextView
-                    style="@style/cotton_textview"
-                    android:text="Size"
-                    android:textStyle="bold" />
+        </com.google.android.material.appbar.AppBarLayout>
 
-                <TextView
-                    style="@style/cotton_textview_rate"
-                    android:text="Rate"
-                    android:textStyle="bold" />
-            </LinearLayout>
+        <ScrollView style="@style/outer_scroll_view">
 
-            <LinearLayout style="@style/varnish_horizontal_linear_layout">
+            <LinearLayout style="@style/outer_vertical_linear_layout">
 
-                <TextView
-                    style="@style/cotton_textview"
-                    android:text="1mm" />
-
-                <TextView
-                    android:id="@+id/one"
-                    style="@style/cotton_textview_rate" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/varnish_horizontal_linear_layout"
-                android:background="@color/grey">
-
-                <TextView
-                    style="@style/cotton_textview"
-                    android:text="2mm" />
-
-                <TextView
-                    android:id="@+id/two"
-                    style="@style/cotton_textview_rate" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/varnish_horizontal_linear_layout">
-
-                <TextView
-                    style="@style/cotton_textview"
-                    android:text="3mm" />
-
-                <TextView
-                    android:id="@+id/three"
-                    style="@style/cotton_textview_rate" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/varnish_horizontal_linear_layout"
-                android:background="@color/grey">
-
-                <TextView
-                    style="@style/cotton_textview"
-                    android:text="4mm" />
-
-                <TextView
-                    android:id="@+id/four"
-                    style="@style/cotton_textview_rate" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/varnish_horizontal_linear_layout">
-
-                <TextView
-                    style="@style/cotton_textview"
-                    android:text="5mm" />
-
-                <TextView
-                    android:id="@+id/five"
-                    style="@style/cotton_textview_rate" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/varnish_horizontal_linear_layout"
-                android:background="@color/grey">
-
-                <TextView
-                    style="@style/cotton_textview"
-                    android:text="6mm" />
-
-                <TextView
-                    android:id="@+id/six"
-                    style="@style/cotton_textview_rate" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/varnish_horizontal_linear_layout">
-
-                <TextView
-                    style="@style/cotton_textview"
-                    android:text="8mm" />
-
-                <TextView
-                    android:id="@+id/eight"
-                    style="@style/cotton_textview_rate" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/varnish_horizontal_linear_layout"
-                android:background="@color/grey">
-
-                <TextView
-                    style="@style/cotton_textview"
-                    android:text="10mm" />
-
-                <TextView
-                    android:id="@+id/ten"
-                    style="@style/cotton_textview_rate" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/varnish_horizontal_linear_layout">
-
-                <TextView
-                    style="@style/cotton_textview"
-                    android:text="Shubham 2mm" />
-
-                <TextView
-                    android:id="@+id/shubham_two"
-                    style="@style/cotton_textview_rate" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/varnish_horizontal_linear_layout"
-                android:background="@color/grey">
-
-                <TextView
-                    style="@style/cotton_textview"
-                    android:text="Ganga 2mm" />
-
-                <TextView
-                    android:id="@+id/ganga_two"
-                    style="@style/cotton_textview_rate" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/details"
-                style="@style/general_vertical_linear_layout"
-                android:layout_margin="5dp">
-
-                <LinearLayout style="@style/general_horizontal_linear_layout">
+                <LinearLayout
+                    style="@style/varnish_horizontal_linear_layout"
+                    android:background="@color/grey">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Name : " />
+                        style="@style/cotton_textview"
+                        android:text="Size"
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        style="@style/cotton_textview_rate"
+                        android:text="Rate"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
-                <LinearLayout style="@style/general_horizontal_linear_layout">
+                <LinearLayout style="@style/varnish_horizontal_linear_layout">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Cost Price : " />
+                        style="@style/cotton_textview"
+                        android:text="1mm" />
 
                     <TextView
-                        android:id="@+id/cost_price"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:id="@+id/one"
+                        style="@style/cotton_textview_rate" />
                 </LinearLayout>
 
-                <LinearLayout style="@style/general_horizontal_linear_layout">
+                <LinearLayout
+                    style="@style/varnish_horizontal_linear_layout"
+                    android:background="@color/grey">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Sell Price : " />
+                        style="@style/cotton_textview"
+                        android:text="2mm" />
 
                     <TextView
-                        android:id="@+id/sell_price"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:id="@+id/two"
+                        style="@style/cotton_textview_rate" />
                 </LinearLayout>
 
-                <LinearLayout style="@style/general_horizontal_linear_layout">
+                <LinearLayout style="@style/varnish_horizontal_linear_layout">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Date : " />
+                        style="@style/cotton_textview"
+                        android:text="3mm" />
 
                     <TextView
-                        android:id="@+id/date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:id="@+id/three"
+                        style="@style/cotton_textview_rate" />
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/edit"
-                    style="@style/general_button"
-                    android:text="Edit" />
+                <LinearLayout
+                    style="@style/varnish_horizontal_linear_layout"
+                    android:background="@color/grey">
+
+                    <TextView
+                        style="@style/cotton_textview"
+                        android:text="4mm" />
+
+                    <TextView
+                        android:id="@+id/four"
+                        style="@style/cotton_textview_rate" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/varnish_horizontal_linear_layout">
+
+                    <TextView
+                        style="@style/cotton_textview"
+                        android:text="5mm" />
+
+                    <TextView
+                        android:id="@+id/five"
+                        style="@style/cotton_textview_rate" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/varnish_horizontal_linear_layout"
+                    android:background="@color/grey">
+
+                    <TextView
+                        style="@style/cotton_textview"
+                        android:text="6mm" />
+
+                    <TextView
+                        android:id="@+id/six"
+                        style="@style/cotton_textview_rate" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/varnish_horizontal_linear_layout">
+
+                    <TextView
+                        style="@style/cotton_textview"
+                        android:text="8mm" />
+
+                    <TextView
+                        android:id="@+id/eight"
+                        style="@style/cotton_textview_rate" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/varnish_horizontal_linear_layout"
+                    android:background="@color/grey">
+
+                    <TextView
+                        style="@style/cotton_textview"
+                        android:text="10mm" />
+
+                    <TextView
+                        android:id="@+id/ten"
+                        style="@style/cotton_textview_rate" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/varnish_horizontal_linear_layout">
+
+                    <TextView
+                        style="@style/cotton_textview"
+                        android:text="Shubham 2mm" />
+
+                    <TextView
+                        android:id="@+id/shubham_two"
+                        style="@style/cotton_textview_rate" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/varnish_horizontal_linear_layout"
+                    android:background="@color/grey">
+
+                    <TextView
+                        style="@style/cotton_textview"
+                        android:text="Ganga 2mm" />
+
+                    <TextView
+                        android:id="@+id/ganga_two"
+                        style="@style/cotton_textview_rate" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/details"
+                    style="@style/general_vertical_linear_layout"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name : " />
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cost Price : " />
+
+                        <TextView
+                            android:id="@+id/cost_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sell Price : " />
+
+                        <TextView
+                            android:id="@+id/sell_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date : " />
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/edit"
+                        style="@style/general_button"
+                        android:text="Edit" />
+                </LinearLayout>
             </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
+    </LinearLayout>
 </layout>

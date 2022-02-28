@@ -1,63 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".transaction.TransactionModifyFragment">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
 
-        <CheckBox
-            android:id="@+id/receipt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Receipt" />
+    <LinearLayout style="@style/general_vertical_linear_layout">
 
-        <AutoCompleteTextView
-            android:id="@+id/transaction_modify_name"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="customer name"
-            android:inputType="textPersonName"
-            android:autofillHints="name" />
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/transaction_modify_amount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="amount"
-            android:inputType="numberDecimal"
-            android:autofillHints="amount" />
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/top_app_bar"
+                app:title="Transaction Modify" />
 
-        <EditText
-            android:id="@+id/transaction_modify_date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="date"
-            android:clickable="true"
-            android:autofillHints="22/08/21" />
+        </com.google.android.material.appbar.AppBarLayout>
 
-        <EditText
-            android:id="@+id/transaction_modify_detail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="detail"
-            android:inputType="text"
-            android:autofillHints="detail" />
+        <ScrollView style="@style/outer_scroll_view">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/transaction_modify"
-            android:text="modify"/>
+            <LinearLayout style="@style/outer_vertical_linear_layout">
+
+                <CheckBox
+                    android:id="@+id/receipt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Receipt" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/transaction_modify_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="name"
+                    android:ems="10"
+                    android:hint="customer name"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/transaction_modify_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="amount"
+                    android:ems="10"
+                    android:hint="amount"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/transaction_modify_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="22/08/21"
+                    android:clickable="true"
+                    android:ems="10"
+                    android:hint="date" />
+
+                <EditText
+                    android:id="@+id/transaction_modify_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="detail"
+                    android:ems="10"
+                    android:hint="detail"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/transaction_modify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="modify" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
-    </ScrollView>
 </layout>

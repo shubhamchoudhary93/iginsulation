@@ -1,63 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".customer.CustomerModifyFragment">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/customer_modify_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"/>
+    <LinearLayout style="@style/general_vertical_linear_layout">
 
-        <EditText
-            android:id="@+id/customer_modify_phone"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="phone"
-            android:inputType="phone"
-            android:autofillHints="phone" />
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/customer_modify_address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="address"
-            android:inputType="textPostalAddress"
-            android:autofillHints="address" />
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/top_app_bar"
+                app:title="Customer Modify" />
 
-        <EditText
-            android:id="@+id/customer_modify_opening"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="opening balance"
-            android:inputType="number"
-            android:autofillHints="opening balance" />
+        </com.google.android.material.appbar.AppBarLayout>
 
-        <EditText
-            android:id="@+id/customer_modify_current"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="current balance"
-            android:inputType="number"
-            android:autofillHints="current balance" />
+            android:layout_height="match_parent">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/customer_modify"
-            android:text="modify"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/customer_modify_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10" />
+
+                <EditText
+                    android:id="@+id/customer_modify_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="phone"
+                    android:ems="10"
+                    android:hint="phone"
+                    android:inputType="phone" />
+
+                <EditText
+                    android:id="@+id/customer_modify_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="address"
+                    android:ems="10"
+                    android:hint="address"
+                    android:inputType="textPostalAddress" />
+
+                <EditText
+                    android:id="@+id/customer_modify_opening"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="opening balance"
+                    android:ems="10"
+                    android:hint="opening balance"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/customer_modify_current"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="current balance"
+                    android:ems="10"
+                    android:hint="current balance"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/customer_modify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="modify" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
-    </ScrollView>
 </layout>

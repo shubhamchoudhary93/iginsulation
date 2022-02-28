@@ -1,746 +1,756 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".sale.SaleDetailFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <LinearLayout style="@style/general_vertical_linear_layout">
 
-        <LinearLayout
-            android:id="@+id/screenshot_layout"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/cash"
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"/>
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/top_app_bar"
+                app:title="Sale Detail" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView style="@style/outer_scroll_view">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:id="@+id/screenshot_layout"
+                style="@style/outer_vertical_linear_layout">
 
                 <TextView
-                    android:id="@+id/sale_detail_name"
-                    android:layout_width="200dp"
+                    android:id="@+id/cash"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:ems="10"
-                    android:gravity="start"/>
+                    android:gravity="center" />
 
-                <TextView
-                    android:id="@+id/sale_detail_date"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:gravity="end"/>
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_detail_name"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="start"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/sale_detail_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="end" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_sale_name"
+                        android:text="Item" />
+
+                    <TextView
+                        style="@style/list_column_sale_two"
+                        android:text="Quan" />
+
+                    <TextView
+                        style="@style/list_column_sale_two"
+                        android:text="Rate" />
+
+                    <TextView
+                        style="@style/list_column_sale_three"
+                        android:text="Total" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sale_details_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_one_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_one_quantity"
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_one_rate"
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_one_total"
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sale_details_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_two_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_two_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_two_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_two_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_three_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_three_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_three_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_three_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_four_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_four_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_four_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_four_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_five_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_five_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_five_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_five_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_six"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_six_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_six_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_six_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_six_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_seven"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_seven_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_seven_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_seven_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_seven_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_eight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_eight_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_eight_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_eight_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_eight_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_nine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_nine_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_nine_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_nine_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_nine_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_ten"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_ten_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_ten_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_ten_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_ten_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_eleven"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_eleven_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_eleven_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_eleven_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_eleven_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_twelve"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_twelve_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_twelve_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_twelve_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_twelve_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_thirteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_thirteen_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_thirteen_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_thirteen_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_thirteen_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_fourteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_fourteen_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_fourteen_quantity"
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_fourteen_rate"
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_fourteen_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sale_details_fifteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_fifteen_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_fifteen_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_fifteen_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_fifteen_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_sixteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_sixteen_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_sixteen_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_sixteen_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_sixteen_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_seventeen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_seventeen_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_seventeen_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_seventeen_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_seventeen_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_eighteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_eighteen_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_eighteen_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_eighteen_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_eighteen_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_nineteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_nineteen_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_nineteen_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_nineteen_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_nineteen_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sale_details_twenty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_details_twenty_name"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/sale_details_twenty_quantity"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_twenty_rate"
+
+                        style="@style/list_column_sale_two" />
+
+                    <TextView
+                        android:id="@+id/sale_details_twenty_total"
+
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sale_details_transport_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_sale_name"
+                        android:text="Transport" />
+
+                    <TextView
+                        android:id="@+id/sale_detail_transport"
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sale_details_other_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_sale_name"
+                        android:text="Other" />
+
+                    <TextView
+                        android:id="@+id/sale_detail_other"
+                        style="@style/list_column_sale_three" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sale_details_total_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_sale_name"
+                        android:text="Total" />
+
+                    <TextView
+                        android:id="@+id/sale_detail_total"
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sale_details_old_balance_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/old_balance_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/old_balance"
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sale_details_past_one_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/past_one_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/past_one_date"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/past_one_amount"
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sale_details_past_two_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/past_two_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/past_two_date"
+                        style="@style/list_column_sale_name" />
+
+                    <TextView
+                        android:id="@+id/past_two_amount"
+                        style="@style/list_column_sale_three" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sale_details_balance_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_column_sale_name"
+                        android:text="Balance" />
+
+                    <TextView
+                        android:id="@+id/sale_detail_balance"
+                        style="@style/list_column_sale_three"
+                        android:textColor="@color/red"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/sale_detail_modify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="modify" />
+
+                <Button
+                    android:id="@+id/sale_detail_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="delete" />
+
+                <Button
+                    android:id="@+id/sale_detail_share"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Share" />
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    style="@style/list_column_sale_name"
-                    android:text="Item" />
-
-                <TextView
-                    style="@style/list_column_sale_two"
-                    android:text="Quan" />
-
-                <TextView
-                    style="@style/list_column_sale_two"
-                    android:text="Rate" />
-
-                <TextView
-                    style="@style/list_column_sale_three"
-                    android:text="Total" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sale_details_one"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_one_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_one_quantity"
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_one_rate"
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_one_total"
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sale_details_two"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_two_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_two_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_two_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_two_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_three"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_three_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_three_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_three_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_three_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_four"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_four_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_four_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_four_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_four_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_five"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_five_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_five_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_five_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_five_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_six"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_six_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_six_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_six_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_six_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_seven"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_seven_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_seven_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_seven_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_seven_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_eight"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_eight_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_eight_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_eight_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_eight_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_nine"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_nine_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_nine_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_nine_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_nine_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_ten"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_ten_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_ten_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_ten_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_ten_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_eleven"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_eleven_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_eleven_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_eleven_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_eleven_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_twelve"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_twelve_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_twelve_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_twelve_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_twelve_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_thirteen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_thirteen_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_thirteen_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_thirteen_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_thirteen_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_fourteen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_fourteen_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_fourteen_quantity"
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_fourteen_rate"
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_fourteen_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sale_details_fifteen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_fifteen_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_fifteen_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_fifteen_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_fifteen_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_sixteen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_sixteen_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_sixteen_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_sixteen_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_sixteen_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_seventeen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_seventeen_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_seventeen_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_seventeen_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_seventeen_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_eighteen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_eighteen_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_eighteen_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_eighteen_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_eighteen_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_nineteen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_nineteen_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_nineteen_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_nineteen_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_nineteen_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/sale_details_twenty"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sale_details_twenty_name"
-                    style="@style/list_column_sale_name" />
-
-                <TextView
-                    android:id="@+id/sale_details_twenty_quantity"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_twenty_rate"
-
-                    style="@style/list_column_sale_two" />
-
-                <TextView
-                    android:id="@+id/sale_details_twenty_total"
-
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sale_details_transport_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    style="@style/list_column_sale_name"
-                    android:text="Transport" />
-
-                <TextView
-                    android:id="@+id/sale_detail_transport"
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sale_details_other_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    style="@style/list_column_sale_name"
-                    android:text="Other" />
-
-                <TextView
-                    android:id="@+id/sale_detail_other"
-                    style="@style/list_column_sale_three" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sale_details_total_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    style="@style/list_column_sale_name"
-                    android:text="Total" />
-
-                <TextView
-                    android:id="@+id/sale_detail_total"
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sale_details_old_balance_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/old_balance_check"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    style="@style/list_column_sale_name"/>
-
-                <TextView
-                    android:id="@+id/old_balance"
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sale_details_past_one_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/past_one_check"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:id="@+id/past_one_date"
-                    style="@style/list_column_sale_name"/>
-
-                <TextView
-                    android:id="@+id/past_one_amount"
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sale_details_past_two_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/past_two_check"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:id="@+id/past_two_date"
-                    style="@style/list_column_sale_name"/>
-
-                <TextView
-                    android:id="@+id/past_two_amount"
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sale_details_balance_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    style="@style/list_column_sale_name"
-                    android:text="Balance" />
-
-                <TextView
-                    android:id="@+id/sale_detail_balance"
-                    android:textSize="18sp"
-                    android:textColor="@color/red"
-                    style="@style/list_column_sale_three" />
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/sale_detail_modify"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="modify" />
-
-            <Button
-                android:id="@+id/sale_detail_delete"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="delete" />
-
-            <Button
-                android:id="@+id/sale_detail_share"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Share" />
-
-
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
+    </LinearLayout>
 </layout>
