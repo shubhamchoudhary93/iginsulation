@@ -27,19 +27,6 @@
                 <LinearLayout style="@style/general_horizontal_linear_layout">
 
                     <TextView
-                        android:id="@+id/name_text"
-                        style="@style/detail_text_textview"
-                        android:text="Name" />
-
-                    <TextView
-                        android:id="@+id/name_value"
-                        style="@style/detail_value_textview" />
-
-                </LinearLayout>
-
-                <LinearLayout style="@style/general_horizontal_linear_layout">
-
-                    <TextView
                         android:id="@+id/category_text"
                         style="@style/detail_text_textview"
                         android:text="Category" />

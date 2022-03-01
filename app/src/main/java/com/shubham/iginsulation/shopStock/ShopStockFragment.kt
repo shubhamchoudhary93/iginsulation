@@ -26,6 +26,7 @@ class ShopStockFragment : Fragment() {
     private lateinit var shopStockDatabase: ShopStockDatabaseDao
     private lateinit var shopStockTransactionDatabase: ShopStockTransactionDatabaseDao
     private lateinit var stockList: List<String>
+    private var notification = "Ready"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,6 +41,7 @@ class ShopStockFragment : Fragment() {
         shopStockTransactionDatabase =
             ShopStockTransactionDatabase.getInstance(requireContext()).shopStockTransactionDatabaseDao
 
+        //Retrieving Stock Name List from database to put into AutoComplete Edittext
         stockList = shopStockDatabase.getAllStock()
         val adapterStock: ArrayAdapter<String> = ArrayAdapter<String>(
             this.requireContext(),
@@ -52,19 +54,22 @@ class ShopStockFragment : Fragment() {
         fetchAdaptor()
         setListeners()
 
-        binding.shopStockQuantity.post {
+        //resizing autocomplete edittext to normal height
+        //as it tends to shrink when nothing is selected at page load
+        binding.quantity.post {
             val params: ViewGroup.LayoutParams = binding.name.layoutParams
-            params.height = binding.shopStockQuantity.height
+            params.height = binding.quantity.height
             binding.name.layoutParams = params
         }
 
-        binding.notifications.text = "Ready"
+        binding.notifications.text = notification
         return binding.root
     }
 
     private fun setListeners() {
 
-        binding.topAppBar.setOnMenuItemClickListener { menuItem ->
+        //binding the backup icon to backup code
+        binding.header.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.backup -> {
                     backup(context, "shop_stock_transaction")
@@ -74,25 +79,26 @@ class ShopStockFragment : Fragment() {
             }
         }
 
+        //fetching current quantity and default reduce of the stock selected from autocomplete
         binding.name.setOnItemClickListener { parent, _, position, _ ->
             val selectedItem = parent.getItemAtPosition(position).toString()
             val stockDetailReturn = shopStockDatabase.get(selectedItem)
-            binding.shopStockQuantity.setText(stockDetailReturn?.defaultReduce.toString())
-            binding.shopStockQuantityShow.text = stockDetailReturn?.quantity.toString()
+            binding.quantity.setText(stockDetailReturn?.defaultReduce.toString())
+            binding.quantityShow.text = stockDetailReturn?.quantity.toString()
         }
 
-        binding.shopStockAdd.setOnClickListener {
+        binding.add.setOnClickListener {
             val name = binding.name.text.toString()
             val stock = shopStockDatabase.get(name)
 
-            val quantity = binding.shopStockQuantity.text.toString()
+            val quantity = binding.quantity.text.toString()
             if (stock != null) {
                 if (quantity.toIntOrNull() == null) {
-                    binding.notifications.text = "quantity should be numeric"
+                    "quantity should be numeric".also { binding.notifications.text = it }
                 } else {
                     stock.quantity += quantity.toInt()
                     shopStockDatabase.update(stock)
-                    binding.shopStockQuantityShow.text = stock.quantity.toString()
+                    binding.quantityShow.text = stock.quantity.toString()
                     val date = SimpleDateFormat("d/M/yyyy", Locale.ENGLISH).format(Date())
                     shopStockTransactionDatabase.insert(
                         ShopStockTransaction(
@@ -103,28 +109,30 @@ class ShopStockFragment : Fragment() {
                         )
                     )
 
-                    binding.notifications.text = name + " updated to " + stock.quantity
+                    notification = name + " updated to " + stock.quantity
+                    binding.notifications.text = notification
                 }
             }
 
             binding.name.setText("")
-            binding.shopStockQuantity.setText("")
-            binding.shopStockQuantityShow.text = ""
+            binding.quantity.setText("")
+            binding.quantityShow.text = ""
             fetchAdaptor()
         }
 
-        binding.shopStockMinus.setOnClickListener {
+        binding.minus.setOnClickListener {
             val name = binding.name.text.toString()
             val stock = shopStockDatabase.get(name)
 
-            val quantity = binding.shopStockQuantity.text.toString()
+            val quantity = binding.quantity.text.toString()
             if (stock != null) {
                 if (quantity.toIntOrNull() == null) {
-                    binding.notifications.text = "quantity should be numeric"
+                    notification = "quantity should be numeric"
+                    binding.notifications.text = notification
                 } else {
                     stock.quantity -= quantity.toInt()
                     shopStockDatabase.update(stock)
-                    binding.shopStockQuantityShow.text = stock.quantity.toString()
+                    binding.quantityShow.text = stock.quantity.toString()
                     val date = SimpleDateFormat("d/M/yyyy", Locale.ENGLISH).format(Date())
                     shopStockTransactionDatabase.insert(
                         ShopStockTransaction(
@@ -135,25 +143,26 @@ class ShopStockFragment : Fragment() {
                         )
                     )
 
-                    binding.notifications.text = name + " updated to " + stock.quantity
+                    notification = name + " updated to " + stock.quantity
+                    binding.notifications.text = notification
                 }
             }
 
             binding.name.setText("")
-            binding.shopStockQuantity.setText("")
-            binding.shopStockQuantityShow.text = ""
+            binding.quantity.setText("")
+            binding.quantityShow.text = ""
             fetchAdaptor()
         }
 
-        binding.buttonNewShopStock.setOnClickListener {
+        binding.buttonNew.setOnClickListener {
             view?.findNavController()
                 ?.navigate(ShopStockFragmentDirections.actionShopStockFragmentToShopStockNewFragment())
         }
-        binding.buttonViewShopStock.setOnClickListener {
+        binding.buttonView.setOnClickListener {
             view?.findNavController()
                 ?.navigate(ShopStockFragmentDirections.actionShopStockFragmentToShopStockListFragment())
         }
-        binding.buttonViewShopStockTransaction.setOnClickListener {
+        binding.buttonViewTransaction.setOnClickListener {
             view?.findNavController()
                 ?.navigate(ShopStockFragmentDirections.actionShopStockFragmentToShopStockTransactionListFragment())
         }

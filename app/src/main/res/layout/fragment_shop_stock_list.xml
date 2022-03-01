@@ -26,7 +26,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/new_text_input_layout"
-                    android:hint="Name">
+                    android:hint="@string/name">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/name"
@@ -36,12 +36,13 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/new_text_auto_input_layout"
-                    android:hint="Category">
+                    android:hint="@string/category">
 
                     <AutoCompleteTextView
                         android:id="@+id/category"
                         style="@style/new_edit_auto_input_layout"
-                        android:inputType="textPersonName" />
+                        android:inputType="textPersonName"
+                        android:labelFor="@id/category"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.button.MaterialButton
@@ -52,12 +53,12 @@
 
                     <TextView
                         style="@style/list_shop_stock_column_one"
-                        android:text="Stock"
+                        android:text="@string/stock"
                         android:textSize="30sp" />
 
                     <TextView
                         style="@style/list_shop_stock_column_two"
-                        android:text="Quantity"
+                        android:text="@string/quantity"
                         android:textSize="30sp" />
                 </LinearLayout>
 

@@ -57,30 +57,24 @@ class ShopStockDetailFragment : Fragment() {
     }
 
     private fun fetchShopStock(id: Long) {
-        val shopStock = if (id == 0L) {
-            try {
-                shopStockDatabase.getLastShopStock()
-            } catch (e: Exception) {
-                e.printStackTrace()
-                ShopStock()
-            }
+        if (id == 0L) {
+            view?.findNavController()?.navigate(
+                ShopStockDetailFragmentDirections.actionShopStockDetailFragmentToShopStockListFragment()
+            )
         } else {
             try {
-                shopStockDatabase.get(id)!!
+                setShopStockData(shopStockDatabase.get(id)!!)
             } catch (e: Exception) {
-                e.printStackTrace()
-                ShopStock()
+                view?.findNavController()?.navigate(
+                    ShopStockDetailFragmentDirections.actionShopStockDetailFragmentToShopStockListFragment()
+                )
             }
         }
-        setShopStockData(shopStock)
     }
 
     private fun setShopStockData(shopStock: ShopStock) {
-        if (shopStock.name != "")
-            binding.nameValue.text = shopStock.name
-        else {
-            binding.nameValue.visibility = View.GONE
-            binding.nameText.visibility = View.GONE
+        if (shopStock.name != "") {
+            binding.topAppBar.title = shopStock.name
         }
         if (shopStock.category != "")
             binding.categoryValue.text = shopStock.category
