@@ -9,4 +9,7 @@
     <string name="view_transaction">View Transaction</string>
     <string name="category">Category</string>
     <string name="stock">Stock</string>
+    <string name="backup">Backup</string>
+    <string name="home">Home</string>
+    <string name="settings">settings</string>
 </resources>

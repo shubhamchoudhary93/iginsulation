@@ -15,7 +15,7 @@
                 style="@style/Widget.MaterialComponents.Toolbar.Primary"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:menu="@menu/top_app_bar"
+                app:menu="@menu/header"
                 app:title="Customer" />
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -27,12 +27,12 @@
                 <Button
                     android:id="@+id/button_new_customer"
                     style="@style/general_button"
-                    android:text="New Customer" />
+                    android:text="@string/new_user" />
 
                 <Button
                     android:id="@+id/button_view_customer"
                     style="@style/general_button"
-                    android:text="View Customer" />
+                    android:text="@string/view" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

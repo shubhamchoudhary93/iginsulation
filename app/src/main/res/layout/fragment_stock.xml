@@ -13,7 +13,7 @@
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/topAppBar"
                 style="@style/Widget.MaterialComponents.Toolbar.Primary"
-                app:menu="@menu/top_app_bar"
+                app:menu="@menu/header"
                 app:title="Stock"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize" />
