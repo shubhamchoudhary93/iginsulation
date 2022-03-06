@@ -63,8 +63,8 @@ class ShopStockListFragment : Fragment() {
 
         binding.category.setOnItemClickListener { parent, _, position, _ ->
             val selectedItem = parent.getItemAtPosition(position).toString()
-            currentPage = 1
             shopStockListFilter = shopStockDatabase.getListByFilter(selectedItem)
+            currentPage = 1
             setShopStockData()
         }
 

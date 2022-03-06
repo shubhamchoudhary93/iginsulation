@@ -15,6 +15,8 @@ import com.shubham.iginsulation.database.shopstock.ShopStock
 import com.shubham.iginsulation.database.shopstock.ShopStockDatabase
 import com.shubham.iginsulation.database.shopstock.ShopStockDatabaseDao
 import com.shubham.iginsulation.databinding.FragmentShopStockNewBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 class ShopStockNewFragment : Fragment() {
 
@@ -137,6 +139,8 @@ class ShopStockNewFragment : Fragment() {
         shopStock.defaultReduce = defaultReduce
         shopStock.rate = rate
         shopStock.seller = seller
+        shopStock.opening = quantity
+        shopStock.date = SimpleDateFormat("d/M/yyyy", Locale.ENGLISH).format(Date())
 
         try {
             shopStockDatabase.insert(shopStock)

@@ -1,5 +1,6 @@
 package com.shubham.iginsulation.shopStock
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.text.format.DateFormat.format
 import android.view.LayoutInflater
@@ -62,6 +63,7 @@ class ShopStockFragment : Fragment() {
             binding.name.layoutParams = params
         }
 
+        binding.date.setText(SimpleDateFormat("d/M/yyyy", Locale.ENGLISH).format(Date()))
         binding.notifications.text = notification
         return binding.root
     }
@@ -99,7 +101,7 @@ class ShopStockFragment : Fragment() {
                     stock.quantity += quantity.toInt()
                     shopStockDatabase.update(stock)
                     binding.quantityShow.text = stock.quantity.toString()
-                    val date = SimpleDateFormat("d/M/yyyy", Locale.ENGLISH).format(Date())
+                    val date = binding.date.text.toString()
                     shopStockTransactionDatabase.insert(
                         ShopStockTransaction(
                             0L, true, name, if (quantity == "")
@@ -171,6 +173,26 @@ class ShopStockFragment : Fragment() {
             view?.findNavController()
                 ?.navigate(ShopStockFragmentDirections.actionShopStockFragmentToShopStockUpdateFragment())
         }
+
+        binding.date.setOnClickListener {
+
+            val c = Calendar.getInstance()
+            val year = c.get(Calendar.YEAR)
+            val month = c.get(Calendar.MONTH)
+            val day = c.get(Calendar.DAY_OF_MONTH)
+
+            val datePickerDialog = DatePickerDialog(
+                this.requireContext(),
+                { _, yearPick, monthOfYear, dayOfMonth ->
+                    val text = dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + yearPick
+                    binding.date.setText(text)
+                },
+                year,
+                month,
+                day
+            )
+            datePickerDialog.show()
+        }
     }
 
     private fun fetchAdaptor() {
@@ -188,5 +210,10 @@ class ShopStockFragment : Fragment() {
 
         binding.list.adapter = adapter
         adapter.submitList(list)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        backup(context, "shop_stock_transaction")
     }
 }

@@ -15,6 +15,8 @@ import com.shubham.iginsulation.database.shopstock.ShopStock
 import com.shubham.iginsulation.database.shopstock.ShopStockDatabase
 import com.shubham.iginsulation.database.shopstock.ShopStockDatabaseDao
 import com.shubham.iginsulation.databinding.FragmentShopStockModifyBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 class ShopStockModifyFragment : Fragment() {
 
@@ -24,6 +26,7 @@ class ShopStockModifyFragment : Fragment() {
     private lateinit var subCategoryList: List<String>
 
     private var id = 0L
+    private var previousQuantity = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -151,6 +154,10 @@ class ShopStockModifyFragment : Fragment() {
         shopStock.rate = rate
         shopStock.seller = seller
 
+        if(previousQuantity != quantity){
+            shopStock.opening = quantity
+            shopStock.date = SimpleDateFormat("d/M/yyyy", Locale.ENGLISH).format(Date())
+        }
         try {
             shopStockDatabase.update(shopStock)
             BackupRestore.backup(context, "shop_stock")
@@ -188,6 +195,7 @@ class ShopStockModifyFragment : Fragment() {
         binding.categoryAuto.setText(shopStock.category)
         binding.subCategoryAuto.setText(shopStock.subCategory)
         binding.quantity.setText(shopStock.quantity.toString())
+        previousQuantity = shopStock.quantity
         binding.minQuantity.setText(shopStock.minQuantity.toString())
         binding.defaultReduce.setText(shopStock.defaultReduce.toString())
         binding.rate.setText(shopStock.rate.toString())

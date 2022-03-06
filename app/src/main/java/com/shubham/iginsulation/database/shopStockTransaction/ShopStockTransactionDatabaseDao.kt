@@ -35,4 +35,6 @@ interface ShopStockTransactionDatabaseDao {
     @Query("SELECT * from shop_stock_transaction_data_table WHERE transaction_stock LIKE '%' || :string || '%'")
     fun getListByName(string: String): List<ShopStockTransaction>
 
+    @Query("SELECT * from shop_stock_transaction_data_table WHERE transaction_stock = :string")
+    fun getListByExactName(string: String): List<ShopStockTransaction>
 }
