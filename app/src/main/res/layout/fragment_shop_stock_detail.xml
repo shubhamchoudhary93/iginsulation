@@ -108,6 +108,18 @@
                         style="@style/detail_value_textview" />
                 </LinearLayout>
 
+                <LinearLayout style="@style/general_horizontal_linear_layout">
+
+                    <TextView
+                        android:id="@+id/date_text"
+                        style="@style/detail_text_textview"
+                        android:text="Last Update" />
+
+                    <TextView
+                        android:id="@+id/date_value"
+                        style="@style/detail_value_textview" />
+                </LinearLayout>
+
                 <Button
                     android:id="@+id/modify"
                     style="@style/detail_edit_button"

@@ -60,4 +60,7 @@ interface ShopStockDatabaseDao {
 
     @Query("SELECT * from shop_stock_data_table WHERE min_quantity>quantity ORDER BY name")
     fun getListLow(): List<ShopStock>
+
+    @Query("UPDATE shop_stock_data_table SET opening_date = :date WHERE id = :id")
+    fun updateDate(id: Long, date: String)
 }

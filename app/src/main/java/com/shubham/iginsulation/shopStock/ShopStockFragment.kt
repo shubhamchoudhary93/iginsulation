@@ -135,7 +135,7 @@ class ShopStockFragment : Fragment() {
                     stock.quantity -= quantity.toInt()
                     shopStockDatabase.update(stock)
                     binding.quantityShow.text = stock.quantity.toString()
-                    val date = SimpleDateFormat("d/M/yyyy", Locale.ENGLISH).format(Date())
+                    val date = binding.date.text.toString()
                     shopStockTransactionDatabase.insert(
                         ShopStockTransaction(
                             0L, false, name, if (quantity == "")

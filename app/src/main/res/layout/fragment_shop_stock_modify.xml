@@ -108,6 +108,11 @@
                     android:id="@+id/modify"
                     style="@style/new_add_button"
                     android:text="modify" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/update_date"
+                    style="@style/general_button"
+                    android:text="Update Date" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

@@ -67,6 +67,10 @@ class ShopStockModifyFragment : Fragment() {
     }
 
     private fun setListeners() {
+
+        binding.updateDate.setOnClickListener {
+            shopStockDatabase.updateDate(id, SimpleDateFormat("d/M/yyyy", Locale.ENGLISH).format(Date()))
+        }
         binding.modify.setOnClickListener {
 
             val name = binding.name.text.toString()

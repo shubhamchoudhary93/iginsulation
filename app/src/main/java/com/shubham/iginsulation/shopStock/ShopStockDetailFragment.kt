@@ -127,6 +127,8 @@ class ShopStockDetailFragment : Fragment() {
             binding.sellerText.visibility = View.GONE
             binding.sellerValue.visibility = View.GONE
         }
+
+        binding.dateValue.text = shopStock.date
         binding.openingBalance.text = shopStock.opening.toString()
         binding.date.text = shopStock.date
         date = shopStock.date
