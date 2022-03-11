@@ -1,0 +1,38 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="shopStockTransaction"
+            type="com.shubham.iginsulation.database.shopStockTransaction.ShopStockTransaction" />
+
+        <variable
+            name="clickListener"
+            type="com.shubham.iginsulation.shopStock.ShopStockDetailAdaptor.ShopStockTransactionListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:onClick="@{() -> clickListener.onClick(shopStockTransaction)}">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dateString="@{shopStockTransaction}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - " />
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:quantityString="@{shopStockTransaction}" />
+    </LinearLayout>
+</layout>

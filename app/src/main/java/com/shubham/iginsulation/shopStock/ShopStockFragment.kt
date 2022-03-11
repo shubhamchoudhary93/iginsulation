@@ -74,6 +74,7 @@ class ShopStockFragment : Fragment() {
         binding.header.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.backup -> {
+                    backup(context, "shop_stock")
                     backup(context, "shop_stock_transaction")
                     true
                 }
@@ -215,5 +216,6 @@ class ShopStockFragment : Fragment() {
     override fun onPause() {
         super.onPause()
         backup(context, "shop_stock_transaction")
+        backup(context, "shop_stock")
     }
 }

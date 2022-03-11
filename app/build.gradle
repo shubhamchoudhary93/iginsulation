@@ -14,13 +14,13 @@ android {
         applicationId "com.shubham.iginsulation"
         minSdkVersion 29
         targetSdkVersion 31
-        versionCode 222
-        versionName "3.44"
+        versionCode 224
+        versionName "3.46"
     }
 
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }

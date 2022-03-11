@@ -50,8 +50,8 @@ class ShopStockTransactionDetailFragment : Fragment() {
             val oldQuantity =
                 shopStockDatabase.getShopStockQuantity(shopStockTransaction.stock)
             val newQuantity =
-                if (shopStockTransaction.add) oldQuantity + shopStockTransaction.quantity
-                else oldQuantity - shopStockTransaction.quantity
+                if (shopStockTransaction.add) oldQuantity - shopStockTransaction.quantity
+                else oldQuantity + shopStockTransaction.quantity
             shopStockDatabase.setShopStockQuantity(
                 newQuantity,
                 shopStockTransaction.stock

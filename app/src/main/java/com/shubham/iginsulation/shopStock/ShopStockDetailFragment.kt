@@ -154,12 +154,12 @@ class ShopStockDetailFragment : Fragment() {
                 newList.add(l)
             }
         }
-        val adapter = ShopStockAdaptor(ShopStockAdaptor.ShopStockTransactionListener {
-            view?.findNavController()?.navigate(
-                ShopStockFragmentDirections.actionShopStockFragmentToShopStockTransactionDetailFragment(
-                    it
-                )
-            )
+        val adapter = ShopStockDetailAdaptor(ShopStockDetailAdaptor.ShopStockTransactionListener {
+//            view?.findNavController()?.navigate(
+//                ShopStockDetailFragmentDirections.act(
+//                    it
+//                )
+//            )
         })
 
         binding.list.adapter = adapter

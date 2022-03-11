@@ -26,3 +26,11 @@ fun TextView.setQuantityString(item: ShopStockTransaction) {
 
     }
 }
+
+@BindingAdapter("dateString")
+fun TextView.setDateString(item: ShopStockTransaction) {
+    item.let {
+        text = item.date
+    }
+
+}

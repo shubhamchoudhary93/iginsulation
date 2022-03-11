@@ -118,7 +118,6 @@ class ShopStockTransactionModifyFragment : Fragment() {
                     shopStockDatabase.setShopStockQuantity(newQuantityNewName, name)
 
                     BackupRestore.backup(context, "shop_stock")
-                    BackupRestore.backup(context, "shop_stock_transaction")
                 }
             } else
                 Toast.makeText(context, "shopStock doesn't exist", Toast.LENGTH_SHORT).show()
@@ -163,6 +162,7 @@ class ShopStockTransactionModifyFragment : Fragment() {
                     detail
                 )
             )
+            BackupRestore.backup(context, "shop_stock_transaction")
         } catch (e: Exception) {
             e.printStackTrace()
         }
